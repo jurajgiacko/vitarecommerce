@@ -1,0 +1,32 @@
+# Revital Botanicals Hořčík + B6
+
+- Source: nasevitaminy.cz
+- URL: https://www.nasevitaminy.cz/revital-botanicals-magnesium-20-eff
+- Brand: Revital Botanicals
+- SKU: 41201107
+- EAN: 8595011146981
+- Recommended category: Hořčík a minerály
+- Form: Šumivé tablety
+- Need states: hořčík
+- Image: https://img.nasevitaminy.cz/images/41201107_Revital_Botanicals_Magnezium_B6_20_efff_tbl_3DK_CZ_WEB_fast_6215cc.jpg?tid=20
+
+## Short Description
+s příchutí maliny, višně a levandule
+
+## Attributes
+- Výrobce: VITAR, s.r.o.
+- Kód: 41201107
+- EAN: 8595011146981
+- Dostupnost: Na skladě víc než 10 ks
+
+## Popis
+Šumivé tablety s obsahem hořčíku, vitaminu B6 a rostlinných extraktů. Přírodní harmonie chutného ovoce a bylin v každém doušku. S příchutí maliny, višně a levandule, s extrakty z levandule a schizandry.
+
+## Popis 2
+Objevte novou dimenzi osvěžení s Revital Botanicals. Obsahuje bylinné extrakty z levandule a schizandry, vlákninu z čekanky a aktivní látky, které podporují psychiku a správné fungování nervové soustavy. Podílejí se na energetickém metabolismu a pomáhají při únavě a vyčerpání. Schizandra (Schisandra chinensis) je všeobecně známá jako Klanopraška čínská, obsahuje adaptogenní látky, které podporují odolnost organismu při fyzické zátěži či stresových situacích. Podílí se na mentální pohodě a vyrovnanosti. Působí jako antioxidant a látka prospěšná pro zdraví dýchacího systému a jater. Levandule lékařská (Lavandula augustifolia) podporuje relaxaci a uklidnění. Podílí se na uvolnění celého organismu při tělesném vypětí a pomáhá navodit klidný spánek. S příchutí višně, maliny a levandule. Tablety s obsahem hořčíku, vitaminu B6 a rostlinných extraktů. Se sladidly. Informace pro diabetiky: Neobsahuje cukr. Aktivní složky v 1 tabletě – ve 200 ml nápoje (% RHP*) extrakt z levandule lékařské (Lavandula angustifolia) 50 mg extrakt ze schizandry (Schisandra chinensis) 50 mg magnesium (oxid hořečnatý, laktát hořečnatý) 300 mg vitamin B6 (pyridoxin hydrochlorid) 1,4 mg (100 %) vláknina – inulin 120 mg * referenční hodnota příjmu Složení: kyselina – kyselina citronová, sladidlo – sorbitol, regulátor kyselosti – hydrogenuhličitan sodný, oxid hořečnatý, laktát hořečnatý, vláknina z čekanky – inulin, protispékavá látka – polyethylenglykol, extrakt z květů levandule, extrakt z plodů schizandry, přírodní aromata, přírodní levandulové aroma s jinými přírodními aromaty, barvivo – koncentrát z červené řepy, malinový prášek 0,5 %, protispékavá látka - talek, sladidla – sukralóza, citróza (neohesperidin DC), pyridoxin hydrochlorid. Doporučené denní dávkování: dospělí a děti od 12 let 1 tableta denně. Není určeno pro děti do 12 let, těhotné a kojící ženy. Tabletu rozpusťte ve 200 ml vody. Přítomnost jemných a nerozpuštěných částic je přirozenou vlastností výrobku a není na závadu. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění: nadměrná konzumace může vyvolat projímavé účinky. Tubu těsně uzavírejte! Ukládejte mimo dosah dětí! Skladujte v suchu při teplotě od 5 °C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na spodní straně obalu
+
+## Popis 3
+Objevte novou dimenzi osvěžení s Revital Botanicals. Obsahuje bylinné extrakty z levandule a schizandry, vlákninu z čekanky a aktivní látky, které podporují psychiku a správné fungování nervové soustavy. Podílejí se na energetickém metabolismu a pomáhají při únavě a vyčerpání. Schizandra (Schisandra chinensis) je všeobecně známá jako Klanopraška čínská, obsahuje adaptogenní látky, které podporují odolnost organismu při fyzické zátěži či stresových situacích. Podílí se na mentální pohodě a vyrovnanosti. Působí jako antioxidant a látka prospěšná pro zdraví dýchacího systému a jater. Levandule lékařská (Lavandula augustifolia) podporuje relaxaci a uklidnění. Podílí se na uvolnění celého organismu při tělesném vypětí a pomáhá navodit klidný spánek. S příchutí višně, maliny a levandule. Tablety s obsahem hořčíku, vitaminu B6 a rostlinných extraktů. Se sladidly. Informace pro diabetiky: Neobsahuje cukr. Aktivní složky v 1 tabletě – ve 200 ml nápoje (% RHP*) extrakt z levandule lékařské (Lavandula angustifolia) 50 mg extrakt ze schizandry (Schisandra chinensis) 50 mg magnesium (oxid hořečnatý, laktát hořečnatý) 300 mg vitamin B6 (pyridoxin hydrochlorid) 1,4 mg (100 %) vláknina – inulin 120 mg * referenční hodnota příjmu Složení: kyselina – kyselina citronová, sladidlo – sorbitol, regulátor kyselosti – hydrogenuhličitan sodný, oxid hořečnatý, laktát hořečnatý, vláknina z čekanky – inulin, protispékavá látka – polyethylenglykol, extrakt z květů levandule, extrakt z plodů schizandry, přírodní aromata, přírodní levandulové aroma s jinými přírodními aromaty, barvivo – koncentrát z červené řepy, malinový prášek 0,5 %, protispékavá látka - talek, sladidla – sukralóza, citróza (neohesperidin DC), pyridoxin hydrochlorid. Doporučené denní dávkování: dospělí a děti od 12 let 1 tableta denně. Není určeno pro děti do 12 let, těhotné a kojící ženy. Tabletu rozpusťte ve 200 ml vody. Přítomnost jemných a nerozpuštěných částic je přirozenou vlastností výrobku a není na závadu. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění: nadměrná konzumace může vyvolat projímavé účinky. Tubu těsně uzavírejte! Ukládejte mimo dosah dětí! Skladujte v suchu při teplotě od 5 °C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na spodní straně obalu
+
+## Popis 4
+ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář

@@ -1,0 +1,33 @@
+# Maxi Vita Premium Probiotika + vitamin C
+
+- Source: nasevitaminy.cz
+- URL: https://www.nasevitaminy.cz/maxi-vita-premium-probiotika-vitamin-c
+- Brand: Maxi Vita
+- SKU: 43200311
+- EAN: 8595011144376
+- Recommended category: Imunita a nachlazení
+- Form: Neurčeno
+- Need states: vitamin c
+- Image: https://img.nasevitaminy.cz/images/graphic/Import/3d_mxv_stick_probiotika_web_1.jpg?tid=20
+
+## Short Description
+Sypká směs ve formě jednorázových sáčků, které umožňují vysoce komfortní užívání bez nutnosti zapíjení, obsahuje směs 4 probiotických kmenů, které mohou střevní mikroflóru obohatit. Mezi nimi je LactoSpore® - Bacillus coagulans, kmen, který se vyznačuje odolností vůči vysokým teplotám a kyselému prostředí. Významnou složkou je i rozpustná prebiotická vláknina GOFOS™ - fruktooligosacharidy, která je prospěšná pro střevní mikroflóru.
+
+## Attributes
+- Výrobce: VITAR, s.r.o.
+- Kód: 43200311
+- EAN: 8595011144376
+- Hmotnost: 0,07 kg
+- Dostupnost: Na skladě 10 ks
+
+## Popis
+Sypká směs ve formě jednorázových sáčků, které umožňují vysoce komfortní užívání bez nutnosti zapíjení, obsahuje směs 4 probiotických kmenů, které mohou střevní mikroflóru obohatit. Mezi nimi je LactoSpore® - Bacillus coagulans, kmen, který se vyznačuje odolností vůči vysokým teplotám a kyselému prostředí. Významnou složkou je i rozpustná prebiotická vláknina GOFOS™ - fruktooligosacharidy, která je prospěšná pro střevní mikroflóru.
+
+## Popis 2
+Střevní mikroflóra (tzv. mikrobiom) je přirozenou součástí trávicího traktu. Je tvořen miliardami bakterií, které mají příznivý vliv na lidský organizmus. Harmonie střevní mikroflóry může být narušena celou řadou vlivů jako jsou nevhodná strava, přemíra cukrů, překyselení organizmu, stres či užívání antibiotik. Sypká směs ve formě jednorázových sáčků, které umožňují vysoce komfortní užívání bez nutnosti zapíjení, obsahuje směs 4 probiotických kmenů, které mohou střevní mikroflóru obohatit. Mezi nimi je LactoSpore® - Bacillus coagulans, kmen, který se vyznačuje odolností vůči vysokým teplotám a kyselému prostředí. Významnou složkou je i rozpustná prebiotická vláknina GOFOS™ - fruktooligosacharidy, která je prospěšná pro střevní mikroflóru. Probiotika jsou doplněna vitaminem C , který příznivě ovlivňuje fungování celého organizmu. Je významný antioxidant, podporuje energetický metabolizmus a správnou funkci imunitního a nervového systému, který ovládá činnost všech orgánů v těle. S prebiotickou vlákninou a příchutí pomeranče. Aktivní složky v 1 sáčku a % RHP* 4 probiotické kmeny 1,5 miliardy LactoSpore® Bacillus coagulans Lactobacillus acidophilus Lactobacillus plantarum Lactobacillus rhamnosus vitamin C 40 mg (50 %) GOFOS TM fruktooligosacharidy 60 mg * referenční hodnota příjmu Informace pro diabetiky: neobsahuje cukr. Složení: plnidlo – maltodextrin, směs probiotických kmenů (maltodextrin, LactoSpore® - Bacillus coagulans MTCC 5856, Lactobacillus acidophilus, Lactobacillus plantarum, Lactobacillus rhamnosus), vláknina – GOFOS TM fruktooligosacharidy, kyselina L-askorbová, přírodní aroma, kyselina – kyselina citronová, protispékavé látky – stearan hořečnatý, talek, oxid křemičitý, sladidla – sukralóza, citróza (neohesperidin DC). Doporučené dávkování: Dospělí a děti od 12 let 1 sáček denně. Obsah sáčku nasypte do úst, pomalu nechejte rozpustit. Sypká směs se postupně přemění ve žvýkací hmotu, která se následně v ústech zcela rozpustí. Obsah sáčku lze rozmíchat také ve studené nebo vlažné vodě. Není určeno pro děti do 12 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.
+
+## Popis 3
+Střevní mikroflóra (tzv. mikrobiom) je přirozenou součástí trávicího traktu. Je tvořen miliardami bakterií, které mají příznivý vliv na lidský organizmus. Harmonie střevní mikroflóry může být narušena celou řadou vlivů jako jsou nevhodná strava, přemíra cukrů, překyselení organizmu, stres či užívání antibiotik. Sypká směs ve formě jednorázových sáčků, které umožňují vysoce komfortní užívání bez nutnosti zapíjení, obsahuje směs 4 probiotických kmenů, které mohou střevní mikroflóru obohatit. Mezi nimi je LactoSpore® - Bacillus coagulans, kmen, který se vyznačuje odolností vůči vysokým teplotám a kyselému prostředí. Významnou složkou je i rozpustná prebiotická vláknina GOFOS™ - fruktooligosacharidy, která je prospěšná pro střevní mikroflóru. Probiotika jsou doplněna vitaminem C , který příznivě ovlivňuje fungování celého organizmu. Je významný antioxidant, podporuje energetický metabolizmus a správnou funkci imunitního a nervového systému, který ovládá činnost všech orgánů v těle. S prebiotickou vlákninou a příchutí pomeranče. Aktivní složky v 1 sáčku a % RHP* 4 probiotické kmeny 1,5 miliardy LactoSpore® Bacillus coagulans Lactobacillus acidophilus Lactobacillus plantarum Lactobacillus rhamnosus vitamin C 40 mg (50 %) GOFOS TM fruktooligosacharidy 60 mg * referenční hodnota příjmu Informace pro diabetiky: neobsahuje cukr. Složení: plnidlo – maltodextrin, směs probiotických kmenů (maltodextrin, LactoSpore® - Bacillus coagulans MTCC 5856, Lactobacillus acidophilus, Lactobacillus plantarum, Lactobacillus rhamnosus), vláknina – GOFOS TM fruktooligosacharidy, kyselina L-askorbová, přírodní aroma, kyselina – kyselina citronová, protispékavé látky – stearan hořečnatý, talek, oxid křemičitý, sladidla – sukralóza, citróza (neohesperidin DC). Doporučené dávkování: Dospělí a děti od 12 let 1 sáček denně. Obsah sáčku nasypte do úst, pomalu nechejte rozpustit. Sypká směs se postupně přemění ve žvýkací hmotu, která se následně v ústech zcela rozpustí. Obsah sáčku lze rozmíchat také ve studené nebo vlažné vodě. Není určeno pro děti do 12 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.
+
+## Popis 4
+ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář

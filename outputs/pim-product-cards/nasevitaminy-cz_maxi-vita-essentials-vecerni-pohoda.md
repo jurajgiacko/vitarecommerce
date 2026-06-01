@@ -1,0 +1,32 @@
+# Maxi Vita Essentials Večerní pohoda
+
+- Source: nasevitaminy.cz
+- URL: https://www.nasevitaminy.cz/maxi-vita-essentials-vecerni-pohoda
+- Brand: Maxi Vita Essentials
+- SKU: 42300608
+- EAN: 8595011149548
+- Recommended category: Hořčík a minerály
+- Form: Neurčeno
+- Need states: hořčík
+- Image: https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Essentials_Vecerni_pohoda_WEB_fast_e8b464.jpg?tid=20
+
+## Short Description
+Maxi Vita Essentials Večerní pohoda je vysoce vstřebatelná forma hořčíku pro podporu svalové činnosti, výdrže a koncentrace. Přispívá k normální funkci svalů a nervové soustavy, energetickému metabolismu a pomáhá snižovat míru únavy.
+
+## Attributes
+- Výrobce: VITAR, s.r.o.
+- Kód: 42300608
+- EAN: 8595011149548
+- Dostupnost: Na skladě víc než 10 ks
+
+## Popis
+Hořčík patří mezi klíčové minerály, které se podílejí na stovkách procesů v těle – od činnosti svalů a nervové soustavy až po tvorbu energie. Jeho příjem však bývá často nedostatečný. Velkou roli proto hraje i jeho forma. Bisglycinát je šetrná a dobře vstřebatelná forma hořčíku, ve které je navázán na aminokyselinu glycin, což podporuje jeho využitelnost v organismu.
+
+## Popis 2
+Proč záleží na formě hořčíku? Chelátová forma pro lepší vstřebatelnost Běžné tržní formy hořčíku - jako oxid nebo uhličitan hořečnatý - mají vstřebatelnost přibližně 4-10 %. Znamená to, že většina užitého hořčíku tělem pouze projde, aniž by byla využita. Navíc tyto formy často způsobují zažívací obtíže. Bisglycinát funguje jinak. Hořčík je v něm vázán na dvě molekuly aminokyseliny glycin. Tato vazba ho chrání před reakcemi v zažívacím traktu a umožňuje vstřebání přes střevní stěnu podobně jako aminokyseliny - tedy výrazně efektivněji. Glycin přináší další benefity Glycin není pouhým nosičem. Je to aminokyselina, která sama o sobě podporuje relaxaci a zklidnění nervové soustavy, svalové uvolnění a klidnou mysl před spaním. Proto je bisglycinát často volbou pro večerní užívání, kdy potřebujete podpořit regeneraci a kvalitní spánek. Aktivní forma vitaminu B6 Produkt obsahuje vitamin B6 ve formě pyridoxal-5-fosfátu (P-5-P). Jde o biologicky aktivní formu vitaminu B6, kterou dokáže tělo okamžitě využít bez nutnosti transmormace v játrech. Tím se stává tato forma vitaminu pro lidský organizmus efektivnější. Aktivní složky Ve 2 kapslích (% RHP*) Ve 4 kapslích (% RHP*) Hořčík (bisglycinát hořečnatý) 150 mg (40 %) 300 mg (80 %) Vitamin B6 (pyridoxal-5-fosfát) 1,4 mg (100 %) 2,8 mg (200 %) * referenční hodnota příjmu Složení obsahu kapsle: bisglycinát hořečnatý, protispékavá látka-stearan hořečnatý, plnidlo-mikrokrystalická celulóza, pyridoxal-5-fosfát. Složení obalu kapsle: rostlinná kapsle na bázi HPMC, oxid zinečnatý. Doporučené denní dávkování: dospělí 2-4 kapsle denně, zapít dostatečným množstvím tekutiny. Běžná denní podpora: 2 kapsle večer. Zvýšená potřeba, aktivní životní styl: 4 kapsle (2 ráno + 2 večer). Podpora relaxace a spánku: 2-4 kapsle hodinu před spaním. ‍Kapsle zapijte dostatečným množstvím vody. Můžete užívat s jídlem i nalačno. Není určeno pro děti do 18 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění: ukládejte mimo dosah dětí! Skladujte v suchu při teplotě od 5 °C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na obalu.
+
+## Popis 3
+Proč záleží na formě hořčíku? Chelátová forma pro lepší vstřebatelnost Běžné tržní formy hořčíku - jako oxid nebo uhličitan hořečnatý - mají vstřebatelnost přibližně 4-10 %. Znamená to, že většina užitého hořčíku tělem pouze projde, aniž by byla využita. Navíc tyto formy často způsobují zažívací obtíže. Bisglycinát funguje jinak. Hořčík je v něm vázán na dvě molekuly aminokyseliny glycin. Tato vazba ho chrání před reakcemi v zažívacím traktu a umožňuje vstřebání přes střevní stěnu podobně jako aminokyseliny - tedy výrazně efektivněji. Glycin přináší další benefity Glycin není pouhým nosičem. Je to aminokyselina, která sama o sobě podporuje relaxaci a zklidnění nervové soustavy, svalové uvolnění a klidnou mysl před spaním. Proto je bisglycinát často volbou pro večerní užívání, kdy potřebujete podpořit regeneraci a kvalitní spánek. Aktivní forma vitaminu B6 Produkt obsahuje vitamin B6 ve formě pyridoxal-5-fosfátu (P-5-P). Jde o biologicky aktivní formu vitaminu B6, kterou dokáže tělo okamžitě využít bez nutnosti transmormace v játrech. Tím se stává tato forma vitaminu pro lidský organizmus efektivnější. Aktivní složky Ve 2 kapslích (% RHP*) Ve 4 kapslích (% RHP*) Hořčík (bisglycinát hořečnatý) 150 mg (40 %) 300 mg (80 %) Vitamin B6 (pyridoxal-5-fosfát) 1,4 mg (100 %) 2,8 mg (200 %) * referenční hodnota příjmu Složení obsahu kapsle: bisglycinát hořečnatý, protispékavá látka-stearan hořečnatý, plnidlo-mikrokrystalická celulóza, pyridoxal-5-fosfát. Složení obalu kapsle: rostlinná kapsle na bázi HPMC, oxid zinečnatý. Doporučené denní dávkování: dospělí 2-4 kapsle denně, zapít dostatečným množstvím tekutiny. Běžná denní podpora: 2 kapsle večer. Zvýšená potřeba, aktivní životní styl: 4 kapsle (2 ráno + 2 večer). Podpora relaxace a spánku: 2-4 kapsle hodinu před spaním. ‍Kapsle zapijte dostatečným množstvím vody. Můžete užívat s jídlem i nalačno. Není určeno pro děti do 18 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění: ukládejte mimo dosah dětí! Skladujte v suchu při teplotě od 5 °C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na obalu.
+
+## Popis 4
+ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář

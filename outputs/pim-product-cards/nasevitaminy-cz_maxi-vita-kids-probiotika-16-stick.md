@@ -1,0 +1,33 @@
+# Maxi Vita Kids Probiotika
+
+- Source: nasevitaminy.cz
+- URL: https://www.nasevitaminy.cz/maxi-vita-kids-probiotika-16-stick
+- Brand: Maxi Vita
+- SKU: 44000002
+- EAN: 8595011147247
+- Recommended category: Děti
+- Form: Stick pack
+- Need states: stres
+- Image: https://img.nasevitaminy.cz/images/44000002_MaxiVita_Kids_Probiotika_stick_pack_16_sacku_3DK_WEB.jpg?tid=20
+
+## Short Description
+Střevní mikroflóra je přirozenou součástí trávicího traktu, je tvořena velkým množstvím bakterií, které se podílejí na správném zažívání. Harmonie střevní mikroflóry však může být narušena nevhodnou stravou, přemírou cukrů, stresem či užíváním antibiotik.
+
+## Attributes
+- Výrobce: VITAR, s.r.o.
+- Kód: 44000002
+- EAN: 8595011147247
+- Hmotnost: 0,06 kg
+- Dostupnost: Na skladě víc než 10 ks
+
+## Popis
+Střevní mikroflóra je přirozenou součástí trávicího traktu, je tvořena velkým množstvím bakterií, které se podílejí na správném zažívání. Harmonie střevní mikroflóry však může být narušena nevhodnou stravou, přemírou cukrů, stresem či užíváním antibiotik.
+
+## Popis 2
+Střevní mikroflóra je přirozenou součástí trávicího traktu, je tvořena velkým množstvím bakterií, které se podílejí na správném zažívání. Harmonie střevní mikroflóry však může být narušena nevhodnou stravou, přemírou cukrů, stresem či užíváním antibiotik. Maxi Vita Kids Probiotika obsahují 5 probiotických kmenů , které mohou střevní mikroflóru obohatit. Některé z nich se vyznačují vysokou stabilitou, jsou odolné vůči vysokým teplotám a kyselému prostředí. Významnou složkou je také prebiotická vláknina GOFOS™ , která je pro střevní mikroflóru prospěšná. Pro správnou funkci imunitního systému je důležitý vitamin C a D3, který má příznivý vliv i na zdravý růst a vývin kostí u dětí. Maxi Vita Kids Probiotika nabízí více možností užívání – směs je možné vsypat do jídla, nápojů nebo přímo do úst, kde se přemění na žvýkací hmotu a následně se zcela rozpustí. Děti si probiotika s jahodovou příchutí zamilují. Aktivní složky v 1 sáčku a % RHP* 5 probiotických kmenů LactoSpore® – Bacillus coagulans LifeinU™ – Bacillus subtillis Lactobacillus acidophilus Lactobacillus plantarum Lactobacillus rhamnosus 2 miliardy CFU** Vitamin C 40 mg (50 %) Vitamin D3 12,5 μg / 500 IU (250 %) GOFOS™ fruktooligosacharidy 60 mg *referenční hodnota příjmu Složení : plnidlo – maltodextrin, vláknina – GOFOSTM fruktooligosacharidy, kyselina L-askorbová, přírodní aroma, LifeinUTM Bacillus subtilis CNCM I-2745, LactoSpore® Bacillus coagulans MTCC 5856, protispékavé látky – stearan hořečnatý, oxid křemičitý, talek, kyselina – kyselina citronová, cholekalciferol, směs probiotických kmenů (Lactobacillus acidophilus LMG 8151, Lactobacillus plantarum LMG 26655, Lactobacillus rhamnosus LMG 25626), jahodový prášek 0,1 %, sladidla – sukralóza, citróza (neohesperidin DC). Informace pro diabetiky: neobsahuje cukr. Doporučené dávkování : děti od 3 do 12 let 1 sáček denně, dospělí a děti od 12 let 1–2 sáčky denně. Obsah sáčku rozmíchejte ve studené či vlažné vodě, mléce, kaši, anebo jej vsypte přímo do úst, kde se přemění na žvýkací hmotu a následně se zcela rozpustí. Není určeno pro děti do 3 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění : ukládejte mimo dosah dětí. Skladujte v suchu při teplotě od 5°C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na spodní straně obalu.
+
+## Popis 3
+Střevní mikroflóra je přirozenou součástí trávicího traktu, je tvořena velkým množstvím bakterií, které se podílejí na správném zažívání. Harmonie střevní mikroflóry však může být narušena nevhodnou stravou, přemírou cukrů, stresem či užíváním antibiotik. Maxi Vita Kids Probiotika obsahují 5 probiotických kmenů , které mohou střevní mikroflóru obohatit. Některé z nich se vyznačují vysokou stabilitou, jsou odolné vůči vysokým teplotám a kyselému prostředí. Významnou složkou je také prebiotická vláknina GOFOS™ , která je pro střevní mikroflóru prospěšná. Pro správnou funkci imunitního systému je důležitý vitamin C a D3, který má příznivý vliv i na zdravý růst a vývin kostí u dětí. Maxi Vita Kids Probiotika nabízí více možností užívání – směs je možné vsypat do jídla, nápojů nebo přímo do úst, kde se přemění na žvýkací hmotu a následně se zcela rozpustí. Děti si probiotika s jahodovou příchutí zamilují. Aktivní složky v 1 sáčku a % RHP* 5 probiotických kmenů LactoSpore® – Bacillus coagulans LifeinU™ – Bacillus subtillis Lactobacillus acidophilus Lactobacillus plantarum Lactobacillus rhamnosus 2 miliardy CFU** Vitamin C 40 mg (50 %) Vitamin D3 12,5 μg / 500 IU (250 %) GOFOS™ fruktooligosacharidy 60 mg *referenční hodnota příjmu Složení : plnidlo – maltodextrin, vláknina – GOFOSTM fruktooligosacharidy, kyselina L-askorbová, přírodní aroma, LifeinUTM Bacillus subtilis CNCM I-2745, LactoSpore® Bacillus coagulans MTCC 5856, protispékavé látky – stearan hořečnatý, oxid křemičitý, talek, kyselina – kyselina citronová, cholekalciferol, směs probiotických kmenů (Lactobacillus acidophilus LMG 8151, Lactobacillus plantarum LMG 26655, Lactobacillus rhamnosus LMG 25626), jahodový prášek 0,1 %, sladidla – sukralóza, citróza (neohesperidin DC). Informace pro diabetiky: neobsahuje cukr. Doporučené dávkování : děti od 3 do 12 let 1 sáček denně, dospělí a děti od 12 let 1–2 sáčky denně. Obsah sáčku rozmíchejte ve studené či vlažné vodě, mléce, kaši, anebo jej vsypte přímo do úst, kde se přemění na žvýkací hmotu a následně se zcela rozpustí. Není určeno pro děti do 3 let. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl. Upozornění : ukládejte mimo dosah dětí. Skladujte v suchu při teplotě od 5°C do 25 °C v dobře uzavřeném obalu. Minimální trvanlivost do konce data uvedeného na spodní straně obalu.
+
+## Popis 4
+ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář
