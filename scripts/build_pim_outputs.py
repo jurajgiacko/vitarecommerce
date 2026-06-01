@@ -11,6 +11,7 @@ OUT = ROOT / "outputs"
 REPORTS = OUT / "reports"
 HTML = OUT / "html"
 PROCESSED = ROOT / "data" / "processed"
+PUBLIC_DATA = OUT / "data"
 
 
 SEO_TEMPLATES = {
@@ -254,6 +255,7 @@ def separate_assortments(products):
 
 def write_json(products, masters, categories, brands, separate):
     PROCESSED.mkdir(parents=True, exist_ok=True)
+    PUBLIC_DATA.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "raw_records": len(products),
@@ -269,7 +271,9 @@ def write_json(products, masters, categories, brands, separate):
         "competitor_notes": COMPETITOR_NOTES,
         "products": masters,
     }
-    (PROCESSED / "pim-master.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload_json = json.dumps(payload, ensure_ascii=False, indent=2)
+    (PROCESSED / "pim-master.json").write_text(payload_json, encoding="utf-8")
+    (PUBLIC_DATA / "pim-master.json").write_text(payload_json, encoding="utf-8")
     return payload
 
 
