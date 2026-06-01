@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MASTER = ROOT / "data" / "processed" / "pim-master.json"
+RAW_PRODUCTS = ROOT / "data" / "processed" / "products.json"
 OUT = ROOT / "outputs"
 PROCESSED = ROOT / "data" / "processed"
 PUBLIC_DATA = OUT / "data"
@@ -83,6 +84,18 @@ def norm(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
+def master_key(product):
+    return product.get("ean") or product.get("sku") or product.get("product_id")
+
+
+def load_raw_index():
+    payload = json.loads(RAW_PRODUCTS.read_text(encoding="utf-8"))
+    index = defaultdict(list)
+    for product in payload["products"]:
+        index[master_key(product)].append(product)
+    return index
+
+
 def haystack(product):
     pieces = [
         product.get("name"),
@@ -101,6 +114,76 @@ def match_rules(text, rules):
         if any(word in text for word in words):
             found.append(value)
     return found
+
+
+def field_present(record, field):
+    value = record.get(field)
+    if field == "form":
+        return bool(value and value.get("key") != "unknown")
+    if field == "content_sections":
+        return bool(value)
+    if field == "attributes":
+        return bool(value)
+    if isinstance(value, str):
+        return bool(norm(value))
+    return value is not None and value != []
+
+
+def preview_value(value):
+    if isinstance(value, dict):
+        if "label" in value:
+            return norm(value["label"])
+        return ", ".join(list(value.keys())[:5])
+    if isinstance(value, list):
+        return ", ".join(norm(v) for v in value[:5])
+    return norm(value)[:160]
+
+
+def source_analysis(product, raw_records):
+    by_site = {}
+    for record in raw_records:
+        site = record["source_site"]
+        current = by_site.get(site)
+        if not current or len(record.get("description") or "") > len(current.get("description") or ""):
+            by_site[site] = record
+
+    fields = ["sku", "ean", "price_czk", "availability", "description", "image", "form", "attributes", "content_sections"]
+    coverage = {}
+    links = {}
+    for site in ["vitar.cz", "nasevitaminy.cz"]:
+        record = by_site.get(site)
+        links[site] = record.get("url") if record else ""
+        coverage[site] = {field: field_present(record, field) if record else False for field in fields}
+
+    recoverable = []
+    for field in fields:
+        if field_present(product, field):
+            continue
+        for site, record in by_site.items():
+            if field_present(record, field):
+                recoverable.append({
+                    "field": field,
+                    "source_site": site,
+                    "value_preview": preview_value(record.get(field)),
+                    "url": record.get("url"),
+                })
+                break
+
+    complements = []
+    for field in fields:
+        sites = [site for site in ["vitar.cz", "nasevitaminy.cz"] if coverage[site][field]]
+        if len(sites) == 1:
+            complements.append({"field": field, "available_on": sites[0]})
+
+    return {
+        "source_count": len(raw_records),
+        "source_sites": sorted(by_site.keys()),
+        "has_both_sources": "vitar.cz" in by_site and "nasevitaminy.cz" in by_site,
+        "links": links,
+        "coverage": coverage,
+        "recoverable_missing_fields": recoverable,
+        "source_complements": complements,
+    }
 
 
 def infer_form(product):
@@ -234,6 +317,7 @@ def readiness(product, form, category, critical, warnings, action):
         "form_inferred_needs_check": 5,
         "category_recommended_change": 8,
         "missing_need_states": 4,
+        "missing_info_available_on_other_source": 2,
     }
     for flag in critical + warnings:
         score -= penalties.get(flag, 3)
@@ -251,7 +335,7 @@ def readiness(product, form, category, critical, warnings, action):
     return score, status
 
 
-def qa_product(product):
+def qa_product(product, raw_records):
     text = haystack(product)
     form = infer_form(product)
     category = proposed_category(product)
@@ -260,7 +344,11 @@ def qa_product(product):
     targets = match_rules(text, TARGET_RULES)
     diet_flags = match_rules(text, DIET_RULES)
     action = recommended_action(product, form, category, brand)
+    sources = source_analysis(product, raw_records)
     flags, critical, warnings = qa_flags(product, form, category, action)
+    if sources["recoverable_missing_fields"]:
+        warnings.append("missing_info_available_on_other_source")
+        flags.append("missing_info_available_on_other_source")
     score, status = readiness(product, form, category, critical, warnings, action)
     return {
         "master_key": product.get("pim_recommendation", {}).get("master_key"),
@@ -292,6 +380,10 @@ def qa_product(product):
         "warnings": warnings,
         "flags": flags,
         "source_records": product.get("source_records", []),
+        "source_analysis": sources,
+        "vitar_url": sources["links"].get("vitar.cz", ""),
+        "nasevitaminy_url": sources["links"].get("nasevitaminy.cz", ""),
+        "cross_source_recoverable_fields": [item["field"] for item in sources["recoverable_missing_fields"]],
     }
 
 
@@ -299,6 +391,14 @@ def summarize(rows, master_payload):
     main = [r for r in rows if r["assortment_scope"] == "main_vitar"]
     main_keep = [r for r in main if r["recommended_action"] in {"keep_in_main_pim", "keep_as_drinks_portfolio_review"}]
     categories = Counter(r["proposed_category"] for r in main_keep)
+    both_sources = sum(1 for r in rows if r["source_analysis"]["has_both_sources"])
+    recoverable_rows = [r for r in rows if r["cross_source_recoverable_fields"]]
+    source_field_counts = defaultdict(Counter)
+    for row in rows:
+        for site, coverage in row["source_analysis"]["coverage"].items():
+            for field, present in coverage.items():
+                if present:
+                    source_field_counts[site][field] += 1
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "master_products": len(rows),
@@ -313,6 +413,11 @@ def summarize(rows, master_payload):
         "current_category_count_sum": sum(c["count"] for c in master_payload["categories"]),
         "proposed_main_keep_count": len(main_keep),
         "current_counts_match": sum(c["count"] for c in master_payload["categories"]) == master_payload["main_products"],
+        "both_source_products": both_sources,
+        "single_source_products": len(rows) - both_sources,
+        "recoverable_missing_info_products": len(recoverable_rows),
+        "recoverable_missing_field_counts": dict(Counter(field for r in rows for field in r["cross_source_recoverable_fields"])),
+        "source_field_counts": {site: dict(counts) for site, counts in source_field_counts.items()},
         "products": rows,
     }
 
@@ -331,7 +436,8 @@ def write_outputs(payload):
         "qa_status", "readiness_score", "recommended_action", "name", "current_brand", "proposed_brand",
         "sku", "ean", "price_czk", "current_category", "proposed_category", "category_confidence",
         "current_form", "proposed_form", "form_confidence", "active_ingredients_suggested",
-        "target_groups_suggested", "diet_flags_suggested", "critical_issues", "warnings", "url",
+        "target_groups_suggested", "diet_flags_suggested", "critical_issues", "warnings",
+        "vitar_url", "nasevitaminy_url", "cross_source_recoverable_fields", "url",
     ]
     for csv_path in [PROCESSED / "product-qa.csv", PUBLIC_DATA / "product-qa.csv"]:
         with csv_path.open("w", encoding="utf-8", newline="") as fh:
@@ -339,7 +445,7 @@ def write_outputs(payload):
             writer.writeheader()
             for row in payload["products"]:
                 flat = dict(row)
-                for key in ["active_ingredients_suggested", "target_groups_suggested", "diet_flags_suggested", "critical_issues", "warnings"]:
+                for key in ["active_ingredients_suggested", "target_groups_suggested", "diet_flags_suggested", "critical_issues", "warnings", "cross_source_recoverable_fields"]:
                     flat[key] = ", ".join(flat.get(key) or [])
                 writer.writerow({field: flat.get(field, "") for field in csv_fields})
 
@@ -370,6 +476,7 @@ def write_report(payload):
     unassigned = [r for r in rows if "category_unassigned" in r["critical_issues"]]
     changed_categories = [r for r in rows if r["category_changed"]]
     brand_changes = [r for r in rows if r["brand_changed"]]
+    recoverable = [r for r in rows if r["cross_source_recoverable_fields"]]
 
     lines = [
         "# VITAR product QA and PIM readiness",
@@ -388,6 +495,9 @@ def write_report(payload):
         f"- Current separate count: {payload['separate_products_current']}",
         f"- Current category count sum: {payload['current_category_count_sum']} ({'OK' if payload['current_counts_match'] else 'MISMATCH'})",
         f"- Proposed main keep count after QA actions: {payload['proposed_main_keep_count']}",
+        f"- Products found on both `vitar.cz` and `nasevitaminy.cz`: {payload['both_source_products']}",
+        f"- Products found on one source only: {payload['single_source_products']}",
+        f"- Products with missing fields recoverable from the other source: {payload['recoverable_missing_info_products']}",
         "",
         "## QA Status",
         "",
@@ -425,6 +535,35 @@ def write_report(payload):
     ])
     for key, count in payload["warning_counts"].items():
         lines.append(f"- {key}: {count}")
+
+    lines.extend([
+        "",
+        "## Cross-source Field Coverage",
+        "",
+        "| Source | SKU | EAN | Price | Availability | Description | Image | Form | Attributes | Content sections |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ])
+    for site in ["vitar.cz", "nasevitaminy.cz"]:
+        counts = payload["source_field_counts"].get(site, {})
+        lines.append(
+            f"| {site} | {counts.get('sku', 0)} | {counts.get('ean', 0)} | {counts.get('price_czk', 0)} | "
+            f"{counts.get('availability', 0)} | {counts.get('description', 0)} | {counts.get('image', 0)} | "
+            f"{counts.get('form', 0)} | {counts.get('attributes', 0)} | {counts.get('content_sections', 0)} |"
+        )
+
+    lines.extend([
+        "",
+        "## Missing Info Recoverable From Other Source",
+        "",
+        "These are records where the selected master view misses a field, but another scraped source has it.",
+        "",
+    ])
+    lines.extend(md_table(recoverable[:100], [
+        ("Product", "name"),
+        ("Missing/recoverable fields", "cross_source_recoverable_fields"),
+        ("VITAR URL", "vitar_url"),
+        ("NašeVitamíny URL", "nasevitaminy_url"),
+    ]))
 
     lines.extend([
         "",
@@ -583,9 +722,18 @@ function init() {{
     ['Ready', DATA.qa_status_counts.ready || 0],
     ['Review', DATA.qa_status_counts.review || 0],
     ['Blocked', DATA.qa_status_counts.blocked || 0],
+    ['On both sources', DATA.both_source_products],
+    ['Recoverable info', DATA.recoverable_missing_info_products],
   ].map(([label,value]) => `<div class="stat"><b>${{value}}</b><span>${{label}}</span></div>`).join('');
 }}
 function pill(value, cls='') {{ return `<span class="pill ${{cls}}">${{value}}</span>`; }}
+function sourceLinks(p) {{
+  const links = [];
+  if (p.vitar_url) links.push(`<a href="${{p.vitar_url}}" target="_blank">vitar.cz</a>`);
+  if (p.nasevitaminy_url) links.push(`<a href="${{p.nasevitaminy_url}}" target="_blank">nasevitaminy.cz</a>`);
+  const recoverable = (p.cross_source_recoverable_fields || []).map(x => pill('can fill '+x, 'review')).join('');
+  return links.join('<br>') + (recoverable ? `<div>${{recoverable}}</div>` : '');
+}}
 function render() {{
   const q = document.getElementById('q').value.toLowerCase();
   const status = document.getElementById('status').value;
@@ -607,7 +755,7 @@ function render() {{
     <td>${{p.current_form}}${{p.current_form !== p.proposed_form ? '<br><b>→ '+p.proposed_form+'</b>' : ''}}<div class="muted">${{p.form_confidence}}</div></td>
     <td>${{(p.active_ingredients_suggested || []).map(x => pill(x)).join('')}}</td>
     <td>${{[...(p.critical_issues || []), ...(p.warnings || [])].map(x => pill(x, p.critical_issues.includes(x) ? 'blocked' : 'review')).join('')}}</td>
-    <td><a href="${{p.url}}" target="_blank">open</a></td>
+    <td>${{sourceLinks(p)}}</td>
   </tr>`).join('');
 }}
 init();
@@ -621,7 +769,8 @@ render();
 
 def main():
     master_payload = json.loads(MASTER.read_text(encoding="utf-8"))
-    rows = [qa_product(product) for product in master_payload["products"]]
+    raw_index = load_raw_index()
+    rows = [qa_product(product, raw_index.get(master_key(product), [])) for product in master_payload["products"]]
     payload = summarize(rows, master_payload)
     write_outputs(payload)
     print(json.dumps({
@@ -630,6 +779,8 @@ def main():
         "recommended_action_counts": payload["recommended_action_counts"],
         "current_counts_match": payload["current_counts_match"],
         "proposed_main_keep_count": payload["proposed_main_keep_count"],
+        "both_source_products": payload["both_source_products"],
+        "recoverable_missing_info_products": payload["recoverable_missing_info_products"],
         "html": str(HTML / "product-qa-dashboard.html"),
     }, ensure_ascii=False, indent=2))
 
