@@ -515,10 +515,12 @@ function setScope(next) {{
 function setCategory(next) {{
   scope = 'main_vitar';
   category = next;
+  brand = 'all';
   renderAll();
 }}
 function setBrand(next) {{
   scope = 'main_vitar';
+  category = 'all';
   brand = next;
   renderAll();
 }}
