@@ -468,7 +468,7 @@ textarea {{ width:100%; min-height:300px; border:1px solid var(--line); border-r
 <script>
 const DATA = {data};
 let currentTab = 'products';
-let scope = 'all';
+let scope = 'main_vitar';
 let category = 'all';
 let brand = 'all';
 let query = '';
@@ -489,6 +489,9 @@ function filtered() {{
 function scopedProducts() {{
   return DATA.products.filter(p => scope === 'all' || p.assortment_scope.key === scope);
 }}
+function mainProducts() {{
+  return DATA.products.filter(p => p.assortment_scope.key === 'main_vitar');
+}}
 function renderStats() {{
   document.getElementById('stats').innerHTML = `
     <span><b>${{DATA.master_products}}</b> master products</span>
@@ -506,24 +509,25 @@ function setScope(next) {{
   renderAll();
 }}
 function setCategory(next) {{
+  scope = 'main_vitar';
   category = next;
   renderAll();
 }}
 function setBrand(next) {{
+  scope = 'main_vitar';
   brand = next;
   renderAll();
 }}
 function renderSide() {{
   const scopes = [
-    ['all', 'All products', DATA.master_products],
     ['main_vitar', 'Main VITAR assortment', DATA.main_products],
-    ...DATA.separate_assortments.map(s => [s.key, s.label, s.count])
+    ...DATA.separate_assortments.map(s => [s.key, s.label + ' bokom', s.count])
   ];
   document.getElementById('separate').innerHTML = scopes.map(([key,label,n]) => `<div class="cat ${{key !== 'main_vitar' && key !== 'all' ? 'separate' : ''}} ${{scope===key?'active':''}}" onclick='setScope(${{JSON.stringify(key)}})'><span>${{label}}</span><span class="count">${{n}}</span></div>`).join('');
-  const productsForSide = scopedProducts();
-  const catRows = [['all', productsForSide.length], ...DATA.categories.map(c => [c.category, productsForSide.filter(p => p.category_recommendation.label === c.category).length]).filter(x => x[1] > 0)];
+  const productsForSide = mainProducts();
+  const catRows = [['all', DATA.main_products], ...DATA.categories.map(c => [c.category, c.count])];
   document.getElementById('cats').innerHTML = catRows.map(([c,n]) => `<div class="cat ${{category===c?'active':''}}" onclick='setCategory(${{JSON.stringify(c)}})'><span>${{c==='all'?'All main categories':c}}</span><span class="count">${{n}}</span></div>`).join('');
-  const brands = [['all', productsForSide.length], ...countBy(productsForSide, p => p.brand)];
+  const brands = [['all', DATA.main_products], ...DATA.brands.map(b => [b.brand, b.count])];
   document.getElementById('brands').innerHTML = brands.map(([b,n]) => `<div class="cat ${{brand===b?'active':''}}" onclick='setBrand(${{JSON.stringify(b)}})'><span>${{b==='all'?'All brands':b}}</span><span class="count">${{n}}</span></div>`).join('');
 }}
 function setTab(tab) {{
@@ -549,13 +553,16 @@ function productCard(p) {{
 }}
 function renderProducts() {{
   const list = filtered();
-  const scopeOptions = [['all','All products'], ['main_vitar','Main VITAR assortment'], ...DATA.separate_assortments.map(s => [s.key, s.label])];
+  const scopeOptions = [['main_vitar','Main VITAR assortment'], ...DATA.separate_assortments.map(s => [s.key, s.label + ' bokom'])];
+  const modeNote = scope === 'main_vitar'
+    ? 'Main category and brand filters are scoped to the VITAR human supplement assortment.'
+    : 'Separate portfolio view: this is kept outside the main category tree.';
   return `<div class="toolbar">
     <input placeholder="Search name, SKU, EAN..." value="${{query}}" oninput="query=this.value;renderView()">
     <select onchange="setScope(this.value)">${{scopeOptions.map(([k,l])=>`<option ${{scope===k?'selected':''}} value="${{k}}">${{l}}</option>`).join('')}}</select>
     <select onchange="setCategory(this.value)">${{['all',...DATA.categories.map(c=>c.category)].map(c=>`<option ${{category===c?'selected':''}} value="${{c}}">${{c==='all'?'All categories':c}}</option>`).join('')}}</select>
-    <select onchange="setBrand(this.value)">${{['all',...countBy(scopedProducts(),p=>p.brand).map(x=>x[0])].map(b=>`<option ${{brand===b?'selected':''}} value="${{b}}">${{b==='all'?'All brands':b}}</option>`).join('')}}</select>
-  </div><div class="meta" style="margin-bottom:10px">${{list.length}} visible products</div><div class="grid">${{list.map(productCard).join('')}}</div>`;
+    <select onchange="setBrand(this.value)">${{['all',...DATA.brands.map(b=>b.brand)].map(b=>`<option ${{brand===b?'selected':''}} value="${{b}}">${{b==='all'?'All brands':b}}</option>`).join('')}}</select>
+  </div><div class="meta" style="margin-bottom:10px">${{list.length}} visible products · ${{modeNote}}</div><div class="grid">${{list.map(productCard).join('')}}</div>`;
 }}
 function renderTaxonomy() {{
   return `<div class="panel"><h2>Separate portfolio</h2><div class="meta">These products stay visible for PIM and admin planning, but outside the main VITAR human supplement taxonomy.</div></div>
