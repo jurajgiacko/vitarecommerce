@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/vyvoj-a-kvalita
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Vývoj a kvalita | VITAR, s.r.o.
 - Meta description: Od požadavku na nový produkt až po jeho první výrobu. Tak by se dalo velmi stručně popsat poslání oddělení vývoje a legislativy, kterým VITAR jako tradiční výrobce vitaminových doplňků disponuje.

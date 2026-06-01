@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace/lekarny
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace/lekarny
+- Destination: vitar-group.cz/o-nas/spoluprace/lekarny
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Lékárny | VITAR, s.r.o.
 - Meta description: Máme odborný tým zaměřený na lékárenské velkoobchody, lékárny a prodejny se zdravou výživou, kam dodáváme naše doplňky stravy. Kontaktujte nás!

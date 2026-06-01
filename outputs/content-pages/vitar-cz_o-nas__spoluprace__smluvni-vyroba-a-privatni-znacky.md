@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace/smluvni-vyroba-a-privatni-znacky
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace/smluvni-vyroba-a-privatni-znacky
+- Destination: vitar-group.cz/o-nas/spoluprace/smluvni-vyroba-a-privatni-znacky
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Smluvní výroba a privátní značky | VITAR, s.r.o.
 - Meta description: VITAR je tradiční český výrobce vitaminových doplňků, který nabízí spolupráci i v oblasti smluvní výroby a výroby doplňků stravy pod privátní značkou. Kontaktujte nás!

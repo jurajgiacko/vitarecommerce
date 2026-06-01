@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/novinky/maxivita/
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/novinky/maxivita
+- Destination: vitar-group.cz/novinky/maxivita
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: MaxiVita | VITAR, s.r.o.
 - Meta description: Jsme tradiční český výrobce a distributor vitaminových doplňků, jednička na trhu ve svém oboru v obchodních řetězcích a drogeriích v Česku a na Slovensku. Naše rodinná firma vznikla již v roce 1990 a dnes patří k předním českým producentům. Vitaminy, minerální látky a další doplňky stravy nabízíme i v lékárnách, vyvážíme je také do zahraničí.

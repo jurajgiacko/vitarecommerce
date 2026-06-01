@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/ekonomika
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Finanční | VITAR, s.r.o.
 - Meta description: Veškerou ekonomickou agendu ve VITARu spravují účetní a finanční ředitelka. Zabývají se kompletní ekonomikou VITARu i dceřiných společností. Jak to u nich chodí?

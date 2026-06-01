@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/export
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Export a smluvní výroba | VITAR, s.r.o.
 - Meta description: Doplňky stravy vyrobené ve VITARu jsou dostupné kromě Česka a Slovenska v dalších 40 zemích světa. Seznamte se s naším exportním oddělením, pod které spadá také smluvní a privátní výroba.

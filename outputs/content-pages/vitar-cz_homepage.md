@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/homepage/
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/homepage
+- Destination: vitar-group.cz/homepage
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: VITAR, s.r.o.: Vitaminy, minerální látky, doplňky stravy
 - Meta description: Jsme tradiční český výrobce vitaminových doplňků s historií od roku 1990. Pomáháme lidem vést zdravější život prostřednictvím kvalitních doplňků stravy i řadou projektů.

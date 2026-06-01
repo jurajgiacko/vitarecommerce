@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/marketing
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Marketing | VITAR, s.r.o.
 - Meta description: Podpora péče o značky, zvyšování jejich známosti a budování poptávky je jedním z hlavních úkolů marketingu VITARu, tradičního českého výrobce vitaminových doplňků. Mrkněte, jak to u nás vypadá!

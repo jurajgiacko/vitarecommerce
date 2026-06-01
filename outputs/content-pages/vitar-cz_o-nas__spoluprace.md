@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace
+- Destination: vitar-group.cz/o-nas/spoluprace
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Pro partnery | VITAR, s.r.o.
 - Meta description: Chcete spolupracovat s VITARem, tradičním českým výrobcem vitaminových doplňků? Kontaktujte členy našich týmů pro lékárny, obchodní řetězce a drogerie, export, smluvní výrobu nebo pro prodej vitaminů do firem.

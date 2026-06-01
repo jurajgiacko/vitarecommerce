@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/pribeh-vitaru
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/pribeh-vitaru
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/pribeh-vitaru
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Příběh VITARu | VITAR, s.r.o.
 - Meta description: Za úspěchem VITARu stojí silná vize a odhodlání k jejímu naplnění. Seznamte se s unikátním příběhem rodinné firmy, tradičního českého výrobce vitaminů, minerálních látek a doplňků stravy.

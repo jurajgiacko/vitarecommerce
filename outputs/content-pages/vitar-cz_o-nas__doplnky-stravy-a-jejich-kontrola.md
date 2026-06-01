@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/doplnky-stravy-a-jejich-kontrola
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/doplnky-stravy-a-jejich-kontrola
+- Destination: vitar-group.cz/o-nas/doplnky-stravy-a-jejich-kontrola
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Doplňky stravy a jejich kontrola | VITAR, s.r.o.
 - Meta description: Jaké mechanismy fungují pro kontrolu doplňků stravy, jaké požadavky musí splňovat a kdo je vlastně kontroluje?

@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace/export
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace/export
+- Destination: vitar-group.cz/o-nas/spoluprace/export
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Export | VITAR, s.r.o.
 - Meta description: Doplňky stravy od VITARu jsou dostupné v téměř 40 zemích světa. Pokud máte i vy zájem s námi spolupracovat, náš exportní tým je vám k dispozici!

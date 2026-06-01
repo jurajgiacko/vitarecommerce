@@ -69,19 +69,19 @@ def suggested_destination(record):
     if any(x in path_l for x in ["veterinae", "veterina", "pro-zvirata", "pro-zvireci-mazlicky"]):
         return {
             "action": "move_to_veterina_shop",
-            "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+            "destination": "dedicated VITAR Veterina e-shop / domain TBD",
             "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy.",
         }
     if family == "corporate_group":
         return {
             "action": "move_to_group_web",
-            "destination": f"vittar.group/{path}",
+            "destination": f"vitar-group.cz/{path}",
             "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.",
         }
     if family == "career":
         return {
             "action": "move_to_group_web",
-            "destination": "vittar.group/kariera",
+            "destination": "vitar-group.cz/kariera",
             "reason": "Employer branding and hiring should be centralized on the group website.",
         }
     if family == "brand_landing":
@@ -111,8 +111,8 @@ def suggested_destination(record):
     if family == "article_or_knowledge":
         return {
             "action": "audit_for_knowledge_base",
-            "destination": "vitar.cz/blog or knowledge base",
-            "reason": "Useful for SEO and recommender context, but needs medical/legal claim review.",
+            "destination": "vitar-group.cz/expertise",
+            "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing.",
         }
     return {
         "action": "manual_review",
@@ -239,7 +239,7 @@ def write_report(bundle):
         "",
         "Verdict: this is enough for discovery, vendor briefing and information architecture, but not yet enough for a final e-shop build. The product scrape gives a strong first PIM seed, but the new platform still needs enriched active ingredients, dosage, claims/legal review, availability/pricing source of truth, redirect rules and final brand architecture decisions.",
         "",
-        "Given the 2026 VITAR GROUP context, the build should be split into three workstreams: `vittar.group` for corporate/employer/B2B trust, `vitar.cz` for D2C shop and knowledge base, and a separate Veterina shop/BU for veterinary products.",
+        "Given the 2026 VITAR GROUP context, the build should be split into three workstreams: `vitar-group.cz` for corporate/employer/B2B trust, `vitar.cz` for a product-led D2C shop, and a separate Veterina shop/BU for veterinary products.",
         "",
         "## Recommended Migration Actions",
         "",

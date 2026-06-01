@@ -4,8 +4,8 @@
 - URL: https://www.vitar.cz/pro-zdravi
 - Family: article_or_knowledge
 - Migration action: audit_for_knowledge_base
-- Destination: vitar.cz/blog or knowledge base
-- Reason: Useful for SEO and recommender context, but needs medical/legal claim review.
+- Destination: vitar-group.cz/expertise
+- Reason: Useful for group expertise and trust building, but needs medical/legal claim review before publishing.
 - Title: Pro zdraví | VITAR, s.r.o.
 - Meta description: Vydejte se s námi na cestu za zdravějším životem! Pomáháme vám řadou různých projektů - stačí se podívat a přidat k nám.
 

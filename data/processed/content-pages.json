@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T11:21:16.774582+00:00",
+  "generated_at": "2026-06-01T18:07:24.611923+00:00",
   "source_sites": [
     "vitar",
     "nasevitaminy"
@@ -568,7 +568,7 @@
       "images_count": 138,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -1123,7 +1123,7 @@
       "images_count": 138,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -1175,7 +1175,7 @@
       "images_count": 177,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/homepage",
+        "destination": "vitar-group.cz/homepage",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -1998,7 +1998,7 @@
       "images_count": 128,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -2190,7 +2190,7 @@
       "images_count": 131,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/novinky/maxivita",
+        "destination": "vitar-group.cz/novinky/maxivita",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -2664,7 +2664,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -2773,7 +2773,7 @@
       "images_count": 136,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -2963,7 +2963,7 @@
       "images_count": 177,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/",
+        "destination": "vitar-group.cz/",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3022,7 +3022,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas",
+        "destination": "vitar-group.cz/o-nas",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3049,7 +3049,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3078,7 +3078,7 @@
       "images_count": 129,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3110,7 +3110,7 @@
       "images_count": 131,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace",
+        "destination": "vitar-group.cz/o-nas/spoluprace",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3139,7 +3139,7 @@
       "images_count": 128,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/kde-koupite",
+        "destination": "vitar-group.cz/o-nas/kde-koupite",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3169,7 +3169,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/pro-media",
+        "destination": "vitar-group.cz/o-nas/pro-media",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3203,7 +3203,7 @@
       "images_count": 133,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/pomahame",
+        "destination": "vitar-group.cz/o-nas/pomahame",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3230,7 +3230,7 @@
       "images_count": 128,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/kdo-jsme",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/kdo-jsme",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3256,7 +3256,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/historie",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/historie",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3301,7 +3301,7 @@
       "images_count": 141,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/management",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/management",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3331,7 +3331,7 @@
       "images_count": 129,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/dcerine-spolecnosti",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/dcerine-spolecnosti",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3364,7 +3364,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3399,7 +3399,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/eticky-kodex",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/eticky-kodex",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3428,7 +3428,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace/lekarny",
+        "destination": "vitar-group.cz/o-nas/spoluprace/lekarny",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3464,7 +3464,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace/retail",
+        "destination": "vitar-group.cz/o-nas/spoluprace/retail",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3502,7 +3502,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace/export",
+        "destination": "vitar-group.cz/o-nas/spoluprace/export",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3530,7 +3530,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace/smluvni-vyroba-a-privatni-znacky",
+        "destination": "vitar-group.cz/o-nas/spoluprace/smluvni-vyroba-a-privatni-znacky",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3557,7 +3557,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spoluprace/prodej-do-firem",
+        "destination": "vitar-group.cz/o-nas/spoluprace/prodej-do-firem",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3585,7 +3585,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/certifikaty",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/certifikaty",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3629,8 +3629,8 @@
       "images_count": 145,
       "migration": {
         "action": "audit_for_knowledge_base",
-        "destination": "vitar.cz/blog or knowledge base",
-        "reason": "Useful for SEO and recommender context, but needs medical/legal claim review."
+        "destination": "vitar-group.cz/expertise",
+        "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing."
       }
     },
     {
@@ -3743,7 +3743,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3773,7 +3773,7 @@
       "images_count": 129,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/pribeh-vitaru",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/pribeh-vitaru",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -3813,8 +3813,8 @@
       "images_count": 127,
       "migration": {
         "action": "audit_for_knowledge_base",
-        "destination": "vitar.cz/blog or knowledge base",
-        "reason": "Useful for SEO and recommender context, but needs medical/legal claim review."
+        "destination": "vitar-group.cz/expertise",
+        "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing."
       }
     },
     {
@@ -3842,7 +3842,7 @@
       "images_count": 128,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3872,7 +3872,7 @@
       "images_count": 157,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3902,7 +3902,7 @@
       "images_count": 134,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3933,7 +3933,7 @@
       "images_count": 132,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3961,7 +3961,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -3991,7 +3991,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4025,7 +4025,7 @@
       "images_count": 144,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4056,7 +4056,7 @@
       "images_count": 134,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4087,7 +4087,7 @@
       "images_count": 137,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4118,7 +4118,7 @@
       "images_count": 132,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4197,7 +4197,7 @@
       "images_count": 177,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/",
+        "destination": "vitar-group.cz/",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4247,8 +4247,8 @@
       "images_count": 130,
       "migration": {
         "action": "audit_for_knowledge_base",
-        "destination": "vitar.cz/blog or knowledge base",
-        "reason": "Useful for SEO and recommender context, but needs medical/legal claim review."
+        "destination": "vitar-group.cz/expertise",
+        "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing."
       }
     },
     {
@@ -4277,7 +4277,7 @@
       "images_count": 130,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/spolupracujeme",
+        "destination": "vitar-group.cz/o-nas/spolupracujeme",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4305,7 +4305,7 @@
       "images_count": 128,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/doplnky-stravy-a-jejich-kontrola",
+        "destination": "vitar-group.cz/o-nas/doplnky-stravy-a-jejich-kontrola",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4333,7 +4333,7 @@
       "images_count": 134,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/reference-a-zkusenosti",
+        "destination": "vitar-group.cz/o-nas/reference-a-zkusenosti",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4395,8 +4395,8 @@
       "images_count": 134,
       "migration": {
         "action": "audit_for_knowledge_base",
-        "destination": "vitar.cz/blog or knowledge base",
-        "reason": "Useful for SEO and recommender context, but needs medical/legal claim review."
+        "destination": "vitar-group.cz/expertise",
+        "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing."
       }
     },
     {
@@ -4429,7 +4429,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/o-spolecnosti/pribeh-generalniho-reditele",
+        "destination": "vitar-group.cz/o-nas/o-spolecnosti/pribeh-generalniho-reditele",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4487,7 +4487,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4519,7 +4519,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4571,8 +4571,8 @@
       "images_count": 154,
       "migration": {
         "action": "audit_for_knowledge_base",
-        "destination": "vitar.cz/blog or knowledge base",
-        "reason": "Useful for SEO and recommender context, but needs medical/legal claim review."
+        "destination": "vitar-group.cz/expertise",
+        "reason": "Useful for group expertise and trust building, but needs medical/legal claim review before publishing."
       }
     },
     {
@@ -4630,7 +4630,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4660,7 +4660,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4687,7 +4687,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/udrzitelnost",
+        "destination": "vitar-group.cz/o-nas/udrzitelnost",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4726,7 +4726,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas/whistleblowing",
+        "destination": "vitar-group.cz/o-nas/whistleblowing",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },
@@ -4756,7 +4756,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4788,7 +4788,7 @@
       "images_count": 127,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4815,7 +4815,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4845,7 +4845,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4876,7 +4876,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4908,7 +4908,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -4958,7 +4958,7 @@
       "images_count": 126,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/kariera",
+        "destination": "vitar-group.cz/kariera",
         "reason": "Employer branding and hiring should be centralized on the group website."
       }
     },
@@ -5521,7 +5521,7 @@
       "images_count": 26,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -5565,7 +5565,7 @@
       "images_count": 42,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -6294,7 +6294,7 @@
       "images_count": 51,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -6575,7 +6575,7 @@
       "images_count": 50,
       "migration": {
         "action": "move_to_veterina_shop",
-        "destination": "veterina.vittar.group or dedicated VITAR Veterina e-shop",
+        "destination": "dedicated VITAR Veterina e-shop / domain TBD",
         "reason": "Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy."
       }
     },
@@ -8716,7 +8716,7 @@
       "images_count": 26,
       "migration": {
         "action": "move_to_group_web",
-        "destination": "vittar.group/o-nas",
+        "destination": "vitar-group.cz/o-nas",
         "reason": "Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer."
       }
     },

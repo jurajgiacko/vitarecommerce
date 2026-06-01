@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/historie
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/historie
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/historie
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Historie | VITAR, s.r.o.
 - Meta description: Seznamte se s historií VITARu - tradičního českého výrobce vitaminových doplňků. Na trhu působíme už od roku 1990 a jsme jedničkou v oblasti doplňků stravy v obchodních řetězcích a drogeriích.

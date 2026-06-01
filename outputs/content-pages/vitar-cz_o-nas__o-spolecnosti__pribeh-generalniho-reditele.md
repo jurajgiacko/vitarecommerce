@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/pribeh-generalniho-reditele
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/pribeh-generalniho-reditele
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/pribeh-generalniho-reditele
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Příběh generálního ředitele | VITAR, s.r.o.
 - Meta description: Seznamte se s generálním ředitelem VITARu a pokračovatelem rodinné tradice Vladimírem Poláškem jr.

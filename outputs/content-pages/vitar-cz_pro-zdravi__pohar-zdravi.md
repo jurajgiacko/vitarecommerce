@@ -4,8 +4,8 @@
 - URL: https://www.vitar.cz/pro-zdravi/pohar-zdravi
 - Family: article_or_knowledge
 - Migration action: audit_for_knowledge_base
-- Destination: vitar.cz/blog or knowledge base
-- Reason: Useful for SEO and recommender context, but needs medical/legal claim review.
+- Destination: vitar-group.cz/expertise
+- Reason: Useful for group expertise and trust building, but needs medical/legal claim review before publishing.
 - Title: Pohár zdraví | VITAR, s.r.o.
 - Meta description: Představujeme vám seriál plný pohybu pro celou rodinu, který čítá několik akcí po celé ČR. Udělejte něco pro sebe a zúčastněte i naší soutěže!
 

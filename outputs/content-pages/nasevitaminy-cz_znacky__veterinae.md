@@ -4,7 +4,7 @@
 - URL: https://www.nasevitaminy.cz/znacky/veterinae
 - Family: brand_landing
 - Migration action: move_to_veterina_shop
-- Destination: veterina.vittar.group or dedicated VITAR Veterina e-shop
+- Destination: dedicated VITAR Veterina e-shop / domain TBD
 - Reason: Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy.
 - Title: Pro vaše zvířecí miláčky
 - Meta description: Dceřiná společnost VITAR Veterinae nabízí veterinárními přípravky pro vaše zvířecí miláčky čítající preparáty na klouby a zuby, vitaminy a minerály nebo antiparazitální přípravky a šampony.

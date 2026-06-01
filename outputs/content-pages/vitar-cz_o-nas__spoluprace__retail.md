@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace/retail
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace/retail
+- Destination: vitar-group.cz/o-nas/spoluprace/retail
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Retail | VITAR, s.r.o.
 - Meta description: Máte-li zájem o doplňky stravy od tradičního českého výrobce vitaminových doplňků, kontaktujte nás! Naši specialisté jsou vám k dispozici.

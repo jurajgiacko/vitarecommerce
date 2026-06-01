@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti
+- Destination: vitar-group.cz/o-nas/o-spolecnosti
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: O společnosti | VITAR, s.r.o.
 - Meta description: VITAR je tradiční český výrobce vitaminových doplňků, jednička na trhu v oblasti doplňků stravy v obchodních řetězcích a drogeriích v Česku a na Slovensku. Vitaminy, minerální látky a další užitečné produkty nabízíme i v lékárnách a vyvážíme je do téměř 40 zemí světa.

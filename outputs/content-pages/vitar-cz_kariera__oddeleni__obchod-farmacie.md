@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/obchod-farmacie
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Obchod - farmacie | VITAR, s.r.o.
 - Meta description: Farmaceutická obchodní divize se stará o prodej a podporu doplňků stravy a dalších produktů VITARu v lékárnách, kde působíme už od roku 1990. Seznamte se s naší činností!

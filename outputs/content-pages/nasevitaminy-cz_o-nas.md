@@ -4,7 +4,7 @@
 - URL: https://www.nasevitaminy.cz/o-nas
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas
+- Destination: vitar-group.cz/o-nas
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: O nás
 - Meta description: 

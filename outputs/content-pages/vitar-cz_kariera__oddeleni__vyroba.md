@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/vyroba
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Výroba | VITAR, s.r.o.
 - Meta description: VITAR má svůj vlastní výrobní závod na výrobu doplňků stravy v Tišnově u Brna. Jak to u nás ve výrobě chodí? Podívejte se a přidejte se k nám!

@@ -4,7 +4,7 @@
 - URL: https://www.nasevitaminy.cz/produkty/pro-zvirata
 - Family: category_or_listing
 - Migration action: move_to_veterina_shop
-- Destination: veterina.vittar.group or dedicated VITAR Veterina e-shop
+- Destination: dedicated VITAR Veterina e-shop / domain TBD
 - Reason: Veterina is being split into its own BU and should not be part of the main VITAR.cz taxonomy.
 - Title: Pro zvířata
 - Meta description: Také zvířata potřebují dostatek vitaminů, minerálů a dalších důležitých látek, aby jejich organizmus správně fungoval. Doplnit je mohou kvalitními veterinárními přípravky VITAR Veterinae.

@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/pomahame
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/pomahame
+- Destination: vitar-group.cz/o-nas/pomahame
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Pomáháme | VITAR, s.r.o.
 - Meta description: Naše motto „Pomáháme lidem vést zdravější život“ se snažíme rozšiřovat i na kvalitu života jako takového. Je pro nás samozřejmé podělit se o svůj úspěch a finanční zisk s potřebnými.

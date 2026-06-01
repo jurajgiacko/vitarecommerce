@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Představení oddělení | VITAR, s.r.o.
 - Meta description: Seznamte se s prací jednotlivých odděleních VITARu - tradičního českého výrobce vitaminových doplňků. Přidejte se k nám a pomáhejte lidem vést zdravější život.

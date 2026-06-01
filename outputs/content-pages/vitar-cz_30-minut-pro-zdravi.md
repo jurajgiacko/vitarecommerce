@@ -4,8 +4,8 @@
 - URL: https://www.vitar.cz/30-minut-pro-zdravi
 - Family: article_or_knowledge
 - Migration action: audit_for_knowledge_base
-- Destination: vitar.cz/blog or knowledge base
-- Reason: Useful for SEO and recommender context, but needs medical/legal claim review.
+- Destination: vitar-group.cz/expertise
+- Reason: Useful for group expertise and trust building, but needs medical/legal claim review before publishing.
 - Title: 30 minut pro zdraví | VITAR, s.r.o.
 - Meta description: Jsme tradiční český výrobce a distributor vitaminových doplňků, jednička na trhu ve svém oboru v obchodních řetězcích a drogeriích v Česku a na Slovensku. Naše rodinná firma vznikla již v roce 1990 a dnes patří k předním českým producentům. Vitaminy, minerální látky a další doplňky stravy nabízíme i v lékárnách, vyvážíme je také do zahraničí.
 

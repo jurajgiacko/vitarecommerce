@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/volna-mista/serizovac-vyrobnich-linek
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Seřizovač | VITAR, s.r.o.
 - Meta description: Jsme tradiční český výrobce a distributor vitaminových doplňků, jednička na trhu ve svém oboru v obchodních řetězcích a drogeriích v Česku a na Slovensku. Naše rodinná firma vznikla již v roce 1990 a dnes patří k předním českým producentům. Vitaminy, minerální látky a další doplňky stravy nabízíme i v lékárnách, vyvážíme je také do zahraničí.

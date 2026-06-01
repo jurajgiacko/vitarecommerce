@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spoluprace/prodej-do-firem
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spoluprace/prodej-do-firem
+- Destination: vitar-group.cz/o-nas/spoluprace/prodej-do-firem
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Prodej do firem | VITAR, s.r.o.
 - Meta description: Chcete benefit pro zaměstnance v podobě vitaminových balíčků? Nabízíme plnění zdravotně-preventivních programů kvalitními vitaminy a dalšími doplňky stravy. Kontaktujte nás!

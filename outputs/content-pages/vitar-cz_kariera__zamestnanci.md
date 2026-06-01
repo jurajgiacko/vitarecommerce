@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/zamestnanci
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Příběhy zaměstnanců | VITAR, s.r.o.
 - Meta description: Prohlédněte si videomedailonky našich zaměstnanců. Třeba se pak rozhodnete přidat k nám a pomáhat lidem vést zdravější život.

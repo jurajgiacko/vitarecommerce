@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/dcerine-spolecnosti
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/dcerine-spolecnosti
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/dcerine-spolecnosti
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Skupina společností VITAR | VITAR, s.r.o.
 - Meta description: Seznamte se s dceřinými společnostmi VITARu, tradičního českého výrobce vitaminových doplňků. Mezi naše dceřinky patří VITAR Slovakia, VITAR Sport, VITAR Veterinae.

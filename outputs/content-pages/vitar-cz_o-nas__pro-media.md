@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/pro-media
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/pro-media
+- Destination: vitar-group.cz/o-nas/pro-media
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Pro média | VITAR, s.r.o.
 - Meta description: Jste zástupci médií a hledáte informace o doplňcích stravy? Obraťte se na nás. VITAR je tradiční český výrobce vitaminových doplňků s vlastním výrobním závodem a historií od roku 1990.

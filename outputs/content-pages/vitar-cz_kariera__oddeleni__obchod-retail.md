@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/obchod-retail
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Obchod - retail | VITAR, s.r.o.
 - Meta description: Retailový obchodní tým se stará o prodej a podporu doplňků stravy a dalších produktů VITARu v obchodních řetězcích, drogeriích, čerpacích stanicích a na nezávislém trhu.

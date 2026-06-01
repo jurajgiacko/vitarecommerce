@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/kde-koupite
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/kde-koupite
+- Destination: vitar-group.cz/o-nas/kde-koupite
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Kde koupíte | VITAR, s.r.o.
 - Meta description: Kde všude koupíte doplňky stravy od VITARu - tradičního českého výrobce vitamínových doplňků?

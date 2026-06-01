@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/eticky-kodex
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/eticky-kodex
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/eticky-kodex
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Etický kodex | VITAR, s.r.o.
 - Meta description: Našim zákazníkům i zaměstnancům garantujeme etické chování. Při všech činnostech se řídíme etickým kodexem, který je pro VITAR závazný. Podívejte se na naše zásady.

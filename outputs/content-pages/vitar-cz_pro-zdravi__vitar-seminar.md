@@ -4,8 +4,8 @@
 - URL: https://www.vitar.cz/pro-zdravi/vitar-seminar
 - Family: article_or_knowledge
 - Migration action: audit_for_knowledge_base
-- Destination: vitar.cz/blog or knowledge base
-- Reason: Useful for SEO and recommender context, but needs medical/legal claim review.
+- Destination: vitar-group.cz/expertise
+- Reason: Useful for group expertise and trust building, but needs medical/legal claim review before publishing.
 - Title: VITAR seminář | VITAR, s.r.o.
 - Meta description: VITAR semináře pro vás pořádáme, abychom vám pomohli na vaší cestě ke zdravějšímu životu. Přednášejí odborníci a fakta dává do souvislostí. Jdeme až k samotné podstatě a evoluci.
 

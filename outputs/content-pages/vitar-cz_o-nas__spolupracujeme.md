@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/spolupracujeme
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/spolupracujeme
+- Destination: vitar-group.cz/o-nas/spolupracujeme
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Spolupracujeme | VITAR, s.r.o.
 - Meta description: Spolupracujeme s vysokými školami, chráněnými dílnami či charitativními projekty. Podívejte jakými.

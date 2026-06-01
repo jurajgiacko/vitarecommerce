@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/o-nas/o-spolecnosti/management
 - Family: corporate_group
 - Migration action: move_to_group_web
-- Destination: vittar.group/o-nas/o-spolecnosti/management
+- Destination: vitar-group.cz/o-nas/o-spolecnosti/management
 - Reason: Group story, company trust, manufacturing and employer content belong to the VITAR GROUP corporate layer.
 - Title: Management | VITAR, s.r.o.
 - Meta description: Seznamte se s managementem naší rodinné firmy, tradičního českého výrobce vitaminových doplňků s historií od roku 1990.

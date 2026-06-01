@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/oddeleni/nakup-a-logistika
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Nákup a logistika | VITAR, s.r.o.
 - Meta description: Nákupy, zákaznický servis, sklady, expedice. To všechno spadá pod oddělení nákupu a logistiky. Jak to v něm chodí? Mrkněte a přidejte se k nám!

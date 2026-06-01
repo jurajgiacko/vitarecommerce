@@ -4,7 +4,7 @@
 - URL: https://www.vitar.cz/kariera/volna-mista
 - Family: career
 - Migration action: move_to_group_web
-- Destination: vittar.group/kariera
+- Destination: vitar-group.cz/kariera
 - Reason: Employer branding and hiring should be centralized on the group website.
 - Title: Volná místa | VITAR, s.r.o.
 - Meta description: Přidejte se k nám a dělejte práci, která má smysl. Pomáháme lidem vést zdravější život. Prohlédněte si volné pracovní pozice ve VITARu, u tradičního českého výrobce vitaminových doplňků.
