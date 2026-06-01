@@ -18,6 +18,13 @@ Main deliverables:
 - `outputs/html/vitar-category-planner.html` - interactive local category planner.
 - `outputs/pim-product-cards/*.md` - one markdown card per scraped product record.
 
+GitHub Pages publishes the `outputs/` directory. After Pages is enabled for this
+repository, the planner URL should be:
+
+```text
+https://jurajgiacko.github.io/vitarecommerce/
+```
+
 Run the pipeline:
 
 ```bash
