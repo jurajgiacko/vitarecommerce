@@ -1,6 +1,6 @@
 # VITAR product QA and PIM readiness
 
-Generated: 2026-06-01T19:20:35.888351+00:00
+Generated: 2026-06-02T07:44:30.946939+00:00
 
 ## Verdict
 
@@ -10,28 +10,28 @@ This is now a QA workbench, not only a scraped product list. Category counts are
 
 - Raw scraped records: 548
 - Master products: 333
-- Current main VITAR count: 293
-- Current separate count: 40
-- Current category count sum: 293 (OK)
-- Proposed main keep count after QA actions: 270
+- Current main VITAR count: 294
+- Current separate count: 39
+- Current category count sum: 294 (OK)
+- Proposed main keep count after QA actions: 271
 - Products found on both `vitar.cz` and `nasevitaminy.cz`: 214
 - Products found on one source only: 119
 - Products with missing fields recoverable from the other source: 114
 
 ## QA Status
 
-- review: 108
+- review: 109
 - blocked: 6
 - ready: 162
-- separate_review: 57
+- separate_review: 56
 
 ## Recommended Actions
 
 - keep_as_drinks_portfolio_review: 12
 - exclude_from_main_or_accessories: 6
-- keep_in_main_pim: 258
+- keep_in_main_pim: 259
 - separate_vitar_sport_review: 17
-- separate_veterinae: 40
+- separate_veterinae: 39
 
 ## Proposed Category Counts for Main Keep Assortment
 
@@ -44,7 +44,7 @@ This is now a QA workbench, not only a scraped product list. Category counts are
 | Repelenty a paraziti | 20 |
 | Nápoje a pitný režim | 18 |
 | Močové cesty | 16 |
-| Trávení a detox | 12 |
+| Trávení a detox | 13 |
 | Sladidla | 11 |
 | Zrak | 7 |
 | Děti | 6 |
@@ -134,6 +134,7 @@ These are records where the selected master view misses a field, but another scr
 | Maxi Vita Chrom + garcinia cambogia | form | https://www.vitar.cz/maxivita-chrom-garcinia-cambogia/ | https://www.nasevitaminy.cz/maxi-vita-chrom-garcinia-cambogia |
 | Maxi Vita Exclusive Erektor | form | https://www.vitar.cz/maxivita-exclusive-erektor/ | https://www.nasevitaminy.cz/maxi-vita-exclusive-erektor |
 | Maxi Vita Herbal Klidná střeva | form | https://www.vitar.cz/maxivita-herbal-klidna-streva/ | https://www.nasevitaminy.cz/maxi-vita-herbal-klidna-streva |
+| Maxi Vita Herbal Kurkuma | form | https://www.vitar.cz/maxi-vita-herbal-kurkuma/ | https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma |
 | Maxi Vita Exclusive Lutein forte+ | form | https://www.vitar.cz/maxivita-exclusive-lutein-forte/ | https://www.nasevitaminy.cz/maxi-vita-exclusive-lutein-forte |
 | Maxi Vita Exclusive Omega 3 forte+ | form | https://www.vitar.cz/maxivita-exclusive-omega-3-forte/ | https://www.nasevitaminy.cz/maxi-vita-exclusive-omega-3-forte |
 | Maxi Vita Herbal Očista jater | form | https://www.vitar.cz/maxivita-herbal-ocista-jater/ | https://www.nasevitaminy.cz/maxi-vita-herbal-ocista-jater |
@@ -179,7 +180,6 @@ These are records where the selected master view misses a field, but another scr
 | Vitar EKO Kolagen forte | form | https://www.vitar.cz/vitar-eko-kolagen-forte/ | https://www.nasevitaminy.cz/vitar-eko-kolagen-forte |
 | Vitar EKO B-komplex forte | form | https://www.vitar.cz/vitar-eko-b-komplex-forte/ | https://www.nasevitaminy.cz/vitar-eko-b-komplex-forte |
 | Vitar EKO Betakaroten | form | https://www.vitar.cz/vitar-eko-betakaroten/ | https://www.nasevitaminy.cz/vitar-eko-betakaroten |
-| Vitar EKO Detox silná dávka | form | https://www.vitar.cz/vitar-eko-detox-silna-davka/ | https://www.nasevitaminy.cz/vitar-eko-detox-silna-davka |
 
 ## Blocked Products
 
@@ -217,7 +217,6 @@ These products belong in a separate portfolio or SBU decision path.
 | Kompresní stehenní návleky | Vitar | Vitar | separate_vitar_sport_review | Sport / VITAR Sport SBU | https://www.vitar.cz/kompresni-stehenni-navleky/ |
 | Proteinové tyčinky | Vitar | Enervit | separate_vitar_sport_review | Sport / VITAR Sport SBU | https://www.vitar.cz/proteinove-tycinky-enervit/ |
 | Sportovní ponožky | Vitar | ROYAL BAY | separate_vitar_sport_review | Sport / VITAR Sport SBU | https://www.vitar.cz/sportovni-ponozky/ |
-| Maxi Vita Herbal Kurkuma | Maxi Vita | Maxi Vita | separate_veterinae | Veterinae a zvířata | https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma |
 | VITAR Veterinae ArtiVit Pegas Forte 7 | Vitar Veterinae | Vitar Veterinae | separate_veterinae | Klouby a pohyb | https://www.nasevitaminy.cz/vitar-veterinae-artivit-pegas-forte-7-700g |
 | VITAR Veterinae Artivit sirup 1000 ml | Vitar Veterinae | Vitar Veterinae | separate_veterinae | Klouby a pohyb | https://www.nasevitaminy.cz/vitar-veterinae-artivit-sirup-1000ml |
 | VITAR Veterinae Artivit sirup 200 ml | Vitar Veterinae | Vitar Veterinae | separate_veterinae | Klouby a pohyb | https://www.nasevitaminy.cz/vitar-veterinae-artivit-sirup-200-ml-2 |
@@ -351,8 +350,8 @@ These products belong in a separate portfolio or SBU decision path.
 ## Ready / Review Split
 
 - Ready now: 162
-- Needs review/enrichment: 108
+- Needs review/enrichment: 109
 - Blocked: 6
-- Separate review: 57
+- Separate review: 56
 
 Recommended next move: use `outputs/data/product-qa.csv` as the client/PIM review sheet, resolve blocked and separate-review items first, then lock the final category tree.

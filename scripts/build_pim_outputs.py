@@ -94,7 +94,14 @@ def load():
 
 
 def is_veterinary(product):
-    return product.get("brand") == "Vitar Veterinae" or product["category_recommendation"]["label"] == "Veterinae a zvířata"
+    hay = " ".join([
+        product.get("brand", ""),
+        product.get("name", ""),
+        product.get("slug", ""),
+        product.get("url", ""),
+        " ".join(product.get("breadcrumbs", [])),
+    ]).lower()
+    return product.get("brand") == "Vitar Veterinae" or "veterinae" in hay or "/pro-zvirata" in hay or "/pro-zvireci" in hay
 
 
 def scope_for(product):
@@ -139,6 +146,8 @@ def master_products(products):
             primary.update({k: shop[k] for k in ["price_czk", "availability"] if k in shop})
         if vitar and len(vitar.get("description", "")) > len(primary.get("description", "")):
             primary["description"] = vitar["description"]
+        if vitar and primary.get("brand") != "Vitar Veterinae" and primary["category_recommendation"]["key"] == "pets":
+            primary["category_recommendation"] = vitar["category_recommendation"]
         primary["assortment_scope"] = scope_for(primary)
         primary["pim_recommendation"] = {
             "master_key": key,

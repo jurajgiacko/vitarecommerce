@@ -1,0 +1,21 @@
+priority,status,epic,task,owner,deliverable
+P0,next,Assortment governance,Approve products excluded from main VITAR.cz,E-commerce + CMO,Exclude/accessory decision list
+P0,next,Assortment governance,Confirm VITAR Sport split for Enervit/Royal Bay/compression items,VITAR Sport,Sport SBU product list
+P0,next,Assortment governance,Lock final SBU ownership for every SKU,VITAR GROUP + E-commerce,Approved governance matrix
+P0,next,Category management,Define indexable landing pages vs noindex filter states,SEO + E-commerce,SEO URL rulebook
+P0,next,Category management,Lock main VITAR.cz category tree v2,E-commerce + SEO,"Navigation, filter and SEO taxonomy"
+P0,next,Content migration,Approve which content remains on VITAR.cz vs moves to vitar-group.cz,CMO + E-commerce,Content destination matrix
+P0,next,Content migration,Create redirect map for product/category/content URLs,SEO + Dev,301 redirect workbook
+P0,ready_for_review,PIM model,Approve launch PIM attribute schema,PIM/Data + E-commerce,PIM attribute model v1
+P0,next,PIM model,"Extract dosage, active ingredients, warnings and approved claims",Product/Regulatory,Regulatory-safe product facts
+P0,next,PIM model,Merge recoverable missing form fields from vitar.cz into master PIM,PIM/Data,114 cross-source form enrichments
+P0,next,Platform selection,"Compare platform options against PIM, content, SEO and B2B needs",Digital/AI architecture,Platform decision matrix
+P0,next,Platform selection,"Define integration scope: ERP, stock, prices, feeds, analytics, CRM/Vitar Klub",Digital/IT/E-commerce,Integration map
+P0,next,Product UX,"Create product page blueprint for supplements, drinks, cosmetics and accessories",E-commerce + UX + Regulatory,Product detail page spec
+P0,backlog,VITAR GROUP web,Create B2B/OEM lead-gen flow and forms,B2B/OEM + Digital,Lead-gen IA and form spec
+P0,next,VITAR GROUP web,Rewrite P0 group pages for new SBU/Coca-Cola operating model,Central marketing,Group website copy deck
+P0,next,Veterina separation,Confirm VITAR Veterina domain and platform direction,VITAR Veterina,Separate e-shop decision
+P1,backlog,Analytics,Design measurement plan for migration,Digital growth + CMO,GA4/GTM/server-side event plan
+P1,backlog,Commercial,"Classify SKUs by traffic driver, margin driver, hero, legacy, bundle candidate",E-commerce + Sales,Commercial SKU role matrix
+P1,backlog,Governance,"Set approval workflow for claims, SEO copy and product changes",CMO + Regulatory + Legal,Content/PIM governance workflow
+P1,backlog,Product UX,Define bundle and cross-sell logic by need state,E-commerce/AI,Cross-sell matrix v1

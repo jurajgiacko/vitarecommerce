@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-01T19:20:35.888351+00:00",
+  "generated_at": "2026-06-02T07:44:30.946939+00:00",
   "master_products": 333,
   "raw_records": 548,
-  "main_products_current": 293,
-  "separate_products_current": 40,
+  "main_products_current": 294,
+  "separate_products_current": 39,
   "qa_status_counts": {
-    "review": 108,
+    "review": 109,
     "blocked": 6,
     "ready": 162,
-    "separate_review": 57
+    "separate_review": 56
   },
   "recommended_action_counts": {
     "keep_as_drinks_portfolio_review": 12,
     "exclude_from_main_or_accessories": 6,
-    "keep_in_main_pim": 258,
+    "keep_in_main_pim": 259,
     "separate_vitar_sport_review": 17,
-    "separate_veterinae": 40
+    "separate_veterinae": 39
   },
   "critical_issue_counts": {
     "exclude_from_main_or_accessories": 6,
@@ -38,7 +38,7 @@
     "Repelenty a paraziti": 20,
     "Nápoje a pitný režim": 18,
     "Močové cesty": 16,
-    "Trávení a detox": 12,
+    "Trávení a detox": 13,
     "Sladidla": 11,
     "Zrak": 7,
     "Děti": 6,
@@ -46,8 +46,8 @@
     "Srdce a oběh": 6,
     "Vyprošťovák": 3
   },
-  "current_category_count_sum": 293,
-  "proposed_main_keep_count": 270,
+  "current_category_count_sum": 294,
+  "proposed_main_keep_count": 271,
   "current_counts_match": true,
   "both_source_products": 214,
   "single_source_products": 119,
@@ -14235,6 +14235,125 @@
       },
       "vitar_url": "https://www.vitar.cz/maxivita-herbal-klidna-streva/",
       "nasevitaminy_url": "https://www.nasevitaminy.cz/maxi-vita-herbal-klidna-streva",
+      "cross_source_recoverable_fields": [
+        "form"
+      ]
+    },
+    {
+      "master_key": "8595011144659",
+      "name": "Maxi Vita Herbal Kurkuma",
+      "current_brand": "Maxi Vita",
+      "proposed_brand": "Maxi Vita",
+      "brand_changed": false,
+      "sku": "42300083",
+      "ean": "8595011144659",
+      "price_czk": 135.9,
+      "source_site": "nasevitaminy.cz",
+      "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg?tid=20",
+      "assortment_scope": "main_vitar",
+      "current_category": "Trávení a detox",
+      "proposed_category": "Trávení a detox",
+      "category_confidence": "high",
+      "category_changed": false,
+      "current_form": "Neurčeno",
+      "proposed_form": "Neurčeno",
+      "form_confidence": "low",
+      "active_ingredients_suggested": [],
+      "target_groups_suggested": [
+        "zvířata"
+      ],
+      "diet_flags_suggested": [],
+      "recommended_action": "keep_in_main_pim",
+      "qa_status": "review",
+      "readiness_score": 79,
+      "critical_issues": [],
+      "warnings": [
+        "missing_form",
+        "missing_need_states",
+        "missing_info_available_on_other_source"
+      ],
+      "flags": [
+        "missing_form",
+        "missing_need_states",
+        "missing_info_available_on_other_source"
+      ],
+      "source_records": [
+        {
+          "source_site": "nasevitaminy.cz",
+          "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+          "sku": "42300083",
+          "ean": "8595011144659",
+          "has_price": true
+        },
+        {
+          "source_site": "vitar.cz",
+          "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
+          "sku": "42300083",
+          "ean": "8595011144659",
+          "has_price": false
+        }
+      ],
+      "source_analysis": {
+        "source_count": 2,
+        "source_sites": [
+          "nasevitaminy.cz",
+          "vitar.cz"
+        ],
+        "has_both_sources": true,
+        "links": {
+          "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
+          "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma"
+        },
+        "coverage": {
+          "vitar.cz": {
+            "sku": true,
+            "ean": true,
+            "price_czk": false,
+            "availability": false,
+            "description": true,
+            "image": true,
+            "form": true,
+            "attributes": true,
+            "content_sections": true
+          },
+          "nasevitaminy.cz": {
+            "sku": true,
+            "ean": true,
+            "price_czk": true,
+            "availability": true,
+            "description": true,
+            "image": true,
+            "form": false,
+            "attributes": true,
+            "content_sections": true
+          }
+        },
+        "recoverable_missing_fields": [
+          {
+            "field": "form",
+            "source_site": "vitar.cz",
+            "value_preview": "Tablety",
+            "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/"
+          }
+        ],
+        "source_complements": [
+          {
+            "field": "price_czk",
+            "available_on": "nasevitaminy.cz"
+          },
+          {
+            "field": "availability",
+            "available_on": "nasevitaminy.cz"
+          },
+          {
+            "field": "form",
+            "available_on": "vitar.cz"
+          }
+        ]
+      },
+      "vitar_url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
+      "nasevitaminy_url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
       "cross_source_recoverable_fields": [
         "form"
       ]
@@ -33075,125 +33194,6 @@
       },
       "vitar_url": "https://www.vitar.cz/emve-multivita/",
       "nasevitaminy_url": "https://www.nasevitaminy.cz/emve-multivita",
-      "cross_source_recoverable_fields": [
-        "form"
-      ]
-    },
-    {
-      "master_key": "8595011144659",
-      "name": "Maxi Vita Herbal Kurkuma",
-      "current_brand": "Maxi Vita",
-      "proposed_brand": "Maxi Vita",
-      "brand_changed": false,
-      "sku": "42300083",
-      "ean": "8595011144659",
-      "price_czk": 135.9,
-      "source_site": "nasevitaminy.cz",
-      "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
-      "image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg?tid=20",
-      "assortment_scope": "separate_veterinary",
-      "current_category": "Veterinae a zvířata",
-      "proposed_category": "Veterinae a zvířata",
-      "category_confidence": "medium",
-      "category_changed": false,
-      "current_form": "Neurčeno",
-      "proposed_form": "Neurčeno",
-      "form_confidence": "low",
-      "active_ingredients_suggested": [],
-      "target_groups_suggested": [
-        "zvířata"
-      ],
-      "diet_flags_suggested": [],
-      "recommended_action": "separate_veterinae",
-      "qa_status": "separate_review",
-      "readiness_score": 75,
-      "critical_issues": [],
-      "warnings": [
-        "missing_form",
-        "missing_need_states",
-        "missing_info_available_on_other_source"
-      ],
-      "flags": [
-        "missing_form",
-        "missing_need_states",
-        "missing_info_available_on_other_source"
-      ],
-      "source_records": [
-        {
-          "source_site": "nasevitaminy.cz",
-          "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
-          "sku": "42300083",
-          "ean": "8595011144659",
-          "has_price": true
-        },
-        {
-          "source_site": "vitar.cz",
-          "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
-          "sku": "42300083",
-          "ean": "8595011144659",
-          "has_price": false
-        }
-      ],
-      "source_analysis": {
-        "source_count": 2,
-        "source_sites": [
-          "nasevitaminy.cz",
-          "vitar.cz"
-        ],
-        "has_both_sources": true,
-        "links": {
-          "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
-          "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma"
-        },
-        "coverage": {
-          "vitar.cz": {
-            "sku": true,
-            "ean": true,
-            "price_czk": false,
-            "availability": false,
-            "description": true,
-            "image": true,
-            "form": true,
-            "attributes": true,
-            "content_sections": true
-          },
-          "nasevitaminy.cz": {
-            "sku": true,
-            "ean": true,
-            "price_czk": true,
-            "availability": true,
-            "description": true,
-            "image": true,
-            "form": false,
-            "attributes": true,
-            "content_sections": true
-          }
-        },
-        "recoverable_missing_fields": [
-          {
-            "field": "form",
-            "source_site": "vitar.cz",
-            "value_preview": "Tablety",
-            "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/"
-          }
-        ],
-        "source_complements": [
-          {
-            "field": "price_czk",
-            "available_on": "nasevitaminy.cz"
-          },
-          {
-            "field": "availability",
-            "available_on": "nasevitaminy.cz"
-          },
-          {
-            "field": "form",
-            "available_on": "vitar.cz"
-          }
-        ]
-      },
-      "vitar_url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
-      "nasevitaminy_url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
       "cross_source_recoverable_fields": [
         "form"
       ]

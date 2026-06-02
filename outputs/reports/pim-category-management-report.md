@@ -1,13 +1,13 @@
 # VITAR ecommerce PIM preparation
 
-Generated: 2026-06-01T19:25:10.370277+00:00
+Generated: 2026-06-02T07:44:30.823315+00:00
 
 ## Executive Summary
 
 - Scraped raw product records: 548
 - Recommended master products after SKU/EAN dedupe: 333
-- Main VITAR human supplement assortment: 293 master products
-- Separate/non-main assortment: 40 master products
+- Main VITAR human supplement assortment: 294 master products
+- Separate/non-main assortment: 39 master products
 - Cross-site duplicate records merged: 215
 - Recommended source strategy: NašeVitamíny for commerce fields, VITAR.cz for brand/content enrichment.
 
@@ -17,13 +17,13 @@ Recommended navigation order: separate portfolios first for governance visibilit
 
 | Separate portfolio | Products | Recommendation | Top forms |
 |---|---:|---|---|
-| Veterinae - samostatný sortiment | 40 | Zobrazit jako separátní sekci/portfolio mimo hlavní VITAR strom pro lidské doplňky. V PIM ponechat stejné produktové atributy, ale navigačně a SEO oddělit. | Neurčeno (16), Prášek / sypká směs (12), Sirup / elixír (8), Nápoj (4) |
+| Veterinae - samostatný sortiment | 39 | Zobrazit jako separátní sekci/portfolio mimo hlavní VITAR strom pro lidské doplňky. V PIM ponechat stejné produktové atributy, ale navigačně a SEO oddělit. | Neurčeno (15), Prášek / sypká směs (12), Sirup / elixír (8), Nápoj (4) |
 
 ### Brand Navigation
 
 | Brand | Products | Role | Top categories | Top forms |
 |---|---:|---|---|---|
-| Maxi Vita | 90 | Core vitamin/mineral umbrella; primary brand landing. | Imunita a nachlazení (22), Hořčík a minerály (18), Ostatní / nezařazeno (11), Močové cesty (10) | Neurčeno (53), Šumivé tablety (21), Sirup / elixír (10), Nápoj (3) |
+| Maxi Vita | 91 | Core vitamin/mineral umbrella; primary brand landing. | Imunita a nachlazení (22), Hořčík a minerály (18), Ostatní / nezařazeno (11), Močové cesty (10) | Neurčeno (54), Šumivé tablety (21), Sirup / elixír (10), Nápoj (3) |
 | Vitar | 58 | Functional legacy products and pharmacy staples. | Hořčík a minerály (13), Ostatní / nezařazeno (12), Imunita a nachlazení (8), Krása, vlasy, pleť (8) | Neurčeno (30), Šumivé tablety (8), Kosmetika (6), Tablety (5) |
 | Maxi Vita Essentials | 16 | Modern premium/lifestyle sub-brand; strong for segmented landings. | Hořčík a minerály (7), Energie, stres, spánek (5), Klouby a pohyb (2), Krása, vlasy, pleť (1) | Neurčeno (16) |
 | Revital | 19 | Effervescent/value vitamin line. | Imunita a nachlazení (9), Hořčík a minerály (8), Energie, stres, spánek (1), Močové cesty (1) | Neurčeno (11), Šumivé tablety (8) |
@@ -56,7 +56,7 @@ Use a hybrid model: top-level brand entry points for recognisable VITAR lines, t
 | Energie, stres, spánek | 15 | Energit (6), Maxi Vita Essentials (5), Revital Botanicals (2), Revital (1), Vitar (1) | Neurčeno (10), Šumivé tablety (3), Tablety (2) | Doplňky pro energii, stres a klidný spánek \| Vitar |
 | Děti | 13 | Vitar Kids (6), Maxi Vita (4), Capri-Sun (2), Energit (1) | Neurčeno (7), Nápoj (2), Stick pack (2), Sirup / elixír (1), Tablety (1) | Vitamíny a doplňky pro děti \| Vitar Kids a Maxi Vita Kids |
 | Sladidla | 12 | Irbis (10), Vitar (2) | Tablety (7), Prášek / sypká směs (3), Šumivé tablety (2) | Sladidla \| Vitar |
-| Trávení a detox | 11 | Vitar Eko (6), Maxi Vita (5) | Neurčeno (7), Šumivé tablety (2), Kapsle (2) | Trávení a detox \| Vitar |
+| Trávení a detox | 12 | Maxi Vita (6), Vitar Eko (6) | Neurčeno (8), Šumivé tablety (2), Kapsle (2) | Trávení a detox \| Vitar |
 | Zrak | 8 | Maxi Vita (5), Capri-Sun (1), Energit (1), Maxi Vita Essentials (1) | Neurčeno (7), Sirup / elixír (1) | Zrak \| Vitar |
 | Srdce a oběh | 8 | Maxi Vita (3), Vitar (2), Vitar Kings (2), eMVe (1) | Neurčeno (5), Šumivé tablety (1), Kapsle (1), Stick pack (1) | Srdce a oběh \| Vitar |
 | Klouby a pohyb | 7 | Maxi Vita (3), Maxi Vita Essentials (2), Vitar (1), Vitar Eko (1) | Neurčeno (7) | Klouby a pohyb \| Vitar |
@@ -108,7 +108,7 @@ Use a hybrid model: top-level brand entry points for recognisable VITAR lines, t
 
 - Missing EAN: 40/333 master products.
 - Unknown form: 183/333 master products.
-- Main taxonomy excludes 40 separate products by design; keep them visible in admin/PIM QA.
+- Main taxonomy excludes 39 separate products by design; keep them visible in admin/PIM QA.
 - Active ingredients, dosage, health claims and contraindications require manual or NLP-assisted enrichment before final PIM import.
 - Some VITAR content is richer than NašeVitamíny product text; merge descriptions deliberately instead of overwriting.
 

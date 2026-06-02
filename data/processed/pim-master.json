@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-01T19:25:10.370277+00:00",
+  "generated_at": "2026-06-02T07:44:30.823315+00:00",
   "raw_records": 548,
   "master_products": 333,
   "duplicate_raw_records": 215,
-  "main_products": 293,
-  "separate_products": 40,
+  "main_products": 294,
+  "separate_products": 39,
   "brands": [
     {
       "brand": "Maxi Vita",
-      "count": 90,
+      "count": 91,
       "categories": [
         [
           "Imunita a nachlazení",
@@ -30,7 +30,7 @@
       "forms": [
         [
           "Neurčeno",
-          53
+          54
         ],
         [
           "Šumivé tablety",
@@ -912,21 +912,21 @@
     },
     {
       "category": "Trávení a detox",
-      "count": 11,
+      "count": 12,
       "brands": [
         [
-          "Vitar Eko",
+          "Maxi Vita",
           6
         ],
         [
-          "Maxi Vita",
-          5
+          "Vitar Eko",
+          6
         ]
       ],
       "forms": [
         [
           "Neurčeno",
-          7
+          8
         ],
         [
           "Šumivé tablety",
@@ -1088,12 +1088,12 @@
     {
       "key": "separate_veterinary",
       "label": "Veterinae - samostatný sortiment",
-      "count": 40,
+      "count": 39,
       "recommendation": "Zobrazit jako separátní sekci/portfolio mimo hlavní VITAR strom pro lidské doplňky. V PIM ponechat stejné produktové atributy, ale navigačně a SEO oddělit.",
       "top_forms": [
         [
           "Neurčeno",
-          16
+          15
         ],
         [
           "Prášek / sypká směs",
@@ -12917,6 +12917,100 @@
       },
       "pim_recommendation": {
         "master_key": "8595011143270",
+        "import_priority": "P1",
+        "canonical_source": "nasevitaminy.cz for price/availability, vitar.cz for brand/category content",
+        "needs_manual_enrichment": [
+          "form",
+          "need_states",
+          "active_ingredients",
+          "dosage",
+          "target_group",
+          "contraindications",
+          "health_claims"
+        ]
+      }
+    },
+    {
+      "source_site": "nasevitaminy.cz",
+      "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+      "canonical_url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+      "slug": "maxi-vita-herbal-kurkuma",
+      "name": "Maxi Vita Herbal Kurkuma",
+      "brand": "Maxi Vita",
+      "manufacturer": "VITAR, s.r.o.",
+      "sku": "42300083",
+      "ean": "8595011144659",
+      "price_czk": 135.9,
+      "availability": "Na skladě 10 ks",
+      "description": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg?tid=20",
+      "breadcrumbs": [
+        "Domů",
+        "Produkty",
+        "Maxi Vita Herbal Kurkuma"
+      ],
+      "attributes": {
+        "Výrobce": "VITAR, s.r.o.",
+        "Kód": "42300083",
+        "EAN": "8595011144659",
+        "Hmotnost": "0,04 kg",
+        "Dostupnost": "Na skladě 10 ks"
+      },
+      "content_sections": {
+        "Popis": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
+        "Popis 2": "ZDRAVÁ JÁTRA A DETOXIKACE ORGANIZMU Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání. Udržení jater ve zdravém stavu je zásadní pro zdraví a dobrou kvalitu života. Játra jsou klíčovým orgánem, který se podílí na detoxikaci organismu a na metabolizmu sacharidů, tuků a bílkovin. Kurkuma působí jako antioxidant, podporuje správnou činnost jater a činnost kardiovaskulárního systému. Příznivě ovlivňuje nervovou soustavu, funkci dýchacího systému a je prospěšná pro zdraví kostí a kloubů. Ostropestřec mariánský podporuje správné trávení, pročištění organizmu a přirozenou obranyschopnost. Přispívá k udržení správné hladiny cukru v krvi a podporuje správnou činnost srdce. Aktivní složky v 1 kapsli extrakt z kurkumy 180 mg ostropestřec mariánský 100 mg inulin – vláknina z čekanky 50 mg SLOŽENÍ OBSAHU KAPSLE: extrakt z kořene kurkumy, extrakt ze semen ostropestřce mariánského, inulin – vláknina z čekanky, protispékavá látka - stearan hořečnatý SLOŽENÍ OBALU KAPSLE: bovinní želatina, oxid zinečnatý INFORMACE PRO DIABETIKY: neobsahuje cukr DOPORUČENÉ DENNÍ DÁVKOVÁNÍ : Dospělí a děti od 12 let 1 kapsle denně po jídle, zapít dostatečným množstvím tekutiny. Není určeno pro děti do 12 let., těhotné a kojící ženy. Při antikoagulační léčbě, onemocnění žlučových cest a při užívání léků snižujících tvorbu žaludečních kyselin, užívání konzultujte s ošetřujícím lékařem. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.",
+        "Popis 3": "ZDRAVÁ JÁTRA A DETOXIKACE ORGANIZMU Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání. Udržení jater ve zdravém stavu je zásadní pro zdraví a dobrou kvalitu života. Játra jsou klíčovým orgánem, který se podílí na detoxikaci organismu a na metabolizmu sacharidů, tuků a bílkovin. Kurkuma působí jako antioxidant, podporuje správnou činnost jater a činnost kardiovaskulárního systému. Příznivě ovlivňuje nervovou soustavu, funkci dýchacího systému a je prospěšná pro zdraví kostí a kloubů. Ostropestřec mariánský podporuje správné trávení, pročištění organizmu a přirozenou obranyschopnost. Přispívá k udržení správné hladiny cukru v krvi a podporuje správnou činnost srdce. Aktivní složky v 1 kapsli extrakt z kurkumy 180 mg ostropestřec mariánský 100 mg inulin – vláknina z čekanky 50 mg SLOŽENÍ OBSAHU KAPSLE: extrakt z kořene kurkumy, extrakt ze semen ostropestřce mariánského, inulin – vláknina z čekanky, protispékavá látka - stearan hořečnatý SLOŽENÍ OBALU KAPSLE: bovinní želatina, oxid zinečnatý INFORMACE PRO DIABETIKY: neobsahuje cukr DOPORUČENÉ DENNÍ DÁVKOVÁNÍ : Dospělí a děti od 12 let 1 kapsle denně po jídle, zapít dostatečným množstvím tekutiny. Není určeno pro děti do 12 let., těhotné a kojící ženy. Při antikoagulační léčbě, onemocnění žlučových cest a při užívání léků snižujících tvorbu žaludečních kyselin, užívání konzultujte s ošetřujícím lékařem. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.",
+        "Popis 4": "ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář"
+      },
+      "seo": {
+        "title": "Maxi Vita Herbal Kurkuma",
+        "meta_description": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
+        "og_title": "Maxi Vita Herbal Kurkuma",
+        "og_image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg"
+      },
+      "product_id": "2ec0d6e8a9e4",
+      "form": {
+        "key": "unknown",
+        "label": "Neurčeno"
+      },
+      "category_recommendation": {
+        "key": "digestion_detox",
+        "label": "Trávení a detox",
+        "score": 4
+      },
+      "need_states": [],
+      "pim_status": {
+        "has_sku": true,
+        "has_ean": true,
+        "has_image": true,
+        "has_description": true,
+        "has_price": true
+      },
+      "source_records": [
+        {
+          "source_site": "nasevitaminy.cz",
+          "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+          "sku": "42300083",
+          "ean": "8595011144659",
+          "has_price": true
+        },
+        {
+          "source_site": "vitar.cz",
+          "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
+          "sku": "42300083",
+          "ean": "8595011144659",
+          "has_price": false
+        }
+      ],
+      "duplicate_count": 2,
+      "assortment_scope": {
+        "key": "main_vitar",
+        "label": "Hlavní VITAR sortiment",
+        "main_navigation": true,
+        "note": "Produkty pro hlavní e-shopovou navigaci podle značky a potřeby."
+      },
+      "pim_recommendation": {
+        "master_key": "8595011144659",
         "import_priority": "P1",
         "canonical_source": "nasevitaminy.cz for price/availability, vitar.cz for brand/category content",
         "needs_manual_enrichment": [
@@ -28167,100 +28261,6 @@
       "pim_recommendation": {
         "master_key": "8595011113389",
         "import_priority": "P1",
-        "canonical_source": "nasevitaminy.cz for price/availability, vitar.cz for brand/category content",
-        "needs_manual_enrichment": [
-          "form",
-          "need_states",
-          "active_ingredients",
-          "dosage",
-          "target_group",
-          "contraindications",
-          "health_claims"
-        ]
-      }
-    },
-    {
-      "source_site": "nasevitaminy.cz",
-      "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
-      "canonical_url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
-      "slug": "maxi-vita-herbal-kurkuma",
-      "name": "Maxi Vita Herbal Kurkuma",
-      "brand": "Maxi Vita",
-      "manufacturer": "VITAR, s.r.o.",
-      "sku": "42300083",
-      "ean": "8595011144659",
-      "price_czk": 135.9,
-      "availability": "Na skladě 10 ks",
-      "description": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
-      "image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg?tid=20",
-      "breadcrumbs": [
-        "Domů",
-        "Produkty",
-        "Maxi Vita Herbal Kurkuma"
-      ],
-      "attributes": {
-        "Výrobce": "VITAR, s.r.o.",
-        "Kód": "42300083",
-        "EAN": "8595011144659",
-        "Hmotnost": "0,04 kg",
-        "Dostupnost": "Na skladě 10 ks"
-      },
-      "content_sections": {
-        "Popis": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
-        "Popis 2": "ZDRAVÁ JÁTRA A DETOXIKACE ORGANIZMU Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání. Udržení jater ve zdravém stavu je zásadní pro zdraví a dobrou kvalitu života. Játra jsou klíčovým orgánem, který se podílí na detoxikaci organismu a na metabolizmu sacharidů, tuků a bílkovin. Kurkuma působí jako antioxidant, podporuje správnou činnost jater a činnost kardiovaskulárního systému. Příznivě ovlivňuje nervovou soustavu, funkci dýchacího systému a je prospěšná pro zdraví kostí a kloubů. Ostropestřec mariánský podporuje správné trávení, pročištění organizmu a přirozenou obranyschopnost. Přispívá k udržení správné hladiny cukru v krvi a podporuje správnou činnost srdce. Aktivní složky v 1 kapsli extrakt z kurkumy 180 mg ostropestřec mariánský 100 mg inulin – vláknina z čekanky 50 mg SLOŽENÍ OBSAHU KAPSLE: extrakt z kořene kurkumy, extrakt ze semen ostropestřce mariánského, inulin – vláknina z čekanky, protispékavá látka - stearan hořečnatý SLOŽENÍ OBALU KAPSLE: bovinní želatina, oxid zinečnatý INFORMACE PRO DIABETIKY: neobsahuje cukr DOPORUČENÉ DENNÍ DÁVKOVÁNÍ : Dospělí a děti od 12 let 1 kapsle denně po jídle, zapít dostatečným množstvím tekutiny. Není určeno pro děti do 12 let., těhotné a kojící ženy. Při antikoagulační léčbě, onemocnění žlučových cest a při užívání léků snižujících tvorbu žaludečních kyselin, užívání konzultujte s ošetřujícím lékařem. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.",
-        "Popis 3": "ZDRAVÁ JÁTRA A DETOXIKACE ORGANIZMU Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání. Udržení jater ve zdravém stavu je zásadní pro zdraví a dobrou kvalitu života. Játra jsou klíčovým orgánem, který se podílí na detoxikaci organismu a na metabolizmu sacharidů, tuků a bílkovin. Kurkuma působí jako antioxidant, podporuje správnou činnost jater a činnost kardiovaskulárního systému. Příznivě ovlivňuje nervovou soustavu, funkci dýchacího systému a je prospěšná pro zdraví kostí a kloubů. Ostropestřec mariánský podporuje správné trávení, pročištění organizmu a přirozenou obranyschopnost. Přispívá k udržení správné hladiny cukru v krvi a podporuje správnou činnost srdce. Aktivní složky v 1 kapsli extrakt z kurkumy 180 mg ostropestřec mariánský 100 mg inulin – vláknina z čekanky 50 mg SLOŽENÍ OBSAHU KAPSLE: extrakt z kořene kurkumy, extrakt ze semen ostropestřce mariánského, inulin – vláknina z čekanky, protispékavá látka - stearan hořečnatý SLOŽENÍ OBALU KAPSLE: bovinní želatina, oxid zinečnatý INFORMACE PRO DIABETIKY: neobsahuje cukr DOPORUČENÉ DENNÍ DÁVKOVÁNÍ : Dospělí a děti od 12 let 1 kapsle denně po jídle, zapít dostatečným množstvím tekutiny. Není určeno pro děti do 12 let., těhotné a kojící ženy. Při antikoagulační léčbě, onemocnění žlučových cest a při užívání léků snižujících tvorbu žaludečních kyselin, užívání konzultujte s ošetřujícím lékařem. Nepřekračujte doporučené denní dávkování. Výrobek není určen jako náhrada pestré stravy. Dbejte na vyváženou pestrou stravu a zdravý životní styl.",
-        "Popis 4": "ZNAČKY Maxi Vita Essentials Maxi Vita Energit Revital Vitar Revitalon Predator Vyprošťovák OvoCé Irbis Capri-Sun eMVe Vitar Veterinae DOPRAVA ZDARMA Při nákupu nad 600 Kč PŘÍMO OD VÝROBCE Prodáváme naše zboží OVĚŘENO ZÁKAZNÍKY 99 % zákazníků doporučuje VÝVOJ A VÝROBA V ČR Vše od českého výrobce Staňte se členy VITAR klubu a získejte spoustu exkluzivních výhod VITAR klub je věrnostní program pro všechny, kteří chtějí žít zdravější život. Proto VITAR klub nabízí svým členům celou řadu výhod, jako jsou slevy na produkty, dárky, ale i poradenství a zajímavé informace z oblasti doplňků stravy a zdravého životního stylu. VÍCE INFORMACÍ STÁT SE ČLENEM Vše o nákupu O nás Doprava a platba Obchodní podmínky Kontakt Rychlý kontakt VITAR, s.r.o. Železné 113 666 01 Tišnov Tel.: +420 549 121 835 Kontaktní formulář"
-      },
-      "seo": {
-        "title": "Maxi Vita Herbal Kurkuma",
-        "meta_description": "Maxi Vita Herbal Kurkuma obsahuje vysokou dávku extraktu z kořene kurkumy a extraktu ze semen ostropestřce mariánského. Obě tyto rostliny jsou prospěšné pro zdraví jater a tím i pro celkové zažívání.",
-        "og_title": "Maxi Vita Herbal Kurkuma",
-        "og_image": "https://img.nasevitaminy.cz/images/graphic/Import/mxvh_kurkuma_web.jpg"
-      },
-      "product_id": "2ec0d6e8a9e4",
-      "form": {
-        "key": "unknown",
-        "label": "Neurčeno"
-      },
-      "category_recommendation": {
-        "key": "pets",
-        "label": "Veterinae a zvířata",
-        "score": 1
-      },
-      "need_states": [],
-      "pim_status": {
-        "has_sku": true,
-        "has_ean": true,
-        "has_image": true,
-        "has_description": true,
-        "has_price": true
-      },
-      "source_records": [
-        {
-          "source_site": "nasevitaminy.cz",
-          "url": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
-          "sku": "42300083",
-          "ean": "8595011144659",
-          "has_price": true
-        },
-        {
-          "source_site": "vitar.cz",
-          "url": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
-          "sku": "42300083",
-          "ean": "8595011144659",
-          "has_price": false
-        }
-      ],
-      "duplicate_count": 2,
-      "assortment_scope": {
-        "key": "separate_veterinary",
-        "label": "Veterinae - samostatný sortiment",
-        "main_navigation": false,
-        "note": "Vyčlenit mimo hlavní strukturu VITAR doplňků pro lidi; držet jako separátní portfolio/sekci."
-      },
-      "pim_recommendation": {
-        "master_key": "8595011144659",
-        "import_priority": "Separate",
         "canonical_source": "nasevitaminy.cz for price/availability, vitar.cz for brand/category content",
         "needs_manual_enrichment": [
           "form",
