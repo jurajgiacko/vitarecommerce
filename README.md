@@ -2,12 +2,12 @@
 
 Project workspace for `jurajgiacko/vitarecommerce`.
 
-## Onboarding & briefs (live)
+## Onboarding & briefs
 
-- **E-commerce & Digital onboarding briefing** (internal): https://jurajgiacko.github.io/vitarecommerce/onboarding/
-- **Developer brief — Vitar.cz e-shop** (for build/pricing): https://jurajgiacko.github.io/vitarecommerce/onboarding/dev-brief.html
+- **Developer brief — Vitar.cz e-shop** (vendor-facing, for build/pricing, live): https://jurajgiacko.github.io/vitarecommerce/onboarding/dev-brief.html
+- **Internal onboarding briefing** — NOT published here (internal-only, kept on SharePoint). Public Pages has no auth, so internal strategy stays off it.
 
-Both live under `outputs/onboarding/`. Update = edit the HTML + push (Pages rebuilds, same URL).
+Dev brief lives under `outputs/onboarding/`. Update = edit the HTML + push (Pages rebuilds, same URL).
 
 ### Target architecture (summary)
 
