@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer brief v2.0 — Vitar.cz e-shop</title>
+<style>
+:root{--blue:#0057A0;--blue-l:#1a7fd4;--green:#2e9e5b;--orange:#e08600;--red:#d13b3b;--ink:#1e2836;--muted:#5b6a7d;--line:#e3e9f0;--bg:#f5f7fa;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:15px}
+.wrap{max-width:940px;margin:0 auto;padding:24px}
+header.doc{background:linear-gradient(135deg,var(--blue),var(--blue-l));color:#fff;border-radius:16px;padding:32px;margin-bottom:22px}
+header.doc .kicker{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;opacity:.85;font-weight:700}
+header.doc h1{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin:8px 0 14px}
+header.doc .meta{font-size:.9rem;opacity:.95;margin:3px 0}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-bottom:16px}
+section h2{font-size:1.2rem;color:var(--blue);font-weight:800;margin-bottom:12px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+h3{font-size:1rem;font-weight:700;margin:14px 0 8px}
+p{margin-bottom:9px}ul,ol{margin:0 0 9px 22px}li{margin-bottom:5px}
+strong{font-weight:700;color:#0d1521}
+code{background:#eef2f7;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-family:'SF Mono',Consolas,monospace;font-size:.85em;color:#b8004a}
+a{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue)}
+table{width:100%;border-collapse:collapse;margin:11px 0;font-size:.85rem}
+th{background:#eef4fb;color:var(--blue);text-align:left;padding:8px 10px;border:1px solid var(--line);font-weight:700}
+td{padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fafbfd}
+.note{border-left:4px solid var(--blue);background:#eef4fb;border-radius:0 8px 8px 0;padding:11px 15px;margin:11px 0;font-size:.9rem}
+.note.warn{border-left-color:var(--orange);background:#fff6e8}
+.kpi{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.kpi div{flex:1;min-width:110px;background:#eef4fb;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+.kpi b{display:block;font-size:1.5rem;color:var(--blue);font-weight:800}
+.kpi span{font-size:.72rem;color:var(--muted)}
+.pill{display:inline-block;font-size:.66rem;font-weight:700;padding:2px 8px;border-radius:11px;color:#fff}
+.pill.blue{background:var(--blue)}.pill.orange{background:var(--orange)}.pill.green{background:var(--green)}
+footer.doc{text-align:center;color:var(--muted);font-size:.8rem;padding:16px}
+@media print{body{background:#fff;font-size:11px}.wrap{max-width:100%;padding:0}section,header.doc{break-inside:avoid}header.doc{background:var(--blue)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}th,.kpi div{background:#eef4fb!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="doc">
+<div class="kicker">VITAR &middot; Developer brief v2.1</div>
+<h1>Novy e-shop Vitar.cz (+ nasevitaminy.cz)</h1>
+<div class="meta"><b>Pre:</b> dev team WON ECOMMERCE (Jitka, Ondra) + interny support</div>
+<div class="meta"><b>Od:</b> Juraj Giacko (Director of Digital Growth / leader e-com projektu)</div>
+<div class="meta"><b>Ucel:</b> Zadanie na build 2 Shopify e-shopov z jednej reuse bazy — sofistikovany podklad pre nacenenie + development s konkretnym datasetom.</div>
+</header>
+<div class="note">Nadradeny architektonicky ramec: <strong>deklaracia L0–L7</strong> (Tomas Cervinka). Strategicky/brandovy kontext je v samostatnom <a href="./index.html"><strong>onboarding briefingu &raquo;</strong></a>. Tu je len <strong>technicke/produktove zadanie</strong>.</div>
+
+<section><h2>0. Kde sedime v architekture (L0–L7)</h2>
+<ul>
+<li><strong>L2 (predajne kanaly):</strong> vitar.cz + nasevitaminy.cz (+ Enervit, Royal Bay, Alza).</li>
+<li><strong>L3 (storefront):</strong> <strong>Shopify</strong> = cielovy standard; odchod od Magenta/FastCentrik.</li>
+<li><strong>L4 (backend/ucto):</strong> <strong>Pohoda</strong> (co firma, to entita — Vitar Digital). <strong>QAD zostava master vyroby + kmenovych dat pod Vitar s.r.o., mimo fulfillmentu.</strong></li>
+<li><strong>L5–L7:</strong> jedno spolocne WMS + jedno zdielane DC (samostatny prud — launch od neho <strong>nezavisi</strong>).</li>
+</ul>
+<div class="note"><strong>Pravidlo:</strong> kazda objednavka pada do jednej entity (Pohoda) &rarr; jedno WMS &rarr; jedno DC. Vpredu moze pribudat kolko shopov chceme, backend je jeden.</div>
+</section>
+
+<section><h2>1. Scope &amp; priorita</h2>
+<table>
+<tr><th>E-shop</th><th>Rola</th><th>Zakaznik</th><th>Priorita</th></tr>
+<tr><td><strong>Vitar.cz</strong></td><td><strong>Produktove trziste / marketplace</strong> — lifestyle, premium, nove rady, obsah; <strong>multi-brand</strong></td><td>high-end / aspiracny</td><td><span class="pill blue">#1</span> launch <strong>oktober 2026</strong></td></tr>
+<tr><td><strong>nasevitaminy.cz</strong></td><td><strong>Retail</strong> — klasiky, objem, mimo premium; "normalny" dizajn</td><td>price-sensitive</td><td>#2 — po Vitar.cz</td></tr>
+</table>
+<ul>
+<li>Oba na <strong>Shopify</strong> (+ Markets CZ/SK), rovnaka reuse baza + integracie, <strong>rozdielny brand + UX</strong>.</li>
+<li><strong>nasevitaminy.cz zostava samostatny — NEzlucuje sa a nepresmerovava do vitar.cz</strong> (potvrdene Tomasom). Idealne kupit riesenie aj s dizajnom.</li>
+<li><strong>Vitar.cz = marketplace</strong> &rarr; navigacia typu GymBeam / BrainMarket / iHerb / Vilgain.</li>
+</ul>
+</section>
+
+<section><h2>2. Dataset &amp; reuse (zdroj pravdy — migracny planner)</h2>
+<p><a href="https://jurajgiacko.github.io/vitarecommerce/">jurajgiacko.github.io/vitarecommerce</a> — repo <code>github.com/jurajgiacko/vitarecommerce</code>, <code>data/processed/</code> + <code>outputs/</code>.</p>
+<div class="kpi">
+<div><b>548</b><span>scrapnutych URL (vitar 259 + nasevit. 289)</span></div>
+<div><b>333</b><span>master produktov (po dedupe)</span></div>
+<div><b>271</b><span>SKU &rarr; Vitar.cz (main scope)</span></div>
+<div><b>67%</b><span>overall readiness</span></div>
+</div>
+<h3>Governance split (<code>assortment-governance.csv</code>, 333 riadkov)</h3>
+<table>
+<tr><th>SBU owner</th><th>Pocet</th><th>Cielova platforma</th></tr>
+<tr><td><strong>VITAR.cz B2C/D2C</strong></td><td><strong>271</strong></td><td>novy Vitar.cz Shopify (main scope)</td></tr>
+<tr><td>VITAR Veterina</td><td>39</td><td><strong>samostatny e-shop / domena TBD — mimo hlavnej nav</strong></td></tr>
+<tr><td>VITAR Sport</td><td>17</td><td>SBU rozhodnutie (Enervit/RB)</td></tr>
+<tr><td>Exclude / accessory</td><td>6</td><td>neimportovat do schvalenia</td></tr>
+</table>
+<p><strong>PIM readiness:</strong> ready <strong>121</strong>, doobohatit z druheho zdroja <strong>114</strong>, review 37, separate_review 55, blocked 6 (PIM 49 %, assortment decision 92 %). <strong>Obsah:</strong> 238 content pages + 57 Vitar Group pages.</p>
+<h3>Reuse z ROYAL BAY / Enervit</h3>
+<p><code>jurajgiacko/royalbay-shopify</code>, <code>jurajgiacko/enervit-shopify</code>: kolekcie, metafields/filtre, cross-sell/upsell, Shopify native bundles, konfigurator pattern, checkout/doprava/emailing.</p>
+<div class="note">Princip: <strong>prekopirovat overenu bazu</strong>. PIM (nastroj) nie je nutny vo faze 1 — staci <strong>MVP PIM na SharePointe</strong> (obohatenie 114 produktov + claims/dosage).</div>
+</section>
+
+<section><h2>3. Katalog, taxonomia &amp; filtre (marketplace model)</h2>
+<p><strong>16 znaciek</strong> (Maxi Vita, Vitar, Maxi Vita Essentials — hero, Predator, Capri-Sun, Revital, Energit, Vitar Kids, Vitar Eko, Irbis, eMVe, Revitalon, OvoCé, Vyprostovak, Vitar Kings, Revital Botanicals) &middot; <strong>~15 kategorii / need-states</strong> (imunita, horcik, krasa, travenie, napoje, deti, energia/stres/spanok, mocove cesty, srdce, klby, zrak, sladidla, repelenty, veterinae, vyprostovak).</p>
+<h3>Filter model — 12 filtrov (priorita + SEO pravidlo)</h3>
+<table>
+<tr><th>Priorita</th><th>Filter</th><th>UI</th><th>SEO</th></tr>
+<tr><td><span class="pill blue">P0</span></td><td>Znacka / rada</td><td>top nav + filter</td><td><strong>indexovatelne brand pages</strong></td></tr>
+<tr><td><span class="pill blue">P0</span></td><td>Hlavna potreba (need-state)</td><td>main nav</td><td><strong>indexovatelne category landings</strong></td></tr>
+<tr><td><span class="pill blue">P0</span></td><td>Forma</td><td>facet</td><td>noindex (len kurátorovane)</td></tr>
+<tr><td><span class="pill blue">P0</span></td><td>Aktivna latka</td><td>facet + search synonyma</td><td><strong>kurátorovane</strong> (vit. C, horcik, kolagen, omega-3, D3/K2)</td></tr>
+<tr><td><span class="pill blue">P0</span></td><td>Cielova skupina</td><td>facet</td><td><strong>kurátorovane</strong> (deti, zeny, muzi, seniori)</td></tr>
+<tr><td><span class="pill orange">P1</span></td><td>Vek, diet flags, velkost balenia, prichut, dostupnost</td><td>facet/toggle</td><td>noindex</td></tr>
+<tr><td>P2</td><td>Cena za davku, certifikacia/kvalita</td><td>sort / trust badge</td><td>supporting content</td></tr>
+</table>
+<div class="note warn"><strong>NErobit:</strong> vyrobca ako filter (radsej znacka), interne SKU/EAN facet, cenovy slider, <strong>duplicitne brand&times;potreba ako indexovane URL</strong> (thin/duplicate SEO), Veterinae v hlavnej Vitar kategorii.</div>
+<p><strong>Benchmark:</strong> GymBeam (ciel + latka), BrainMarket (ciel/vitamin/segment), iHerb (trust: iTested/lab), Vilgain (lifestyle filtre).</p>
+</section>
+
+<section><h2>4. PIM atribucny model (22 poli)</h2>
+<p><strong>P0 (must pred launchom):</strong> master_key, sku, ean, sbu_owner, brand_architecture_role, category, need_state, active_ingredients, form, dosage, target_group, claims, warnings, price, availability, canonical_url.</p>
+<p><strong>P1:</strong> pack_size, flavour, age_group, quality_proof, cross_sell_matrix, structured_data (Product/Offer/Brand/Breadcrumb/FAQ).</p>
+<div class="note">Owneri: Identity/Product facts = PIM/Data; need_state/category = E-commerce; <strong>claims/warnings/dosage = Regulatory/Legal</strong> (overclaiming!); price/availability z nasevitaminy.cz / novej platformy (Vitar.cz casto nema commerce cenu).</div>
+</section>
+
+<section><h2>5. Funkcny rozsah</h2>
+<h3>Must-have (Vitar.cz)</h3>
+<ul>
+<li>Katalog + <strong>parametricke filtre cez metafields</strong> (P0 filtre + SEO indexacia).</li>
+<li>Produktova karta: varianty (thumbnail swatche), <strong>nutricne tabulky + davkovanie</strong>, claims/warnings, recenzie.</li>
+<li><strong>Landing pages:</strong> brand (16), category/need-state (~15) + kurátorovane ingredient/segment landingy.</li>
+<li><strong>Bundly</strong> (Shopify native) + cross-sell/upsell.</li>
+<li><strong>Konfigurator / dotaznik</strong> (person profily &rarr; personalizovane bundly) — reuse z VS.</li>
+<li><strong>Zlavy</strong> + <strong>anti-kanibalizacia</strong> (Vitar.cz premium nesmie podstrelovat retail).</li>
+<li><strong>B2B (ak relevantne):</strong> Shopify B2B; pre velkoobchod/export <strong>zahrnut exportny team</strong>.</li>
+</ul>
+<p><strong>nasevitaminy.cz:</strong> redukovany set — jednoduchy katalog (klasiky), vypredajove mechaniky, minimalny brand layer.</p>
+</section>
+
+<section><h2>6. Integrace + 7. SEO/migracia</h2>
+<table>
+<tr><th>Vrstva</th><th>Riesenie</th></tr>
+<tr><td>ERP sync</td><td><strong>Dativery &harr; Pohoda</strong> (Vitar Digital)</td></tr>
+<tr><td>Platby</td><td><strong>Shopify Payments</strong> (Apple/Google Pay)</td></tr>
+<tr><td>Fakturacia (docasne)</td><td>Fakturoid &rarr; import Pohoda</td></tr>
+<tr><td>Doprava</td><td>Zasilkovna + GLS (Shopify appky)</td></tr>
+<tr><td>Tracking</td><td>GA4 + Meta cez <strong>GTM Custom Pixels</strong> (nie theme.liquid)</td></tr>
+<tr><td>Feedy</td><td>Merchant Center / Mergado + <strong>Alza</strong> (EAN povinny)</td></tr>
+</table>
+<ul>
+<li><strong>Ziadne 404</strong> — mapa presmerovani zo starych Magento URL: <strong>301 (trvale)</strong> pre finalne URL + <strong>302 (docasne)</strong> kde este ladime strukturu (<code>canonical_url</code> = P0).</li>
+<li><strong>Indexacia:</strong> brand + category + rucne vybrane ingredient/segment landingy; facety noindex; ziadne duplicitne brand&times;potreba URL.</li>
+<li>Selekcia obsahu ~80 % neziaducich brandov; <strong>Veterina rebrand, mimo hlavnych e-shopov</strong> (39 SKU).</li>
+<li><strong>Owner SEO/301 = Juraj.</strong> Pristupy: reklamne/analyticke ucty spravuje Juraj (admin vie zdielat).</li>
+</ul>
+</section>
+
+<section><h2>8. Milniky</h2>
+<ol>
+<li><strong>IA + wireframes</strong> (House of Rezac) + brandove podklady (Karel/BloomField) — marketplace navigacia.</li>
+<li><strong>Theme build</strong> — reuse RB/Enervit + <strong>import 271 SKU</strong> (Matrixify).</li>
+<li><strong>Obohatenie PIM</strong> — 114 produktov + claims/dosage (Regulatory) na MVP PIM.</li>
+<li><strong>Integrace</strong> — Dativery/Pohoda, Payments, doprava, tracking, feedy.</li>
+<li><strong>QA</strong> + 301 mapa + test objednavky.</li>
+<li><strong>Launch Vitar.cz — oktober 2026</strong>; nasevitaminy.cz nasledne.</li>
+</ol>
+</section>
+
+<section><h2>9. Otvorene / caka sa</h2>
+<ul>
+<li><strong>Finalne (ramcove) nacenenie</strong> WON ECOMMERCE pred podpisom.</li>
+<li><strong>Brandovo-pravne rozhodnutie</strong> (VITAR &rarr; VITAR Group; klasicky brand VITAR zanika).</li>
+<li><strong>Priradenie znaciek/rad/SKU</strong> premium (Vitar.cz) vs klasiky (nasevitaminy.cz) — brand + komercia (uz 92 %).</li>
+<li><strong>Veterina (39 SKU)</strong> — samostatny e-shop / domena TBD.</li>
+<li><strong>DC / WMS</strong> = samostatny prud (Lokia nepodporuje Shopify &rarr; novy vendor).</li>
+</ul>
+</section>
+
+<section><h2>10. Kontakty &amp; referencie</h2>
+<p><strong>Juraj Giacko</strong> — leader e-com, dataset/planner, reklamne ucty, SEO/301.<br>
+<strong>Marek Kozel</strong> — marketing specialista: mailingy, interne nastavenie shopov, exekutiva.</p>
+<ul>
+<li>Architektura L0–L7 (Tomas): <code>2026-06-30-tomas-cervinka-ecommerce-architektura-L0-L7.md</code></li>
+<li>Migracny planner + dataset: <a href="https://jurajgiacko.github.io/vitarecommerce/">jurajgiacko.github.io/vitarecommerce</a></li>
+<li>Shopify repos: <code>royalbay-shopify</code>, <code>enervit-shopify</code>; VitarSport infra + KB.</li>
+<li>Referencne buildy: <strong>ROYAL BAY live</strong> (<a href="https://www.royalbay.cz/">royalbay.cz</a>), <strong>Enervit preview</strong> (<a href="https://enervitcz.myshopify.com/">enervitcz.myshopify.com</a>, heslo: <code>ulteod</code>).</li>
+</ul>
+</section>
+
+<footer class="doc">Developer brief v2.1 &middot; 2026-07-01 &middot; Pripravil Juraj Giacko &middot; Dataset: migracny planner (548 &rarr; 333) + L0–L7 (Tomas Cervinka)</footer>
+</div>
+</body>
+</html>
