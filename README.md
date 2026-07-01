@@ -2,6 +2,21 @@
 
 Project workspace for `jurajgiacko/vitarecommerce`.
 
+## Onboarding & briefs (live)
+
+- **E-commerce & Digital onboarding briefing** (internal): https://jurajgiacko.github.io/vitarecommerce/onboarding/
+- **Developer brief — Vitar.cz e-shop** (for build/pricing): https://jurajgiacko.github.io/vitarecommerce/onboarding/dev-brief.html
+
+Both live under `outputs/onboarding/`. Update = edit the HTML + push (Pages rebuilds, same URL).
+
+### Target architecture (summary)
+
+- **Two worlds:** static **VITAR Group** (corporate/B2B/OEM/careers, no cart, outside DC) + **e-com world** (transactional, via DC).
+- **vitar.cz = product marketplace** (multi-brand, premium, new lines) — not a single-brand shop.
+- **nasevitaminy.cz = retail** (classics, volume) — permanently separate, not merged/redirected into vitar.cz.
+- **Shopify** storefront (leaving FastCentrik) · **Pohoda** ERP (one entity per company; QAD stays production/master-data only, outside fulfillment) · **one WMS + one shared DC**.
+- Dataset scope: **548 scraped URLs → 333 master products** (271 vitar.cz / 39 Veterina separate / 17 Sport / 6 exclude), 16 brands, ~15 categories, 12 filters (with SEO index rules), 22-attribute PIM model, 238 content + 57 group pages. Overall readiness ~67% (assortment 92%, PIM 49%).
+
 ## PIM discovery outputs
 
 This workspace contains a first-pass scrape and category-management preparation for:
