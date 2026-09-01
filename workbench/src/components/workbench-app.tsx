@@ -538,12 +538,15 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
     return props.products
       .filter((product) => {
         const mine = currentReview(product, props.profileId);
+        const effectiveCategoryKey = props.view === "final" && product.finalDecision
+          ? product.finalDecision.categoryKey
+          : mine?.categoryKey || product.finalDecision?.categoryKey || product.categoryKey;
         if (props.view === "homework" && mine?.status === "submitted") return false;
         if (props.view === "conflicts" && !product.consensusConflict && !product.quality.hasConflict && !product.reviews.some((review) => review.channels.some((channel) => channel.channel === "workshop_hold"))) return false;
         if (props.view === "coverage" && product.sourceCount > 1 && product.quality.hasEan && product.quality.hasDescription && !product.quality.hasConflict) return false;
         if (props.view === "wip" && product.lifecycle !== "wip") return false;
         if (props.brand !== "all" && product.brand !== props.brand) return false;
-        if (props.category !== "all" && product.categoryKey !== props.category) return false;
+        if (props.category !== "all" && effectiveCategoryKey !== props.category) return false;
         if (props.source !== "all" && !product.sources.some((source) => source.sourceKey === props.source)) return false;
         if (props.status !== "all" && reviewStatus(product, props.profileId).key !== props.status) return false;
         if (props.lifecycle !== "all" && lifecycleDecision(product, props.profileId) !== props.lifecycle) return false;
@@ -599,12 +602,15 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
               const mine = currentReview(product, props.profileId);
               const productStatus = reviewStatus(product, props.profileId);
               const productLifecycle = lifecycleDecision(product, props.profileId);
+              const effectiveCategoryLabel = props.view === "final" && product.finalDecision
+                ? product.finalDecision.categoryLabel
+                : mine?.categoryLabel || product.finalDecision?.categoryLabel || product.categoryLabel;
               const recommendation = mine?.channels.length ? mine.channels.map((channel) => channelLabel(channel.channel)).join(" + ") : product.systemRecommendation.channels.map(channelLabel).join(" + ");
               return (
                 <tr onClick={() => props.onOpenProduct(product.id)} className={props.selectedIds.has(product.id) ? "selected-row" : ""} key={product.id}>
                   <td className="check-column"><button className={`table-checkbox ${props.selectedIds.has(product.id) ? "checked" : ""}`} onClick={(event) => { event.stopPropagation(); toggleOne(product.id); }} aria-label={`Vybrat ${product.name}`}>{props.selectedIds.has(product.id) ? <Check size={13} /> : null}</button></td>
                   <td><div className="product-cell"><div className="table-image">{product.imageUrl ? <img src={product.imageUrl} alt="" /> : <span>{product.brand[0]}</span>}</div><span><strong>{product.name}</strong><small>{product.brand} · SKU {product.sku || "čeká"}{product.lifecycle === "wip" ? " · WIP" : ""}</small>{product.familySize > 1 ? <button className="family-select-button" onClick={(event) => { event.stopPropagation(); props.onSelectFamily(props.products.filter((item) => item.familyKey === product.familyKey).map((item) => item.id)); }}><Layers3 size={12} /> Rodina · {product.familySize} variant</button> : null}</span></div></td>
-                  <td><span className="category-cell">{product.categoryLabel}</span><small className="form-label">{product.formLabel}</small></td>
+                  <td><span className="category-cell">{effectiveCategoryLabel}</span><small className="form-label">{product.formLabel}</small></td>
                   <td><div className="source-badges">{product.sources.map((sourceItem) => <a href={sourceItem.url} target="_blank" rel="noreferrer" className={sourceItem.sourceKey} title={`Otevřít ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} aria-label={`Otevřít produkt na ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} onClick={(event) => event.stopPropagation()} key={sourceItem.id}>{SOURCE_LABELS[sourceItem.sourceKey]?.short}</a>)}</div></td>
                   <td><span className={`recommendation-cell ${mine ? "personal" : "system"}`}>{mine ? null : <Sparkles size={12} />}{recommendation || "K rozhodnutí"}</span></td>
                   <td><span className={`status-pill ${productStatus.key}`}>{productStatus.label}</span></td>
@@ -635,7 +641,7 @@ function BulkBar({ selectedIds, profileId, pending, onClear, onRun }: { selected
 function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profileId: string; categories: Array<{ key: string; label: string }>; onSaveFeedback: SaveFeedbackHandler; onClose: () => void }) {
   const [name, setName] = useState("");
   const [brand, setBrand] = useState("Vitar");
-  const [categoryKey, setCategoryKey] = useState(categories[0]?.key || "unclassified");
+  const [categoryKey, setCategoryKey] = useState(categories.find((item) => item.key === "unclassified")?.key || categories[0]?.key || "unclassified");
   const [description, setDescription] = useState("");
   const [targetChannels, setTargetChannels] = useState<Array<"vitar.cz" | "nasevitaminy.cz">>(["vitar.cz"]);
   const [error, setError] = useState("");
