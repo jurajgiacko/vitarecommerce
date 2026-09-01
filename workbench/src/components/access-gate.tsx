@@ -2,7 +2,6 @@
 
 import { FormEvent, useState, useTransition } from "react";
 import { ArrowRight, KeyRound } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 import { unlockApp } from "@/app/actions";
 
@@ -10,7 +9,6 @@ export function AccessGate() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [pending, startTransition] = useTransition();
-  const router = useRouter();
 
   function submit(event: FormEvent) {
     event.preventDefault();
@@ -21,7 +19,7 @@ export function AccessGate() {
         setError(result.error || "Přístup se nepodařilo ověřit.");
         return;
       }
-      router.refresh();
+      window.location.reload();
     });
   }
 
