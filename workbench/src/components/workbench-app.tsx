@@ -61,7 +61,7 @@ type ViewKey =
 
 const NAV_ITEMS: Array<{ key: ViewKey; label: string; icon: typeof LayoutDashboard }> = [
   { key: "overview", label: "Přehled", icon: LayoutDashboard },
-  { key: "quick", label: "Rychlý review", icon: Zap },
+  { key: "quick", label: "Rychlé posouzení", icon: Zap },
   { key: "homework", label: "Můj domácí úkol", icon: ClipboardCheck },
   { key: "portfolio", label: "Všechny produkty", icon: ListFilter },
   { key: "conflicts", label: "Konflikty", icon: AlertTriangle },
@@ -83,7 +83,7 @@ function currentReview(product: WorkbenchProduct, profileId: string) {
 
 function channelLabel(key: string) {
   return CHANNEL_OPTIONS.find((channel) => channel.key === key)?.label ||
-    (key === "workshop_hold" ? "Hold" : key);
+    (key === "workshop_hold" ? "Společně rozhodnout" : key);
 }
 
 function reviewStatus(product: WorkbenchProduct, profileId: string) {
@@ -102,6 +102,14 @@ function lifecycleDecision(product: WorkbenchProduct, profileId: string) {
 
 function lifecycleLabel(key: string) {
   return LIFECYCLE_OPTIONS.find(([value]) => value === key)?.[1] || key;
+}
+
+function roundStatusLabel(status: string) {
+  return ({ active: "OTEVŘENO", draft: "PŘÍPRAVA", completed: "UZAVŘENO", closed: "UZAVŘENO" } as Record<string, string>)[status] || status.toUpperCase();
+}
+
+function submittedStatusLabel(status: string) {
+  return status === "submitted" ? "Odevzdáno" : status === "draft" ? "Koncept" : "Čeká";
 }
 
 function formatDeadline(value: string | null) {
@@ -231,10 +239,10 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
       <aside className={`sidebar ${mobileNav ? "mobile-open" : ""}`}>
         <header className="brand-lockup">
           <div className="brand-symbol">V</div>
-          <div><strong>VITAR</strong><span>Assortment Workbench</span></div>
+          <div><strong>VITAR</strong><span>Správa sortimentu</span></div>
           <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} title="Zavřít menu"><X size={18} /></button>
         </header>
-        <div className="round-chip"><span className="live-dot" /><span><strong>Review otevřený</strong><small>Termín: {formatDeadline(data.round.dueAt).split(",")[0]}</small></span></div>
+        <div className="round-chip"><span className="live-dot" /><span><strong>Posouzení otevřeno</strong><small>Termín: {formatDeadline(data.round.dueAt).split(",")[0]}</small></span></div>
         <nav className="side-nav">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
@@ -330,7 +338,8 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
         <nav className="mobile-bottom-nav">
           {NAV_ITEMS.filter((item) => ["overview", "quick", "homework", "conflicts"].includes(item.key)).map((item) => {
             const Icon = item.icon;
-            return <button className={view === item.key ? "active" : ""} onClick={() => changeView(item.key)} key={item.key}><Icon size={19} /><span>{item.label.replace("Můj domácí úkol", "Úkol").replace("Rychlý review", "Swipe")}</span></button>;
+            const mobileLabel = item.key === "homework" ? "Úkol" : item.key === "quick" ? "Posoudit" : item.label;
+            return <button className={view === item.key ? "active" : ""} onClick={() => changeView(item.key)} key={item.key}><Icon size={19} /><span>{mobileLabel}</span></button>;
           })}
           <button onClick={() => setMobileNav(true)}><Menu size={19} /><span>Více</span></button>
         </nav>
@@ -423,7 +432,7 @@ function Overview({
     <section className="overview-page">
       <header className="overview-heading">
         <div>
-          <p className="eyebrow">REVIEW ROUND · {data.round.status.toUpperCase()}</p>
+          <p className="eyebrow">ROZHODOVACÍ KOLO · {roundStatusLabel(data.round.status)}</p>
           <h1>Rozdělení portfolia pro nové e-shopy</h1>
           <p>{data.round.description}</p>
         </div>
@@ -433,13 +442,13 @@ function Overview({
       <section className="homework-guide">
         <header>
           <div><p className="eyebrow">RYCHLÝ NÁVOD</p><h2>Jak připravit domácí úkol</h2><p>U každého produktu rozhodněte, zda zůstává, kde se bude prodávat a kam patří.</p></div>
-          <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Začít rychlý review</button>
+          <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Začít rychlé posouzení</button>
         </header>
         <div className="homework-guide-steps">
           <div><span><Archive size={17} /></span><p><strong>1. Ponechat, nebo vyřadit?</strong>Určete aktivní produkt, doprodej, ukončení výroby nebo archiv.</p></div>
           <div><span><Store size={17} /></span><p><strong>2. Zvolte cílový e-shop</strong>VITAR.cz, NašeVitamíny.cz, oba, Veterina nebo společné rozhodnutí.</p></div>
           <div><span><ListFilter size={17} /></span><p><strong>3. Potvrďte kategorii</strong>Vyberte hlavní kategorii; stejné varianty můžete označit přes Produktovou rodinu.</p></div>
-          <div><span><MessageSquareText size={17} /></span><p><strong>4. Doplňte výjimky a novinky</strong>Chybí-li podklad, označte důvod; novinky uložte ve WIP jako trvalý placeholder.</p></div>
+          <div><span><MessageSquareText size={17} /></span><p><strong>4. Doplňte výjimky a novinky</strong>Chybí-li podklad, označte důvod; novinky založte ve WIP jako trvalé pracovní produkty.</p></div>
         </div>
       </section>
 
@@ -452,14 +461,14 @@ function Overview({
 
       <div className="overview-grid">
         <section className="homework-panel">
-          <header><div><h2>Dnešní domácí úkol</h2><p>Váš osobní názor před společným workshopem.</p></div><span>{progress}%</span></header>
+          <header><div><h2>Dnešní domácí úkol</h2><p>Váš osobní názor před společným setkáním.</p></div><span>{progress}%</span></header>
           <div className="large-progress"><i style={{ width: `${progress}%` }} /></div>
           <div className="homework-stats"><span><strong>{metrics.submitted}</strong> odevzdáno</span><span><strong>{metrics.drafts}</strong> koncepty</span><span><strong>{data.products.length - metrics.submitted - metrics.drafts}</strong> čeká</span></div>
           {nextProduct ? (
             <div className="next-product">
               <div>{nextProduct.imageUrl ? <img src={nextProduct.imageUrl} alt="" /> : <span>{nextProduct.brand[0]}</span>}</div>
               <span><small>Další produkt</small><strong>{nextProduct.name}</strong><em>{nextProduct.brand} · {nextProduct.categoryLabel}</em></span>
-              <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Spustit swipe</button>
+              <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Spustit posouzení</button>
               <button className="icon-button" onClick={() => onOpenProduct(nextProduct.id)} title="Otevřít plný detail"><ChevronRight size={18} /></button>
             </div>
           ) : null}
@@ -474,7 +483,7 @@ function Overview({
       </div>
 
       <section className="team-overview">
-        <header><div><h2>Postup podle profilů</h2><p>Vidíte přípravu týmu ještě před workshopem.</p></div><button className="text-button" onClick={() => onChangeView("team")}><UsersRound size={15} /> Spravovat tým</button></header>
+        <header><div><h2>Postup podle profilů</h2><p>Vidíte přípravu týmu ještě před společným setkáním.</p></div><button className="text-button" onClick={() => onChangeView("team")}><UsersRound size={15} /> Spravovat tým</button></header>
         <div className="profile-progress-list">
           {data.profiles.map((profile) => {
             const done = data.products.filter((product) => product.reviews.some((review) => review.profileId === profile.id && review.status === "submitted")).length;
@@ -486,7 +495,7 @@ function Overview({
 
       <div className="overview-grid lower">
         <section className="source-audit-panel">
-          <header><div><h2>Kontrola zdrojů</h2><p>Každá sitemap URL je zaúčtovaná.</p></div><span className={`audit-state ${data.crawl?.errorCount ? "error" : "ok"}`}><CircleDotDashed size={15} /> {data.crawl?.errorCount || 0} chyb</span></header>
+          <header><div><h2>Kontrola zdrojů</h2><p>Každá URL v mapě webu je zaúčtovaná.</p></div><span className={`audit-state ${data.crawl?.errorCount ? "error" : "ok"}`}><CircleDotDashed size={15} /> {data.crawl?.errorCount || 0} chyb</span></header>
           <div className="source-audit-table">
             {Object.entries(sourceCoverage).map(([key, value]) => (
               <div key={key}><span className={`source-logo ${key}`}>{SOURCE_LABELS[key]?.short || key.slice(0, 2)}</span><span><strong>{SOURCE_LABELS[key]?.label || key}</strong><small>{value.products || 0} produktových profilů</small></span><span><strong>{value.inventory_urls || 0}/{value.sitemap_urls || 0}</strong><small>URL zkontrolováno</small></span><span className={value.reconciled ? "reconciled" : "not-reconciled"}>{value.reconciled ? <CheckCircle2 size={16} /> : <AlertTriangle size={16} />}{value.reconciled ? "Sedí" : "Nesedí"}</span></div>
@@ -495,7 +504,7 @@ function Overview({
         </section>
 
         <section className="brand-panel">
-          <header><div><h2>Největší značky</h2><p>Počet master produktů po bezpečném párování.</p></div><BarChart3 size={20} /></header>
+          <header><div><h2>Největší značky</h2><p>Počet hlavních produktů po bezpečném párování.</p></div><BarChart3 size={20} /></header>
           <div className="brand-bars">
             {brandCounts.map((item) => <div key={item.brand}><span>{item.brand}</span><i><b style={{ width: `${Math.max(6, (item.count / brandCounts[0].count) * 100)}%` }} /></i><strong>{item.count}</strong></div>)}
           </div>
@@ -581,7 +590,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
   return (
     <section className="workspace-page">
       <header className="page-heading compact-heading">
-        <div><p className="eyebrow">{props.view === "conflicts" ? "DECISION QUEUE" : props.view === "coverage" ? "DATA CONTROL TOWER" : "MASTER CATALOG"}</p><h1>{pageTitle(props.view)}</h1><p>{props.view === "homework" ? "Produkty, pro které ještě nemáte odevzdaný názor." : props.view === "conflicts" ? "Rozdílné názory nebo konfliktní zdrojová data." : props.view === "coverage" ? "Chybějící data, osamocené zdroje a identifikační konflikty." : props.view === "final" ? "Schválené rozhodnutí je oddělené od osobních návrhů." : "Kompletní portfolio ze tří aktuálních zdrojů."}</p></div>
+        <div><p className="eyebrow">{props.view === "conflicts" ? "FRONTA ROZHODNUTÍ" : props.view === "coverage" ? "KONTROLA DAT" : "HLAVNÍ KATALOG"}</p><h1>{pageTitle(props.view)}</h1><p>{props.view === "homework" ? "Produkty, pro které ještě nemáte odevzdaný názor." : props.view === "conflicts" ? "Rozdílné názory nebo konfliktní zdrojová data." : props.view === "coverage" ? "Chybějící data, osamocené zdroje a identifikační konflikty." : props.view === "final" ? "Schválené rozhodnutí je oddělené od osobních návrhů." : "Kompletní portfolio ze tří aktuálních zdrojů."}</p></div>
         <div className="heading-actions"><span className="result-count"><strong>{filtered.length}</strong> produktů</span><button className="secondary-button" onClick={props.onAddWip}><Plus size={16} /> Nový WIP</button></div>
       </header>
 
@@ -615,7 +624,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
                   <td><div className="source-badges">{product.sources.map((sourceItem) => <a href={sourceItem.url} target="_blank" rel="noreferrer" className={sourceItem.sourceKey} title={`Otevřít ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} aria-label={`Otevřít produkt na ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} onClick={(event) => event.stopPropagation()} key={sourceItem.id}>{SOURCE_LABELS[sourceItem.sourceKey]?.short}</a>)}</div></td>
                   <td><span className={`recommendation-cell ${mine ? "personal" : "system"}`}>{mine ? null : <Sparkles size={12} />}{recommendation || "K rozhodnutí"}</span></td>
                   <td><span className={`status-pill ${productStatus.key}`}>{productStatus.label}</span></td>
-                  <td><div className="team-avatars">{product.reviews.slice(0, 5).map((review) => <span className={`avatar tiny ${review.status}`} style={{ backgroundColor: review.profileColor }} title={`${review.profileName}: ${review.status}`} key={review.profileId}>{review.profileInitials}</span>)}{product.consensusConflict ? <AlertTriangle className="team-conflict" size={15} /> : null}</div></td>
+                  <td><div className="team-avatars">{product.reviews.slice(0, 5).map((review) => <span className={`avatar tiny ${review.status}`} style={{ backgroundColor: review.profileColor }} title={`${review.profileName}: ${submittedStatusLabel(review.status)}`} key={review.profileId}>{review.profileInitials}</span>)}{product.consensusConflict ? <AlertTriangle className="team-conflict" size={15} /> : null}</div></td>
                   <td><div className="qa-flags">{productLifecycle !== "active" ? <span className={productLifecycle === "phaseout" ? "warn" : "error"} title={lifecycleLabel(productLifecycle)}>{productLifecycle === "phaseout" ? "DOP" : productLifecycle === "discontinue" ? "STOP" : "ARCH"}</span> : null}{product.quality.hasConflict ? <span className="error" title="Konflikt identifikátorů"><AlertTriangle size={14} /></span> : null}{product.sourceCount === 1 ? <span className="warn" title="Pouze jeden zdroj">1×</span> : null}{!product.quality.hasEan ? <span className="warn" title="Chybí EAN">EAN</span> : null}{product.finalDecision ? <span className="ok" title="Finální rozhodnutí"><ShieldCheck size={14} /></span> : null}</div></td>
                   <td><ChevronRight size={17} /></td>
                 </tr>
@@ -654,7 +663,7 @@ function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profile
     const selected = categories.find((item) => item.key === categoryKey);
     if (!selected) return;
     setError("");
-    onSaveFeedback("saving", "Ukládám nový placeholder");
+    onSaveFeedback("saving", "Ukládám nový pracovní produkt");
     startTransition(async () => {
       try {
         await createWipProduct({
@@ -666,7 +675,7 @@ function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profile
           description,
           targetChannels,
         });
-        onSaveFeedback("saved", "Placeholder trvale uložen");
+        onSaveFeedback("saved", "Pracovní produkt trvale uložen");
         router.refresh();
         onClose();
       } catch (submitError) {
@@ -685,10 +694,10 @@ function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profile
       <button className="modal-backdrop" onClick={onClose} aria-label="Zavřít" />
       <form className="modal-panel" onSubmit={submit}>
         <header>
-          <div><p className="eyebrow">WIP INBOX</p><h2>Přidat nový placeholder</h2></div>
+          <div><p className="eyebrow">NOVÝ PRODUKT</p><h2>Přidat nový pracovní produkt</h2></div>
           <button type="button" className="icon-button" onClick={onClose} title="Zavřít"><X size={18} /></button>
         </header>
-        <p>Placeholder se trvale uloží do databáze, zůstane vedle nascrapovaného portfolia a projde stejným review.</p>
+        <p>Pracovní produkt se trvale uloží do databáze, zůstane vedle načteného portfolia a projde stejným posouzením.</p>
         <label><span>Pracovní název</span><input value={name} onChange={(event) => setName(event.target.value)} autoFocus /></label>
         <div className="two-column-fields">
           <label><span>Značka / řada</span><input value={brand} onChange={(event) => setBrand(event.target.value)} /></label>
@@ -718,14 +727,14 @@ function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profile
               );
             })}
           </div>
-          <small>Lze zvolit jeden nebo oba e-shopy. Cíl se uloží přímo k placeholderu.</small>
+          <small>Lze zvolit jeden nebo oba e-shopy. Cíl se uloží přímo k pracovnímu produktu.</small>
         </div>
         <label><span>Koncept / USP</span><textarea rows={5} value={description} onChange={(event) => setDescription(event.target.value)} /></label>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
         <footer>
           <button type="button" className="secondary-button" onClick={onClose}>Zrušit</button>
           <button className="primary-button" disabled={pending || name.trim().length < 3 || targetChannels.length === 0}>
-            {pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Uložit placeholder
+            {pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Uložit pracovní produkt
           </button>
         </footer>
       </form>

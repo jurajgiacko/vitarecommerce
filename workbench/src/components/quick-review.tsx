@@ -92,7 +92,7 @@ export function QuickReview({ products, profile, onOpenProduct, onSelectFamily, 
     const decision = DECISIONS[kind];
     const rationale = kind === "hold" && informationReason
       ? informationRationale(informationReason)
-      : `Rychlý review: ${decision.label}.`;
+      : `Rychlé posouzení: ${decision.label}.`;
     setMessage(decision.label);
     onSaveFeedback("saving", `Ukládám: ${decision.label}`);
     startTransition(async () => {
@@ -175,7 +175,7 @@ export function QuickReview({ products, profile, onOpenProduct, onSelectFamily, 
     <section className="quick-review">
       <header className="quick-header">
         <div>
-          <p className="eyebrow">RYCHLÝ REVIEW</p>
+          <p className="eyebrow">RYCHLÉ POSOUZENÍ</p>
           <h1>Kam tento produkt patří?</h1>
         </div>
         <div className="quick-progress">

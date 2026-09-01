@@ -33,8 +33,8 @@ import type {
 } from "@/lib/workbench-types";
 
 export const CHANNEL_OPTIONS = [
-  { key: "vitar.cz", label: "VITAR.cz", note: "Premium marketplace" },
-  { key: "nasevitaminy.cz", label: "NašeVitamíny.cz", note: "Retail a volume" },
+  { key: "vitar.cz", label: "VITAR.cz", note: "Prémiový e-shop" },
+  { key: "nasevitaminy.cz", label: "NašeVitamíny.cz", note: "Maloobchod a objemový prodej" },
   { key: "vitar_veterina", label: "VITAR Veterina", note: "Samostatný e-shop" },
   { key: "oem_b2b", label: "OEM / B2B", note: "Mimo B2C katalog" },
   { key: "workshop_hold", label: "Potřebuji informace", note: "Chybí podklad pro rozhodnutí" },
@@ -49,12 +49,12 @@ export const LIFECYCLE_OPTIONS = [
 ] as const;
 
 const PORTFOLIO_ROLES = [
-  ["hero", "Hero"],
-  ["core", "Core"],
-  ["support", "Support"],
-  ["longtail", "Long tail"],
-  ["test", "Test"],
-  ["hold", "Hold"],
+  ["hero", "Klíčový"],
+  ["core", "Hlavní"],
+  ["support", "Doplňkový"],
+  ["longtail", "Okrajový"],
+  ["test", "Testovací"],
+  ["hold", "Pozastavit"],
   ["exclude", "Vyřadit"],
 ] as const;
 

@@ -30,7 +30,7 @@ export function AccessGate() {
       <section className="gate-panel">
         <div className="gate-mark" aria-hidden="true">V</div>
         <p className="eyebrow">VITAR DIGITAL GROWTH</p>
-        <h1>Assortment Workbench</h1>
+        <h1>Správa sortimentu</h1>
         <p className="gate-copy">
           Interní rozhodovací prostor pro portfolio VITAR.cz a NašeVitamíny.cz.
         </p>

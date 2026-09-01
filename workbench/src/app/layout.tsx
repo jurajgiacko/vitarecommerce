@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VITAR Assortment Workbench",
+  title: "VITAR · Správa sortimentu",
   description: "Interní rozhodovací nástroj pro nové e-commerce portfolio VITAR.",
 };
 

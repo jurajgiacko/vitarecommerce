@@ -80,9 +80,9 @@ export function TeamPanel({ profiles, products, currentProfile }: TeamPanelProps
     <section className="team-page">
       <header className="page-heading">
         <div>
-          <p className="eyebrow">PROFILY A SESSION</p>
+          <p className="eyebrow">PROFILY A PŘÍSTUPY</p>
           <h1>Týmový domácí úkol</h1>
-          <p>Každý pozvaný člověk dostane vlastní session a jeho rozhodnutí zůstanou oddělená.</p>
+          <p>Každý pozvaný člověk dostane vlastní přístup a jeho rozhodnutí zůstanou oddělená.</p>
         </div>
         <div className="heading-stat"><UsersRound size={19} /><strong>{profiles.length}</strong><span>aktivní profily</span></div>
       </header>
@@ -98,9 +98,9 @@ export function TeamPanel({ profiles, products, currentProfile }: TeamPanelProps
             <div className="team-row" key={profile.id}>
               <span className="team-person"><i className="avatar small" style={{ backgroundColor: profile.color }}>{profile.initials}</i><span><strong>{profile.name}</strong></span></span>
               <span>{profile.email || "E-mail není nutný"}</span>
-              <span className={`session-state ${profile.lastActiveAt ? "active" : "waiting"}`}>{profile.lastActiveAt ? "Session aktivní" : "Čeká na otevření"}</span>
+              <span className={`session-state ${profile.lastActiveAt ? "active" : "waiting"}`}>{profile.lastActiveAt ? "Přístup aktivní" : "Čeká na otevření"}</span>
               <span className="team-progress"><span><i style={{ width: `${percent}%` }} /></span><strong>{done}/{products.length}</strong></span>
-              {canManage ? <button className="secondary-button compact invite-link-button" disabled={pending} onClick={() => createLink(profile)}><Link2 size={14} /> Vytvořit link</button> : null}
+              {canManage ? <button className="secondary-button compact invite-link-button" disabled={pending} onClick={() => createLink(profile)}><Link2 size={14} /> Vytvořit odkaz</button> : null}
             </div>
           );
         })}
@@ -108,17 +108,17 @@ export function TeamPanel({ profiles, products, currentProfile }: TeamPanelProps
 
       {canManage ? (
         <section className="invite-section">
-          <header><div><Mail size={18} /><span><strong>Přidat dalšího člověka</strong><small>Osobní link platí 14 dní a přihlásí správný profil automaticky.</small></span></div></header>
+          <header><div><Mail size={18} /><span><strong>Přidat dalšího člověka</strong><small>Osobní odkaz platí 14 dní a přihlásí správný profil automaticky.</small></span></div></header>
           <form className="invite-form" onSubmit={submit}>
             <label><span>Jméno</span><input value={name} onChange={(event) => setName(event.target.value)} placeholder="Např. Tomáš Červinka" /></label>
             <label><span>E-mail (volitelný)</span><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="jmeno@vitar.cz" /></label>
-            <button className="primary-button" disabled={pending || name.trim().length < 2}><Plus size={16} /> {pending ? "Vytvářím..." : "Přidat a vytvořit link"}</button>
+            <button className="primary-button" disabled={pending || name.trim().length < 2}><Plus size={16} /> {pending ? "Vytvářím..." : "Přidat a vytvořit odkaz"}</button>
           </form>
           {error ? <p className="form-error">{error}</p> : null}
           {inviteUrl ? (
             <div className="invite-result">
               <Link2 size={17} />
-              <span><strong>Osobní link pro {inviteName}</strong><input readOnly value={inviteUrl} onFocus={(event) => event.currentTarget.select()} /></span>
+              <span><strong>Osobní odkaz pro {inviteName}</strong><input readOnly value={inviteUrl} onFocus={(event) => event.currentTarget.select()} /></span>
               <button className="secondary-button" onClick={copyInvite}>{copied ? <Check size={16} /> : <Copy size={16} />}{copied ? "Zkopírováno" : "Kopírovat"}</button>
             </div>
           ) : null}

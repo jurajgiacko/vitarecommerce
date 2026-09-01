@@ -364,7 +364,7 @@ export async function createWipProduct(input: {
       channels: parsed.targetChannels,
       primary: parsed.targetChannels[0],
       confidence: "low",
-      reason: `WIP placeholder připravený pro ${parsed.targetChannels.join(" + ")}; vyžaduje společné rozhodnutí.`,
+      reason: `WIP pracovní produkt připravený pro ${parsed.targetChannels.join(" + ")}; vyžaduje společné rozhodnutí.`,
     },
   });
   await db.insert(schema.auditEvents).values({

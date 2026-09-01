@@ -31,7 +31,7 @@ export function ProfilePicker({ profiles }: { profiles: Profile[] }) {
   return (
     <main className="profile-shell">
       <section className="profile-panel">
-        <p className="eyebrow">VITAR ASSORTMENT WORKBENCH</p>
+        <p className="eyebrow">VITAR · SPRÁVA SORTIMENTU</p>
         <h1>Kdo dnes rozhoduje?</h1>
         <p>Každý profil má vlastní domácí úkol, poznámky a návrhy.</p>
         <div className="profile-grid">

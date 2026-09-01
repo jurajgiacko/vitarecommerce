@@ -213,7 +213,7 @@ export async function GET(request: Request) {
   if (format === "md") {
     const generatedAt = new Date().toISOString();
     const approvedCount = rows.filter((row) => row.final_status !== "unresolved").length;
-    const title = scope === "all" ? "VITAR Assortment - všechny názory" : "VITAR Assortment - finální rozhodnutí";
+    const title = scope === "all" ? "VITAR sortiment - všechny názory" : "VITAR sortiment - finální rozhodnutí";
     const lines = [
       `# ${title}`,
       "",
@@ -225,7 +225,7 @@ export async function GET(request: Request) {
       "",
       "## Produktová matice",
       "",
-      "| Produkt | Rodina | Brand | SKU | EAN | Zdroje | Placeholder cíl | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
+      "| Produkt | Rodina | Značka | SKU | EAN | Zdroje | Cíl pracovního produktu | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Posouzení | Důvod |",
       "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
       ...rows.map((row) => {
         const sourceLinks = [
@@ -258,7 +258,7 @@ export async function GET(request: Request) {
         "",
         "## Individuální názory",
         "",
-        "| Produkt | Reviewer | Stav | Životní cyklus | Kanály | Kategorie | Role | Odůvodnění |",
+        "| Produkt | Hodnotitel | Stav | Životní cyklus | Kanály | Kategorie | Role | Odůvodnění |",
         "| --- | --- | --- | --- | --- | --- | --- | --- |",
       );
       for (const row of rows) {
