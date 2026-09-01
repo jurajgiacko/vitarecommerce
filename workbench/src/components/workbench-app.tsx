@@ -112,6 +112,7 @@ function formatDeadline(value: string | null) {
     month: "long",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "Europe/Prague",
   }).format(new Date(value));
 }
 
@@ -261,7 +262,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           <button className="icon-button mobile-menu" onClick={() => setMobileNav(true)} title="Otevřít menu"><Menu size={19} /></button>
           <div><span className="topbar-path">VITAR DIGITAL GROWTH /</span><strong>{pageTitle(view)}</strong></div>
           <div className="topbar-actions">
-            <div className={`sync-state ${saveFeedback.state}`} aria-live="polite"><span /><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : saveFeedback.state === "error" ? "Chyba uložení" : "Data aktuální"}</strong><small>{saveFeedback.state === "idle" ? (data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.crawl.completedAt)) : "") : saveFeedback.message}</small></div>
+            <div className={`sync-state ${saveFeedback.state}`} aria-live="polite"><span /><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : saveFeedback.state === "error" ? "Chyba uložení" : "Data aktuální"}</strong><small>{saveFeedback.state === "idle" ? (data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Prague" }).format(new Date(data.crawl.completedAt)) : "") : saveFeedback.message}</small></div>
             <button className="icon-button sync-refresh" onClick={() => startTransition(() => router.refresh())} title="Obnovit data týmu" aria-label="Obnovit data týmu"><RefreshCw className={pending ? "spin" : ""} size={16} /></button>
             <details className="export-menu">
               <summary className="secondary-button" title="Exportovat data"><Download size={16} /> <span>Export</span></summary>
