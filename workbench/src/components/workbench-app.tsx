@@ -42,8 +42,10 @@ import { useRouter } from "next/navigation";
 
 import { bulkSaveReviews, clearProfileSelection, createWipProduct } from "@/app/actions";
 import { ProductDrawer, CHANNEL_OPTIONS, LIFECYCLE_OPTIONS } from "@/components/product-drawer";
+import { PixelMark } from "@/components/pixel-mark";
 import { QuickReview } from "@/components/quick-review";
 import { TeamPanel } from "@/components/team-panel";
+import { highConflictDetails, highConflictSummary } from "@/lib/conflicts";
 import { INFORMATION_REASONS } from "@/lib/review-options";
 import type { SaveFeedbackHandler, SaveFeedbackState, WorkbenchData, WorkbenchProduct } from "@/lib/workbench-types";
 
@@ -244,7 +246,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
     <div className="app-shell">
       <aside className={`sidebar ${mobileNav ? "mobile-open" : ""}`}>
         <header className="brand-lockup">
-          <div className="brand-symbol">V</div>
+          <PixelMark />
           <div><strong>VITAR</strong><span>Správa sortimentu</span></div>
           <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} title="Zavřít menu"><X size={18} /></button>
         </header>
@@ -627,6 +629,8 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
               const mine = currentReview(product, props.profileId);
               const productStatus = reviewStatus(product, props.profileId);
               const productLifecycle = lifecycleDecision(product, props.profileId);
+              const sourceConflictSummary = highConflictSummary(product.fieldConflicts);
+              const sourceConflictDetails = highConflictDetails(product.fieldConflicts);
               const effectiveCategoryLabel = props.view === "final" && product.finalDecision
                 ? product.finalDecision.categoryLabel
                 : mine?.categoryLabel || product.finalDecision?.categoryLabel || product.categoryLabel;
@@ -634,13 +638,13 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
               return (
                 <tr onClick={() => props.onOpenProduct(product.id)} className={props.selectedIds.has(product.id) ? "selected-row" : ""} key={product.id}>
                   <td className="check-column"><button className={`table-checkbox ${props.selectedIds.has(product.id) ? "checked" : ""}`} onClick={(event) => { event.stopPropagation(); toggleOne(product.id); }} aria-label={`Vybrat ${product.name}`}>{props.selectedIds.has(product.id) ? <Check size={13} /> : null}</button></td>
-                  <td><div className="product-cell"><div className="table-image">{product.imageUrl ? <img src={product.imageUrl} alt="" /> : <span>{product.brand[0]}</span>}</div><span><strong>{product.name}</strong><small>{product.brand} · SKU {product.sku || "čeká"}{product.lifecycle === "wip" ? " · WIP" : ""}</small>{product.familySize > 1 ? <button className="family-select-button" onClick={(event) => { event.stopPropagation(); props.onSelectFamily(props.products.filter((item) => item.familyKey === product.familyKey).map((item) => item.id)); }}><Layers3 size={12} /> Rodina · {product.familySize} variant</button> : null}</span></div></td>
+                  <td><div className="product-cell"><div className="table-image">{product.imageUrl ? <img src={product.imageUrl} alt="" /> : <span>{product.brand[0]}</span>}</div><span><strong>{product.name}</strong><small>{product.brand} · SKU {product.sku || "čeká"}{product.lifecycle === "wip" ? " · WIP" : ""}</small>{props.view === "conflicts" && sourceConflictSummary ? <small className="source-conflict-summary" title={sourceConflictDetails}><AlertTriangle size={11} /> {sourceConflictSummary}</small> : null}{product.familySize > 1 ? <button className="family-select-button" onClick={(event) => { event.stopPropagation(); props.onSelectFamily(props.products.filter((item) => item.familyKey === product.familyKey).map((item) => item.id)); }}><Layers3 size={12} /> Rodina · {product.familySize} variant</button> : null}</span></div></td>
                   <td><span className="category-cell">{effectiveCategoryLabel}</span><small className="form-label">{product.formLabel}</small></td>
                   <td><div className="source-badges">{product.sources.map((sourceItem) => <a href={sourceItem.url} target="_blank" rel="noreferrer" className={sourceItem.sourceKey} title={`Otevřít ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} aria-label={`Otevřít produkt na ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} onClick={(event) => event.stopPropagation()} key={sourceItem.id}>{SOURCE_LABELS[sourceItem.sourceKey]?.short}</a>)}</div></td>
                   <td><span className={`recommendation-cell ${mine ? "personal" : "system"}`}>{mine ? null : <Sparkles size={12} />}{recommendation || "K rozhodnutí"}</span></td>
                   <td><span className={`status-pill ${productStatus.key}`}>{productStatus.label}</span></td>
                   <td><div className="team-avatars">{product.reviews.slice(0, 5).map((review) => <span className={`avatar tiny ${review.status}`} style={{ backgroundColor: review.profileColor }} title={`${review.profileName}: ${submittedStatusLabel(review.status)}`} key={review.profileId}>{review.profileInitials}</span>)}{product.consensusConflict ? <AlertTriangle className="team-conflict" size={15} /> : null}</div></td>
-                  <td><div className="qa-flags">{productLifecycle !== "active" ? <span className={productLifecycle === "phaseout" ? "warn" : "error"} title={lifecycleLabel(productLifecycle)}>{productLifecycle === "phaseout" ? "DOP" : productLifecycle === "discontinue" ? "STOP" : "ARCH"}</span> : null}{product.quality.hasConflict ? <span className="error" title="Konflikt identifikátorů"><AlertTriangle size={14} /></span> : null}{product.sourceCount === 1 ? <span className="warn" title="Pouze jeden zdroj">1×</span> : null}{!product.quality.hasEan ? <span className="warn" title="Chybí EAN">EAN</span> : null}{product.finalDecision ? <span className="ok" title="Finální rozhodnutí"><ShieldCheck size={14} /></span> : null}</div></td>
+                  <td><div className="qa-flags">{productLifecycle !== "active" ? <span className={productLifecycle === "phaseout" ? "warn" : "error"} title={lifecycleLabel(productLifecycle)}>{productLifecycle === "phaseout" ? "DOP" : productLifecycle === "discontinue" ? "STOP" : "ARCH"}</span> : null}{product.quality.hasConflict ? <span className="error" title="Konflikt zdrojových dat"><AlertTriangle size={14} /></span> : null}{product.sourceCount === 1 ? <span className="warn" title="Pouze jeden zdroj">1×</span> : null}{!product.quality.hasEan ? <span className="warn" title="Chybí EAN">EAN</span> : null}{product.finalDecision ? <span className="ok" title="Finální rozhodnutí"><ShieldCheck size={14} /></span> : null}</div></td>
                   <td><ChevronRight size={17} /></td>
                 </tr>
               );

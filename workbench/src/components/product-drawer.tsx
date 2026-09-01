@@ -24,6 +24,7 @@ import { useRouter } from "next/navigation";
 
 import { addComment, saveFinalDecision, saveReview } from "@/app/actions";
 import { INFORMATION_REASONS, informationRationale } from "@/lib/review-options";
+import { conflictFieldLabel } from "@/lib/conflicts";
 import type {
   ChannelDecision,
   ProductDetail,
@@ -328,7 +329,7 @@ export function ProductDrawer({ product, profile, profiles, categories, familyPr
                       .filter((conflict) => conflict.severity === "high")
                       .map((conflict) => (
                         <p key={conflict.field}>
-                          {conflict.field}: {conflict.values?.join(" / ")}
+                          {conflictFieldLabel(conflict.field)}: {conflict.values?.join(" / ")}
                         </p>
                       ))}
                   </div>

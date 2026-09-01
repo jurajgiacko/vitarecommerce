@@ -300,17 +300,60 @@ p {
 }
 
 .gate-mark {
-  align-items: center;
-  background: var(--green);
-  border-radius: 5px;
-  color: #fff;
-  display: flex;
-  font-size: 26px;
-  font-weight: 800;
-  height: 48px;
-  justify-content: center;
   margin-bottom: 30px;
+}
+
+.pixel-mark {
+  --pixel-gap: 1px;
+  --pixel-size: 3px;
+  background: #10372c;
+  border: 1px solid rgba(139, 240, 194, 0.38);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(3, 16, 12, 0.7), 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: grid;
+  flex: 0 0 auto;
+  gap: var(--pixel-gap);
+  grid-template-columns: repeat(7, var(--pixel-size));
+  grid-template-rows: repeat(7, var(--pixel-size));
+  height: 32px;
+  overflow: hidden;
+  place-content: center;
+  position: relative;
+  width: 32px;
+}
+
+.pixel-mark.large {
+  --pixel-gap: 2px;
+  --pixel-size: 4px;
+  border-radius: 5px;
+  height: 48px;
   width: 48px;
+}
+
+.pixel-cell {
+  background: rgba(224, 255, 243, 0.06);
+  display: block;
+  height: var(--pixel-size);
+  width: var(--pixel-size);
+}
+
+.pixel-cell.core {
+  background: #f2fff9;
+  box-shadow: 0 0 4px rgba(225, 255, 243, 0.44);
+}
+
+.pixel-cell.node {
+  animation: pixel-signal 2.4s steps(2, end) infinite;
+  background: #74eeb8;
+  box-shadow: 0 0 5px rgba(116, 238, 184, 0.7);
+}
+
+@keyframes pixel-signal {
+  50% { opacity: 0.42; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-cell.node { animation: none; }
 }
 
 .gate-panel h1,
@@ -470,19 +513,6 @@ p {
   padding: 0 17px;
 }
 
-.brand-symbol {
-  align-items: center;
-  background: var(--green);
-  border-radius: 4px;
-  color: #fff;
-  display: flex;
-  font-size: 18px;
-  font-weight: 800;
-  height: 32px;
-  justify-content: center;
-  width: 32px;
-}
-
 .brand-lockup > div:nth-child(2) {
   display: grid;
   gap: 1px;
@@ -493,7 +523,7 @@ p {
   font-size: 14px;
 }
 
-.brand-lockup span {
+.brand-lockup > div:nth-child(2) > span {
   color: #94a49d;
   font-size: 10px;
 }
@@ -1467,6 +1497,22 @@ textarea:focus {
 .form-label {
   color: var(--muted);
   font-size: 9px;
+}
+
+.product-cell .source-conflict-summary {
+  align-items: center;
+  color: var(--red);
+  display: flex;
+  font-weight: 750;
+  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.source-conflict-summary svg {
+  flex: 0 0 auto;
 }
 
 .family-select-button,

@@ -4,6 +4,7 @@ import { FormEvent, useState, useTransition } from "react";
 import { ArrowRight, KeyRound } from "lucide-react";
 
 import { unlockApp } from "@/app/actions";
+import { PixelMark } from "@/components/pixel-mark";
 
 export function AccessGate() {
   const [code, setCode] = useState("");
@@ -26,7 +27,7 @@ export function AccessGate() {
   return (
     <main className="gate-shell">
       <section className="gate-panel">
-        <div className="gate-mark" aria-hidden="true">V</div>
+        <PixelMark large className="gate-mark" />
         <p className="eyebrow">VITAR DIGITAL GROWTH</p>
         <h1>Správa sortimentu</h1>
         <p className="gate-copy">
