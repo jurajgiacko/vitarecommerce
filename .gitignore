@@ -2,3 +2,5 @@ work/
 data/raw/
 .DS_Store
 __pycache__/
+.vercel
+.env*
