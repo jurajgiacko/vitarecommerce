@@ -16,6 +16,8 @@ import {
   Database,
   Download,
   FileJson,
+  FileSpreadsheet,
+  FileText,
   Filter,
   Gauge,
   LayoutDashboard,
@@ -227,11 +229,16 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           <div className="topbar-actions">
             <div className="sync-state"><span /><strong>Data aktuální</strong><small>{data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.crawl.completedAt)) : ""}</small></div>
             <details className="export-menu">
-              <summary className="secondary-button"><Download size={16} /> Export</summary>
+              <summary className="secondary-button" title="Exportovat data"><Download size={16} /> <span>Export</span></summary>
               <div>
-                <a href="/api/export?format=csv&scope=final"><FileJson size={15} /> Finální CSV</a>
-                <a href="/api/export?format=json&scope=final"><FileJson size={15} /> Finální JSON</a>
-                <a href="/api/export?format=json&scope=all"><Database size={15} /> Všechny názory JSON</a>
+                <strong>Finální rozhodnutí</strong>
+                <a href="/api/export?format=json&scope=final"><FileJson size={15} /> JSON</a>
+                <a href="/api/export?format=md&scope=final"><FileText size={15} /> Markdown</a>
+                <a href="/api/export?format=csv&scope=final"><FileSpreadsheet size={15} /> CSV</a>
+                <strong>Všechny názory</strong>
+                <a href="/api/export?format=json&scope=all"><FileJson size={15} /> JSON</a>
+                <a href="/api/export?format=md&scope=all"><FileText size={15} /> Markdown</a>
+                <a href="/api/export?format=csv&scope=all"><FileSpreadsheet size={15} /> CSV</a>
               </div>
             </details>
             <span className="avatar top-avatar" style={{ backgroundColor: data.profile.color }}>{data.profile.initials}</span>

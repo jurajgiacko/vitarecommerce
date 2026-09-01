@@ -27,7 +27,8 @@ consensus tracking and a facilitator-owned final decision.
    and manufacturing discontinuation are recorded as a separate lifecycle decision.
 5. The facilitator uses Conflicts and Final Matrix during the workshop and records
    the approved channel, category, portfolio role, confidence and rationale.
-6. Final or full data can be exported as JSON or CSV for development and PIM.
+6. Final decisions or the full reviewer dataset can be exported as JSON,
+   Markdown or CSV for development, workshop notes and PIM.
 
 The shared access code is a facilitator bootstrap only. Team members should use
 personal invite links so they cannot accidentally vote under somebody else's name.

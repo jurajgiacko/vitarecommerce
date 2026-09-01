@@ -6,9 +6,49 @@ import { hasAppAccess } from "@/lib/session";
 
 const ROUND_ID = "round-vitar-split-2026-09";
 
+const CHANNEL_LABELS: Record<string, string> = {
+  "vitar.cz": "VITAR.cz",
+  "nasevitaminy.cz": "NašeVitamíny.cz",
+  vitar_veterina: "VITAR Veterina",
+  oem_b2b: "OEM / B2B",
+  workshop_hold: "Společně rozhodnout",
+  archive: "Starý produkt / archiv",
+};
+
+const LIFECYCLE_LABELS: Record<string, string> = {
+  active: "Aktivní",
+  phaseout: "Doprodej / dožití",
+  discontinue: "Ukončit výrobu",
+  archive: "Starý produkt / archiv",
+};
+
 function csvCell(value: unknown) {
   const output = Array.isArray(value) ? value.join(" | ") : String(value ?? "");
   return `"${output.replaceAll('"', '""')}"`;
+}
+
+function markdownCell(value: unknown) {
+  return String(value ?? "")
+    .replaceAll("\\", "\\\\")
+    .replaceAll("|", "\\|")
+    .replaceAll("\r", " ")
+    .replaceAll("\n", " ")
+    .trim();
+}
+
+function markdownLink(label: string, url: string) {
+  if (!url) return "";
+  return `[${markdownCell(label)}](${url.replaceAll(" ", "%20").replaceAll(")", "%29")})`;
+}
+
+function channelSummary(channels: string[]) {
+  return channels
+    .map((item) => {
+      const [channel, decision, role] = item.split(":");
+      const label = CHANNEL_LABELS[channel] || channel;
+      return [label, decision, role].filter(Boolean).join(" · ");
+    })
+    .join("; ");
 }
 
 export async function GET(request: Request) {
@@ -16,15 +56,17 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const url = new URL(request.url);
-  const format = url.searchParams.get("format") === "csv" ? "csv" : "json";
-  const scope = url.searchParams.get("scope") || "final";
-  const [products, sources, profiles, reviews, reviewChannels, decisions, decisionChannels] =
+  const requestedFormat = url.searchParams.get("format");
+  const format = requestedFormat === "csv" || requestedFormat === "md" ? requestedFormat : "json";
+  const scope = url.searchParams.get("scope") === "all" ? "all" : "final";
+  const [products, sources, profiles, reviews, reviewChannels, comments, decisions, decisionChannels] =
     await Promise.all([
       db.select().from(schema.products).orderBy(asc(schema.products.brand), asc(schema.products.name)),
       db.select().from(schema.productSources),
       db.select().from(schema.profiles),
       db.select().from(schema.productReviews).where(eq(schema.productReviews.roundId, ROUND_ID)),
       db.select().from(schema.reviewChannels),
+      db.select().from(schema.comments).where(eq(schema.comments.roundId, ROUND_ID)),
       db.select().from(schema.finalDecisions).where(eq(schema.finalDecisions.roundId, ROUND_ID)),
       db.select().from(schema.finalDecisionChannels),
     ]);
@@ -47,6 +89,12 @@ export async function GET(request: Request) {
     existing.push(review);
     reviewsByProduct.set(review.productId, existing);
   }
+  const commentsByProduct = new Map<string, typeof comments>();
+  for (const comment of comments) {
+    const existing = commentsByProduct.get(comment.productId) || [];
+    existing.push(comment);
+    commentsByProduct.set(comment.productId, existing);
+  }
   const finalChannelMap = new Map<string, typeof decisionChannels>();
   for (const channel of decisionChannels) {
     const existing = finalChannelMap.get(channel.decisionId) || [];
@@ -59,6 +107,7 @@ export async function GET(request: Request) {
     const final = finalMap.get(product.id);
     const productReviews = reviewsByProduct.get(product.id) || [];
     const productSources = sourceMap.get(product.id) || [];
+    const productComments = commentsByProduct.get(product.id) || [];
     return {
       product_id: product.id,
       sku: product.sku,
@@ -85,6 +134,14 @@ export async function GET(request: Request) {
       approved_by: final ? profileMap.get(final.approvedByProfileId) || "" : "",
       review_count: productReviews.length,
       submitted_review_count: productReviews.filter((review) => review.status === "submitted").length,
+      comments:
+        scope === "all"
+          ? productComments.map((comment) => ({
+              profile: profileMap.get(comment.profileId) || comment.profileId,
+              body: comment.body,
+              created_at: comment.createdAt.toISOString(),
+            }))
+          : undefined,
       reviews:
         scope === "all"
           ? productReviews.map((review) => ({
@@ -110,7 +167,7 @@ export async function GET(request: Request) {
       { headers: { "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.json"` } },
     );
   }
-  const columns = [
+  const finalColumns = [
     "product_id",
     "sku",
     "ean",
@@ -133,9 +190,141 @@ export async function GET(request: Request) {
     "review_count",
     "submitted_review_count",
   ] as const;
+
+  if (format === "md") {
+    const generatedAt = new Date().toISOString();
+    const approvedCount = rows.filter((row) => row.final_status !== "unresolved").length;
+    const title = scope === "all" ? "VITAR Assortment - všechny názory" : "VITAR Assortment - finální rozhodnutí";
+    const lines = [
+      `# ${title}`,
+      "",
+      `- Vygenerováno: ${generatedAt}`,
+      `- Kolo: ${ROUND_ID}`,
+      `- Produktů: ${rows.length}`,
+      `- Finálně rozhodnuto: ${approvedCount}`,
+      `- Neuzavřeno: ${rows.length - approvedCount}`,
+      "",
+      "## Produktová matice",
+      "",
+      "| Produkt | Brand | SKU | EAN | Zdroje | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
+      ...rows.map((row) => {
+        const sourceLinks = [
+          markdownLink("VITAR.cz", row.vitar_url),
+          markdownLink("NašeVitamíny.cz", row.nasevitaminy_url),
+          markdownLink("České vitamíny", row.ceskevitaminy_url),
+        ].filter(Boolean).join(", ");
+        const cells = [
+          row.name,
+          row.brand,
+          row.sku,
+          row.ean,
+          sourceLinks,
+          row.final_status,
+          LIFECYCLE_LABELS[row.final_lifecycle] || row.final_lifecycle,
+          channelSummary(row.final_channels),
+          row.final_category,
+          row.final_portfolio_role,
+          `${row.submitted_review_count}/${row.review_count}`,
+          row.final_rationale,
+        ];
+        return `| ${cells.map(markdownCell).join(" | ")} |`;
+      }),
+    ];
+
+    if (scope === "all") {
+      lines.push(
+        "",
+        "## Individuální názory",
+        "",
+        "| Produkt | Reviewer | Stav | Životní cyklus | Kanály | Kategorie | Role | Odůvodnění |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+      );
+      for (const row of rows) {
+        for (const review of row.reviews || []) {
+          const reviewChannels = review.channels
+            .map((channel) => `${CHANNEL_LABELS[channel.channel] || channel.channel} · ${channel.decision} · ${channel.role}`)
+            .join("; ");
+          const cells = [
+            row.name,
+            review.profile,
+            review.status,
+            LIFECYCLE_LABELS[review.lifecycle] || review.lifecycle,
+            reviewChannels,
+            review.category,
+            review.portfolio_role,
+            review.rationale,
+          ];
+          lines.push(`| ${cells.map(markdownCell).join(" | ")} |`);
+        }
+      }
+
+      const commentCount = rows.reduce((sum, row) => sum + (row.comments?.length || 0), 0);
+      if (commentCount > 0) {
+        lines.push(
+          "",
+          "## Poznámky",
+          "",
+          "| Produkt | Autor | Datum | Poznámka |",
+          "| --- | --- | --- | --- |",
+        );
+        for (const row of rows) {
+          for (const comment of row.comments || []) {
+            lines.push(`| ${[row.name, comment.profile, comment.created_at, comment.body].map(markdownCell).join(" | ")} |`);
+          }
+        }
+      }
+    }
+
+    return new NextResponse(`${lines.join("\n")}\n`, {
+      headers: {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.md"`,
+      },
+    });
+  }
+
+  if (scope === "all") {
+    const reviewColumns = [
+      ...finalColumns,
+      "review_profile",
+      "review_status",
+      "review_channels",
+      "review_category",
+      "review_portfolio_role",
+      "review_lifecycle",
+      "review_rationale",
+      "product_comments",
+    ] as const;
+    const csvRows = rows.flatMap((row) => {
+      const reviewRows = row.reviews?.length ? row.reviews : [null];
+      return reviewRows.map((review) => ({
+        ...row,
+        review_profile: review?.profile || "",
+        review_status: review?.status || "",
+        review_channels: review?.channels.map((channel) => `${channel.channel}:${channel.decision}:${channel.role}`) || [],
+        review_category: review?.category || "",
+        review_portfolio_role: review?.portfolio_role || "",
+        review_lifecycle: review?.lifecycle || "",
+        review_rationale: review?.rationale || "",
+        product_comments: row.comments?.map((comment) => `${comment.profile}: ${comment.body}`) || [],
+      }));
+    });
+    const csv = [
+      reviewColumns.map(csvCell).join(","),
+      ...csvRows.map((row) => reviewColumns.map((column) => csvCell(row[column])).join(",")),
+    ].join("\r\n");
+    return new NextResponse(`\uFEFF${csv}`, {
+      headers: {
+        "Content-Type": "text/csv; charset=utf-8",
+        "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.csv"`,
+      },
+    });
+  }
+
   const csv = [
-    columns.map(csvCell).join(","),
-    ...rows.map((row) => columns.map((column) => csvCell(row[column])).join(",")),
+    finalColumns.map(csvCell).join(","),
+    ...rows.map((row) => finalColumns.map((column) => csvCell(row[column])).join(",")),
   ].join("\r\n");
   return new NextResponse(`\uFEFF${csv}`, {
     headers: {

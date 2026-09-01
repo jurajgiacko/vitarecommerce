@@ -674,6 +674,13 @@ p {
   z-index: 50;
 }
 
+.export-menu > div > strong {
+  color: var(--faint);
+  font-size: 9px;
+  padding: 7px 9px 3px;
+  text-transform: uppercase;
+}
+
 .export-menu a {
   align-items: center;
   border-radius: 4px;
@@ -2608,8 +2615,15 @@ textarea {
   .topbar { height: 58px; padding: 0 12px; }
   .topbar-path,
   .sync-state,
-  .export-menu,
   .top-avatar { display: none; }
+  .export-menu summary {
+    font-size: 0;
+    justify-content: center;
+    padding: 0;
+    width: 34px;
+  }
+  .export-menu summary svg { margin: 0; }
+  .export-menu > div { max-height: calc(100vh - 76px); overflow-y: auto; }
   .topbar > div:first-of-type { margin-right: auto; }
   .content-area { padding: 15px 12px 84px; }
   .mobile-bottom-nav {
