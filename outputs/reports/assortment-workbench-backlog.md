@@ -15,7 +15,8 @@ Updated: 1 September 2026
 - Start with products where submitted opinions disagree.
 - Record one facilitator-owned final decision instead of overwriting personal votes.
 - Confirm channel, category, portfolio role, confidence and rationale for every exception.
-- Keep Veterina and Sport as explicit business-unit destinations outside the VITAR.cz category tree.
+- Keep Veterina as an explicit business-unit destination outside the VITAR.cz category tree.
+- Separate active, phase-out, manufacturing-discontinued and archived product lifecycles.
 - Assign an owner and due date to every hold or data-quality blocker.
 
 ## Next delivery increments

@@ -78,6 +78,7 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
       categoryKey: review.categoryKey,
       categoryLabel: review.categoryLabel,
       portfolioRole: review.portfolioRole,
+      lifecycleDecision: review.lifecycleDecision,
       confidence: review.confidence,
       rationale: review.rationale,
       channels: channelsByReview.get(review.id) || [],
@@ -143,6 +144,7 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
       categoryKey: decision.categoryKey,
       categoryLabel: decision.categoryLabel,
       portfolioRole: decision.portfolioRole,
+      lifecycleDecision: decision.lifecycleDecision,
       status: decision.status,
       rationale: decision.rationale,
       approvedByProfileId: decision.approvedByProfileId,
@@ -160,6 +162,7 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
           channels: review.channels.map((channel) => `${channel.channel}:${channel.decision}`).sort(),
           category: review.categoryKey,
           role: review.portfolioRole,
+          lifecycle: review.lifecycleDecision,
         }),
       ),
     );

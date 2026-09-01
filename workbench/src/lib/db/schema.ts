@@ -134,6 +134,7 @@ export const productReviews = pgTable(
     categoryKey: text("category_key").notNull().default(""),
     categoryLabel: text("category_label").notNull().default(""),
     portfolioRole: text("portfolio_role").notNull().default("core"),
+    lifecycleDecision: text("lifecycle_decision").notNull().default("active"),
     confidence: text("confidence").notNull().default("medium"),
     rationale: text("rationale").notNull().default(""),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
@@ -195,6 +196,7 @@ export const finalDecisions = pgTable(
     categoryKey: text("category_key").notNull().default(""),
     categoryLabel: text("category_label").notNull().default(""),
     portfolioRole: text("portfolio_role").notNull().default("core"),
+    lifecycleDecision: text("lifecycle_decision").notNull().default("active"),
     status: text("status").notNull().default("approved"),
     rationale: text("rationale").notNull().default(""),
     approvedByProfileId: text("approved_by_profile_id")

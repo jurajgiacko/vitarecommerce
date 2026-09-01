@@ -30,6 +30,7 @@ const reviewSchema = z.object({
   categoryKey: z.string().min(1),
   categoryLabel: z.string().min(1),
   portfolioRole: z.enum(["hero", "core", "support", "longtail", "test", "exclude", "hold"]),
+  lifecycleDecision: z.enum(["active", "phaseout", "discontinue", "archive"]).default("active"),
   confidence: z.enum(["low", "medium", "high"]),
   rationale: z.string().max(4000),
   status: z.enum(["draft", "submitted"]),
@@ -162,6 +163,7 @@ export async function saveReview(input: z.input<typeof reviewSchema>) {
       categoryKey: parsed.categoryKey,
       categoryLabel: parsed.categoryLabel,
       portfolioRole: parsed.portfolioRole,
+      lifecycleDecision: parsed.lifecycleDecision,
       confidence: parsed.confidence,
       rationale: parsed.rationale,
       updatedAt: new Date(),
@@ -177,6 +179,7 @@ export async function saveReview(input: z.input<typeof reviewSchema>) {
         categoryKey: parsed.categoryKey,
         categoryLabel: parsed.categoryLabel,
         portfolioRole: parsed.portfolioRole,
+        lifecycleDecision: parsed.lifecycleDecision,
         confidence: parsed.confidence,
         rationale: parsed.rationale,
         updatedAt: new Date(),
@@ -196,6 +199,7 @@ export async function saveReview(input: z.input<typeof reviewSchema>) {
       channels: parsed.channels,
       category: parsed.categoryKey,
       portfolioRole: parsed.portfolioRole,
+      lifecycleDecision: parsed.lifecycleDecision,
     },
   });
   revalidatePath("/");
@@ -232,6 +236,7 @@ export async function bulkSaveReviews(input: {
       categoryKey: product.categoryKey,
       categoryLabel: product.categoryLabel,
       portfolioRole: parsed.decision === "exclude" ? "exclude" : "core",
+      lifecycleDecision: parsed.decision === "exclude" ? "archive" : "active",
       confidence: "medium",
       rationale: "Hromadné rozhodnutí z portfolio přehledu.",
       status: parsed.status,
@@ -356,6 +361,7 @@ export async function saveFinalDecision(input: z.input<typeof reviewSchema>) {
       categoryKey: parsed.categoryKey,
       categoryLabel: parsed.categoryLabel,
       portfolioRole: parsed.portfolioRole,
+      lifecycleDecision: parsed.lifecycleDecision,
       rationale: parsed.rationale,
       approvedByProfileId: parsed.profileId,
       updatedAt: new Date(),
@@ -366,6 +372,7 @@ export async function saveFinalDecision(input: z.input<typeof reviewSchema>) {
         categoryKey: parsed.categoryKey,
         categoryLabel: parsed.categoryLabel,
         portfolioRole: parsed.portfolioRole,
+        lifecycleDecision: parsed.lifecycleDecision,
         rationale: parsed.rationale,
         approvedByProfileId: parsed.profileId,
         updatedAt: new Date(),
@@ -383,7 +390,7 @@ export async function saveFinalDecision(input: z.input<typeof reviewSchema>) {
     productId: parsed.productId,
     roundId: ROUND_ID,
     action: "final_decision_saved",
-    payload: { channels: parsed.channels },
+    payload: { channels: parsed.channels, lifecycleDecision: parsed.lifecycleDecision },
   });
   revalidatePath("/");
   return { ok: true };

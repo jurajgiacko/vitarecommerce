@@ -25,6 +25,7 @@ export type Review = {
   categoryKey: string;
   categoryLabel: string;
   portfolioRole: string;
+  lifecycleDecision: string;
   confidence: string;
   rationale: string;
   channels: ChannelDecision[];
@@ -60,6 +61,7 @@ export type FinalDecision = {
   categoryKey: string;
   categoryLabel: string;
   portfolioRole: string;
+  lifecycleDecision: string;
   status: string;
   rationale: string;
   approvedByProfileId: string;

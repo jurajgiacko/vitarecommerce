@@ -35,7 +35,7 @@ import {
 import { useRouter } from "next/navigation";
 
 import { bulkSaveReviews, createWipProduct } from "@/app/actions";
-import { ProductDrawer, CHANNEL_OPTIONS } from "@/components/product-drawer";
+import { ProductDrawer, CHANNEL_OPTIONS, LIFECYCLE_OPTIONS } from "@/components/product-drawer";
 import { QuickReview } from "@/components/quick-review";
 import { TeamPanel } from "@/components/team-panel";
 import type { WorkbenchData, WorkbenchProduct } from "@/lib/workbench-types";
@@ -85,6 +85,16 @@ function reviewStatus(product: WorkbenchProduct, profileId: string) {
   return { key: "pending", label: "Čeká" };
 }
 
+function lifecycleDecision(product: WorkbenchProduct, profileId: string) {
+  return currentReview(product, profileId)?.lifecycleDecision ||
+    product.finalDecision?.lifecycleDecision ||
+    "active";
+}
+
+function lifecycleLabel(key: string) {
+  return LIFECYCLE_OPTIONS.find(([value]) => value === key)?.[1] || key;
+}
+
 function formatDeadline(value: string | null) {
   if (!value) return "Bez termínu";
   return new Intl.DateTimeFormat("cs-CZ", {
@@ -107,6 +117,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
   const [category, setCategory] = useState("all");
   const [source, setSource] = useState("all");
   const [status, setStatus] = useState("all");
+  const [lifecycle, setLifecycle] = useState("all");
   const [page, setPage] = useState(1);
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
@@ -259,6 +270,8 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
               setSource={(value) => { setSource(value); setPage(1); }}
               status={status}
               setStatus={(value) => { setStatus(value); setPage(1); }}
+              lifecycle={lifecycle}
+              setLifecycle={(value) => { setLifecycle(value); setPage(1); }}
               page={page}
               setPage={setPage}
               selectedIds={selectedIds}
@@ -439,6 +452,8 @@ type ProductWorkspaceProps = {
   setSource: (value: string) => void;
   status: string;
   setStatus: (value: string) => void;
+  lifecycle: string;
+  setLifecycle: (value: string) => void;
   page: number;
   setPage: (page: number) => void;
   selectedIds: Set<string>;
@@ -462,6 +477,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
         if (props.category !== "all" && product.categoryKey !== props.category) return false;
         if (props.source !== "all" && !product.sources.some((source) => source.sourceKey === props.source)) return false;
         if (props.status !== "all" && reviewStatus(product, props.profileId).key !== props.status) return false;
+        if (props.lifecycle !== "all" && lifecycleDecision(product, props.profileId) !== props.lifecycle) return false;
         if (query && !`${product.name} ${product.brand} ${product.sku} ${product.ean}`.toLocaleLowerCase("cs").includes(query)) return false;
         return true;
       })
@@ -502,7 +518,8 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
         <select value={props.category} onChange={(event) => props.setCategory(event.target.value)} aria-label="Filtrovat kategorii"><option value="all">Všechny kategorie</option>{props.categories.map((item) => <option value={item.key} key={item.key}>{item.label}</option>)}</select>
         <select value={props.source} onChange={(event) => props.setSource(event.target.value)} aria-label="Filtrovat zdroj"><option value="all">Všechny zdroje</option><option value="vitar">VITAR.cz</option><option value="nasevitaminy">NašeVitamíny.cz</option><option value="ceskevitaminy">České vitamíny</option></select>
         <select value={props.status} onChange={(event) => props.setStatus(event.target.value)} aria-label="Filtrovat stav"><option value="all">Všechny stavy</option><option value="pending">Čeká</option><option value="draft">Koncept</option><option value="submitted">Odevzdáno</option></select>
-        <button className="icon-button" title="Vymazat filtry" onClick={() => { props.setSearch(""); props.setBrand("all"); props.setCategory("all"); props.setSource("all"); props.setStatus("all"); }}><X size={17} /></button>
+        <select value={props.lifecycle} onChange={(event) => props.setLifecycle(event.target.value)} aria-label="Filtrovat životní cyklus"><option value="all">Všechny životní cykly</option>{LIFECYCLE_OPTIONS.map(([key, label]) => <option value={key} key={key}>{label}</option>)}</select>
+        <button className="icon-button" title="Vymazat filtry" onClick={() => { props.setSearch(""); props.setBrand("all"); props.setCategory("all"); props.setSource("all"); props.setStatus("all"); props.setLifecycle("all"); }}><X size={17} /></button>
       </div>
 
       <div className="product-table-wrap">
@@ -512,6 +529,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
             {visible.map((product) => {
               const mine = currentReview(product, props.profileId);
               const productStatus = reviewStatus(product, props.profileId);
+              const productLifecycle = lifecycleDecision(product, props.profileId);
               const recommendation = mine?.channels.length ? mine.channels.map((channel) => channelLabel(channel.channel)).join(" + ") : product.systemRecommendation.channels.map(channelLabel).join(" + ");
               return (
                 <tr onClick={() => props.onOpenProduct(product.id)} className={props.selectedIds.has(product.id) ? "selected-row" : ""} key={product.id}>
@@ -522,7 +540,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
                   <td><span className={`recommendation-cell ${mine ? "personal" : "system"}`}>{mine ? null : <Sparkles size={12} />}{recommendation || "K rozhodnutí"}</span></td>
                   <td><span className={`status-pill ${productStatus.key}`}>{productStatus.label}</span></td>
                   <td><div className="team-avatars">{product.reviews.slice(0, 5).map((review) => <span className={`avatar tiny ${review.status}`} style={{ backgroundColor: review.profileColor }} title={`${review.profileName}: ${review.status}`} key={review.profileId}>{review.profileInitials}</span>)}{product.consensusConflict ? <AlertTriangle className="team-conflict" size={15} /> : null}</div></td>
-                  <td><div className="qa-flags">{product.quality.hasConflict ? <span className="error" title="Konflikt identifikátorů"><AlertTriangle size={14} /></span> : null}{product.sourceCount === 1 ? <span className="warn" title="Pouze jeden zdroj">1×</span> : null}{!product.quality.hasEan ? <span className="warn" title="Chybí EAN">EAN</span> : null}{product.finalDecision ? <span className="ok" title="Finální rozhodnutí"><ShieldCheck size={14} /></span> : null}</div></td>
+                  <td><div className="qa-flags">{productLifecycle !== "active" ? <span className={productLifecycle === "phaseout" ? "warn" : "error"} title={lifecycleLabel(productLifecycle)}>{productLifecycle === "phaseout" ? "DOP" : productLifecycle === "discontinue" ? "STOP" : "ARCH"}</span> : null}{product.quality.hasConflict ? <span className="error" title="Konflikt identifikátorů"><AlertTriangle size={14} /></span> : null}{product.sourceCount === 1 ? <span className="warn" title="Pouze jeden zdroj">1×</span> : null}{!product.quality.hasEan ? <span className="warn" title="Chybí EAN">EAN</span> : null}{product.finalDecision ? <span className="ok" title="Finální rozhodnutí"><ShieldCheck size={14} /></span> : null}</div></td>
                   <td><ChevronRight size={17} /></td>
                 </tr>
               );

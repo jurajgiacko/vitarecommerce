@@ -8,9 +8,9 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
-  BriefcaseBusiness,
   CheckCircle2,
   ExternalLink,
+  Hourglass,
   LoaderCircle,
   PawPrint,
   RotateCcw,
@@ -22,7 +22,7 @@ import { useRouter } from "next/navigation";
 import { saveReview } from "@/app/actions";
 import type { Profile, WorkbenchProduct } from "@/lib/workbench-types";
 
-type DecisionKind = "vitar" | "nase" | "both" | "hold" | "sport" | "veterina" | "archive";
+type DecisionKind = "vitar" | "nase" | "both" | "hold" | "veterina" | "archive";
 
 const DECISIONS: Record<
   DecisionKind,
@@ -39,9 +39,8 @@ const DECISIONS: Record<
     label: "Oba e-shopy",
   },
   hold: { channels: [{ channel: "workshop_hold", decision: "hold" }], role: "hold", label: "Společně rozhodnout" },
-  sport: { channels: [{ channel: "vitar_sport", decision: "include" }], role: "core", label: "VITAR Sport" },
   veterina: { channels: [{ channel: "vitar_veterina", decision: "include" }], role: "core", label: "VITAR Veterina" },
-  archive: { channels: [{ channel: "archive", decision: "exclude" }], role: "exclude", label: "Vyřadit" },
+  archive: { channels: [{ channel: "archive", decision: "exclude" }], role: "exclude", label: "Starý produkt / archiv" },
 };
 
 type QuickReviewProps = {
@@ -86,6 +85,7 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
         categoryKey: product.categoryKey,
         categoryLabel: product.categoryLabel,
         portfolioRole: decision.role,
+        lifecycleDecision: kind === "archive" ? "archive" : "active",
         confidence: kind === "hold" ? "low" : "medium",
         rationale: `Rychlý review: ${decision.label}.`,
         status: "submitted",
@@ -205,8 +205,8 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
       </div>
       <div className="special-actions">
         <button onClick={() => decide("veterina")} disabled={pending}><PawPrint size={15} /> Veterina</button>
-        <button onClick={() => decide("sport")} disabled={pending}><BriefcaseBusiness size={15} /> Sport</button>
-        <button onClick={() => decide("archive")} disabled={pending}><ShieldX size={15} /> Vyřadit</button>
+        <button onClick={() => onOpenProduct(product.id)} disabled={pending}><Hourglass size={15} /> Doprodej / ukončit</button>
+        <button onClick={() => decide("archive")} disabled={pending}><ShieldX size={15} /> Starý / archiv</button>
       </div>
       {message && !pending ? <p className="quick-message">{message}</p> : null}
     </section>

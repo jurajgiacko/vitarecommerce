@@ -31,10 +31,16 @@ import type {
 export const CHANNEL_OPTIONS = [
   { key: "vitar.cz", label: "VITAR.cz", note: "Premium marketplace" },
   { key: "nasevitaminy.cz", label: "NašeVitamíny.cz", note: "Retail a volume" },
-  { key: "vitar_sport", label: "VITAR Sport", note: "Sportovní BU" },
   { key: "vitar_veterina", label: "VITAR Veterina", note: "Samostatný e-shop" },
   { key: "oem_b2b", label: "OEM / B2B", note: "Mimo B2C katalog" },
-  { key: "archive", label: "Vyřadit / archiv", note: "Bez aktivního listingu" },
+  { key: "archive", label: "Starý produkt / archiv", note: "Již se nemá prodávat" },
+] as const;
+
+export const LIFECYCLE_OPTIONS = [
+  ["active", "Aktivní"],
+  ["phaseout", "Doprodej / dožití"],
+  ["discontinue", "Ukončit výrobu"],
+  ["archive", "Starý produkt / archiv"],
 ] as const;
 
 const PORTFOLIO_ROLES = [
@@ -99,6 +105,9 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
   );
   const [categoryKey, setCategoryKey] = useState(currentReview?.categoryKey || product.categoryKey);
   const [portfolioRole, setPortfolioRole] = useState(currentReview?.portfolioRole || "core");
+  const [lifecycleDecision, setLifecycleDecision] = useState(
+    currentReview?.lifecycleDecision || product.finalDecision?.lifecycleDecision || "active",
+  );
   const [confidence, setConfidence] = useState(currentReview?.confidence || "medium");
   const [rationale, setRationale] = useState(currentReview?.rationale || "");
   const [comment, setComment] = useState("");
@@ -145,12 +154,26 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
       if (channel === "archive") {
         setPrimaryChannel("archive");
         setPortfolioRole("exclude");
+        setLifecycleDecision("archive");
         return ["archive"];
       }
       const next = current.filter((item) => item !== "archive").concat(channel);
       if (!primaryChannel || primaryChannel === "archive") setPrimaryChannel(channel);
       return next;
     });
+  }
+
+  function selectLifecycle(nextLifecycle: (typeof LIFECYCLE_OPTIONS)[number][0]) {
+    setLifecycleDecision(nextLifecycle);
+    if (nextLifecycle === "archive") {
+      setChannels(["archive"]);
+      setPrimaryChannel("archive");
+      setPortfolioRole("exclude");
+    } else if (channels.includes("archive")) {
+      setChannels([]);
+      setPrimaryChannel("");
+      setPortfolioRole("core");
+    }
   }
 
   function submitReview(status: "draft" | "submitted") {
@@ -167,6 +190,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
           categoryKey: selectedCategory.key,
           categoryLabel: selectedCategory.label,
           portfolioRole: portfolioRole as "hero" | "core" | "support" | "longtail" | "test" | "exclude" | "hold",
+          lifecycleDecision: lifecycleDecision as "active" | "phaseout" | "discontinue" | "archive",
           confidence: confidence as "low" | "medium" | "high",
           rationale,
           status,
@@ -197,6 +221,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
           categoryKey: selectedCategory.key,
           categoryLabel: selectedCategory.label,
           portfolioRole: portfolioRole as "hero" | "core" | "support" | "longtail" | "test" | "exclude" | "hold",
+          lifecycleDecision: lifecycleDecision as "active" | "phaseout" | "discontinue" | "archive",
           confidence: confidence as "low" | "medium" | "high",
           rationale,
           status: "submitted",
@@ -363,6 +388,21 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
                     </button>
                   ))}
                 </div>
+                <div className="lifecycle-field">
+                  <span>Životní cyklus</span>
+                  <div className="segmented-control lifecycle-control">
+                    {LIFECYCLE_OPTIONS.map(([key, label]) => (
+                      <button
+                        type="button"
+                        className={lifecycleDecision === key ? "active" : ""}
+                        onClick={() => selectLifecycle(key)}
+                        key={key}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 <div className="two-column-fields">
                   <label>
                     <span>Navržená kategorie</span>
@@ -410,6 +450,12 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
                   {profiles.map((person) => {
                     const review = product.reviews.find((item) => item.profileId === person.id);
                     const revealReview = person.id === profile.id || canSeeTeamOpinions;
+                    const reviewChannels = review?.channels
+                      .map((channel) => CHANNEL_OPTIONS.find((option) => option.key === channel.channel)?.label || channel.channel)
+                      .join(" + ");
+                    const lifecycleSuffix = review && review.lifecycleDecision !== "active"
+                      ? ` · ${LIFECYCLE_OPTIONS.find(([key]) => key === review.lifecycleDecision)?.[1] || review.lifecycleDecision}`
+                      : "";
                     return (
                       <div className="vote-row" key={person.id}>
                         <span className="avatar small" style={{ backgroundColor: person.color }}>{person.initials}</span>
@@ -425,7 +471,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
                           {!revealReview
                             ? "Skryto"
                             : review?.status === "submitted"
-                            ? review.channels.map((channel) => CHANNEL_OPTIONS.find((option) => option.key === channel.channel)?.label || channel.channel).join(" + ")
+                            ? `${reviewChannels}${lifecycleSuffix}`
                             : review?.status === "draft"
                               ? "Koncept"
                               : "Čeká"}

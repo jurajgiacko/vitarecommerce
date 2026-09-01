@@ -76,6 +76,7 @@ export async function GET(request: Request) {
         : [],
       final_category: final?.categoryLabel || "",
       final_portfolio_role: final?.portfolioRole || "",
+      final_lifecycle: final?.lifecycleDecision || "",
       final_rationale: final?.rationale || "",
       approved_by: final ? profileMap.get(final.approvedByProfileId) || "" : "",
       review_count: productReviews.length,
@@ -92,6 +93,7 @@ export async function GET(request: Request) {
               })),
               category: review.categoryLabel,
               portfolio_role: review.portfolioRole,
+              lifecycle: review.lifecycleDecision,
               rationale: review.rationale,
             }))
           : undefined,
@@ -118,6 +120,7 @@ export async function GET(request: Request) {
     "final_channels",
     "final_category",
     "final_portfolio_role",
+    "final_lifecycle",
     "final_rationale",
     "approved_by",
     "review_count",

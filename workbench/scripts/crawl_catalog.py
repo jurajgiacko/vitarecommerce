@@ -648,7 +648,7 @@ def assortment_recommendation(product: dict[str, Any]) -> dict[str, Any]:
         return {
             "channels": ["review"],
             "confidence": "low",
-            "reason": "Prověřit hranici VITAR Sport vs. spotřebitelský marketplace.",
+            "reason": "Rozhodnout mezi VITAR.cz a NašeVitamíny.cz podle pozice, ceny a cílové skupiny.",
         }
     if brand in {"Maxi Vita Essentials", "Vitar Origin", "Revital Botanicals"}:
         return {

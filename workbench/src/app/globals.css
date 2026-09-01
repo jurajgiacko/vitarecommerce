@@ -1180,7 +1180,7 @@ p {
   border-radius: 6px 6px 0 0;
   display: grid;
   gap: 8px;
-  grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(130px, 0.6fr)) 34px;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(5, minmax(125px, 0.6fr)) 34px;
   padding: 10px;
 }
 
@@ -1821,6 +1821,22 @@ textarea:focus {
   box-shadow: 0 1px 3px rgba(20, 34, 29, 0.12);
   color: var(--green-dark);
   font-weight: 750;
+}
+
+.lifecycle-field {
+  display: grid;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.lifecycle-field > span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.lifecycle-control {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .two-column-fields {
@@ -2552,7 +2568,8 @@ textarea {
   .metric-strip button:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
   .filter-toolbar { grid-template-columns: minmax(220px, 1.2fr) repeat(2, minmax(130px, 0.7fr)) 34px; }
   .filter-toolbar select:nth-of-type(3),
-  .filter-toolbar select:nth-of-type(4) { display: none; }
+  .filter-toolbar select:nth-of-type(4),
+  .filter-toolbar select:nth-of-type(5) { display: none; }
   .drawer-footer { flex-wrap: wrap; }
   .drawer-footer > div { flex-basis: 100%; max-width: none; }
 }
@@ -2685,6 +2702,7 @@ textarea {
   .drawer-footer .approve-button { flex: 1; }
   .channel-grid { grid-template-columns: 1fr; }
   .role-control { grid-template-columns: repeat(4, 1fr); }
+  .lifecycle-control { grid-template-columns: repeat(2, 1fr); }
   .two-column-fields { grid-template-columns: 1fr; }
   .team-row-head { display: none; }
   .team-row { gap: 8px; grid-template-columns: 1fr auto; padding: 10px; }

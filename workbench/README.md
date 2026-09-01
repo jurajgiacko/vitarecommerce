@@ -23,7 +23,8 @@ consensus tracking and a facilitator-owned final decision.
 3. Reviewers complete their homework independently on desktop or mobile. Other
    product opinions are hidden until their own opinion is submitted.
 4. Mobile quick review supports right = VITAR.cz, left = NaseVitaminy.cz, up =
-   both, down = hold, plus separate actions for Veterina, Sport and exclusion.
+   both, down = hold, plus separate actions for Veterina and archive. Doprodej
+   and manufacturing discontinuation are recorded as a separate lifecycle decision.
 5. The facilitator uses Conflicts and Final Matrix during the workshop and records
    the approved channel, category, portfolio role, confidence and rationale.
 6. Final or full data can be exported as JSON or CSV for development and PIM.
