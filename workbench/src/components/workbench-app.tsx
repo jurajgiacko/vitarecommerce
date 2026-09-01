@@ -5,6 +5,7 @@
 import { FormEvent, useEffect, useMemo, useState, useTransition } from "react";
 import {
   AlertTriangle,
+  Archive,
   ArrowLeft,
   ArrowRight,
   BarChart3,
@@ -24,12 +25,14 @@ import {
   ListFilter,
   LoaderCircle,
   Menu,
+  MessageSquareText,
   MoreHorizontal,
   PackagePlus,
   Plus,
   Search,
   ShieldCheck,
   Sparkles,
+  Store,
   UsersRound,
   X,
   Zap,
@@ -214,7 +217,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
         <footer className="sidebar-footer">
           <div className="profile-block">
             <span className="avatar" style={{ backgroundColor: data.profile.color }}>{data.profile.initials}</span>
-            <span><strong>{data.profile.name}</strong><small>{data.profile.role === "facilitator" ? "Facilitátor" : "Reviewer"}</small></span>
+            <span><strong>{data.profile.name}</strong></span>
             <MoreHorizontal size={17} />
           </div>
         </footer>
@@ -381,6 +384,19 @@ function Overview({
         <div className="deadline-block"><span>Rozhodnutí</span><strong>{formatDeadline(data.round.dueAt)}</strong></div>
       </header>
 
+      <section className="homework-guide">
+        <header>
+          <div><p className="eyebrow">RYCHLÝ NÁVOD</p><h2>Jak připravit domácí úkol</h2><p>Projděte portfolio samostatně před společným rozhodnutím.</p></div>
+          <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Začít rychlý review</button>
+        </header>
+        <div className="homework-guide-steps">
+          <div><span><Zap size={17} /></span><p><strong>Projděte produkty</strong>Swipe ukládá váš názor rovnou jako odevzdaný.</p></div>
+          <div><span><Store size={17} /></span><p><strong>Zvolte cílový e-shop</strong>VITAR.cz, NašeVitamíny.cz, oba, Veterina nebo společné rozhodnutí.</p></div>
+          <div><span><Archive size={17} /></span><p><strong>Určete životní cyklus</strong>Doprodej, ukončení výroby a archiv nastavte v detailu produktu.</p></div>
+          <div><span><MessageSquareText size={17} /></span><p><strong>Doplňte výjimky</strong>U sporné kategorie či dat přidejte krátké odůvodnění nebo poznámku.</p></div>
+        </div>
+      </section>
+
       <div className="metric-strip">
         <button onClick={() => onChangeView("homework")}><span className="metric-icon green"><ClipboardCheck size={19} /></span><span><small>Můj postup</small><strong>{metrics.submitted}<i> / {data.products.length}</i></strong><em>{progress}% hotovo</em></span></button>
         <button onClick={() => onChangeView("conflicts")}><span className="metric-icon red"><AlertTriangle size={19} /></span><span><small>Konflikty</small><strong>{metrics.conflicts}</strong><em>data nebo názory</em></span></button>
@@ -417,7 +433,7 @@ function Overview({
           {data.profiles.map((profile) => {
             const done = data.products.filter((product) => product.reviews.some((review) => review.profileId === profile.id && review.status === "submitted")).length;
             const percent = Math.round((done / data.products.length) * 100);
-            return <div className="profile-progress-row" key={profile.id}><span className="avatar small" style={{ backgroundColor: profile.color }}>{profile.initials}</span><span className="profile-progress-name"><strong>{profile.name}</strong><small>{profile.role === "facilitator" ? "Facilitátor" : "Reviewer"}</small></span><span className="profile-progress-bar"><i style={{ width: `${percent}%` }} /></span><strong>{done}/{data.products.length}</strong><em>{percent}%</em></div>;
+            return <div className="profile-progress-row" key={profile.id}><span className="avatar small" style={{ backgroundColor: profile.color }}>{profile.initials}</span><span className="profile-progress-name"><strong>{profile.name}</strong></span><span className="profile-progress-bar"><i style={{ width: `${percent}%` }} /></span><strong>{done}/{data.products.length}</strong><em>{percent}%</em></div>;
           })}
         </div>
       </section>

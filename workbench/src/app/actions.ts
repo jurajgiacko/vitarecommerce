@@ -44,6 +44,25 @@ async function assertProfile(profileId: string) {
   }
 }
 
+async function assertCanManageTeam() {
+  const actorProfileId = await getActiveProfileId();
+  const actor = await db
+    .select({ role: schema.profiles.role })
+    .from(schema.profiles)
+    .where(eq(schema.profiles.id, actorProfileId))
+    .limit(1);
+  if (!actor[0] || !["facilitator", "admin"].includes(actor[0].role)) {
+    throw new Error("Tento profil nemá oprávnění spravovat tým.");
+  }
+}
+
+async function inviteUrlForProfile(profileId: string) {
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("x-forwarded-host") || requestHeaders.get("host") || "localhost:3000";
+  const protocol = requestHeaders.get("x-forwarded-proto") || (host.includes("localhost") ? "http" : "https");
+  return `${protocol}://${host}/join/${createInviteToken(profileId)}`;
+}
+
 export async function unlockApp(code: string) {
   const expected = process.env.APP_ACCESS_CODE;
   if (expected && code !== expected) return { ok: false, error: "Nesprávný přístupový kód." };
@@ -86,35 +105,49 @@ export async function createProfile(input: { name: string; role?: string }) {
   return { id };
 }
 
-export async function createInviteProfile(input: { name: string; email: string }) {
-  const actorProfileId = await getActiveProfileId();
-  const actor = await db
-    .select({ role: schema.profiles.role })
+export async function createProfileInvite(profileId: string) {
+  await assertCanManageTeam();
+  const parsedProfileId = z.string().min(1).parse(profileId);
+  const profile = await db
+    .select({ id: schema.profiles.id })
     .from(schema.profiles)
-    .where(eq(schema.profiles.id, actorProfileId))
+    .where(and(eq(schema.profiles.id, parsedProfileId), eq(schema.profiles.active, true)))
     .limit(1);
-  if (!actor[0] || !["facilitator", "admin"].includes(actor[0].role)) {
-    throw new Error("Pozvánky může vytvářet pouze facilitátor.");
-  }
+  if (!profile[0]) throw new Error("Profil neexistuje nebo není aktivní.");
+  await db
+    .update(schema.profiles)
+    .set({ invitedAt: new Date(), updatedAt: new Date() })
+    .where(eq(schema.profiles.id, parsedProfileId));
+  return { ok: true, profileId: parsedProfileId, inviteUrl: await inviteUrlForProfile(parsedProfileId) };
+}
+
+export async function createInviteProfile(input: { name: string; email?: string }) {
+  await assertCanManageTeam();
   const parsed = z
-    .object({ name: z.string().trim().min(2).max(80), email: z.string().trim().email().max(160) })
+    .object({
+      name: z.string().trim().min(2).max(80),
+      email: z.union([z.string().trim().email().max(160), z.literal("")]).default(""),
+    })
     .parse(input);
-  const existing = await db
-    .select({ id: schema.profiles.id, email: schema.profiles.email })
-    .from(schema.profiles)
-    .where(eq(schema.profiles.email, parsed.email.toLowerCase()))
-    .limit(1);
-  const existingByName = existing[0]
+  const email = parsed.email.toLowerCase();
+  const existingByEmail = email
+    ? await db
+        .select({ id: schema.profiles.id, email: schema.profiles.email })
+        .from(schema.profiles)
+        .where(eq(schema.profiles.email, email))
+        .limit(1)
+    : [];
+  const existingByName = existingByEmail[0]
     ? []
     : await db
         .select({ id: schema.profiles.id, email: schema.profiles.email })
         .from(schema.profiles)
         .where(eq(schema.profiles.name, parsed.name))
         .limit(1);
-  const matchedProfile = existing[0] || existingByName[0];
+  const matchedProfile = existingByEmail[0] || existingByName[0];
   const profileId =
     matchedProfile?.id ||
-    `profile-${createHash("sha1").update(`${parsed.email}:${Date.now()}`).digest("hex").slice(0, 10)}`;
+    `profile-${createHash("sha1").update(`${parsed.name}:${email}:${Date.now()}`).digest("hex").slice(0, 10)}`;
   if (!matchedProfile) {
     const initials = parsed.name
       .split(/\s+/)
@@ -125,24 +158,25 @@ export async function createInviteProfile(input: { name: string; email: string }
     await db.insert(schema.profiles).values({
       id: profileId,
       name: parsed.name,
-      email: parsed.email.toLowerCase(),
+      email,
       initials,
       role: "reviewer",
       color: colors[Math.floor(Math.random() * colors.length)],
       invitedAt: new Date(),
     });
-  } else if (!matchedProfile.email) {
+  } else {
     await db
       .update(schema.profiles)
-      .set({ email: parsed.email.toLowerCase(), invitedAt: new Date(), updatedAt: new Date() })
+      .set({
+        ...(email && !matchedProfile.email ? { email } : {}),
+        invitedAt: new Date(),
+        active: true,
+        updatedAt: new Date(),
+      })
       .where(eq(schema.profiles.id, profileId));
   }
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") || requestHeaders.get("host") || "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") || (host.includes("localhost") ? "http" : "https");
-  const inviteUrl = `${protocol}://${host}/join/${createInviteToken(profileId)}`;
   revalidatePath("/");
-  return { ok: true, profileId, inviteUrl };
+  return { ok: true, profileId, inviteUrl: await inviteUrlForProfile(profileId) };
 }
 
 export async function saveReview(input: z.input<typeof reviewSchema>) {
@@ -346,7 +380,7 @@ export async function saveFinalDecision(input: z.input<typeof reviewSchema>) {
     .where(eq(schema.profiles.id, parsed.profileId))
     .limit(1);
   if (!profileRows[0] || !["facilitator", "admin"].includes(profileRows[0].role)) {
-    throw new Error("Finální rozhodnutí může uložit pouze facilitátor.");
+    throw new Error("Tento profil nemá oprávnění uložit finální rozhodnutí.");
   }
   const decisionId = `final-${createHash("sha1")
     .update(`${ROUND_ID}:${parsed.productId}`)

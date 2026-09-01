@@ -73,8 +73,9 @@ async function main() {
   const profileRows = [
     { id: "profile-juraj", name: "Juraj Giacko", initials: "JG", role: "facilitator", color: "#167A5A" },
     { id: "profile-tomas", name: "Tomáš Červinka", initials: "TČ", role: "reviewer", color: "#2D63B8" },
-    { id: "profile-karel", name: "Karel Novotný", initials: "KN", role: "reviewer", color: "#B55B2A" },
-    { id: "profile-marketing", name: "Marketing / CMO", initials: "MK", role: "reviewer", color: "#7B4DA8" },
+    { id: "profile-daniel", name: "Daniel Polášek", initials: "DP", role: "reviewer", color: "#B55B2A" },
+    { id: "profile-miloslav", name: "Miloslav Matoušek", initials: "MM", role: "reviewer", color: "#7B4DA8" },
+    { id: "profile-roman", name: "Roman Majda", initials: "RM", role: "reviewer", color: "#397887" },
   ];
   await db.insert(schema.profiles).values(profileRows).onConflictDoNothing();
   await db

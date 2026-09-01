@@ -47,7 +47,6 @@ export function ProfilePicker({ profiles }: { profiles: Profile[] }) {
               </span>
               <span>
                 <strong>{profile.name}</strong>
-                <small>{profile.role === "facilitator" ? "Facilitátor" : "Reviewer"}</small>
               </span>
               <ArrowRight size={17} aria-hidden="true" />
             </button>
