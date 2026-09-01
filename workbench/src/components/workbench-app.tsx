@@ -30,6 +30,7 @@ import {
   MoreHorizontal,
   PackagePlus,
   Plus,
+  RefreshCw,
   Search,
   ShieldCheck,
   Sparkles,
@@ -197,6 +198,14 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
     return () => window.clearTimeout(timer);
   }, [saveFeedback]);
 
+  useEffect(() => {
+    if (saveFeedback.state !== "idle") return;
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") startTransition(() => router.refresh());
+    }, 30_000);
+    return () => window.clearInterval(timer);
+  }, [router, saveFeedback.state, startTransition]);
+
   const reportSave: SaveFeedbackHandler = (state, message) => setSaveFeedback({ state, message });
 
   function selectFamily(ids: string[]) {
@@ -253,6 +262,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           <div><span className="topbar-path">VITAR DIGITAL GROWTH /</span><strong>{pageTitle(view)}</strong></div>
           <div className="topbar-actions">
             <div className={`sync-state ${saveFeedback.state}`} aria-live="polite"><span /><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : saveFeedback.state === "error" ? "Chyba uložení" : "Data aktuální"}</strong><small>{saveFeedback.state === "idle" ? (data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.crawl.completedAt)) : "") : saveFeedback.message}</small></div>
+            <button className="icon-button sync-refresh" onClick={() => startTransition(() => router.refresh())} title="Obnovit data týmu" aria-label="Obnovit data týmu"><RefreshCw className={pending ? "spin" : ""} size={16} /></button>
             <details className="export-menu">
               <summary className="secondary-button" title="Exportovat data"><Download size={16} /> <span>Export</span></summary>
               <div>
