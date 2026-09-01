@@ -27,7 +27,6 @@ import {
   LoaderCircle,
   Menu,
   MessageSquareText,
-  MoreHorizontal,
   PackagePlus,
   Plus,
   RefreshCw,
@@ -41,7 +40,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { bulkSaveReviews, createWipProduct } from "@/app/actions";
+import { bulkSaveReviews, clearProfileSelection, createWipProduct } from "@/app/actions";
 import { ProductDrawer, CHANNEL_OPTIONS, LIFECYCLE_OPTIONS } from "@/components/product-drawer";
 import { QuickReview } from "@/components/quick-review";
 import { TeamPanel } from "@/components/team-panel";
@@ -234,6 +233,13 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
     setSelectedIds(new Set());
   }
 
+  function changeProfile() {
+    startTransition(async () => {
+      await clearProfileSelection();
+      window.location.reload();
+    });
+  }
+
   return (
     <div className="app-shell">
       <aside className={`sidebar ${mobileNav ? "mobile-open" : ""}`}>
@@ -256,11 +262,11 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           })}
         </nav>
         <footer className="sidebar-footer">
-          <div className="profile-block">
+          <button className="profile-block" onClick={changeProfile} disabled={pending} title="Změnit aktivní profil">
             <span className="avatar" style={{ backgroundColor: data.profile.color }}>{data.profile.initials}</span>
-            <span><strong>{data.profile.name}</strong></span>
-            <MoreHorizontal size={17} />
-          </div>
+            <span><strong>{data.profile.name}</strong><small>Změnit profil</small></span>
+            {pending ? <LoaderCircle className="spin" size={17} /> : <UsersRound size={17} />}
+          </button>
         </footer>
       </aside>
 

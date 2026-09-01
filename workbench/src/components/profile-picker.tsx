@@ -33,7 +33,7 @@ export function ProfilePicker({ profiles }: { profiles: Profile[] }) {
       <section className="profile-panel">
         <p className="eyebrow">VITAR · SPRÁVA SORTIMENTU</p>
         <h1>Kdo dnes rozhoduje?</h1>
-        <p>Každý profil má vlastní domácí úkol, poznámky a návrhy.</p>
+        <p>Vyberte vždy svůj profil. Pokud v seznamu chybíte, vytvořte si nový.</p>
         <div className="profile-grid">
           {profiles.map((profile) => (
             <button

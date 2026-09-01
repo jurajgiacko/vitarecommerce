@@ -68,6 +68,11 @@ export async function setActiveProfileId(profileId: string) {
   });
 }
 
+export async function clearActiveProfileId() {
+  const cookieStore = await cookies();
+  cookieStore.delete(PROFILE_COOKIE);
+}
+
 export function createInviteToken(profileId: string, validDays = 14) {
   const expiresAt = Date.now() + validDays * 24 * 60 * 60 * 1000;
   const payload = Buffer.from(JSON.stringify({ profileId, expiresAt })).toString("base64url");

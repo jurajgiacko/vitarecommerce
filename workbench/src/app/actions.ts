@@ -9,6 +9,7 @@ import { z } from "zod";
 
 import { db, schema } from "@/lib/db";
 import {
+  clearActiveProfileId,
   getActiveProfileId,
   createInviteToken,
   setActiveProfileId,
@@ -80,6 +81,12 @@ export async function chooseProfile(profileId: string) {
   if (!rows[0]) throw new Error("Profil neexistuje.");
   await setActiveProfileId(profileId);
   revalidatePath("/");
+}
+
+export async function clearProfileSelection() {
+  await clearActiveProfileId();
+  revalidatePath("/");
+  return { ok: true };
 }
 
 export async function createProfile(input: { name: string; role?: string }) {
