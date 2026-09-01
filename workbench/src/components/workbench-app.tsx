@@ -386,14 +386,14 @@ function Overview({
 
       <section className="homework-guide">
         <header>
-          <div><p className="eyebrow">RYCHLÝ NÁVOD</p><h2>Jak připravit domácí úkol</h2><p>Projděte portfolio samostatně před společným rozhodnutím.</p></div>
+          <div><p className="eyebrow">RYCHLÝ NÁVOD</p><h2>Jak připravit domácí úkol</h2><p>U každého produktu rozhodněte, zda zůstává, kde se bude prodávat a kam patří.</p></div>
           <button className="primary-button" onClick={() => onChangeView("quick")}><Zap size={16} /> Začít rychlý review</button>
         </header>
         <div className="homework-guide-steps">
-          <div><span><Zap size={17} /></span><p><strong>Projděte produkty</strong>Swipe ukládá váš názor rovnou jako odevzdaný.</p></div>
-          <div><span><Store size={17} /></span><p><strong>Zvolte cílový e-shop</strong>VITAR.cz, NašeVitamíny.cz, oba, Veterina nebo společné rozhodnutí.</p></div>
-          <div><span><Archive size={17} /></span><p><strong>Určete životní cyklus</strong>Doprodej, ukončení výroby a archiv nastavte v detailu produktu.</p></div>
-          <div><span><MessageSquareText size={17} /></span><p><strong>Doplňte výjimky</strong>U sporné kategorie či dat přidejte krátké odůvodnění nebo poznámku.</p></div>
+          <div><span><Archive size={17} /></span><p><strong>1. Ponechat, nebo vyřadit?</strong>Určete aktivní produkt, doprodej, ukončení výroby nebo archiv.</p></div>
+          <div><span><Store size={17} /></span><p><strong>2. Zvolte cílový e-shop</strong>VITAR.cz, NašeVitamíny.cz, oba, Veterina nebo společné rozhodnutí.</p></div>
+          <div><span><ListFilter size={17} /></span><p><strong>3. Potvrďte kategorii</strong>Vyberte hlavní produktovou kategorii; cílová skupina typu Děti není náhradou za typ produktu.</p></div>
+          <div><span><MessageSquareText size={17} /></span><p><strong>4. Doplňte výjimky a novinky</strong>Přidejte poznámku; nové produkty uložte v sekci WIP jako trvalý placeholder.</p></div>
         </div>
       </section>
 
@@ -589,6 +589,7 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
   const [brand, setBrand] = useState("Vitar");
   const [categoryKey, setCategoryKey] = useState(categories[0]?.key || "unclassified");
   const [description, setDescription] = useState("");
+  const [targetChannels, setTargetChannels] = useState<Array<"vitar.cz" | "nasevitaminy.cz">>(["vitar.cz"]);
   const [error, setError] = useState("");
   const [pending, startTransition] = useTransition();
   const router = useRouter();
@@ -607,6 +608,7 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
           categoryKey,
           categoryLabel: selected.label,
           description,
+          targetChannels,
         });
         router.refresh();
         onClose();
@@ -621,10 +623,10 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
       <button className="modal-backdrop" onClick={onClose} aria-label="Zavřít" />
       <form className="modal-panel" onSubmit={submit}>
         <header>
-          <div><p className="eyebrow">WIP INBOX</p><h2>Přidat nový produkt</h2></div>
+          <div><p className="eyebrow">WIP INBOX</p><h2>Přidat nový placeholder</h2></div>
           <button type="button" className="icon-button" onClick={onClose} title="Zavřít"><X size={18} /></button>
         </header>
-        <p>Koncept se objeví vedle nascrapovaného portfolia a může projít stejným review.</p>
+        <p>Placeholder se trvale uloží do databáze, zůstane vedle nascrapovaného portfolia a projde stejným review.</p>
         <label><span>Pracovní název</span><input value={name} onChange={(event) => setName(event.target.value)} autoFocus /></label>
         <div className="two-column-fields">
           <label><span>Značka / řada</span><input value={brand} onChange={(event) => setBrand(event.target.value)} /></label>
@@ -635,12 +637,33 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
             </select>
           </label>
         </div>
+        <div className="wip-channel-field">
+          <span>Cílový e-shop (povinné)</span>
+          <div className="channel-grid">
+            {CHANNEL_OPTIONS.slice(0, 2).map((channel) => {
+              const key = channel.key as "vitar.cz" | "nasevitaminy.cz";
+              const selected = targetChannels.includes(key);
+              return (
+                <button
+                  type="button"
+                  className={`channel-option ${selected ? "selected" : ""}`}
+                  onClick={() => setTargetChannels((current) => selected ? current.filter((item) => item !== key) : [...current, key])}
+                  key={key}
+                >
+                  <span className="check-box">{selected ? <Check size={14} /> : null}</span>
+                  <span><strong>{channel.label}</strong><small>{channel.note}</small></span>
+                </button>
+              );
+            })}
+          </div>
+          <small>Lze zvolit jeden nebo oba e-shopy. Cíl se uloží přímo k placeholderu.</small>
+        </div>
         <label><span>Koncept / USP</span><textarea rows={5} value={description} onChange={(event) => setDescription(event.target.value)} /></label>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
         <footer>
           <button type="button" className="secondary-button" onClick={onClose}>Zrušit</button>
-          <button className="primary-button" disabled={pending || name.trim().length < 3}>
-            {pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Přidat WIP
+          <button className="primary-button" disabled={pending || name.trim().length < 3 || targetChannels.length === 0}>
+            {pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Uložit placeholder
           </button>
         </footer>
       </form>

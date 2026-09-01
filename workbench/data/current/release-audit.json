@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T13:38:24.568Z",
-  "catalog_generated_at": "2026-09-01T13:29:49.864435+00:00",
+  "generated_at": "2026-09-01T15:17:42.843Z",
+  "catalog_generated_at": "2026-09-01T15:16:37.626415+00:00",
   "status": "pass",
   "checks": [
     {
@@ -31,7 +31,7 @@
     {
       "name": "Current crawl recorded",
       "ok": true,
-      "detail": "2026-09-01T13:29:49.864Z"
+      "detail": "2026-09-01T15:16:37.626Z"
     },
     {
       "name": "Required team profiles",

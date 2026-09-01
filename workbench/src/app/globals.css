@@ -1842,6 +1842,22 @@ textarea:focus {
   font-size: 8px;
 }
 
+.wip-channel-field {
+  display: grid;
+  gap: 7px;
+}
+
+.wip-channel-field > span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.wip-channel-field > small {
+  color: var(--faint);
+  font-size: 9px;
+}
+
 .field-row {
   align-items: center;
   display: grid;

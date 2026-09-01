@@ -1,7 +1,7 @@
 {
   "summary": {
-    "crawl_started_at": "2026-09-01T13:29:20.092577+00:00",
-    "generated_at": "2026-09-01T13:29:49.864435+00:00",
+    "crawl_started_at": "2026-09-01T15:16:08.096144+00:00",
+    "generated_at": "2026-09-01T15:16:37.626415+00:00",
     "coverage": {
       "vitar": {
         "sitemap_urls": 440,
@@ -77,14 +77,15 @@
       "Vyprošťovák": 3
     },
     "by_category": {
-      "Děti": 14,
-      "Hydratace a nápoje": 36,
-      "Zrak": 11,
+      "Merch a příslušenství": 4,
+      "Pitný režim a nápoje": 34,
       "Hořčík": 30,
       "Vitaminy a minerály": 38,
       "Imunita": 34,
       "Energie a výkon": 4,
       "Hroznový cukr a cukrovinky": 6,
+      "Děti": 13,
+      "Zrak": 10,
       "Spánek a stres": 9,
       "Sladidla": 10,
       "Krása, vlasy a pleť": 22,
@@ -122,8 +123,8 @@
       "sku": "39005056",
       "ean": "3900505600000",
       "category": {
-        "key": "kids",
-        "label": "Děti",
+        "key": "merch",
+        "label": "Merch a příslušenství",
         "confidence": "high"
       },
       "form": {
@@ -195,7 +196,7 @@
       "ean": "4000177033487",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -304,9 +305,9 @@
       "sku": "39005057",
       "ean": "3900505700000",
       "category": {
-        "key": "hydration",
-        "label": "Hydratace a nápoje",
-        "confidence": "medium"
+        "key": "merch",
+        "label": "Merch a příslušenství",
+        "confidence": "high"
       },
       "form": {
         "key": "unknown",
@@ -377,7 +378,7 @@
       "ean": "4000177172650",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -487,7 +488,7 @@
       "ean": "4000177019276",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -597,7 +598,7 @@
       "ean": "4000177407509",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -698,7 +699,7 @@
       "ean": "4000177162316",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -816,7 +817,7 @@
       "ean": "4000177030035",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -917,7 +918,7 @@
       "ean": "4000177408100",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -1017,8 +1018,8 @@
       "sku": "39000011",
       "ean": "3900001100000",
       "category": {
-        "key": "eyes",
-        "label": "Zrak",
+        "key": "merch",
+        "label": "Merch a příslušenství",
         "confidence": "high"
       },
       "form": {
@@ -1092,7 +1093,7 @@
       "ean": "4000177407400",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -1193,7 +1194,7 @@
       "ean": "",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -1269,7 +1270,7 @@
       "ean": "4000177407608",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -1369,9 +1370,9 @@
       "sku": "39005029",
       "ean": "3900502900000",
       "category": {
-        "key": "hydration",
-        "label": "Hydratace a nápoje",
-        "confidence": "medium"
+        "key": "merch",
+        "label": "Merch a příslušenství",
+        "confidence": "high"
       },
       "form": {
         "key": "unknown",
@@ -1444,7 +1445,7 @@
       "ean": "4000177172629",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -6896,7 +6897,7 @@
       "ean": "8595011146745",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -7102,7 +7103,7 @@
       "ean": "8595011143003",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -7420,7 +7421,7 @@
       "ean": "8595011146141",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -9525,7 +9526,7 @@
       "ean": "8595011124040",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -12043,7 +12044,7 @@
       "ean": "8595011143614",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -12427,7 +12428,7 @@
       "ean": "8595011142969",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -14451,7 +14452,7 @@
       "ean": "8595011149852",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "medium"
       },
       "form": {
@@ -16134,7 +16135,7 @@
       "ean": "8595011119916",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -16236,7 +16237,7 @@
       "ean": "8595011119947",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -16338,7 +16339,7 @@
       "ean": "8595011119886",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -18704,7 +18705,7 @@
       "ean": "8595011124460",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -18779,7 +18780,7 @@
       "ean": "8595011124446",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -18932,7 +18933,7 @@
       "ean": "8595011124422",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -19007,7 +19008,7 @@
       "ean": "8595011124408",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -19728,7 +19729,7 @@
       "ean": "8595011124507",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -19803,7 +19804,7 @@
       "ean": "8595011124484",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -20065,7 +20066,7 @@
       "ean": "8595011146547",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -20621,7 +20622,7 @@
       "ean": "8595011146967",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -20725,7 +20726,7 @@
       "ean": "8595011146943",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -21757,7 +21758,7 @@
       "ean": "8595011146462",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -21859,7 +21860,7 @@
       "ean": "8595011104356",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -23271,7 +23272,7 @@
       "ean": "8595011145915",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {
@@ -23373,7 +23374,7 @@
       "ean": "8595011144949",
       "category": {
         "key": "hydration",
-        "label": "Hydratace a nápoje",
+        "label": "Pitný režim a nápoje",
         "confidence": "high"
       },
       "form": {

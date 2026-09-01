@@ -81,6 +81,7 @@ BRANDS = [
 
 CATEGORY_RULES = [
     ("veterina", "Veterina", ["veterinae", "pro psy", "pro kočky", "pro kocky"]),
+    ("merch", "Merch a příslušenství", ["merch", "batoh", "osuška", "osuska"]),
     ("repellents", "Repelenty a ochrana", ["predator", "repelent", "klíšť", "klist", "parazit", "hmyz"]),
     ("kids", "Děti", ["kids", "pro děti", "pro deti", "děts", "dets", "kolostrum"]),
     ("womens_health", "Zdraví žen", ["fembalance", "goddess", "hormon", "menopau", "ženy", "zeny"]),
@@ -98,7 +99,7 @@ CATEGORY_RULES = [
     ("heart", "Srdce a oběh", ["srdce", "oběh", "obeh", "omega", "koenzym", "q10"]),
     ("eyes", "Zrak", ["zrak", "oči", "oci", "lutein"]),
     ("urinary", "Močové cesty", ["moč", "moc", "brusink"]),
-    ("hydration", "Hydratace a nápoje", ["rehydrat", "elektrolyt", "nápoj", "napoj", "pitný", "pitny", "capri", "ovocé"]),
+    ("hydration", "Pitný režim a nápoje", ["rehydrat", "elektrolyt", "nápoj", "napoj", "pitný", "pitny", "capri", "ovocé"]),
     ("sweeteners", "Sladidla", ["irbis", "sladid", "stevie", "sukral", "aspartam", "sacharin"]),
     ("dextrose", "Hroznový cukr a cukrovinky", ["energit", "hroznový cukr", "hroznovy cukr", "dextróz", "dextroz"]),
     ("hangover", "Vyprošťovák", ["vyprošťovák", "vyprostovak"]),
@@ -298,6 +299,12 @@ def detect_brand(name: str, url: str, manufacturer: str = "") -> str:
 
 
 def detect_category(product: dict[str, Any]) -> dict[str, Any]:
+    name = normalized_key(product.get("name", ""))
+    brand = normalized_key(product.get("brand", ""))
+    if brand == "capri sun":
+        if any(word in name for word in ["batoh", "lahev", "osuska", "taska"]):
+            return {"key": "merch", "label": "Merch a příslušenství", "confidence": "high"}
+        return {"key": "hydration", "label": "Pitný režim a nápoje", "confidence": "high"}
     haystack = normalized_key(
         " ".join(
             [

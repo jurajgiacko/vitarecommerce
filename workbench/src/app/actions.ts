@@ -319,6 +319,7 @@ export async function createWipProduct(input: {
   categoryKey: string;
   categoryLabel: string;
   description: string;
+  targetChannels: Array<"vitar.cz" | "nasevitaminy.cz">;
 }) {
   const parsed = z
     .object({
@@ -328,6 +329,7 @@ export async function createWipProduct(input: {
       categoryKey: z.string(),
       categoryLabel: z.string(),
       description: z.string().max(4000),
+      targetChannels: z.array(z.enum(["vitar.cz", "nasevitaminy.cz"])).min(1).max(2),
     })
     .parse(input);
   await assertProfile(parsed.profileId);
@@ -354,9 +356,10 @@ export async function createWipProduct(input: {
       hasConflict: false,
     },
     systemRecommendation: {
-      channels: ["review"],
+      channels: parsed.targetChannels,
+      primary: parsed.targetChannels[0],
       confidence: "low",
-      reason: "Nový WIP produkt vyžaduje společné rozhodnutí.",
+      reason: `WIP placeholder připravený pro ${parsed.targetChannels.join(" + ")}; vyžaduje společné rozhodnutí.`,
     },
   });
   await db.insert(schema.auditEvents).values({
@@ -365,7 +368,11 @@ export async function createWipProduct(input: {
     productId: id,
     roundId: ROUND_ID,
     action: "wip_product_created",
-    payload: { name: parsed.name },
+    payload: {
+      name: parsed.name,
+      categoryKey: parsed.categoryKey,
+      targetChannels: parsed.targetChannels,
+    },
   });
   revalidatePath("/");
   return { ok: true, id };

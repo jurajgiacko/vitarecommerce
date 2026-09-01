@@ -1,6 +1,6 @@
 # Crawl coverage report
 
-Generated: 2026-09-01T13:29:49.864435+00:00
+Generated: 2026-09-01T15:16:37.626415+00:00
 Source records: 550
 Master products: 324
 

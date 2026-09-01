@@ -1,6 +1,6 @@
 {
-  "crawl_started_at": "2026-09-01T13:29:20.092577+00:00",
-  "generated_at": "2026-09-01T13:29:49.864435+00:00",
+  "crawl_started_at": "2026-09-01T15:16:08.096144+00:00",
+  "generated_at": "2026-09-01T15:16:37.626415+00:00",
   "coverage": {
     "vitar": {
       "sitemap_urls": 440,
@@ -76,14 +76,15 @@
     "Vyprošťovák": 3
   },
   "by_category": {
-    "Děti": 14,
-    "Hydratace a nápoje": 36,
-    "Zrak": 11,
+    "Merch a příslušenství": 4,
+    "Pitný režim a nápoje": 34,
     "Hořčík": 30,
     "Vitaminy a minerály": 38,
     "Imunita": 34,
     "Energie a výkon": 4,
     "Hroznový cukr a cukrovinky": 6,
+    "Děti": 13,
+    "Zrak": 10,
     "Spánek a stres": 9,
     "Sladidla": 10,
     "Krása, vlasy a pleť": 22,

@@ -120,6 +120,11 @@ export async function GET(request: Request) {
       brand: product.brand,
       source_category: product.categoryLabel,
       lifecycle: product.lifecycle,
+      is_placeholder: product.manuallyCreated,
+      placeholder_channels: product.manuallyCreated ? product.systemRecommendation.channels : [],
+      placeholder_created_by: product.createdByProfileId
+        ? profileMap.get(product.createdByProfileId) || product.createdByProfileId
+        : "",
       source_sites: productSources.map((source) => source.sourceSite),
       source_urls: productSources.map((source) => source.url),
       vitar_url: productSources.find((source) => source.sourceKey === "vitar")?.url || "",
@@ -179,6 +184,9 @@ export async function GET(request: Request) {
     "brand",
     "source_category",
     "lifecycle",
+    "is_placeholder",
+    "placeholder_channels",
+    "placeholder_created_by",
     "source_sites",
     "source_urls",
     "vitar_url",
@@ -210,8 +218,8 @@ export async function GET(request: Request) {
       "",
       "## Produktová matice",
       "",
-      "| Produkt | Brand | SKU | EAN | Zdroje | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
-      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
+      "| Produkt | Brand | SKU | EAN | Zdroje | Placeholder cíl | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
       ...rows.map((row) => {
         const sourceLinks = [
           markdownLink("VITAR.cz", row.vitar_url),
@@ -224,6 +232,7 @@ export async function GET(request: Request) {
           row.sku,
           row.ean,
           sourceLinks,
+          channelSummary(row.placeholder_channels.map((channel) => `${channel}:include`)),
           row.final_status,
           LIFECYCLE_LABELS[row.final_lifecycle] || row.final_lifecycle,
           channelSummary(row.final_channels),
