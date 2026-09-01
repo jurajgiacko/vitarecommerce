@@ -262,7 +262,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           })}
         </nav>
         <footer className="sidebar-footer">
-          <button className="profile-block" onClick={changeProfile} disabled={pending} title="Změnit aktivní profil">
+          <button className="profile-block" onClick={changeProfile} disabled={pending} title="Změnit aktivní profil" aria-label="Změnit aktivní profil">
             <span className="avatar" style={{ backgroundColor: data.profile.color }}>{data.profile.initials}</span>
             <span><strong>{data.profile.name}</strong><small>Změnit profil</small></span>
             {pending ? <LoaderCircle className="spin" size={17} /> : <UsersRound size={17} />}
