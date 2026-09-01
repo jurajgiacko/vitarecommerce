@@ -208,6 +208,23 @@ p {
   margin-left: 0;
 }
 
+.profile-avatar-button {
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.profile-avatar-button:hover:not(:disabled) {
+  box-shadow: 0 0 0 3px rgba(22, 122, 90, 0.16);
+  transform: translateY(-1px);
+}
+
+.profile-avatar-button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
 .status-pill {
   align-items: center;
   border-radius: 999px;

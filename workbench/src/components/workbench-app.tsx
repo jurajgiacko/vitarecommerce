@@ -292,7 +292,16 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
                 <a href="/api/export?format=csv&scope=all"><FileSpreadsheet size={15} /> CSV</a>
               </div>
             </details>
-            <span className="avatar top-avatar" style={{ backgroundColor: data.profile.color }}>{data.profile.initials}</span>
+            <button
+              className="avatar top-avatar profile-avatar-button"
+              style={{ backgroundColor: data.profile.color }}
+              onClick={changeProfile}
+              disabled={pending}
+              title="Změnit aktivní profil"
+              aria-label="Změnit aktivní profil"
+            >
+              {data.profile.initials}
+            </button>
           </div>
         </header>
 
