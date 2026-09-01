@@ -9,18 +9,22 @@ import {
   ArrowRight,
   ArrowUp,
   CheckCircle2,
+  CircleHelp,
   ExternalLink,
   Hourglass,
+  Layers3,
   LoaderCircle,
   PawPrint,
   RotateCcw,
   Search,
   ShieldX,
+  X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { saveReview } from "@/app/actions";
-import type { Profile, WorkbenchProduct } from "@/lib/workbench-types";
+import { INFORMATION_REASONS, informationRationale } from "@/lib/review-options";
+import type { Profile, SaveFeedbackHandler, WorkbenchProduct } from "@/lib/workbench-types";
 
 type DecisionKind = "vitar" | "nase" | "both" | "hold" | "veterina" | "archive";
 
@@ -38,7 +42,7 @@ const DECISIONS: Record<
     role: "core",
     label: "Oba e-shopy",
   },
-  hold: { channels: [{ channel: "workshop_hold", decision: "hold" }], role: "hold", label: "Společně rozhodnout" },
+  hold: { channels: [{ channel: "workshop_hold", decision: "hold" }], role: "hold", label: "Potřebuji informace" },
   veterina: { channels: [{ channel: "vitar_veterina", decision: "include" }], role: "core", label: "VITAR Veterina" },
   archive: { channels: [{ channel: "archive", decision: "exclude" }], role: "exclude", label: "Starý produkt / archiv" },
 };
@@ -47,6 +51,8 @@ type QuickReviewProps = {
   products: WorkbenchProduct[];
   profile: Profile;
   onOpenProduct: (id: string) => void;
+  onSelectFamily: (ids: string[]) => void;
+  onSaveFeedback: SaveFeedbackHandler;
 };
 
 function sourceLabel(sourceKey: string) {
@@ -56,7 +62,7 @@ function sourceLabel(sourceKey: string) {
   return sourceKey.slice(0, 2).toUpperCase();
 }
 
-export function QuickReview({ products, profile, onOpenProduct }: QuickReviewProps) {
+export function QuickReview({ products, profile, onOpenProduct, onSelectFamily, onSaveFeedback }: QuickReviewProps) {
   const router = useRouter();
   const [queueIds] = useState(() =>
     products
@@ -68,36 +74,56 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
   const [history, setHistory] = useState<number[]>([]);
   const [drag, setDrag] = useState({ x: 0, y: 0 });
   const [message, setMessage] = useState("");
+  const [showInformationPicker, setShowInformationPicker] = useState(false);
   const [pending, startTransition] = useTransition();
   const pointerStart = useRef({ x: 0, y: 0 });
   const product = productById.get(queueIds[index]);
+  const familyProducts = product ? products.filter((item) => item.familyKey === product.familyKey) : [];
   const completedBefore = products.length - queueIds.length;
   const completed = Math.min(products.length, completedBefore + index);
 
-  function decide(kind: DecisionKind) {
+  function decide(kind: DecisionKind, informationReason?: string) {
     if (!product || pending) return;
-    const decision = DECISIONS[kind];
-    setMessage(decision.label);
-    startTransition(async () => {
-      await saveReview({
-        productId: product.id,
-        profileId: profile.id,
-        categoryKey: product.categoryKey,
-        categoryLabel: product.categoryLabel,
-        portfolioRole: decision.role,
-        lifecycleDecision: kind === "archive" ? "archive" : "active",
-        confidence: kind === "hold" ? "low" : "medium",
-        rationale: `Rychlý review: ${decision.label}.`,
-        status: "submitted",
-        channels: decision.channels.map((channel, channelIndex) => ({
-          ...channel,
-          role: channelIndex === 0 ? "primary" : "secondary",
-          priority: channelIndex === 0 ? 1 : 2,
-        })),
-      });
-      setHistory((current) => current.concat(index));
-      setIndex((current) => current + 1);
+    if (kind === "hold" && !informationReason) {
       setDrag({ x: 0, y: 0 });
+      setShowInformationPicker(true);
+      return;
+    }
+    const decision = DECISIONS[kind];
+    const rationale = kind === "hold" && informationReason
+      ? informationRationale(informationReason)
+      : `Rychlý review: ${decision.label}.`;
+    setMessage(decision.label);
+    onSaveFeedback("saving", `Ukládám: ${decision.label}`);
+    startTransition(async () => {
+      try {
+        await saveReview({
+          productId: product.id,
+          profileId: profile.id,
+          categoryKey: product.categoryKey,
+          categoryLabel: product.categoryLabel,
+          portfolioRole: decision.role,
+          lifecycleDecision: kind === "archive" ? "archive" : "active",
+          confidence: kind === "hold" ? "low" : "medium",
+          rationale,
+          status: "submitted",
+          channels: decision.channels.map((channel, channelIndex) => ({
+            ...channel,
+            role: channelIndex === 0 ? "primary" : "secondary",
+            priority: channelIndex === 0 ? 1 : 2,
+          })),
+        });
+        setShowInformationPicker(false);
+        setHistory((current) => current.concat(index));
+        setIndex((current) => current + 1);
+        setDrag({ x: 0, y: 0 });
+        setMessage(`Uloženo: ${decision.label}`);
+        onSaveFeedback("saved", `${decision.label} uloženo`);
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "Rozhodnutí se nepodařilo uložit";
+        setMessage(errorMessage);
+        onSaveFeedback("error", errorMessage);
+      }
     });
   }
 
@@ -162,7 +188,7 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
         <div className="swipe-hint top"><ArrowUp size={16} /> Oba</div>
         <div className="swipe-hint left"><ArrowLeft size={16} /> NašeVitamíny</div>
         <div className="swipe-hint right">VITAR.cz <ArrowRight size={16} /></div>
-        <div className="swipe-hint bottom"><ArrowDown size={16} /> Hold</div>
+        <div className="swipe-hint bottom"><ArrowDown size={16} /> Potřebuji info</div>
         <div
           className={`swipe-card ${pending ? "saving" : ""}`}
           style={{ transform: `translate3d(${drag.x}px, ${drag.y}px, 0) rotate(${rotation}deg)` }}
@@ -199,6 +225,18 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
               <span>{product.formLabel}</span>
               <span>{product.priceCzk ? `${Number(product.priceCzk).toLocaleString("cs-CZ")} Kč` : "Bez ceny"}</span>
             </div>
+            {familyProducts.length > 1 ? (
+              <button
+                className="family-quick-button"
+                onPointerDown={(event) => event.stopPropagation()}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  onSelectFamily(familyProducts.map((item) => item.id));
+                }}
+              >
+                <Layers3 size={14} /> Rodina · {familyProducts.length} variant
+              </button>
+            ) : null}
             <p className="swipe-description">{product.description || "Produkt čeká na doplnění popisu."}</p>
             <div className="swipe-recommendation">
               <strong>Systém:</strong> {product.systemRecommendation.reason}
@@ -214,10 +252,20 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
         </div>
       </div>
 
+      {showInformationPicker ? (
+        <div className="quick-information-layer" role="dialog" aria-modal="true" aria-label="Důvod chybějících informací">
+          <button className="quick-information-backdrop" onClick={() => setShowInformationPicker(false)} aria-label="Zavřít" />
+          <section className="quick-information-panel">
+            <header><span><CircleHelp size={18} /><strong>Co potřebujete doplnit?</strong></span><button className="icon-button" onClick={() => setShowInformationPicker(false)} title="Zavřít"><X size={17} /></button></header>
+            <div>{INFORMATION_REASONS.map((reason) => <button onClick={() => decide("hold", reason)} key={reason}>{reason}</button>)}</div>
+          </section>
+        </div>
+      ) : null}
+
       <div className="swipe-actions" aria-label="Rychlé rozhodnutí">
         <button className="swipe-action undo" onClick={undo} disabled={!history.length || pending} title="Vrátit předchozí kartu"><RotateCcw size={20} /></button>
         <button className="swipe-action nase" onClick={() => decide("nase")} disabled={pending} title="NašeVitamíny.cz"><ArrowLeft size={22} /><span>NV</span></button>
-        <button className="swipe-action hold" onClick={() => decide("hold")} disabled={pending} title="Rozhodnout společně"><ArrowDown size={21} /></button>
+        <button className="swipe-action hold" onClick={() => decide("hold")} disabled={pending} title="Potřebuji informace"><ArrowDown size={21} /></button>
         <button className="swipe-action both" onClick={() => decide("both")} disabled={pending} title="Oba e-shopy"><ArrowUp size={21} /></button>
         <button className="swipe-action vitar" onClick={() => decide("vitar")} disabled={pending} title="VITAR.cz"><ArrowRight size={22} /><span>V</span></button>
       </div>

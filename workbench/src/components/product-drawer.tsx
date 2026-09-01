@@ -7,9 +7,11 @@ import {
   AlertTriangle,
   Check,
   CheckCircle2,
+  CircleHelp,
   ExternalLink,
   FileText,
   History,
+  Layers3,
   LoaderCircle,
   MessageSquare,
   Save,
@@ -21,10 +23,12 @@ import {
 import { useRouter } from "next/navigation";
 
 import { addComment, saveFinalDecision, saveReview } from "@/app/actions";
+import { INFORMATION_REASONS, informationRationale } from "@/lib/review-options";
 import type {
   ChannelDecision,
   ProductDetail,
   Profile,
+  SaveFeedbackHandler,
   WorkbenchProduct,
 } from "@/lib/workbench-types";
 
@@ -33,6 +37,7 @@ export const CHANNEL_OPTIONS = [
   { key: "nasevitaminy.cz", label: "NašeVitamíny.cz", note: "Retail a volume" },
   { key: "vitar_veterina", label: "VITAR Veterina", note: "Samostatný e-shop" },
   { key: "oem_b2b", label: "OEM / B2B", note: "Mimo B2C katalog" },
+  { key: "workshop_hold", label: "Potřebuji informace", note: "Chybí podklad pro rozhodnutí" },
   { key: "archive", label: "Starý produkt / archiv", note: "Již se nemá prodávat" },
 ] as const;
 
@@ -65,6 +70,9 @@ type DrawerProps = {
   profile: Profile;
   profiles: Profile[];
   categories: Array<{ key: string; label: string }>;
+  familyProducts: WorkbenchProduct[];
+  onSelectFamily: (ids: string[]) => void;
+  onSaveFeedback: SaveFeedbackHandler;
   onClose: () => void;
 };
 
@@ -84,7 +92,7 @@ function sourceLabel(key: string) {
   return key;
 }
 
-export function ProductDrawer({ product, profile, profiles, categories, onClose }: DrawerProps) {
+export function ProductDrawer({ product, profile, profiles, categories, familyProducts, onSelectFamily, onSaveFeedback, onClose }: DrawerProps) {
   const router = useRouter();
   const currentReview = product.reviews.find((review) => review.profileId === profile.id);
   const canSeeTeamOpinions =
@@ -137,7 +145,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
     () =>
       channels.map((channel, index) => ({
         channel,
-        decision: channel === "archive" ? "exclude" : "include",
+        decision: channel === "archive" ? "exclude" : channel === "workshop_hold" ? "hold" : "include",
         role: channel === primaryChannel || (!primaryChannel && index === 0) ? "primary" : "secondary",
         priority: channel === primaryChannel || (!primaryChannel && index === 0) ? 1 : 2,
       })),
@@ -157,8 +165,14 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
         setLifecycleDecision("archive");
         return ["archive"];
       }
-      const next = current.filter((item) => item !== "archive").concat(channel);
-      if (!primaryChannel || primaryChannel === "archive") setPrimaryChannel(channel);
+      if (channel === "workshop_hold") {
+        setPrimaryChannel("workshop_hold");
+        setPortfolioRole("hold");
+        setConfidence("low");
+        return ["workshop_hold"];
+      }
+      const next = current.filter((item) => item !== "archive" && item !== "workshop_hold").concat(channel);
+      if (!primaryChannel || primaryChannel === "archive" || primaryChannel === "workshop_hold") setPrimaryChannel(channel);
       return next;
     });
   }
@@ -182,6 +196,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
       return;
     }
     setMessage("");
+    onSaveFeedback("saving", status === "submitted" ? "Odevzdávám názor" : "Ukládám koncept");
     startTransition(async () => {
       try {
         await saveReview({
@@ -201,9 +216,12 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
           })),
         });
         setMessage(status === "submitted" ? "Návrh byl odevzdán." : "Koncept byl uložen.");
+        onSaveFeedback("saved", status === "submitted" ? "Názor odevzdán" : "Koncept uložen");
         router.refresh();
       } catch (error) {
-        setMessage(error instanceof Error ? error.message : "Uložení se nepodařilo.");
+        const errorMessage = error instanceof Error ? error.message : "Uložení se nepodařilo.";
+        setMessage(errorMessage);
+        onSaveFeedback("error", errorMessage);
       }
     });
   }
@@ -213,6 +231,7 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
       setMessage("Finální rozhodnutí potřebuje kanál a kategorii.");
       return;
     }
+    onSaveFeedback("saving", "Ukládám finální rozhodnutí");
     startTransition(async () => {
       try {
         await saveFinalDecision({
@@ -232,9 +251,12 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
           })),
         });
         setMessage("Finální rozhodnutí bylo schváleno.");
+        onSaveFeedback("saved", "Finální rozhodnutí uloženo");
         router.refresh();
       } catch (error) {
-        setMessage(error instanceof Error ? error.message : "Schválení se nepodařilo.");
+        const errorMessage = error instanceof Error ? error.message : "Schválení se nepodařilo.";
+        setMessage(errorMessage);
+        onSaveFeedback("error", errorMessage);
       }
     });
   }
@@ -242,10 +264,16 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
   function submitComment(event: FormEvent) {
     event.preventDefault();
     if (!comment.trim()) return;
+    onSaveFeedback("saving", "Ukládám poznámku");
     startTransition(async () => {
-      await addComment({ productId: product.id, profileId: profile.id, body: comment });
-      setComment("");
-      router.refresh();
+      try {
+        await addComment({ productId: product.id, profileId: profile.id, body: comment });
+        setComment("");
+        onSaveFeedback("saved", "Poznámka uložena");
+        router.refresh();
+      } catch (error) {
+        onSaveFeedback("error", error instanceof Error ? error.message : "Poznámku se nepodařilo uložit");
+      }
     });
   }
 
@@ -306,6 +334,18 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
                 </div>
               ) : null}
 
+              {familyProducts.length > 1 ? (
+                <section className="family-panel">
+                  <div>
+                    <Layers3 size={18} />
+                    <span><strong>Produktová rodina</strong><small>{familyProducts.length} variant · každá zůstává samostatným SKU</small></span>
+                  </div>
+                  <button className="secondary-button compact" onClick={() => onSelectFamily(familyProducts.map((item) => item.id))}>
+                    <Check size={15} /> Vybrat celou rodinu
+                  </button>
+                </section>
+              ) : null}
+
               <section className="system-proposal">
                 <div>
                   <Sparkles size={17} />
@@ -326,6 +366,27 @@ export function ProductDrawer({ product, profile, profiles, categories, onClose 
                     Použít návrh
                   </button>
                 ) : null}
+              </section>
+
+              <section className="information-panel">
+                <div><CircleHelp size={17} /><span><strong>Chybí podklad?</strong><small>Označte konkrétní důvod místo neurčité poznámky.</small></span></div>
+                <div className="information-reasons">
+                  {INFORMATION_REASONS.map((reason) => (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setChannels(["workshop_hold"]);
+                        setPrimaryChannel("workshop_hold");
+                        setPortfolioRole("hold");
+                        setConfidence("low");
+                        setRationale(informationRationale(reason));
+                      }}
+                      key={reason}
+                    >
+                      {reason}
+                    </button>
+                  ))}
+                </div>
               </section>
 
               <section className="form-section">

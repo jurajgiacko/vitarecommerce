@@ -22,6 +22,7 @@ import {
   Filter,
   Gauge,
   LayoutDashboard,
+  Layers3,
   ListFilter,
   LoaderCircle,
   Menu,
@@ -43,7 +44,8 @@ import { bulkSaveReviews, createWipProduct } from "@/app/actions";
 import { ProductDrawer, CHANNEL_OPTIONS, LIFECYCLE_OPTIONS } from "@/components/product-drawer";
 import { QuickReview } from "@/components/quick-review";
 import { TeamPanel } from "@/components/team-panel";
-import type { WorkbenchData, WorkbenchProduct } from "@/lib/workbench-types";
+import { INFORMATION_REASONS } from "@/lib/review-options";
+import type { SaveFeedbackHandler, SaveFeedbackState, WorkbenchData, WorkbenchProduct } from "@/lib/workbench-types";
 
 type ViewKey =
   | "overview"
@@ -85,6 +87,7 @@ function channelLabel(key: string) {
 
 function reviewStatus(product: WorkbenchProduct, profileId: string) {
   const review = currentReview(product, profileId);
+  if (review?.channels.some((channel) => channel.channel === "workshop_hold")) return { key: "needs-info", label: "Chybí info" };
   if (review?.status === "submitted") return { key: "submitted", label: "Odevzdáno" };
   if (review?.status === "draft") return { key: "draft", label: "Koncept" };
   return { key: "pending", label: "Čeká" };
@@ -129,6 +132,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
   const [mobileNav, setMobileNav] = useState(false);
   const [showWip, setShowWip] = useState(false);
   const [toast, setToast] = useState("");
+  const [saveFeedback, setSaveFeedback] = useState<{ state: SaveFeedbackState; message: string }>({ state: "idle", message: "" });
   const [pending, startTransition] = useTransition();
   const router = useRouter();
 
@@ -151,8 +155,10 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
     const drafts = data.products.filter(
       (product) => currentReview(product, data.profile.id)?.status === "draft",
     ).length;
-    const conflicts = data.products.filter(
-      (product) => product.consensusConflict || product.quality.hasConflict,
+    const conflicts = data.products.filter((product) =>
+      product.consensusConflict ||
+      product.quality.hasConflict ||
+      product.reviews.some((review) => review.channels.some((channel) => channel.channel === "workshop_hold")),
     ).length;
     const sourceGaps = data.products.filter(
       (product) => product.sourceCount === 1 || !product.quality.hasEan || !product.quality.hasDescription,
@@ -184,6 +190,22 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
     const timer = window.setTimeout(() => setToast(""), 3500);
     return () => window.clearTimeout(timer);
   }, [toast]);
+
+  useEffect(() => {
+    if (saveFeedback.state !== "saved" && saveFeedback.state !== "error") return;
+    const timer = window.setTimeout(() => setSaveFeedback({ state: "idle", message: "" }), 3800);
+    return () => window.clearTimeout(timer);
+  }, [saveFeedback]);
+
+  const reportSave: SaveFeedbackHandler = (state, message) => setSaveFeedback({ state, message });
+
+  function selectFamily(ids: string[]) {
+    setSelectedIds(new Set(ids));
+    setSelectedProductId(null);
+    setView("portfolio");
+    setPage(1);
+    setToast(`${ids.length} variant produktové rodiny je vybráno.`);
+  }
 
   function changeView(next: ViewKey) {
     if (view === "quick" && next !== "quick") router.refresh();
@@ -230,7 +252,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           <button className="icon-button mobile-menu" onClick={() => setMobileNav(true)} title="Otevřít menu"><Menu size={19} /></button>
           <div><span className="topbar-path">VITAR DIGITAL GROWTH /</span><strong>{pageTitle(view)}</strong></div>
           <div className="topbar-actions">
-            <div className="sync-state"><span /><strong>Data aktuální</strong><small>{data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.crawl.completedAt)) : ""}</small></div>
+            <div className={`sync-state ${saveFeedback.state}`} aria-live="polite"><span /><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : saveFeedback.state === "error" ? "Chyba uložení" : "Data aktuální"}</strong><small>{saveFeedback.state === "idle" ? (data.crawl ? new Intl.DateTimeFormat("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.crawl.completedAt)) : "") : saveFeedback.message}</small></div>
             <details className="export-menu">
               <summary className="secondary-button" title="Exportovat data"><Download size={16} /> <span>Export</span></summary>
               <div>
@@ -258,7 +280,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
             />
           ) : null}
           {view === "quick" ? (
-            <QuickReview products={data.products} profile={data.profile} onOpenProduct={setSelectedProductId} />
+            <QuickReview products={data.products} profile={data.profile} onOpenProduct={setSelectedProductId} onSelectFamily={selectFamily} onSaveFeedback={reportSave} />
           ) : null}
           {view === "team" ? (
             <TeamPanel profiles={data.profiles} products={data.products} currentProfile={data.profile} />
@@ -287,6 +309,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
               selectedIds={selectedIds}
               setSelectedIds={setSelectedIds}
               onOpenProduct={setSelectedProductId}
+              onSelectFamily={selectFamily}
               onAddWip={() => setShowWip(true)}
             />
           ) : null}
@@ -308,11 +331,14 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           profile={data.profile}
           profiles={data.profiles}
           categories={categories}
+          familyProducts={data.products.filter((product) => product.familyKey === selectedProduct.familyKey)}
+          onSelectFamily={selectFamily}
+          onSaveFeedback={reportSave}
           onClose={() => setSelectedProductId(null)}
         />
       ) : null}
       {showWip ? (
-        <WipDialog profileId={data.profile.id} categories={categories} onClose={() => setShowWip(false)} />
+        <WipDialog profileId={data.profile.id} categories={categories} onSaveFeedback={reportSave} onClose={() => setShowWip(false)} />
       ) : null}
       {selectedIds.size ? (
         <BulkBar
@@ -320,23 +346,31 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           profileId={data.profile.id}
           pending={pending}
           onClear={() => setSelectedIds(new Set())}
-          onRun={(channel, decision, submit) => {
+          onRun={(channel, decision, submit, reason) => {
+            reportSave("saving", `${selectedIds.size} produktů`);
             startTransition(async () => {
-              await bulkSaveReviews({
-                productIds: [...selectedIds],
-                profileId: data.profile.id,
-                channel,
-                decision,
-                status: submit ? "submitted" : "draft",
-              });
-              setToast(`${selectedIds.size} produktů bylo ${submit ? "odevzdáno" : "uloženo"}.`);
-              setSelectedIds(new Set());
-              router.refresh();
+              try {
+                await bulkSaveReviews({
+                  productIds: [...selectedIds],
+                  profileId: data.profile.id,
+                  channel,
+                  decision,
+                  reason,
+                  status: submit ? "submitted" : "draft",
+                });
+                setToast(`${selectedIds.size} produktů bylo ${submit ? "odevzdáno" : "uloženo"}.`);
+                reportSave("saved", `${selectedIds.size} produktů uloženo`);
+                setSelectedIds(new Set());
+                router.refresh();
+              } catch (error) {
+                reportSave("error", error instanceof Error ? error.message : "Hromadné uložení se nepodařilo");
+              }
             });
           }}
         />
       ) : null}
       {toast ? <div className="toast"><Check size={16} />{toast}</div> : null}
+      {saveFeedback.state !== "idle" ? <div className={`mobile-save-feedback ${saveFeedback.state}`} aria-live="polite">{saveFeedback.state === "saving" ? <LoaderCircle className="spin" size={16} /> : saveFeedback.state === "saved" ? <CheckCircle2 size={16} /> : <AlertTriangle size={16} />}<span><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : "Chyba uložení"}</strong><small>{saveFeedback.message}</small></span></div> : null}
     </div>
   );
 }
@@ -392,8 +426,8 @@ function Overview({
         <div className="homework-guide-steps">
           <div><span><Archive size={17} /></span><p><strong>1. Ponechat, nebo vyřadit?</strong>Určete aktivní produkt, doprodej, ukončení výroby nebo archiv.</p></div>
           <div><span><Store size={17} /></span><p><strong>2. Zvolte cílový e-shop</strong>VITAR.cz, NašeVitamíny.cz, oba, Veterina nebo společné rozhodnutí.</p></div>
-          <div><span><ListFilter size={17} /></span><p><strong>3. Potvrďte kategorii</strong>Vyberte hlavní produktovou kategorii; cílová skupina typu Děti není náhradou za typ produktu.</p></div>
-          <div><span><MessageSquareText size={17} /></span><p><strong>4. Doplňte výjimky a novinky</strong>Přidejte poznámku; nové produkty uložte v sekci WIP jako trvalý placeholder.</p></div>
+          <div><span><ListFilter size={17} /></span><p><strong>3. Potvrďte kategorii</strong>Vyberte hlavní kategorii; stejné varianty můžete označit přes Produktovou rodinu.</p></div>
+          <div><span><MessageSquareText size={17} /></span><p><strong>4. Doplňte výjimky a novinky</strong>Chybí-li podklad, označte důvod; novinky uložte ve WIP jako trvalý placeholder.</p></div>
         </div>
       </section>
 
@@ -482,6 +516,7 @@ type ProductWorkspaceProps = {
   selectedIds: Set<string>;
   setSelectedIds: (value: Set<string>) => void;
   onOpenProduct: (id: string) => void;
+  onSelectFamily: (ids: string[]) => void;
   onAddWip: () => void;
 };
 
@@ -493,7 +528,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
       .filter((product) => {
         const mine = currentReview(product, props.profileId);
         if (props.view === "homework" && mine?.status === "submitted") return false;
-        if (props.view === "conflicts" && !product.consensusConflict && !product.quality.hasConflict) return false;
+        if (props.view === "conflicts" && !product.consensusConflict && !product.quality.hasConflict && !product.reviews.some((review) => review.channels.some((channel) => channel.channel === "workshop_hold"))) return false;
         if (props.view === "coverage" && product.sourceCount > 1 && product.quality.hasEan && product.quality.hasDescription && !product.quality.hasConflict) return false;
         if (props.view === "wip" && product.lifecycle !== "wip") return false;
         if (props.brand !== "all" && product.brand !== props.brand) return false;
@@ -540,7 +575,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
         <select value={props.brand} onChange={(event) => props.setBrand(event.target.value)} aria-label="Filtrovat značku"><option value="all">Všechny značky</option>{props.brands.map((item) => <option key={item}>{item}</option>)}</select>
         <select value={props.category} onChange={(event) => props.setCategory(event.target.value)} aria-label="Filtrovat kategorii"><option value="all">Všechny kategorie</option>{props.categories.map((item) => <option value={item.key} key={item.key}>{item.label}</option>)}</select>
         <select value={props.source} onChange={(event) => props.setSource(event.target.value)} aria-label="Filtrovat zdroj"><option value="all">Všechny zdroje</option><option value="vitar">VITAR.cz</option><option value="nasevitaminy">NašeVitamíny.cz</option><option value="ceskevitaminy">České vitamíny</option></select>
-        <select value={props.status} onChange={(event) => props.setStatus(event.target.value)} aria-label="Filtrovat stav"><option value="all">Všechny stavy</option><option value="pending">Čeká</option><option value="draft">Koncept</option><option value="submitted">Odevzdáno</option></select>
+        <select value={props.status} onChange={(event) => props.setStatus(event.target.value)} aria-label="Filtrovat stav"><option value="all">Všechny stavy</option><option value="pending">Čeká</option><option value="draft">Koncept</option><option value="submitted">Odevzdáno</option><option value="needs-info">Chybí informace</option></select>
         <select value={props.lifecycle} onChange={(event) => props.setLifecycle(event.target.value)} aria-label="Filtrovat životní cyklus"><option value="all">Všechny životní cykly</option>{LIFECYCLE_OPTIONS.map(([key, label]) => <option value={key} key={key}>{label}</option>)}</select>
         <button className="icon-button" title="Vymazat filtry" onClick={() => { props.setSearch(""); props.setBrand("all"); props.setCategory("all"); props.setSource("all"); props.setStatus("all"); props.setLifecycle("all"); }}><X size={17} /></button>
       </div>
@@ -557,7 +592,7 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
               return (
                 <tr onClick={() => props.onOpenProduct(product.id)} className={props.selectedIds.has(product.id) ? "selected-row" : ""} key={product.id}>
                   <td className="check-column"><button className={`table-checkbox ${props.selectedIds.has(product.id) ? "checked" : ""}`} onClick={(event) => { event.stopPropagation(); toggleOne(product.id); }} aria-label={`Vybrat ${product.name}`}>{props.selectedIds.has(product.id) ? <Check size={13} /> : null}</button></td>
-                  <td><div className="product-cell"><div className="table-image">{product.imageUrl ? <img src={product.imageUrl} alt="" /> : <span>{product.brand[0]}</span>}</div><span><strong>{product.name}</strong><small>{product.brand} · SKU {product.sku || "čeká"}{product.lifecycle === "wip" ? " · WIP" : ""}</small></span></div></td>
+                  <td><div className="product-cell"><div className="table-image">{product.imageUrl ? <img src={product.imageUrl} alt="" /> : <span>{product.brand[0]}</span>}</div><span><strong>{product.name}</strong><small>{product.brand} · SKU {product.sku || "čeká"}{product.lifecycle === "wip" ? " · WIP" : ""}</small>{product.familySize > 1 ? <button className="family-select-button" onClick={(event) => { event.stopPropagation(); props.onSelectFamily(props.products.filter((item) => item.familyKey === product.familyKey).map((item) => item.id)); }}><Layers3 size={12} /> Rodina · {product.familySize} variant</button> : null}</span></div></td>
                   <td><span className="category-cell">{product.categoryLabel}</span><small className="form-label">{product.formLabel}</small></td>
                   <td><div className="source-badges">{product.sources.map((sourceItem) => <a href={sourceItem.url} target="_blank" rel="noreferrer" className={sourceItem.sourceKey} title={`Otevřít ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} aria-label={`Otevřít produkt na ${SOURCE_LABELS[sourceItem.sourceKey]?.label || sourceItem.sourceSite}`} onClick={(event) => event.stopPropagation()} key={sourceItem.id}>{SOURCE_LABELS[sourceItem.sourceKey]?.short}</a>)}</div></td>
                   <td><span className={`recommendation-cell ${mine ? "personal" : "system"}`}>{mine ? null : <Sparkles size={12} />}{recommendation || "K rozhodnutí"}</span></td>
@@ -578,13 +613,15 @@ function ProductWorkspace(props: ProductWorkspaceProps) {
   );
 }
 
-function BulkBar({ selectedIds, profileId, pending, onClear, onRun }: { selectedIds: Set<string>; profileId: string; pending: boolean; onClear: () => void; onRun: (channel: string, decision: "include" | "exclude" | "hold", submit: boolean) => void }) {
+function BulkBar({ selectedIds, profileId, pending, onClear, onRun }: { selectedIds: Set<string>; profileId: string; pending: boolean; onClear: () => void; onRun: (channel: string, decision: "include" | "exclude" | "hold", submit: boolean, reason?: string) => void }) {
   const [channel, setChannel] = useState("vitar.cz");
   const [decision, setDecision] = useState<"include" | "exclude" | "hold">("include");
-  return <div className="bulk-bar"><span><strong>{selectedIds.size}</strong> vybráno</span><button className="icon-button inverse" onClick={onClear} title="Zrušit výběr"><X size={16} /></button><i /><label>Cíl<select value={channel} onChange={(event) => setChannel(event.target.value)}>{CHANNEL_OPTIONS.map((option) => <option value={option.key} key={option.key}>{option.label}</option>)}</select></label><label>Akce<select value={decision} onChange={(event) => setDecision(event.target.value as "include" | "exclude" | "hold")}><option value="include">Zařadit</option><option value="hold">Hold</option><option value="exclude">Vyřadit</option></select></label><button className="secondary-button dark" disabled={pending} onClick={() => onRun(channel, decision, false)}>Uložit koncept</button><button className="primary-button light" disabled={pending} onClick={() => onRun(channel, decision, true)}>{pending ? <LoaderCircle className="spin" size={16} /> : <CheckCircle2 size={16} />} Odevzdat hromadně</button><small>{profileId}</small></div>;
+  const [reason, setReason] = useState<(typeof INFORMATION_REASONS)[number]>(INFORMATION_REASONS[0]);
+  const bulkChannels = [{ key: "both", label: "Oba e-shopy" }, ...CHANNEL_OPTIONS.filter((option) => option.key !== "workshop_hold")];
+  return <div className="bulk-bar"><span><strong>{selectedIds.size}</strong> vybráno</span><button className="icon-button inverse" onClick={onClear} title="Zrušit výběr"><X size={16} /></button><i /><label>Cíl<select value={channel} disabled={decision === "hold"} onChange={(event) => setChannel(event.target.value)}>{bulkChannels.map((option) => <option value={option.key} key={option.key}>{option.label}</option>)}</select></label><label>Akce<select value={decision} onChange={(event) => setDecision(event.target.value as "include" | "exclude" | "hold")}><option value="include">Zařadit</option><option value="hold">Potřebuji informace</option><option value="exclude">Vyřadit</option></select></label>{decision === "hold" ? <label>Důvod<select value={reason} onChange={(event) => setReason(event.target.value as (typeof INFORMATION_REASONS)[number])}>{INFORMATION_REASONS.map((item) => <option key={item}>{item}</option>)}</select></label> : null}<button className="secondary-button dark" disabled={pending} onClick={() => onRun(channel, decision, false, reason)}>Uložit koncept</button><button className="primary-button light" disabled={pending} onClick={() => onRun(channel, decision, true, reason)}>{pending ? <LoaderCircle className="spin" size={16} /> : <CheckCircle2 size={16} />} Odevzdat hromadně</button><small>{profileId}</small></div>;
 }
 
-function WipDialog({ profileId, categories, onClose }: { profileId: string; categories: Array<{ key: string; label: string }>; onClose: () => void }) {
+function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profileId: string; categories: Array<{ key: string; label: string }>; onSaveFeedback: SaveFeedbackHandler; onClose: () => void }) {
   const [name, setName] = useState("");
   const [brand, setBrand] = useState("Vitar");
   const [categoryKey, setCategoryKey] = useState(categories[0]?.key || "unclassified");
@@ -599,6 +636,7 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
     const selected = categories.find((item) => item.key === categoryKey);
     if (!selected) return;
     setError("");
+    onSaveFeedback("saving", "Ukládám nový placeholder");
     startTransition(async () => {
       try {
         await createWipProduct({
@@ -610,10 +648,13 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
           description,
           targetChannels,
         });
+        onSaveFeedback("saved", "Placeholder trvale uložen");
         router.refresh();
         onClose();
       } catch (submitError) {
-        setError(submitError instanceof Error ? submitError.message : "Produkt se nepodařilo přidat.");
+        const errorMessage = submitError instanceof Error ? submitError.message : "Produkt se nepodařilo přidat.";
+        setError(errorMessage);
+        onSaveFeedback("error", errorMessage);
       }
     });
   }

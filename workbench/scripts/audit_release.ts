@@ -2,6 +2,8 @@ import { config } from "dotenv";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { buildProductFamilyMap } from "../src/lib/product-family";
+
 config({ path: ".env.local" });
 
 type CatalogSource = {
@@ -12,6 +14,7 @@ type CatalogSource = {
 type CatalogProduct = {
   id: string;
   name: string;
+  brand: string;
   source_count: number;
   sources: CatalogSource[];
   category: { key: string; label: string };
@@ -92,6 +95,10 @@ async function main() {
   const activeProfileNames = new Set(profiles.filter((profile) => profile.active).map((profile) => profile.name));
   const latestCrawl = crawlRuns.sort((left, right) => right.completedAt.getTime() - left.completedAt.getTime())[0];
   const reviewRound = rounds.find((round) => round.id === "round-vitar-split-2026-09");
+  const familyMap = buildProductFamilyMap(catalog.products);
+  const familySizes = [...new Map([...familyMap.values()].map((family) => [family.key, family.size])).values()];
+  const multiFamilySizes = familySizes.filter((size) => size > 1);
+  const largestFamily = Math.max(1, ...familySizes);
 
   const checks: Check[] = [
     {
@@ -142,6 +149,11 @@ async function main() {
       ok: malformedWip.length === 0,
       detail: `${products.filter((product) => product.manuallyCreated).length} WIP, ${malformedWip.length} malformed`,
     },
+    {
+      name: "Product family grouping",
+      ok: familyMap.size === catalog.products.length && largestFamily <= 12,
+      detail: `${multiFamilySizes.length} multi-variant families, ${multiFamilySizes.reduce((sum, size) => sum + size, 0)} products, largest ${largestFamily}`,
+    },
   ];
 
   const report = {
@@ -165,6 +177,9 @@ async function main() {
       products_without_long_content: catalog.products.filter((product) => !product.quality.has_long_content).length,
       products_without_price: catalog.products.filter((product) => !product.quality.has_price).length,
       products_with_source_conflicts: catalog.products.filter((product) => product.quality.has_conflict).length,
+      multi_variant_families: multiFamilySizes.length,
+      products_in_multi_variant_families: multiFamilySizes.reduce((sum, size) => sum + size, 0),
+      largest_product_family: largestFamily,
     },
     failures: {
       missing_product_ids: missingProducts.map((product) => product.id),

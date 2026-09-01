@@ -2,6 +2,7 @@ import { asc, eq, ne } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
 import { db, schema } from "@/lib/db";
+import { buildProductFamilyMap } from "@/lib/product-family";
 import { hasAppAccess } from "@/lib/session";
 
 const ROUND_ID = "round-vitar-split-2026-09";
@@ -106,18 +107,22 @@ export async function GET(request: Request) {
     finalChannelMap.set(channel.decisionId, existing);
   }
   const finalMap = new Map(decisions.map((decision) => [decision.productId, decision]));
+  const familyByProduct = buildProductFamilyMap(products);
 
   const rows = products.map((product) => {
     const final = finalMap.get(product.id);
     const productReviews = reviewsByProduct.get(product.id) || [];
     const productSources = sourceMap.get(product.id) || [];
     const productComments = commentsByProduct.get(product.id) || [];
+    const family = familyByProduct.get(product.id);
     return {
       product_id: product.id,
       sku: product.sku,
       ean: product.ean,
       name: product.name,
       brand: product.brand,
+      product_family: family?.name || product.name,
+      family_size: family?.size || 1,
       source_category: product.categoryLabel,
       lifecycle: product.lifecycle,
       is_placeholder: product.manuallyCreated,
@@ -182,6 +187,8 @@ export async function GET(request: Request) {
     "ean",
     "name",
     "brand",
+    "product_family",
+    "family_size",
     "source_category",
     "lifecycle",
     "is_placeholder",
@@ -218,8 +225,8 @@ export async function GET(request: Request) {
       "",
       "## Produktová matice",
       "",
-      "| Produkt | Brand | SKU | EAN | Zdroje | Placeholder cíl | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
-      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
+      "| Produkt | Rodina | Brand | SKU | EAN | Zdroje | Placeholder cíl | Finální stav | Životní cyklus | Cílové kanály | Kategorie | Role | Review | Důvod |",
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | --- |",
       ...rows.map((row) => {
         const sourceLinks = [
           markdownLink("VITAR.cz", row.vitar_url),
@@ -228,6 +235,7 @@ export async function GET(request: Request) {
         ].filter(Boolean).join(", ");
         const cells = [
           row.name,
+          row.product_family,
           row.brand,
           row.sku,
           row.ean,

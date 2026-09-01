@@ -1,6 +1,7 @@
 import { asc, desc, eq, ne } from "drizzle-orm";
 
 import { db, schema } from "@/lib/db";
+import { buildProductFamilyMap } from "@/lib/product-family";
 import type {
   ChannelDecision,
   Comment,
@@ -157,6 +158,7 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
     });
   }
 
+  const familyByProduct = buildProductFamilyMap(productRows);
   const products: WorkbenchProduct[] = productRows.map((product) => {
     const reviews = reviewByProduct.get(product.id) || [];
     const submitted = reviews.filter((review) => review.status === "submitted");
@@ -170,6 +172,7 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
         }),
       ),
     );
+    const family = familyByProduct.get(product.id);
     return {
       id: product.id,
       name: product.name,
@@ -187,6 +190,9 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
       sourceCount: product.sourceCount,
       lifecycle: product.lifecycle,
       manuallyCreated: product.manuallyCreated,
+      familyKey: family?.key || product.id,
+      familyName: family?.name || product.name,
+      familySize: family?.size || 1,
       coverage: product.coverage,
       quality: product.quality,
       fieldConflicts: product.fieldConflicts as WorkbenchProduct["fieldConflicts"],

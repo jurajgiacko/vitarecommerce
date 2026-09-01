@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T15:17:42.843Z",
+  "generated_at": "2026-09-01T15:41:10.255Z",
   "catalog_generated_at": "2026-09-01T15:16:37.626415+00:00",
   "status": "pass",
   "checks": [
@@ -47,6 +47,11 @@
       "name": "WIP records valid",
       "ok": true,
       "detail": "0 WIP, 0 malformed"
+    },
+    {
+      "name": "Product family grouping",
+      "ok": true,
+      "detail": "34 multi-variant families, 97 products, largest 6"
     }
   ],
   "metrics": {
@@ -64,7 +69,10 @@
     "products_without_description": 19,
     "products_without_long_content": 9,
     "products_without_price": 0,
-    "products_with_source_conflicts": 4
+    "products_with_source_conflicts": 4,
+    "multi_variant_families": 34,
+    "products_in_multi_variant_families": 97,
+    "largest_product_family": 6
   },
   "failures": {
     "missing_product_ids": [],

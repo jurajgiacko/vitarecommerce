@@ -4,10 +4,11 @@ Updated: 1 September 2026
 
 ## Before the Thursday workshop
 
-- Create 5-7 named reviewer profiles and send each person their personal invite link.
+- Send each of the five prepared reviewers their personal invite link.
 - Ask reviewers to submit an independent channel choice for every relevant product.
-- Prioritize the 124-item QA queue and the explicitly separated VITAR Veterina portfolio.
-- Use comments for missing commercial or product facts; do not resolve uncertainty by guessing.
+- Use the 34 detected product families for repeated packaging, strength and flavour decisions; keep SKU-level exceptions separate.
+- Mark missing commercial or product facts as `Potřebuji informace` with a reason; do not resolve uncertainty by guessing.
+- Prioritize the QA queue and the explicitly separated VITAR Veterina portfolio.
 - Export the complete JSON before the workshop as a timestamped backup.
 
 ## During the workshop
@@ -21,14 +22,18 @@ Updated: 1 September 2026
 
 ## Next delivery increments
 
-1. E-mail delivery and invite revocation through the VITAR identity stack.
-2. Review-round templates, freeze/close controls and round-to-round comparison.
-3. Controlled taxonomy and attribute dictionaries with PIM validation rules.
-4. Bulk import of WIP products from the innovation pipeline and ERP identifiers.
-5. Shopify/PIM-ready transformation mappings, redirects and SEO migration fields.
-6. Automated scheduled crawls with change alerts for added, removed or modified products.
-7. SSO, role-based permissions and retention policy before long-term operational use.
-8. Czech/Slovak/Hungarian market assortment overlays and anti-cannibalization pricing checks.
+1. Side-by-side source comparison with highlighted differences across VITAR.cz, NašeVitamíny.cz and České vitamíny.
+2. Product-profile readiness score for identity, content, product facts, media and commerce fields.
+3. Workshop summary grouped into agreement, channel conflict, keep/remove conflict, missing inputs and WIP.
+4. WIP workflow metadata: owner, target launch date, preparation status and working SKU/EAN.
+5. E-mail delivery and invite revocation through the VITAR identity stack.
+6. Review-round templates, freeze/close controls and round-to-round comparison.
+7. Controlled taxonomy and attribute dictionaries with PIM validation rules.
+8. Bulk import of WIP products from the innovation pipeline and ERP identifiers.
+9. Shopify/PIM-ready transformation mappings, redirects and SEO migration fields.
+10. Automated scheduled crawls with change alerts for added, removed or modified products.
+11. SSO, role-based permissions and retention policy before long-term operational use.
+12. Czech/Slovak/Hungarian market assortment overlays and anti-cannibalization pricing checks.
 
 ## Definition of ready for platform import
 

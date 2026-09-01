@@ -86,6 +86,9 @@ export type WorkbenchProduct = {
   sourceCount: number;
   lifecycle: string;
   manuallyCreated: boolean;
+  familyKey: string;
+  familyName: string;
+  familySize: number;
   coverage: Record<string, boolean>;
   quality: {
     hasSku: boolean;
@@ -110,6 +113,10 @@ export type WorkbenchProduct = {
   finalDecision: FinalDecision | null;
   consensusConflict: boolean;
 };
+
+export type SaveFeedbackState = "idle" | "saving" | "saved" | "error";
+
+export type SaveFeedbackHandler = (state: SaveFeedbackState, message: string) => void;
 
 export type WorkbenchData = {
   profile: Profile;

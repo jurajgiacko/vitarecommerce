@@ -245,6 +245,7 @@ export async function bulkSaveReviews(input: {
   profileId: string;
   channel: string;
   decision: "include" | "exclude" | "hold";
+  reason?: string;
   status: "draft" | "submitted";
 }) {
   const parsed = z
@@ -253,6 +254,7 @@ export async function bulkSaveReviews(input: {
       profileId: z.string(),
       channel: z.string(),
       decision: z.enum(["include", "exclude", "hold"]),
+      reason: z.string().trim().max(160).optional(),
       status: z.enum(["draft", "submitted"]),
     })
     .parse(input);
@@ -261,6 +263,14 @@ export async function bulkSaveReviews(input: {
     .select({ id: schema.products.id, categoryKey: schema.products.categoryKey, categoryLabel: schema.products.categoryLabel })
     .from(schema.products);
   const productMap = new Map(productRows.map((product) => [product.id, product]));
+  const channels = parsed.decision === "hold"
+    ? [{ channel: "workshop_hold", decision: "hold" as const, role: "primary" as const, priority: 1 }]
+    : parsed.channel === "both"
+      ? [
+          { channel: "vitar.cz", decision: parsed.decision, role: "primary" as const, priority: 1 },
+          { channel: "nasevitaminy.cz", decision: parsed.decision, role: "secondary" as const, priority: 2 },
+        ]
+      : [{ channel: parsed.channel, decision: parsed.decision, role: "primary" as const, priority: 1 }];
   for (const productId of parsed.productIds) {
     const product = productMap.get(productId);
     if (!product) continue;
@@ -269,19 +279,14 @@ export async function bulkSaveReviews(input: {
       profileId: parsed.profileId,
       categoryKey: product.categoryKey,
       categoryLabel: product.categoryLabel,
-      portfolioRole: parsed.decision === "exclude" ? "exclude" : "core",
+      portfolioRole: parsed.decision === "exclude" ? "exclude" : parsed.decision === "hold" ? "hold" : "core",
       lifecycleDecision: parsed.decision === "exclude" ? "archive" : "active",
-      confidence: "medium",
-      rationale: "Hromadné rozhodnutí z portfolio přehledu.",
+      confidence: parsed.decision === "hold" ? "low" : "medium",
+      rationale: parsed.decision === "hold"
+        ? `Potřebuji doplnit: ${parsed.reason || "Jiný podklad"}.`
+        : "Hromadné rozhodnutí z portfolio přehledu.",
       status: parsed.status,
-      channels: [
-        {
-          channel: parsed.channel,
-          decision: parsed.decision,
-          role: "primary",
-          priority: 1,
-        },
-      ],
+      channels,
     });
   }
   revalidatePath("/");
