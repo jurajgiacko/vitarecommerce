@@ -2829,13 +2829,23 @@ textarea {
 @media (max-width: 820px) {
   body { font-size: 13px; }
   .sidebar {
-    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.22);
-    transform: translateX(-105%);
+    box-shadow: none;
+    transform: translateX(calc(-100% - 36px));
     transition: transform 180ms ease;
     width: min(82vw, 290px);
     z-index: 91;
   }
-  .sidebar.mobile-open { transform: translateX(0); }
+  .sidebar.mobile-open {
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.22);
+    transform: translateX(0);
+  }
+  .toast {
+    bottom: auto;
+    justify-content: center;
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
+    top: calc(68px + env(safe-area-inset-top));
+  }
   .mobile-close,
   .mobile-menu { display: inline-flex; }
   .mobile-nav-backdrop {

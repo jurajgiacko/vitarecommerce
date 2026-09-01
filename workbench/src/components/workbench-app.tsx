@@ -369,7 +369,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
           }}
         />
       ) : null}
-      {toast ? <div className="toast"><Check size={16} />{toast}</div> : null}
+      {toast && saveFeedback.state === "idle" ? <div className="toast"><Check size={16} />{toast}</div> : null}
       {saveFeedback.state !== "idle" ? <div className={`mobile-save-feedback ${saveFeedback.state}`} aria-live="polite">{saveFeedback.state === "saving" ? <LoaderCircle className="spin" size={16} /> : saveFeedback.state === "saved" ? <CheckCircle2 size={16} /> : <AlertTriangle size={16} />}<span><strong>{saveFeedback.state === "saving" ? "Ukládám…" : saveFeedback.state === "saved" ? "Uloženo" : "Chyba uložení"}</strong><small>{saveFeedback.message}</small></span></div> : null}
     </div>
   );
@@ -652,7 +652,10 @@ function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profile
         router.refresh();
         onClose();
       } catch (submitError) {
-        const errorMessage = submitError instanceof Error ? submitError.message : "Produkt se nepodařilo přidat.";
+        const rawMessage = submitError instanceof Error ? submitError.message : "";
+        const errorMessage = /fetch|network|load failed/i.test(rawMessage)
+          ? "Připojení se přerušilo. Data zůstala ve formuláři, zkuste uložení znovu."
+          : rawMessage || "Produkt se nepodařilo přidat.";
         setError(errorMessage);
         onSaveFeedback("error", errorMessage);
       }
