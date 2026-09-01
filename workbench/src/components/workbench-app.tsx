@@ -589,8 +589,61 @@ function WipDialog({ profileId, categories, onClose }: { profileId: string; cate
   const [brand, setBrand] = useState("Vitar");
   const [categoryKey, setCategoryKey] = useState(categories[0]?.key || "unclassified");
   const [description, setDescription] = useState("");
+  const [error, setError] = useState("");
   const [pending, startTransition] = useTransition();
   const router = useRouter();
-  function submit(event: FormEvent) { event.preventDefault(); const selected = categories.find((item) => item.key === categoryKey); if (!selected) return; startTransition(async () => { await createWipProduct({ profileId, name, brand, categoryKey, categoryLabel: selected.label, description }); router.refresh(); onClose(); }); }
-  return <div className="modal-layer"><button className="modal-backdrop" onClick={onClose} aria-label="Zavřít" /><form className="modal-panel" onSubmit={submit}><header><div><p className="eyebrow">WIP INBOX</p><h2>Přidat nový produkt</h2></div><button type="button" className="icon-button" onClick={onClose}><X size={18} /></button></header><p>Koncept se objeví vedle nascrapovaného portfolia a může projít stejným review.</p><label><span>Pracovní název</span><input value={name} onChange={(event) => setName(event.target.value)} autoFocus /></label><div className="two-column-fields"><label><span>Značka / řada</span><input value={brand} onChange={(event) => setBrand(event.target.value)} /></label><label><span>Kategorie</span><select value={categoryKey} onChange={(event) => setCategoryKey(event.target.value)}>{categories.map((item) => <option value={item.key} key={item.key}>{item.label}</option>)}</select></label></div><label><span>Koncept / USP</span><textarea rows={5} value={description} onChange={(event) => setDescription(event.target.value)} /></label><footer><button type="button" className="secondary-button" onClick={onClose}>Zrušit</button><button className="primary-button" disabled={pending || name.trim().length < 3}>{pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Přidat WIP</button></footer></form></div>;
+
+  function submit(event: FormEvent) {
+    event.preventDefault();
+    const selected = categories.find((item) => item.key === categoryKey);
+    if (!selected) return;
+    setError("");
+    startTransition(async () => {
+      try {
+        await createWipProduct({
+          profileId,
+          name,
+          brand,
+          categoryKey,
+          categoryLabel: selected.label,
+          description,
+        });
+        router.refresh();
+        onClose();
+      } catch (submitError) {
+        setError(submitError instanceof Error ? submitError.message : "Produkt se nepodařilo přidat.");
+      }
+    });
+  }
+
+  return (
+    <div className="modal-layer">
+      <button className="modal-backdrop" onClick={onClose} aria-label="Zavřít" />
+      <form className="modal-panel" onSubmit={submit}>
+        <header>
+          <div><p className="eyebrow">WIP INBOX</p><h2>Přidat nový produkt</h2></div>
+          <button type="button" className="icon-button" onClick={onClose} title="Zavřít"><X size={18} /></button>
+        </header>
+        <p>Koncept se objeví vedle nascrapovaného portfolia a může projít stejným review.</p>
+        <label><span>Pracovní název</span><input value={name} onChange={(event) => setName(event.target.value)} autoFocus /></label>
+        <div className="two-column-fields">
+          <label><span>Značka / řada</span><input value={brand} onChange={(event) => setBrand(event.target.value)} /></label>
+          <label>
+            <span>Kategorie</span>
+            <select value={categoryKey} onChange={(event) => setCategoryKey(event.target.value)}>
+              {categories.map((item) => <option value={item.key} key={item.key}>{item.label}</option>)}
+            </select>
+          </label>
+        </div>
+        <label><span>Koncept / USP</span><textarea rows={5} value={description} onChange={(event) => setDescription(event.target.value)} /></label>
+        {error ? <p className="form-error" role="alert">{error}</p> : null}
+        <footer>
+          <button type="button" className="secondary-button" onClick={onClose}>Zrušit</button>
+          <button className="primary-button" disabled={pending || name.trim().length < 3}>
+            {pending ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />} Přidat WIP
+          </button>
+        </footer>
+      </form>
+    </div>
+  );
 }

@@ -1,17 +1,19 @@
 {
-  "crawl_started_at": "2026-09-01T11:54:58.430867+00:00",
-  "generated_at": "2026-09-01T11:55:25.778794+00:00",
+  "crawl_started_at": "2026-09-01T13:29:20.092577+00:00",
+  "generated_at": "2026-09-01T13:29:49.864435+00:00",
   "coverage": {
     "vitar": {
       "sitemap_urls": 440,
       "inventory_urls": 440,
       "ok": 440,
       "errors": 0,
-      "products": 262,
+      "products": 245,
+      "out_of_scope_products": 17,
       "page_types": {
         "homepage": 2,
         "other": 37,
-        "product": 262,
+        "product_out_of_scope": 17,
+        "product": 245,
         "category_or_landing": 79,
         "content": 60
       },
@@ -23,6 +25,7 @@
       "ok": 412,
       "errors": 0,
       "products": 298,
+      "out_of_scope_products": 0,
       "page_types": {
         "content": 27,
         "product": 298,
@@ -37,6 +40,7 @@
       "ok": 13,
       "errors": 0,
       "products": 7,
+      "out_of_scope_products": 0,
       "page_types": {
         "homepage": 1,
         "content": 3,
@@ -49,8 +53,8 @@
   "inventory_status": {
     "ok": 865
   },
-  "source_products": 567,
-  "master_products": 341,
+  "source_products": 550,
+  "master_products": 324,
   "duplicates_merged": 226,
   "by_brand": {
     "Capri-Sun": 15,
@@ -64,7 +68,7 @@
     "Revital": 18,
     "Revital Botanicals": 7,
     "Revitalon": 5,
-    "Vitar": 59,
+    "Vitar": 42,
     "Vitar Kids": 10,
     "Vitar Kings": 2,
     "Vitar Origin": 11,
@@ -73,34 +77,34 @@
   },
   "by_category": {
     "Děti": 14,
-    "Hydratace a nápoje": 39,
-    "Zrak": 12,
-    "Hořčík": 31,
-    "Vitaminy a minerály": 39,
+    "Hydratace a nápoje": 36,
+    "Zrak": 11,
+    "Hořčík": 30,
+    "Vitaminy a minerály": 38,
     "Imunita": 34,
-    "Energie a výkon": 9,
+    "Energie a výkon": 4,
     "Hroznový cukr a cukrovinky": 6,
     "Spánek a stres": 9,
     "Sladidla": 10,
     "Krása, vlasy a pleť": 22,
-    "Srdce a oběh": 11,
+    "Paměť a koncentrace": 8,
     "Zdraví žen": 10,
     "Trávení a probiotika": 12,
     "Klouby a pohyb": 13,
     "Močové cesty": 4,
     "Játra a detox": 3,
-    "Nezařazeno": 9,
+    "Srdce a oběh": 6,
     "Zdraví mužů": 1,
     "Repelenty a ochrana": 22,
     "Veterina": 31
   },
   "quality": {
-    "has_sku": 341,
+    "has_sku": 324,
     "has_ean": 303,
-    "has_image": 341,
-    "has_description": 322,
-    "has_long_content": 331,
-    "has_price": 341,
+    "has_image": 324,
+    "has_description": 305,
+    "has_long_content": 315,
+    "has_price": 324,
     "has_conflict": 4
   },
   "matching": {

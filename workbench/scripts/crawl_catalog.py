@@ -85,6 +85,7 @@ CATEGORY_RULES = [
     ("kids", "Děti", ["kids", "pro děti", "pro deti", "děts", "dets", "kolostrum"]),
     ("womens_health", "Zdraví žen", ["fembalance", "goddess", "hormon", "menopau", "ženy", "zeny"]),
     ("mens_health", "Zdraví mužů", ["alphamale", "mužská vitalita", "muzska vitalita", "erektor", "pro muže"]),
+    ("memory_focus", "Paměť a koncentrace", ["paměť", "pamet", "koncentrace", "ginkgo", "soustřed"]),
     ("sleep_stress", "Spánek a stres", ["spánek", "spanek", "sleep", "stres", "ashwagandha", "večerní pohoda"]),
     ("energy", "Energie a výkon", ["energie", "energy", "výkon", "vykon", "kofein", "guarana"]),
     ("immunity", "Imunita", ["imunit", "betaglukan", "echinacea", "rakytn", "nachlaz"]),
@@ -97,7 +98,7 @@ CATEGORY_RULES = [
     ("heart", "Srdce a oběh", ["srdce", "oběh", "obeh", "omega", "koenzym", "q10"]),
     ("eyes", "Zrak", ["zrak", "oči", "oci", "lutein"]),
     ("urinary", "Močové cesty", ["moč", "moc", "brusink"]),
-    ("hydration", "Hydratace a nápoje", ["rehydrat", "nápoj", "napoj", "pitný", "pitny", "capri", "ovocé"]),
+    ("hydration", "Hydratace a nápoje", ["rehydrat", "elektrolyt", "nápoj", "napoj", "pitný", "pitny", "capri", "ovocé"]),
     ("sweeteners", "Sladidla", ["irbis", "sladid", "stevie", "sukral", "aspartam", "sacharin"]),
     ("dextrose", "Hroznový cukr a cukrovinky", ["energit", "hroznový cukr", "hroznovy cukr", "dextróz", "dextroz"]),
     ("hangover", "Vyprošťovák", ["vyprošťovák", "vyprostovak"]),
@@ -130,6 +131,29 @@ CONTENT_PATH_WORDS = {
     "soutez",
     "aktuality",
     "clanky",
+}
+
+# Published legacy pages owned by the separate VITAR Sport business unit.
+# They remain accounted for in the sitemap inventory but are not assortment
+# candidates for VITAR.cz or NaseVitaminy.cz.
+VITAR_SPORT_PATHS = {
+    "aminokyseliny-enervit",
+    "energeticke-gely",
+    "energeticke-napoje",
+    "energeticke-tablety",
+    "energeticke-tycinky",
+    "enervit-pre-sport",
+    "iontovy-napoj",
+    "kompresni-bandaze",
+    "kompresni-kratasy",
+    "kompresni-lytkove-navleky",
+    "kompresni-pazni-navleky",
+    "kompresni-podkolenky",
+    "kompresni-stehenni-navleky",
+    "proteinove-napoje",
+    "proteinove-tycinky-enervit",
+    "regeneracni-napoje",
+    "sportovni-ponozky",
 }
 
 session_local = threading.local()
@@ -367,6 +391,13 @@ def finish_product(product: dict[str, Any]) -> dict[str, Any]:
     return product
 
 
+def scope_exclusion(product: dict[str, Any]) -> str:
+    path = urlparse(product.get("url", "")).path.strip("/").lower()
+    if product.get("source_key") == "vitar" and path in VITAR_SPORT_PATHS:
+        return "VITAR Sport (Enervit / ROYAL BAY) is managed outside this assortment."
+    return ""
+
+
 def parse_vitar_product(site: Site, url: str, soup: BeautifulSoup) -> dict[str, Any]:
     product = base_product(site, url, soup)
     view = soup.select_one(".product-view")
@@ -566,6 +597,7 @@ def crawl_one(site: Site, entry: dict[str, str], refresh: bool) -> tuple[dict[st
         "title": "",
         "canonical_url": "",
         "content_hash": "",
+        "scope_reason": "",
         "error": "",
     }
     try:
@@ -603,6 +635,13 @@ def crawl_one(site: Site, entry: dict[str, str], refresh: bool) -> tuple[dict[st
             )
         elif page_type == "product_profile":
             product = parse_ceske_product(site, final_url, soup)
+        if product:
+            exclusion = scope_exclusion(product)
+            if exclusion:
+                inventory.update(
+                    {"page_type": "product_out_of_scope", "scope_reason": exclusion}
+                )
+                product = None
         return inventory, product
     except Exception as exc:  # noqa: BLE001 - every failed URL belongs in the audit
         inventory.update({"status": "error", "page_type": "error", "error": str(exc)})
@@ -960,6 +999,9 @@ def write_outputs(
             "ok": sum(item["status"] == "ok" for item in site_inventory),
             "errors": sum(item["status"] == "error" for item in site_inventory),
             "products": sum(item["page_type"] in {"product", "product_profile"} for item in site_inventory),
+            "out_of_scope_products": sum(
+                item["page_type"] == "product_out_of_scope" for item in site_inventory
+            ),
             "page_types": {
                 page_type: count
                 for (key, page_type), count in page_type_counts.items()
@@ -1079,13 +1121,14 @@ def write_outputs(
         "",
         "## Source reconciliation",
         "",
-        "| Source | Sitemap | Inventory | OK | Errors | Products | Reconciled |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | :---: |",
+        "| Source | Sitemap | Inventory | OK | Errors | Products | Out of scope | Reconciled |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | :---: |",
     ]
     for site_key, values in coverage_by_site.items():
         lines.append(
             f"| {site_key} | {values['sitemap_urls']} | {values['inventory_urls']} | "
             f"{values['ok']} | {values['errors']} | {values['products']} | "
+            f"{values['out_of_scope_products']} | "
             f"{'yes' if values['reconciled'] else 'NO'} |"
         )
     lines.extend(

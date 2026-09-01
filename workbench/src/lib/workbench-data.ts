@@ -1,4 +1,4 @@
-import { asc, desc, eq } from "drizzle-orm";
+import { asc, desc, eq, ne } from "drizzle-orm";
 
 import { db, schema } from "@/lib/db";
 import type {
@@ -38,7 +38,11 @@ export async function getWorkbenchData(profileId: string): Promise<WorkbenchData
     await Promise.all([
       getProfiles(),
       db.select().from(schema.reviewRounds).where(eq(schema.reviewRounds.id, ROUND_ID)).limit(1),
-      db.select().from(schema.products).orderBy(asc(schema.products.brand), asc(schema.products.name)),
+      db
+        .select()
+        .from(schema.products)
+        .where(ne(schema.products.lifecycle, "out_of_scope"))
+        .orderBy(asc(schema.products.brand), asc(schema.products.name)),
       db.select().from(schema.productSources).orderBy(asc(schema.productSources.sourceKey)),
       db.select().from(schema.productReviews).where(eq(schema.productReviews.roundId, ROUND_ID)),
       db.select().from(schema.reviewChannels),

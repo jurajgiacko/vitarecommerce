@@ -15,7 +15,7 @@ Dev brief lives under `outputs/onboarding/`. Update = edit the HTML + push (Page
 - **vitar.cz = product marketplace** (multi-brand, premium, new lines) — not a single-brand shop.
 - **nasevitaminy.cz = retail** (classics, volume) — permanently separate, not merged/redirected into vitar.cz.
 - **Shopify** storefront (leaving FastCentrik) · **Pohoda** ERP (one entity per company; QAD stays production/master-data only, outside fulfillment) · **one WMS + one shared DC**.
-- Fresh decision dataset (1 September 2026): **865/865 sitemap URLs → 567 source profiles → 341 safely matched master products** across VITAR.cz, NaseVitaminy.cz and Ceske-vitaminy.cz. The earlier static planning baseline remains archived below.
+- Fresh decision dataset (1 September 2026): **865/865 sitemap URLs → 550 in-scope source profiles → 324 safely matched master products** across VITAR.cz, NaseVitaminy.cz and Ceske-vitaminy.cz. Another 17 legacy Enervit and ROYAL BAY pages are fully audited but excluded as VITAR Sport-owned products. The earlier static planning baseline remains archived below.
 
 ## Assortment Workbench
 

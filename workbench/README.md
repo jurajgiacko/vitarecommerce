@@ -9,8 +9,10 @@ consensus tracking and a facilitator-owned final decision.
 
 - Crawl completed on 1 September 2026.
 - 865/865 sitemap URLs inventoried with 0 crawl errors.
-- 567 source product profiles normalized into 341 safe master products.
-- Sources: 262 VITAR.cz, 298 NaseVitaminy.cz and 7 Ceske-vitaminy.cz profiles.
+- 550 in-scope source product profiles normalized into 324 safe master products.
+- Sources: 245 VITAR.cz, 298 NaseVitaminy.cz and 7 Ceske-vitaminy.cz profiles.
+- 17 legacy Enervit and ROYAL BAY pages remain reconciled in the sitemap audit but
+  are excluded from this assortment as VITAR Sport-owned products.
 - Exact EAN/SKU and guarded name matching; ambiguous identifiers stay separate.
 - Product source content, source conflicts and decision history remain auditable.
 
@@ -57,6 +59,8 @@ the production values.
 
 ```bash
 npm run data:crawl
+npm run db:seed
+npm run qa:release
 npm run lint
 npm run build
 ```

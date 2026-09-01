@@ -103,6 +103,7 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
 
   function pointerDown(event: PointerEvent<HTMLDivElement>) {
     if (pending) return;
+    if ((event.target as HTMLElement).closest("a, button")) return;
     event.currentTarget.setPointerCapture(event.pointerId);
     pointerStart.current = { x: event.clientX, y: event.clientY };
   }
@@ -202,7 +203,11 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
             <div className="swipe-recommendation">
               <strong>Systém:</strong> {product.systemRecommendation.reason}
             </div>
-            <button className="text-button" onClick={(event) => { event.stopPropagation(); onOpenProduct(product.id); }}>
+            <button
+              className="text-button"
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => { event.stopPropagation(); onOpenProduct(product.id); }}
+            >
               <Search size={15} /> Detail a zdroje <ExternalLink size={12} />
             </button>
           </div>

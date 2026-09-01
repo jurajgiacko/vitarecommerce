@@ -1,4 +1,5 @@
 import { config } from "dotenv";
+import { and, eq, notInArray, sql } from "drizzle-orm";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -132,8 +133,40 @@ async function main() {
       )
       .onConflictDoUpdate({
         target: schema.products.id,
-        set: { updatedAt: new Date() },
+        set: {
+          name: sql`excluded.name`,
+          brand: sql`excluded.brand`,
+          sku: sql`excluded.sku`,
+          ean: sql`excluded.ean`,
+          categoryKey: sql`excluded.category_key`,
+          categoryLabel: sql`excluded.category_label`,
+          categoryConfidence: sql`excluded.category_confidence`,
+          formKey: sql`excluded.form_key`,
+          formLabel: sql`excluded.form_label`,
+          description: sql`excluded.description`,
+          imageUrl: sql`excluded.image_url`,
+          priceCzk: sql`excluded.price_czk`,
+          sourceCount: sql`excluded.source_count`,
+          lifecycle: sql`excluded.lifecycle`,
+          coverage: sql`excluded.coverage`,
+          quality: sql`excluded.quality`,
+          fieldConflicts: sql`excluded.field_conflicts`,
+          systemRecommendation: sql`excluded.system_recommendation`,
+          updatedAt: sql`excluded.updated_at`,
+        },
       });
+  }
+  const currentProductIds = catalog.products.map((product) => product.id);
+  if (currentProductIds.length) {
+    await db
+      .update(schema.products)
+      .set({ lifecycle: "out_of_scope", updatedAt: new Date() })
+      .where(
+        and(
+          eq(schema.products.manuallyCreated, false),
+          notInArray(schema.products.id, currentProductIds),
+        ),
+      );
   }
 
   const sources = catalog.products.flatMap((product) =>
@@ -155,7 +188,26 @@ async function main() {
     })),
   );
   for (let index = 0; index < sources.length; index += chunkSize) {
-    await db.insert(schema.productSources).values(sources.slice(index, index + chunkSize)).onConflictDoNothing();
+    await db
+      .insert(schema.productSources)
+      .values(sources.slice(index, index + chunkSize))
+      .onConflictDoUpdate({
+        target: schema.productSources.url,
+        set: {
+          productId: sql`excluded.product_id`,
+          sourceKey: sql`excluded.source_key`,
+          sourceSite: sql`excluded.source_site`,
+          name: sql`excluded.name`,
+          sku: sql`excluded.sku`,
+          ean: sql`excluded.ean`,
+          priceCzk: sql`excluded.price_czk`,
+          imageUrl: sql`excluded.image_url`,
+          description: sql`excluded.description`,
+          contentSections: sql`excluded.content_sections`,
+          quality: sql`excluded.quality`,
+          lastSeenAt: sql`excluded.last_seen_at`,
+        },
+      });
   }
 
   const sitemapUrlCount = Object.values(catalog.summary.coverage).reduce(
@@ -178,7 +230,23 @@ async function main() {
       errorCount,
       summary: catalog.summary,
     })
-    .onConflictDoNothing();
+    .onConflictDoUpdate({
+      target: schema.crawlRuns.id,
+      set: {
+        startedAt: new Date(catalog.summary.crawl_started_at),
+        completedAt: new Date(catalog.summary.generated_at),
+        sitemapUrlCount,
+        sourceProductCount: catalog.summary.source_products,
+        masterProductCount: catalog.summary.master_products,
+        errorCount,
+        summary: catalog.summary,
+      },
+    });
+
+  const outOfScopeRows = await db
+    .select({ id: schema.products.id })
+    .from(schema.products)
+    .where(eq(schema.products.lifecycle, "out_of_scope"));
 
   console.log(
     JSON.stringify(
@@ -186,6 +254,7 @@ async function main() {
         profiles: profileRows.length,
         products: catalog.products.length,
         sources: sources.length,
+        outOfScopeProducts: outOfScopeRows.length,
         round: "round-vitar-split-2026-09",
       },
       null,

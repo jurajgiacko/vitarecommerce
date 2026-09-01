@@ -1,4 +1,4 @@
-import { asc, eq } from "drizzle-orm";
+import { asc, eq, ne } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
 import { db, schema } from "@/lib/db";
@@ -61,7 +61,11 @@ export async function GET(request: Request) {
   const scope = url.searchParams.get("scope") === "all" ? "all" : "final";
   const [products, sources, profiles, reviews, reviewChannels, comments, decisions, decisionChannels] =
     await Promise.all([
-      db.select().from(schema.products).orderBy(asc(schema.products.brand), asc(schema.products.name)),
+      db
+        .select()
+        .from(schema.products)
+        .where(ne(schema.products.lifecycle, "out_of_scope"))
+        .orderBy(asc(schema.products.brand), asc(schema.products.name)),
       db.select().from(schema.productSources),
       db.select().from(schema.profiles),
       db.select().from(schema.productReviews).where(eq(schema.productReviews.roundId, ROUND_ID)),

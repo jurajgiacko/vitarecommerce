@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-09-01T13:38:24.568Z",
+  "catalog_generated_at": "2026-09-01T13:29:49.864435+00:00",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "Sitemap reconciliation",
+      "ok": true,
+      "detail": "vitar 440/440, nasevitaminy 412/412, ceskevitaminy 13/13"
+    },
+    {
+      "name": "Crawl errors",
+      "ok": true,
+      "detail": "0 errors"
+    },
+    {
+      "name": "Master products in database",
+      "ok": true,
+      "detail": "324 current, 0 missing, 0 stale"
+    },
+    {
+      "name": "Product source URLs in database",
+      "ok": true,
+      "detail": "550 current, 0 missing, 0 stale"
+    },
+    {
+      "name": "Per-product source counts",
+      "ok": true,
+      "detail": "0 mismatches"
+    },
+    {
+      "name": "Current crawl recorded",
+      "ok": true,
+      "detail": "2026-09-01T13:29:49.864Z"
+    },
+    {
+      "name": "Required team profiles",
+      "ok": true,
+      "detail": "5/5 active"
+    },
+    {
+      "name": "Review round open",
+      "ok": true,
+      "detail": "open"
+    },
+    {
+      "name": "WIP records valid",
+      "ok": true,
+      "detail": "0 WIP, 0 malformed"
+    }
+  ],
+  "metrics": {
+    "sitemap_urls": 865,
+    "source_products": 550,
+    "master_products": 324,
+    "database_products": 324,
+    "database_sources": 550,
+    "out_of_scope_products": 17,
+    "active_profiles": 5,
+    "unclassified_products": 0,
+    "products_without_sku": 0,
+    "products_without_ean": 21,
+    "products_without_image": 0,
+    "products_without_description": 19,
+    "products_without_long_content": 9,
+    "products_without_price": 0,
+    "products_with_source_conflicts": 4
+  },
+  "failures": {
+    "missing_product_ids": [],
+    "stale_product_ids": [],
+    "missing_source_urls": [],
+    "stale_source_urls": [],
+    "source_count_product_ids": []
+  }
+}
