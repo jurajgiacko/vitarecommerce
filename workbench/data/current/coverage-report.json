@@ -1,0 +1,111 @@
+{
+  "crawl_started_at": "2026-09-01T11:54:58.430867+00:00",
+  "generated_at": "2026-09-01T11:55:25.778794+00:00",
+  "coverage": {
+    "vitar": {
+      "sitemap_urls": 440,
+      "inventory_urls": 440,
+      "ok": 440,
+      "errors": 0,
+      "products": 262,
+      "page_types": {
+        "homepage": 2,
+        "other": 37,
+        "product": 262,
+        "category_or_landing": 79,
+        "content": 60
+      },
+      "reconciled": true
+    },
+    "nasevitaminy": {
+      "sitemap_urls": 412,
+      "inventory_urls": 412,
+      "ok": 412,
+      "errors": 0,
+      "products": 298,
+      "page_types": {
+        "content": 27,
+        "product": 298,
+        "other": 10,
+        "category_or_landing": 77
+      },
+      "reconciled": true
+    },
+    "ceskevitaminy": {
+      "sitemap_urls": 13,
+      "inventory_urls": 13,
+      "ok": 13,
+      "errors": 0,
+      "products": 7,
+      "page_types": {
+        "homepage": 1,
+        "content": 3,
+        "product_profile": 7,
+        "other": 2
+      },
+      "reconciled": true
+    }
+  },
+  "inventory_status": {
+    "ok": 865
+  },
+  "source_products": 567,
+  "master_products": 341,
+  "duplicates_merged": 226,
+  "by_brand": {
+    "Capri-Sun": 15,
+    "eMVe": 7,
+    "Energit": 15,
+    "Irbis": 10,
+    "Maxi Vita": 93,
+    "Maxi Vita Essentials": 18,
+    "OvoCé": 3,
+    "Predator": 22,
+    "Revital": 18,
+    "Revital Botanicals": 7,
+    "Revitalon": 5,
+    "Vitar": 59,
+    "Vitar Kids": 10,
+    "Vitar Kings": 2,
+    "Vitar Origin": 11,
+    "Vitar Veterinae": 43,
+    "Vyprošťovák": 3
+  },
+  "by_category": {
+    "Děti": 14,
+    "Hydratace a nápoje": 39,
+    "Zrak": 12,
+    "Hořčík": 31,
+    "Vitaminy a minerály": 39,
+    "Imunita": 34,
+    "Energie a výkon": 9,
+    "Hroznový cukr a cukrovinky": 6,
+    "Spánek a stres": 9,
+    "Sladidla": 10,
+    "Krása, vlasy a pleť": 22,
+    "Srdce a oběh": 11,
+    "Zdraví žen": 10,
+    "Trávení a probiotika": 12,
+    "Klouby a pohyb": 13,
+    "Močové cesty": 4,
+    "Játra a detox": 3,
+    "Nezařazeno": 9,
+    "Zdraví mužů": 1,
+    "Repelenty a ochrana": 22,
+    "Veterina": 31
+  },
+  "quality": {
+    "has_sku": 341,
+    "has_ean": 303,
+    "has_image": 341,
+    "has_description": 322,
+    "has_long_content": 331,
+    "has_price": 341,
+    "has_conflict": 4
+  },
+  "matching": {
+    "events": 613,
+    "manual_fuzzy_reviews": 0,
+    "unmatched_ceskevitaminy": 0
+  }
+}

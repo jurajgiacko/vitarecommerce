@@ -15,7 +15,15 @@ Dev brief lives under `outputs/onboarding/`. Update = edit the HTML + push (Page
 - **vitar.cz = product marketplace** (multi-brand, premium, new lines) — not a single-brand shop.
 - **nasevitaminy.cz = retail** (classics, volume) — permanently separate, not merged/redirected into vitar.cz.
 - **Shopify** storefront (leaving FastCentrik) · **Pohoda** ERP (one entity per company; QAD stays production/master-data only, outside fulfillment) · **one WMS + one shared DC**.
-- Dataset scope: **548 scraped URLs → 333 master products** (271 vitar.cz / 39 Veterina separate / 17 Sport / 6 exclude), 16 brands, ~15 categories, 12 filters (with SEO index rules), 22-attribute PIM model, 238 content + 57 group pages. Overall readiness ~67% (assortment 92%, PIM 49%).
+- Fresh decision dataset (1 September 2026): **865/865 sitemap URLs → 567 source profiles → 341 safely matched master products** across VITAR.cz, NaseVitaminy.cz and Ceske-vitaminy.cz. The earlier static planning baseline remains archived below.
+
+## Assortment Workbench
+
+- Production application: https://vitar-assortment-workbench.vercel.app/
+- Source: `workbench/`
+- Named reviewer sessions, independent votes, mobile swipe review, comments, audit history, consensus/conflicts and facilitator-owned final decisions.
+- Neon Postgres is connected through Vercel; GitHub Pages remains the public static report archive.
+- Team members use personal invite links. The shared access code is only for facilitator bootstrap.
 
 ## PIM discovery outputs
 
