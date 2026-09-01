@@ -641,7 +641,7 @@ function BulkBar({ selectedIds, profileId, pending, onClear, onRun }: { selected
 function WipDialog({ profileId, categories, onSaveFeedback, onClose }: { profileId: string; categories: Array<{ key: string; label: string }>; onSaveFeedback: SaveFeedbackHandler; onClose: () => void }) {
   const [name, setName] = useState("");
   const [brand, setBrand] = useState("Vitar");
-  const [categoryKey, setCategoryKey] = useState(categories.find((item) => item.key === "unclassified")?.key || categories[0]?.key || "unclassified");
+  const [categoryKey, setCategoryKey] = useState(categories.find((item) => item.key === "unclassified" || item.label === "Nezařazeno")?.key || categories[0]?.key || "unclassified");
   const [description, setDescription] = useState("");
   const [targetChannels, setTargetChannels] = useState<Array<"vitar.cz" | "nasevitaminy.cz">>(["vitar.cz"]);
   const [error, setError] = useState("");
