@@ -1373,7 +1373,7 @@ textarea:focus {
   display: flex;
 }
 
-.source-badges span {
+.source-badges a {
   align-items: center;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -1383,10 +1383,11 @@ textarea:focus {
   height: 25px;
   justify-content: center;
   margin-left: -5px;
+  text-decoration: none;
   width: 25px;
 }
 
-.source-badges span:first-child { margin-left: 0; }
+.source-badges a:first-child { margin-left: 0; }
 .source-badges .vitar { background: var(--green-soft); color: var(--green-dark); }
 .source-badges .nasevitaminy { background: var(--blue-soft); color: var(--blue); }
 .source-badges .ceskevitaminy { background: var(--gold-soft); color: var(--gold); }
@@ -2204,7 +2205,7 @@ textarea {
   top: 10px;
 }
 
-.swipe-sources span {
+.swipe-sources a {
   align-items: center;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--line);
@@ -2215,6 +2216,7 @@ textarea {
   height: 25px;
   justify-content: center;
   min-width: 25px;
+  text-decoration: none;
 }
 
 .saving-overlay {

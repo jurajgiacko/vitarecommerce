@@ -173,7 +173,20 @@ export function QuickReview({ products, profile, onOpenProduct }: QuickReviewPro
           <div className="swipe-image">
             {product.imageUrl ? <img src={product.imageUrl} alt="" draggable={false} /> : <span>{product.brand.slice(0, 1)}</span>}
             <div className="swipe-sources">
-              {product.sources.map((source) => <span key={source.id}>{sourceLabel(source.sourceKey)}</span>)}
+              {product.sources.map((source) => (
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={`Otevřít produkt na ${source.sourceSite}`}
+                  aria-label={`Otevřít produkt na ${source.sourceSite}`}
+                  onPointerDown={(event) => event.stopPropagation()}
+                  onClick={(event) => event.stopPropagation()}
+                  key={source.id}
+                >
+                  {sourceLabel(source.sourceKey)}
+                </a>
+              ))}
             </div>
             {pending ? <div className="saving-overlay"><LoaderCircle className="spin" /> Ukládám {message}</div> : null}
           </div>

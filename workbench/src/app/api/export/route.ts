@@ -58,6 +58,7 @@ export async function GET(request: Request) {
   const rows = products.map((product) => {
     const final = finalMap.get(product.id);
     const productReviews = reviewsByProduct.get(product.id) || [];
+    const productSources = sourceMap.get(product.id) || [];
     return {
       product_id: product.id,
       sku: product.sku,
@@ -66,8 +67,11 @@ export async function GET(request: Request) {
       brand: product.brand,
       source_category: product.categoryLabel,
       lifecycle: product.lifecycle,
-      source_sites: (sourceMap.get(product.id) || []).map((source) => source.sourceSite),
-      source_urls: (sourceMap.get(product.id) || []).map((source) => source.url),
+      source_sites: productSources.map((source) => source.sourceSite),
+      source_urls: productSources.map((source) => source.url),
+      vitar_url: productSources.find((source) => source.sourceKey === "vitar")?.url || "",
+      nasevitaminy_url: productSources.find((source) => source.sourceKey === "nasevitaminy")?.url || "",
+      ceskevitaminy_url: productSources.find((source) => source.sourceKey === "ceskevitaminy")?.url || "",
       final_status: final?.status || "unresolved",
       final_channels: final
         ? (finalChannelMap.get(final.id) || []).map(
@@ -116,6 +120,9 @@ export async function GET(request: Request) {
     "lifecycle",
     "source_sites",
     "source_urls",
+    "vitar_url",
+    "nasevitaminy_url",
+    "ceskevitaminy_url",
     "final_status",
     "final_channels",
     "final_category",
