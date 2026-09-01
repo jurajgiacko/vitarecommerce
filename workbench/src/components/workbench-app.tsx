@@ -141,6 +141,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
   const categories = useMemo(() => {
     const values = new Map<string, string>();
     for (const product of data.products) values.set(product.categoryKey, product.categoryLabel);
+    if (![...values.values()].includes("Nezařazeno")) values.set("unclassified", "Nezařazeno");
     return [...values.entries()]
       .map(([key, label]) => ({ key, label }))
       .sort((left, right) => left.label.localeCompare(right.label, "cs"));
