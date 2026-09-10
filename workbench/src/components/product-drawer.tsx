@@ -36,6 +36,7 @@ import type {
 export const CHANNEL_OPTIONS = [
   { key: "vitar.cz", label: "VITAR.cz", note: "Prémiový e-shop" },
   { key: "nasevitaminy.cz", label: "NašeVitamíny.cz", note: "Maloobchod a objemový prodej" },
+  { key: "offline_retail", label: "Mimo e-shopy / retail", note: "Retail, marketplace nebo samostatná landing page" },
   { key: "vitar_veterina", label: "VITAR Veterina", note: "Samostatný e-shop" },
   { key: "oem_b2b", label: "OEM / B2B", note: "Mimo B2C katalog" },
   { key: "workshop_hold", label: "Potřebuji informace", note: "Chybí podklad pro rozhodnutí" },

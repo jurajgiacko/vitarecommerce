@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T15:41:10.255Z",
+  "generated_at": "2026-09-10T05:56:23.379Z",
   "catalog_generated_at": "2026-09-01T15:16:37.626415+00:00",
   "status": "pass",
   "checks": [
@@ -46,7 +46,7 @@
     {
       "name": "WIP records valid",
       "ok": true,
-      "detail": "0 WIP, 0 malformed"
+      "detail": "36 WIP, 0 malformed"
     },
     {
       "name": "Product family grouping",
@@ -58,10 +58,10 @@
     "sitemap_urls": 865,
     "source_products": 550,
     "master_products": 324,
-    "database_products": 324,
+    "database_products": 360,
     "database_sources": 550,
     "out_of_scope_products": 17,
-    "active_profiles": 5,
+    "active_profiles": 7,
     "unclassified_products": 0,
     "products_without_sku": 0,
     "products_without_ean": 21,

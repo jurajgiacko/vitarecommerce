@@ -28,6 +28,7 @@ import {
   Menu,
   MessageSquareText,
   PackagePlus,
+  PanelsTopLeft,
   Plus,
   RefreshCw,
   Search,
@@ -44,6 +45,7 @@ import { bulkSaveReviews, clearProfileSelection, createWipProduct } from "@/app/
 import { ProductDrawer, CHANNEL_OPTIONS, LIFECYCLE_OPTIONS } from "@/components/product-drawer";
 import { PixelMark } from "@/components/pixel-mark";
 import { QuickReview } from "@/components/quick-review";
+import { ShopPlanner } from "@/components/shop-planner";
 import { TeamPanel } from "@/components/team-panel";
 import { highConflictDetails, highConflictSummary } from "@/lib/conflicts";
 import { INFORMATION_REASONS } from "@/lib/review-options";
@@ -51,6 +53,7 @@ import type { SaveFeedbackHandler, SaveFeedbackState, WorkbenchData, WorkbenchPr
 
 type ViewKey =
   | "overview"
+  | "shop-plan"
   | "quick"
   | "homework"
   | "portfolio"
@@ -62,6 +65,7 @@ type ViewKey =
 
 const NAV_ITEMS: Array<{ key: ViewKey; label: string; icon: typeof LayoutDashboard }> = [
   { key: "overview", label: "Přehled", icon: LayoutDashboard },
+  { key: "shop-plan", label: "Finální rozdělení", icon: PanelsTopLeft },
   { key: "quick", label: "Rychlé posouzení", icon: Zap },
   { key: "homework", label: "Můj domácí úkol", icon: ClipboardCheck },
   { key: "portfolio", label: "Všechny produkty", icon: ListFilter },
@@ -185,6 +189,7 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
 
   const counts: Record<ViewKey, number | null> = {
     overview: null,
+    "shop-plan": data.products.filter((product) => product.finalDecision).length,
     quick: data.products.length - metrics.submitted,
     homework: data.products.length - metrics.submitted,
     portfolio: data.products.length,
@@ -316,13 +321,16 @@ export function WorkbenchApp({ data }: { data: WorkbenchData }) {
               onOpenProduct={setSelectedProductId}
             />
           ) : null}
+          {view === "shop-plan" ? (
+            <ShopPlanner products={data.products} onOpenProduct={setSelectedProductId} />
+          ) : null}
           {view === "quick" ? (
             <QuickReview products={data.products} profile={data.profile} onOpenProduct={setSelectedProductId} onSelectFamily={selectFamily} onSaveFeedback={reportSave} />
           ) : null}
           {view === "team" ? (
             <TeamPanel profiles={data.profiles} products={data.products} currentProfile={data.profile} />
           ) : null}
-          {!(["overview", "quick", "team"] as ViewKey[]).includes(view) ? (
+          {!(["overview", "shop-plan", "quick", "team"] as ViewKey[]).includes(view) ? (
             <ProductWorkspace
               view={view}
               products={data.products}

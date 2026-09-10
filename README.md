@@ -9,11 +9,15 @@ Project workspace for `jurajgiacko/vitarecommerce`.
 
 Dev brief lives under `outputs/onboarding/`. Update = edit the HTML + push (Pages rebuilds, same URL).
 
-### Target architecture (summary)
+### Target architecture (decision 3 September 2026)
 
 - **Two worlds:** static **VITAR Group** (corporate/B2B/OEM/careers, no cart, outside DC) + **e-com world** (transactional, via DC).
-- **vitar.cz = product marketplace** (multi-brand, premium, new lines) — not a single-brand shop.
-- **nasevitaminy.cz = retail** (classics, volume) — permanently separate, not merged/redirected into vitar.cz.
+- **VITAR.cz** = complete current VITAR range, VITAR NEO, VITAR UNITY and Maxi Vita Essentials.
+- **NaseVitaminy.cz** = all other e-commerce portfolio plus Maxi Vita Essentials.
+- **Maxi Vita Essentials** is the only brand shared by both shops.
+- **Capri-Sun and Predator** remain outside both shops for retail, marketplaces or standalone landing pages.
+- **VITAR Veterina** is a separate brand and separate e-shop.
+- **Revital and Revitalon** currently belong to NaseVitaminy.cz; Revitalon moves only after its redesign.
 - **Shopify** storefront (leaving FastCentrik) · **Pohoda** ERP (one entity per company; QAD stays production/master-data only, outside fulfillment) · **one WMS + one shared DC**.
 - Fresh decision dataset (1 September 2026): **865/865 sitemap URLs → 550 in-scope source profiles → 324 safely matched master products** across VITAR.cz, NaseVitaminy.cz and Ceske-vitaminy.cz. Another 17 legacy Enervit and ROYAL BAY pages are fully audited but excluded as VITAR Sport-owned products. The earlier static planning baseline remains archived below.
 
@@ -50,6 +54,8 @@ Main deliverables:
 - `outputs/reports/content-migration-inventory.md` - critical build-readiness and URL/content migration recommendation.
 - `outputs/reports/vitar-group-content-plan.md` - sitemap and migration plan for the standalone VITAR Group website.
 - `outputs/html/vitar-category-planner.html` - interactive local category planner.
+- `outputs/data/final-shop-split.json` / `.csv` - approved current-product routing by shop.
+- `outputs/reports/final-shop-split.md` - approved routing in Markdown.
 - `outputs/html/product-qa-dashboard.html` - interactive product QA dashboard.
 - `outputs/html/strategic-readiness-dashboard.html` - strategic readiness, governance and backlog dashboard.
 - `outputs/html/vitar-group-content-planner.html` - interactive VITAR Group content planner.
@@ -72,6 +78,7 @@ python3 scripts/build_pim_outputs.py
 python3 scripts/build_product_qa.py
 python3 scripts/build_strategy_outputs.py
 python3 scripts/build_group_outputs.py
+python3 scripts/build_final_shop_split.py
 ```
 
 `data/raw/` is intentionally ignored because it contains the downloaded HTML cache.

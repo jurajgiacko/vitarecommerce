@@ -10,6 +10,7 @@ const ROUND_ID = "round-vitar-split-2026-09";
 const CHANNEL_LABELS: Record<string, string> = {
   "vitar.cz": "VITAR.cz",
   "nasevitaminy.cz": "NašeVitamíny.cz",
+  offline_retail: "Mimo e-shopy / retail",
   vitar_veterina: "VITAR Veterina",
   oem_b2b: "OEM / B2B",
   workshop_hold: "Společně rozhodnout",
