@@ -1,0 +1,3614 @@
+{
+  "generated_at": "2026-09-10T06:19:32.626323+00:00",
+  "catalog_generated_at": "2026-09-01T15:16:37.626415+00:00",
+  "decision_date": "2026-09-03",
+  "decision_source": "Tomáš Červinka, CEO; potvrzeno na týmovém setkání 3. 9. 2026",
+  "shop": "nase",
+  "shop_label": "NašeVitamíny.cz",
+  "current_product_count": 179,
+  "wip": {
+    "total": 0,
+    "details_included": false,
+    "note": "Citlivé WIP detaily jsou dostupné pouze v interním Workbenchi."
+  },
+  "products": [
+    {
+      "id": "prd_0dff242c1ee1",
+      "name": "eMVe Hořčík + vitamin C a B6",
+      "brand": "eMVe",
+      "sku": "42300201",
+      "ean": "8595011113549",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/m/emve_krabicka_horcik_eng_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-horcik-vitamin-c-a-b6/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-horcik-vitamin-c-a-b6",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b5f315757813",
+      "name": "eMVe Magnézium 200 mg + B6",
+      "brand": "eMVe",
+      "sku": "42300204",
+      "ean": "8595011128482",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/m/emve_display_b6_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-magnezium-200-mg-b6/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-magnezium-200-mg-b6",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_44627c5d2b58",
+      "name": "eMVe Multivita+",
+      "brand": "eMVe",
+      "sku": "42300202",
+      "ean": "8595011113389",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/0/30_blistr_83x130x24mm_multi_eng_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-multivita/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-multivita",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_38e4f8064dc4",
+      "name": "eMVe Multivitamin",
+      "brand": "eMVe",
+      "sku": "42300205",
+      "ean": "8595011128406",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/m/emve_display-multivitamin_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-multivitamin/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-multivitamin",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a8b9afdfa3ad",
+      "name": "eMVe Vitamin C",
+      "brand": "eMVe",
+      "sku": "42300203",
+      "ean": "8595011113518",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300203_3d_emve_vitaminc_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-vitamin-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_eefce9f644af",
+      "name": "eMVe Vitamin C 180 mg",
+      "brand": "eMVe",
+      "sku": "42300206",
+      "ean": "8595011128451",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/m/emve_display-vitamin_c_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-vitamin-c-180-mg/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-vitamin-c-180-mg",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_54ba3d3c6572",
+      "name": "eMVe Vápník-hořčík-zinek + vitaminy C, D3 a K1",
+      "brand": "eMVe",
+      "sku": "42300209",
+      "ean": "8595011135176",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/m/emve_display-vapnik_horcik_zinek_cz_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/emve-vapnik-horcik-zinek-vitaminy-c-d3-a-k1/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/emve-vapnik-horcik-zinek-vitaminy-c-d3-a-k1",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5f63df374c5b",
+      "name": "Energit Coffee",
+      "brand": "Energit",
+      "sku": "42100609",
+      "ean": "8595011147186",
+      "category": "Energie a výkon",
+      "category_key": "energy",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100609_energit_coffee_3dk_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-coffee/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-coffee-kofein-42-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a0ee3302d3f9",
+      "name": "Energit Dextróza sport Magnézium + B6",
+      "brand": "Energit",
+      "sku": "50000007",
+      "ean": "8595011143638",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_ehc_dextroza_magnezium_b6_cz_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-dextroza-sport-magnezium-b6/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-dextroza-sport-magnezium-b6",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_304511ddbb72",
+      "name": "Energit Hroznový cukr multivitamin",
+      "brand": "Energit",
+      "sku": "00000012",
+      "ean": "",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_ehc_citron_cz_png.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-hroznovy-cukr-multivitamin/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8b0269c3755c",
+      "name": "Energit Hroznový cukr multivitamin - citron",
+      "brand": "Energit",
+      "sku": "50000001",
+      "ean": "8586015310515",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/energit_hroznovy_cukr_multivitamin_citron_1.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-hroznovy-cukr-multivitamin-citron",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_753554a57f97",
+      "name": "Energit Hroznový cukr multivitamin - citron",
+      "brand": "Energit",
+      "sku": "50000003",
+      "ean": "8586015310492",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/products/3D EHC Pomeranč CZ_LR.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-hroznovy-cukr-multivitamin-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3d2dcb1a6969",
+      "name": "Energit Hroznový cukr multivitamin - jahoda",
+      "brand": "Energit",
+      "sku": "50000002",
+      "ean": "8586015310508",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/products/3D EHC Jahoda CZ_WEB.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-hroznovy-cukr-multivitamin-jahoda",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1c42f5001ce1",
+      "name": "Energit Hroznový cukr multivitamin - třešeň",
+      "brand": "Energit",
+      "sku": "50000006",
+      "ean": "8586015310256",
+      "category": "Hroznový cukr a cukrovinky",
+      "category_key": "dextrose",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/eenrgit_hroznovy_cukr_multivitamin_tresen.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-hroznovy-cukr-multivitamin-tresen",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_bd81b03afcee",
+      "name": "Energit Imunita",
+      "brand": "Energit",
+      "sku": "42100603",
+      "ean": "8595011124187",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100603_energit_posileni_imunity_malina_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-imunita/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-imunita",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b1145e8cff69",
+      "name": "Energit Magnézium",
+      "brand": "Energit",
+      "sku": "42100608",
+      "ean": "8595011129083",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100608_energit_magnezium_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-magnezium/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-magnezium",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e92bad3ebed5",
+      "name": "Energit Multivitamin",
+      "brand": "Energit",
+      "sku": "42100601",
+      "ean": "8595011124248",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100601_energit_multivitamin_pomeranc_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-multivitamin/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-multivitamin",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6dced38fee56",
+      "name": "Energit Pro děti",
+      "brand": "Energit",
+      "sku": "42100606",
+      "ean": "8595011124217",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_energit_prodeti_42tbl_lr_1000px_web_2.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-pro-deti/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-pro-deti",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b6b712a471bc",
+      "name": "Energit Pro oči",
+      "brand": "Energit",
+      "sku": "42100604",
+      "ean": "8595011124309",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100604_energit_pro_oci_boruvka_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-pro-oci/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-pro-oci",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_501c247061d8",
+      "name": "Energit Pro řidiče",
+      "brand": "Energit",
+      "sku": "42100605",
+      "ean": "8595011124279",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100605_energit_pro_ridice_visen_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-pro-ridice/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-pro-ridice",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0cb46a11a746",
+      "name": "Energit Vitamin D3 + acerola",
+      "brand": "Energit",
+      "sku": "42100611",
+      "ean": "8595011141573",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_egt_vitamin_d3_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-vitamin-d3-acerola/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-vitamin-d3-acerola",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_97f2b86cf322",
+      "name": "Energit Zázvor",
+      "brand": "Energit",
+      "sku": "42100610",
+      "ean": "8595011147209",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42100610_energit_z_zvor_li_ejn_k_42_tbl._2024_10_02_3dk_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/energit-zazvor/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/energit-zazvor-lisejnik-42-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f970b7f46b0d",
+      "name": "Irbis Aspartam (220 tbl.)",
+      "brand": "Irbis",
+      "sku": "46000004",
+      "ean": "0000085906488",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_irbis_aspartam_220tbl_cz_lr.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-aspartam-220-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_28dec59c3a93",
+      "name": "Irbis Aspartam - dávkovač (110 tbl.)",
+      "brand": "Irbis",
+      "sku": "46000018",
+      "ean": "8595011134001",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/sladidlo_irbis_aspartam_davkovac_1.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-aspartam-davkovac-110-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5769ac62201b",
+      "name": "Irbis Aspartam - tablety",
+      "brand": "Irbis",
+      "sku": "00000017",
+      "ean": "",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_aspartam_davkovac_100tbl_cz_front_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-aspartam-tablety/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a1354f17b245",
+      "name": "Irbis Aspartam Big Sweet 10x sladší (sypká směs)",
+      "brand": "Irbis",
+      "sku": "46000002",
+      "ean": "8594002799205",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_aspartam_big_sweet_10x_sl_sypke_sladidlo_200g_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-big-sweet-10x-sladsi/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-aspartam-big-sweet-10x-sladsi-sypka-smes",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1f06c7c74262",
+      "name": "Irbis Aspartam Sweet 3x sladší (sypká směs)",
+      "brand": "Irbis",
+      "sku": "46000001",
+      "ean": "8594002790226",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_aspartam_sweet_3x_sl_sypke_sladidlo_200g_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-aspartam-sweet-3x-sladsi/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-aspartam-sweet-3x-sladsi-sypka-smes",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_21139ca3343f",
+      "name": "Irbis se sladidly z rostliny stévie (220 tbl.)",
+      "brand": "Irbis",
+      "sku": "46000011",
+      "ean": "8595011128697",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_irbis_st_vie_n_hradn__n_pl__220_tablet_lr_1000px_web.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-se-sladidly-z-rostliny-stevie-220-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_170e581925fa",
+      "name": "Irbis se sladidly z rostliny stévie (sypká směs)",
+      "brand": "Irbis",
+      "sku": "46000014",
+      "ean": "8595011128239",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_stevie_sypke_sladidlo_250g_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-stevie-sypke-sladidlo-250-g/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-se-sladidly-z-rostliny-stevie-sypka-smes",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_985c0960b0d9",
+      "name": "Irbis se sladidly z rostliny stévie - dávkovač (110 tbl.)",
+      "brand": "Irbis",
+      "sku": "46000017",
+      "ean": "8595011132021",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_irbis_stevie_davkovac_110tbl_cz_front_lr_1000px_web_1.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-se-sladidly-z-rostliny-stevie-davkovac-110-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ca09a138fa59",
+      "name": "Irbis se sladidly z rostliny stévie - tablety",
+      "brand": "Irbis",
+      "sku": "00000019",
+      "ean": "",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_stevie_davkovac_110tbl_cz_front_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-stevie-tablety/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c96141652751",
+      "name": "Irbis Sukralóza s chromem - tablety",
+      "brand": "Irbis",
+      "sku": "46000016",
+      "ean": "8595011131994",
+      "category": "Sladidla",
+      "category_key": "sweeteners",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_irbis_sukraloza_davkovac_100tbl_cz_front_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/irbis-sukraloza-s-chromem-davkovac-110-tbl/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/irbis-sukraloza-s-chromem-davkovac-110-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e39b726e1d43",
+      "name": "Maxi Vita B-komplex forte + vitamin C",
+      "brand": "Maxi Vita",
+      "sku": "42300016",
+      "ean": "8595011119978",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_b-komplex_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-b-komplex-forte-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-b-komplex-forte-vitamin-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_32286172a1ef",
+      "name": "Maxi Vita Beauty Kyselina hyaluronová 100 mg + koenzym Q10",
+      "brand": "Maxi Vita",
+      "sku": "42300097",
+      "ean": "8595011144260",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300097_maxivita_beauty_kys_hyaluronova_60_cps_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-beauty-kyselina-hyaluronova-100-mg-koenzym-q10/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-beauty-kyselina-hyaluronova-100-mg-koenzym-q10",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a8715b9a5dac",
+      "name": "Maxi Vita Beauty Mořský kolagen",
+      "brand": "Maxi Vita",
+      "sku": "42300093",
+      "ean": "8595011138115",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300093_maxivita_beauty_mo_sk_kolagen_kys.hyalur.60cps_web_2.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-beauty-morsky-kolagen/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-beauty-morsky-kolagen",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2203af478a61",
+      "name": "Maxi Vita Beta karoten",
+      "brand": "Maxi Vita",
+      "sku": "42300005",
+      "ean": "8595011107456",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_beta_karoten_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-beta-karoten/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-beta-karoten",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0e6c074b17d9",
+      "name": "Maxi Vita Chrom + garcinia cambogia",
+      "brand": "Maxi Vita",
+      "sku": "42300009",
+      "ean": "8595011109689",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300009_maxivita_chrom_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-chrom-garcinia-cambogia/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-chrom-garcinia-cambogia",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7039916d0193",
+      "name": "Maxi Vita dávkovač léků denní",
+      "brand": "Maxi Vita",
+      "sku": "49040002",
+      "ean": "8591078420149",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/d/a/davkovac_04_denni.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-davkovac-leku-denni-1437/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-davkovac-leku-denni",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7db8543810ac",
+      "name": "Maxi Vita dávkovač léků týdenní",
+      "brand": "Maxi Vita",
+      "sku": "49040001",
+      "ean": "8591078420149",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/d/a/davkovac_04_tydenni.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-davkovac-leku-tydenni/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-davkovac-leku-tydenni",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1f2dbf03d3b9",
+      "name": "Maxi Vita Energy Power",
+      "brand": "Maxi Vita",
+      "sku": "43200309",
+      "ean": "8595011143256",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43200309_energy_power_eng_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-energy-power/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-energy-power",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_95c62ef2aef6",
+      "name": "Maxi Vita Exclusive Beta-karoten forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300072",
+      "ean": "8595011134841",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300072_mxvt_exclusive_beta-karoten_aloe_forte_60tbl_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-beta-karoten-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-beta-karoten-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e468f33ea5a4",
+      "name": "Maxi Vita Exclusive BOX",
+      "brand": "Maxi Vita",
+      "sku": "41300115",
+      "ean": "8595011146134",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/41300115_Maxi_Vita_Exclusive_BOX_3_MIX_eff_tbl_3DK_PNG edit.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-box-3-mix-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b004ab0a59ae",
+      "name": "Maxi Vita Exclusive Detox očista jater",
+      "brand": "Maxi Vita",
+      "sku": "41300105",
+      "ean": "8595011131550",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_detox_o_ista_jater_20tbl.eff_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-detox-ocista-jater/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-detox-ocista-jater",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8a6c4f750124",
+      "name": "Maxi Vita Exclusive Erektor",
+      "brand": "Maxi Vita",
+      "sku": "42300060",
+      "ean": "8595011118162",
+      "category": "Energie a výkon",
+      "category_key": "energy",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300060_mxvt_exclusive_erektor_15cps_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-erektor/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-erektor",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b90f5958fc55",
+      "name": "Maxi Vita Exclusive Ginkgo biloba",
+      "brand": "Maxi Vita",
+      "sku": "41300104",
+      "ean": "8595011131536",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_ginkgo_biloba_20tbl.eff_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-ginkgo-biloba/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-ginkgo-biloba",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8619eee911df",
+      "name": "Maxi Vita Exclusive Kloubní výživa",
+      "brand": "Maxi Vita",
+      "sku": "43200014",
+      "ean": "8595011120134",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43200014_mxvt_exclusive_kloubn__v_iva_20_s_k__web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-kloubni-vyziva/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-kloubni-vyziva",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_53aec124498a",
+      "name": "Maxi Vita Exclusive Kolagen forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300064",
+      "ean": "8595011124873",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300064_mxvt_exclusive_kolagen_forte_60cps_blistr_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-kolagen-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-kolagen-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_cf2bfccc7faf",
+      "name": "Maxi Vita Exclusive Krásné vlasy, nehty a pleť",
+      "brand": "Maxi Vita",
+      "sku": "42300069",
+      "ean": "8595011131451",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300069_mxvt_exclusive_kr_sn__vlasy_nehty_ple_45cps_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-krasne-vlasy-nehty-a-plet/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-krasne-vlasy-nehty-a-plet",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a68eac2bb9d5",
+      "name": "Maxi Vita Exclusive Kyselina Hyaluronová + koenzym Q10",
+      "brand": "Maxi Vita",
+      "sku": "42300062",
+      "ean": "8595011146042",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/42300062_Kyselina Hyaluronová_CZ_3D_WEB.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/mxv-excl-kys-hyaluron-koenzym-q10-60-cps",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_fba3ac6c7246",
+      "name": "Maxi Vita Exclusive Kyselina hyaluronová + koenzym Q10",
+      "brand": "Maxi Vita",
+      "sku": "423000622",
+      "ean": "8595011146042",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300062_kyselina_hyaluronov__cz_3d.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-exclusive-kyselina-hyaluronova-koenzym-q10/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d7da22b49ec3",
+      "name": "Maxi Vita Exclusive Lutein forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300065",
+      "ean": "8595011126938",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300065_mxvt_exclusive_lutein_forte_45cps_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-lutein-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-lutein-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_49a2199f133c",
+      "name": "Maxi Vita Exclusive Magnézium",
+      "brand": "Maxi Vita",
+      "sku": "41300103",
+      "ean": "8595011131512",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_magnesium_20tbl.eff_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-magnezium/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-magnezium",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6f68820844ff",
+      "name": "Maxi Vita Exclusive Magnézium forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300068",
+      "ean": "8595011128987",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300068_mxvt_exclusive_magnezium_forte_60tbl_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-magnezium-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-magnezium-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_64a5b3c7b7a8",
+      "name": "Maxi Vita Exclusive Multivitamin",
+      "brand": "Maxi Vita",
+      "sku": "41300102",
+      "ean": "8595011131499",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_multivitamin_20tbl.eff_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-multivitamin/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-multivitamin",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c23f7edc7fae",
+      "name": "Maxi Vita Exclusive Odkyselení",
+      "brand": "Maxi Vita",
+      "sku": "41300114",
+      "ean": "8595011146769",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300114_maxi_vita_exclusive_odkyseleni_new.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-exclusive-odkyseleni/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-odkyseleni-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f218d45a4482",
+      "name": "Maxi Vita Exclusive Odvodnění",
+      "brand": "Maxi Vita",
+      "sku": "41300113",
+      "ean": "8595011146745",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300113_maxi_vita_exclusive_odvodneni_20tbl.eff_3di_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-exclusive-odvodneni/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-odvodneni-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6cb83ee314bd",
+      "name": "Maxi Vita Exclusive Omega 3 forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300071",
+      "ean": "8595011133806",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_exclusive_omega_3_forte__90cps_doza_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-omega-3-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-omega-3-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_fc429ea25063",
+      "name": "Maxi Vita Exclusive Podpora imunity",
+      "brand": "Maxi Vita",
+      "sku": "41300108",
+      "ean": "8595011143003",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_podpora_imunity_vitd3_vitc_zinek_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-podpora-imunity/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-podpora-imunity",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_427ae2eb26e4",
+      "name": "Maxi Vita Exclusive Posílení imunity forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300066",
+      "ean": "8595011127690",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300066_mxvt_exclusive_pos_len__imunity_forte_45tbl_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-posileni-imunity-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-posileni-imunity-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b835934d5de6",
+      "name": "Maxi Vita Exclusive Rakytník forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300070",
+      "ean": "8595011133288",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300070_mxvt_exclusive_rakytn_k_forte__60cps_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-rakytnik-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-rakytnik-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4ce231f02104",
+      "name": "Maxi Vita Exclusive Rehydratace",
+      "brand": "Maxi Vita",
+      "sku": "41300112",
+      "ean": "8595011146141",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300112_maxi_vita_exclusive_rehydratace_20tbl.eff_3di_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-exclusive-rehydratace/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-rehydratace-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_70a1e15b64a5",
+      "name": "Maxi Vita Exclusive Vitamin C + rakytník",
+      "brand": "Maxi Vita",
+      "sku": "41300101",
+      "ean": "8595011131475",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvt_exclusive_vitaminc_rakytn_k_20tbl.eff_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-vitamin-c-rakytnik/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-vitamin-c-rakytnik",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c3055a93c534",
+      "name": "Maxi Vita Exclusive Vitamin C 800 mg forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300073",
+      "ean": "8595011134865",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300073_mxvt_exclusive_vitaminc_800mg_60cps_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-vitamin-c-800-mg-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-vitamin-c-800-mg-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8d367ea8de23",
+      "name": "Maxi Vita Exclusive Vitamin K2 + D3 forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300075",
+      "ean": "8595011145038",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300075_vitamin_k2_a_d3_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-exclusive-vitamin-k2-d3-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-vitamin-k2-d3-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_42d7cfa0cba6",
+      "name": "Maxi Vita Exclusive Vápník–hořčík–zinek forte+",
+      "brand": "Maxi Vita",
+      "sku": "42300067",
+      "ean": "8595011128956",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300067_mxvt_exclusive_ca_mg_zn_forte_60tbl_blistr_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-exclusive-vapnik-horcik-zinek-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-exclusive-vapnik-horcik-zinek-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f36ac9473bd8",
+      "name": "Maxi Vita Herbal Bylinný elixír Brusinky",
+      "brand": "Maxi Vita",
+      "sku": "43800005",
+      "ean": "8595011123869",
+      "category": "Močové cesty",
+      "category_key": "urinary",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800005_maxi_vita_herbal_bylinny_elixir_brusinka_200ml_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-brusinky/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-brusinky",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_07c0028c7a3c",
+      "name": "Maxi Vita Herbal Bylinný elixír Jitrocel",
+      "brand": "Maxi Vita",
+      "sku": "43800011",
+      "ean": "8595011144673",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800011_maxi_vita_herbal_bylinny_elixir_jitrocel_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-bylinny-elixir-jitrocel/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-jitrocel",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_35f2f7d485f0",
+      "name": "Maxi Vita Herbal Bylinný elixír Karlík",
+      "brand": "Maxi Vita",
+      "sku": "43800004",
+      "ean": "8595011120578",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800004_maxi_vita_herbal_bylinny_elixir_karlik_detsky_czsk_3de_1000_px.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-karlik/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-karlik",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_855774771f06",
+      "name": "Maxi Vita Herbal Bylinný elixír Lipový květ + divizna",
+      "brand": "Maxi Vita",
+      "sku": "43800001",
+      "ean": "8595011120608",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800001_maxi_vita_herbal_bylinny_elixir_podpora_vykaslavani_czsk_3de_1000_px.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-bylinny-elixir-lipovy-kvet-divizna/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-lipovy-kvet-divizna",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_afcc956b39fe",
+      "name": "Maxi Vita Herbal Bylinný elixír NaSpaní",
+      "brand": "Maxi Vita",
+      "sku": "43800006",
+      "ean": "8595011123890",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800006_maxi_vita_herbal_bylinny_elixir_na_spanil_3de__web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-bylinny-elixir-naspani/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-klidny-spanek",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_cf375be83504",
+      "name": "Maxi Vita Herbal Bylinný elixír Posílení imunity",
+      "brand": "Maxi Vita",
+      "sku": "43800002",
+      "ean": "8595011120639",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800002_maxi_vita_herbal_bylinny_elixir_posileni_imunity_3de__web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-posileni-imunity/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-posileni-imunity",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4992365ea756",
+      "name": "Maxi Vita Herbal Bylinný elixír Posílení imunity pro děti",
+      "brand": "Maxi Vita",
+      "sku": "43800010",
+      "ean": "8595011134902",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800010_maxi_vita_herbal_bylinny_elixir_posileni_imunity_pro_deti_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-posileni-imunity-pro-deti/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-posileni-imunity-pro-deti",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7f4d85955c0c",
+      "name": "Maxi Vita Herbal Bylinný elixír Průduškový",
+      "brand": "Maxi Vita",
+      "sku": "43800003",
+      "ean": "8595011120660",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800003_maxi_vita_herbal_bylinny_elixir_pruduskovy_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-pruduskovy/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-pruduskovy",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_aacec09a7d6b",
+      "name": "Maxi Vita Herbal Bylinný elixír Rakytník",
+      "brand": "Maxi Vita",
+      "sku": "43800008",
+      "ean": "8595011128925",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800005_maxi_vita_herbal_bylinny_elixir_rakytnik_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-rakytnik/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-rakytnik",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1236f33854f7",
+      "name": "Maxi Vita Herbal Bylinný elixír Zdravé oči",
+      "brand": "Maxi Vita",
+      "sku": "43800009",
+      "ean": "8595011130317",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43800009_maxi_vita_herbal_bylinny_elixir_zdrave_oci_3de_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-bylinny-elixir-zdrave-oci/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-bylinny-elixir-zdrave-oci",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_13b476fdb17f",
+      "name": "Maxi Vita Herbal Ginkgo biloba",
+      "brand": "Maxi Vita",
+      "sku": "42300050",
+      "ean": "8595011107890",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Želé / gummies",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300050_maxivita_herbal_ginkgo_biloba_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-ginkgo-biloba/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-ginkgo-biloba",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_bfa75879b1ee",
+      "name": "Maxi Vita Herbal HerbaVOX - citron + zázvor",
+      "brand": "Maxi Vita",
+      "sku": "42300098",
+      "ean": "8595011149012",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/o/vox.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-herbavox/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxivita-herbal-herbavox-zazvor-24-tbl-blistr",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_853590db45cb",
+      "name": "Maxi Vita Herbal HerbaVOX - lišejník islandský",
+      "brand": "Maxi Vita",
+      "sku": "42240007",
+      "ean": "8595011131147",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_naturvox_isl_lisejnik.lekorice_16ks_k_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbavox-lisejnik-islandsky/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbavox-lisejnik-islandsky",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_954850c9e312",
+      "name": "Maxi Vita Herbal HerbaVOX - med a citron",
+      "brand": "Maxi Vita",
+      "sku": "42240006",
+      "ean": "8595011119206",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_herbavox_med_citron_16ks_k_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbavox-med-a-citron/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbavox-med-a-citron",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f9997b135971",
+      "name": "Maxi Vita Herbal Hlíva ústřičná",
+      "brand": "Maxi Vita",
+      "sku": "42300023",
+      "ean": "8595011133264",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300023_maxivita_herbal_hl_va__st_i_n_rakytn_k_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-hliva-ustricna/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-hliva-ustricna",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c83e199d8be2",
+      "name": "Maxi Vita Herbal Horký nápoj Brusinka",
+      "brand": "Maxi Vita",
+      "sku": "43300101",
+      "ean": "8595011124040",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvh_horky_napoj_brusinka_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-horky-napoj-brusinka/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-horky-napoj-brusinka",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d850f2e27bbf",
+      "name": "Maxi Vita Herbal Horký nápoj Echinacea",
+      "brand": "Maxi Vita",
+      "sku": "43300103",
+      "ean": "8595011124569",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvh_horky_napoj_echinacea_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-horky-napoj-echinacea/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-horky-napoj-echinacea",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_013a890ba55c",
+      "name": "Maxi Vita Herbal Horký nápoj Zázvor",
+      "brand": "Maxi Vita",
+      "sku": "43300102",
+      "ean": "8595011124071",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvh_horky_napoj_zazvor_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-horky-napoj-zazvor/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-horky-napoj-zazvor",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_71e7da544161",
+      "name": "Maxi Vita Herbal Klidná střeva",
+      "brand": "Maxi Vita",
+      "sku": "43200310",
+      "ean": "8595011143270",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43200310_klidna_streva_png.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-klidna-streva/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-klidna-streva",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_089e228a2a28",
+      "name": "Maxi Vita Herbal Kurkuma",
+      "brand": "Maxi Vita",
+      "sku": "42300083",
+      "ean": "8595011144659",
+      "category": "Játra a detox",
+      "category_key": "detox",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/x/mxvh_kurkuma_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-herbal-kurkuma/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-kurkuma",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a61bdccd5abc",
+      "name": "Maxi Vita Herbal Maxi brusinky",
+      "brand": "Maxi Vita",
+      "sku": "42300082",
+      "ean": "8595011118193",
+      "category": "Močové cesty",
+      "category_key": "urinary",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300082_maxivita_herbal_kanadsk__maxi_brusinky_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-maxi-brusinky/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-maxi-brusinky",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ff56e93f798a",
+      "name": "Maxi Vita Herbal Očista jater",
+      "brand": "Maxi Vita",
+      "sku": "42300081",
+      "ean": "8595011118223",
+      "category": "Játra a detox",
+      "category_key": "detox",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300081_maxivita_herbal_o_ista_jater_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-ocista-jater/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-ocista-jater",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7946cd68b667",
+      "name": "Maxi Vita Herbal Vitamin C + rakytník",
+      "brand": "Maxi Vita",
+      "sku": "42300087",
+      "ean": "8595011121278",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300087_maxivita_herbal_vitaminc_rakytn_k_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-herbal-vitamin-c-rakytnik/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-herbal-vitamin-c-rakytnik",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_deacf8f05148",
+      "name": "Maxi Vita Hořčík + B6",
+      "brand": "Maxi Vita",
+      "sku": "42300013",
+      "ean": "8595011114799",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_horcik_b6_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-horcik-b6-1810/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-horcik-b6-2",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e1b32fe34214",
+      "name": "Maxi Vita Hořčík + vitaminy B6, B12 a biotin",
+      "brand": "Maxi Vita",
+      "sku": "41300069",
+      "ean": "8595011147711",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300069_maxi_vita_magnesium.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-horcik-b6/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-magnesium-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_12c7dd4fef4c",
+      "name": "Maxi Vita Kids Betaglukan multivitamin",
+      "brand": "Maxi Vita",
+      "sku": "44000005",
+      "ean": "8595011148909",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_kids_betaglukan_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-kids-betaglukan-multivitamin/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-kids-betaglukan-d3",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b7251c610928",
+      "name": "Maxi Vita Kids Multivitamin",
+      "brand": "Maxi Vita",
+      "sku": "41300072",
+      "ean": "8595011147773",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300072_3d_maxivita_multivit_kids.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-kids-multivitamin/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-multivit-kids-bob-a-bobek-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_22578ff27e79",
+      "name": "Maxi Vita Kids Multivitamin + kolostrum",
+      "brand": "Maxi Vita",
+      "sku": "44000006",
+      "ean": "8595011125856",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_kids_multivitamin_kolostrum_45tbl_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-kids-multivitamin-kolostrum/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-kids-multivitamin-kolostrum",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f0d8d65cf1c2",
+      "name": "Maxi Vita Kids Multivitamin želé",
+      "brand": "Maxi Vita",
+      "sku": "44000004",
+      "ean": "8595011121230",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Želé / gummies",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_kids_multivitamin_zele_40ks_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-kids-multivitamin-zele/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-kids-multivitamin-zele",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c280b4746888",
+      "name": "Maxi Vita Kids Omega 3 + vitaminy D a E",
+      "brand": "Maxi Vita",
+      "sku": "42300019",
+      "ean": "8595011124903",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_kids_omega_3_30cps_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-kids-omega-3-vitaminy-d-a-e/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-kids-omega-3-vitaminy-d-a-e",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_452152491678",
+      "name": "Maxi Vita Kids Probiotika",
+      "brand": "Maxi Vita",
+      "sku": "44000002",
+      "ean": "8595011147247",
+      "category": "Děti",
+      "category_key": "kids",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/4/44000002_maxivita_kids_probiotika_stick_pack_16_sacku_3dk_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-kids-probiotika/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-kids-probiotika-16-stick",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7289905abbe0",
+      "name": "Maxi Vita Koenzym Q10 30 mg + vitamin C",
+      "brand": "Maxi Vita",
+      "sku": "42300014",
+      "ean": "8595011118568",
+      "category": "Srdce a oběh",
+      "category_key": "heart",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_koenzymq10_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-koenzym-q10-30-mg-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-koenzym-q10-30-mg-vitamin-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4720b9d7d82d",
+      "name": "Maxi Vita Magnézium 400 mg + B komplex + vitamin C",
+      "brand": "Maxi Vita",
+      "sku": "43200307",
+      "ean": "8595011143157",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43200307_magnezium_png.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-magnezium-400-mg-b-komplex-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-magnezium-400-mg-b-komplex-vitamin-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_592612d7f9c4",
+      "name": "Maxi Vita Multivitamin + rakytník",
+      "brand": "Maxi Vita",
+      "sku": "41300068",
+      "ean": "8595011147698",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300068_maxi_vita_multi_rakytn_k.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-multivitamin-rakytnik/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-multi-rakytnik-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3f0002cde873",
+      "name": "Maxi Vita Omega 3 - rybí olej",
+      "brand": "Maxi Vita",
+      "sku": "42300007",
+      "ean": "8595011109931",
+      "category": "Paměť a koncentrace",
+      "category_key": "memory_focus",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300007_maxivita_omega3_ryb__olej_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-omega-3-rybi-olej/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-omega-3-rybi-olej",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_fb52d7baa7a2",
+      "name": "Maxi Vita Premium Ca+Mg+ vit. D3, C",
+      "brand": "Maxi Vita",
+      "sku": "41300109",
+      "ean": "8595011143577",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Premium_Vápník_hořčík_zinek_20tbl.eff_LR_1000px_web.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-ca-mg-vit-d3-c-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7b75b7a7feb0",
+      "name": "Maxi Vita Premium Kloubní výživa",
+      "brand": "Maxi Vita",
+      "sku": "42300053",
+      "ean": "8595011110449",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300053_maxivita_premium_kloubn__v_iva_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-kloubni-vyziva/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-kloubni-vyziva",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3da8c11e040f",
+      "name": "Maxi Vita Premium Magnézium + aminokyseliny",
+      "brand": "Maxi Vita",
+      "sku": "43200312",
+      "ean": "8595011144826",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvp_stick_aminokyseliny_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-premium-magnezium-aminokyseliny/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-magnezium-aminokyseliny",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7b392dce3b27",
+      "name": "Maxi Vita Premium Magnézium+B6",
+      "brand": "Maxi Vita",
+      "sku": "41300110",
+      "ean": "8595011143591",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Premium_Magnesium_20tbl.eff_LR_1000px_web.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-magnezium-b6-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3c3ab59bf57d",
+      "name": "Maxi Vita Premium Multivitamin",
+      "brand": "Maxi Vita",
+      "sku": "41300107",
+      "ean": "8595011142983",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Premium_Multivitamin_20tbl_WEB.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-multivitamin-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3b8c2d9d0e09",
+      "name": "Maxi Vita Premium Podpora imunity",
+      "brand": "Maxi Vita",
+      "sku": "41300111",
+      "ean": "8595011143614",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Premium_Podpora_imunity_20tbl.eff_LR_1000px_web.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-podpora-imunity-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_fe9c4a13a391",
+      "name": "Maxi Vita Premium Probiotika + vitamin C",
+      "brand": "Maxi Vita",
+      "sku": "43200311",
+      "ean": "8595011144376",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxv_stick_probiotika_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-premium-probiotika-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-probiotika-vitamin-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9c66e85a3694",
+      "name": "Maxi Vita Premium Probiotika s vlákninou a vitaminem C",
+      "brand": "Maxi Vita",
+      "sku": "42300024",
+      "ean": "8595011135787",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300024_maxivita_premium_probiotika_vitaminc_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-probiotika-s-vlakninou-a-vitaminem-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-probiotika-s-vlakninou-a-vitaminem-c",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7a087f17740b",
+      "name": "Maxi Vita Premium Super linie",
+      "brand": "Maxi Vita",
+      "sku": "42300052",
+      "ean": "8595011110470",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300052_maxivita_premium_super_linie_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-super-linie/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-super-linie",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d1395b265c1e",
+      "name": "Maxi Vita Premium Vitamin C+ šípek",
+      "brand": "Maxi Vita",
+      "sku": "41300106",
+      "ean": "8595011142969",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/3D_Maxi_Vita_Premium_VitaminC_šípek_20tbl.eff_WEB_JPG.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-vit-c-sipek-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_14f99a9bad15",
+      "name": "Maxi Vita Premium Zdravá pleť",
+      "brand": "Maxi Vita",
+      "sku": "42300063",
+      "ean": "8595011123623",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300063_maxivita_premium_zdrava_plet_tisk.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-zdrava-plet/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-zdrava-plet",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9cc2ea6d462b",
+      "name": "Maxi Vita Premium Zdravé oči",
+      "brand": "Maxi Vita",
+      "sku": "42300051",
+      "ean": "8595011109900",
+      "category": "Zrak",
+      "category_key": "eyes",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300051_maxivita_premium_zdrav_o_i_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-zdrave-oci/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-zdrave-oci",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_cb41b843d8b1",
+      "name": "Maxi Vita Premium Zdravé vlasy, nehty a pokožka",
+      "brand": "Maxi Vita",
+      "sku": "42300011",
+      "ean": "8595011110500",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/2/42300011_maxivita_premium_zdrav__vlasy_nehty_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-premium-zdrave-vlasy-nehty-a-pokozka/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-premium-zdrave-vlasy-nehty-a-pokozka",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_00c101048a5e",
+      "name": "Maxi Vita Selen + zinek + vitamin C a E",
+      "brand": "Maxi Vita",
+      "sku": "42300022",
+      "ean": "8595011133011",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/x/mxvc_selen_eng_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-selen-zinek-vitamin-c-a-e/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-selen-zinek-vitamin-c-a-e",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_937e51dbf8ba",
+      "name": "Maxi Vita Vitamin B12 + B2",
+      "brand": "Maxi Vita",
+      "sku": "41300073",
+      "ean": "8595011147797",
+      "category": "Srdce a oběh",
+      "category_key": "heart",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300073_maxi_vita_b12_b2.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-b12-b2/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-b12-b2-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5a7ffd1e58af",
+      "name": "Maxi Vita Vitamin C + zinek",
+      "brand": "Maxi Vita",
+      "sku": "42300003",
+      "ean": "8595011107470",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/x/mxvc_vitamin_c_zinek_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vitamin-c-zinek/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vitamin-c-zinek",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_45f433516380",
+      "name": "Maxi Vita Vitamin C + zinek a šípek",
+      "brand": "Maxi Vita",
+      "sku": "41300067",
+      "ean": "8595011147674",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300067_maxi_vita_vitamin_c.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vitamin-c-zinek-sipek/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vitamin-c-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ed3159795802",
+      "name": "Maxi Vita Vitamin C komplex + acerola + šípek + zinek",
+      "brand": "Maxi Vita",
+      "sku": "43200308",
+      "ean": "8595011143171",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/3/43200308_vitamin_c_png.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vitamin-c-komplex-acerola-sipek-zinek/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vitamin-c-komplex-acerola-sipek-zinek",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_53e4d1e0e132",
+      "name": "Maxi Vita Vitamin D3 1000 IU",
+      "brand": "Maxi Vita",
+      "sku": "42300074",
+      "ean": "8595011134889",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mxvc_vitamin_d3_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vitamin-d3-1000-iu/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vitamin-d3-1000-iu",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8f1e794d4816",
+      "name": "Maxi Vita Vitamin D3 800 IU",
+      "brand": "Maxi Vita",
+      "sku": "42300094",
+      "ean": "8595011141436",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxivita_vitamin_d3_800_iu_90tbl_doza_eng_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vitamin-d3-800-iu/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vitamin-d3-800-iu",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_623f683aa587",
+      "name": "Maxi Vita Vápník + vitaminy D3 a K1",
+      "brand": "Maxi Vita",
+      "sku": "41300070",
+      "ean": "8595011147735",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300070_maxi_vita_calcium.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vapnik-vitamin-d3-k1/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-calcium-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8e2cd614b360",
+      "name": "Maxi Vita Vápník-hořčík-zinek",
+      "brand": "Maxi Vita",
+      "sku": "42300004",
+      "ean": "8595011107517",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_ca_mg_zn_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-vapnik-horcik-zinek/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-vapnik-horcik-zinek",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c98544c1fe93",
+      "name": "Maxi Vita Zinek 15 mg",
+      "brand": "Maxi Vita",
+      "sku": "42300095",
+      "ean": "8595011141849",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/x/mxv_classic_zinek_15mg_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-zinek-15-mg/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-zinek-15-mg",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_02cc464ecfd8",
+      "name": "Maxi Vita Železo + kyselina listová",
+      "brand": "Maxi Vita",
+      "sku": "42300015",
+      "ean": "8595011120004",
+      "category": "Srdce a oběh",
+      "category_key": "heart",
+      "form": "Želé / gummies",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/maxivita_zelezo_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-zelezo-kyselina-listova/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-zelezo-kyselina-listova",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0e9950ef1b45",
+      "name": "Maxi Vita Železo + vitamin C a kyselina listová",
+      "brand": "Maxi Vita",
+      "sku": "41300071",
+      "ean": "8595011147759",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41300071__maxi_vita_elezo.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxivita-zelezo-vitamin-c/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-zelezo-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_61d63f3e8c04",
+      "name": "Maxi Vita Essentials AlphaMale®",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300607",
+      "ean": "8595011149371",
+      "category": "Energie a výkon",
+      "category_key": "energy",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/a/l/alphamale_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-alphamale/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-alphamale",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/alphamale"
+      }
+    },
+    {
+      "id": "prd_636e6cb58634",
+      "name": "Maxi Vita Essentials Ashwagandha 30 kapslí",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300615",
+      "ean": "8595011149685",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_ashwagandha_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-ashwagandha/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-ashwagandha-30",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_08167d3e3548",
+      "name": "Maxi Vita Essentials Ashwagandha 60 kapslí",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300616",
+      "ean": "8595011149814",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/a/s/ashwagandha_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-ashwagandha-60-kapsli/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-ashwagandha-60",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_05d4334b6740",
+      "name": "Maxi Vita Essentials Elektrolyty, 20 eff.tbl.",
+      "brand": "Maxi Vita Essentials",
+      "sku": "41300601",
+      "ean": "8595011149852",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/notfound.jpg?tid=20",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-elektrolyty-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_97229850b31e",
+      "name": "Maxi Vita Essentials FemBalance®",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300603",
+      "ean": "8595011149296",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/f/e/fembalance_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-fembalance/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-fembalance",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/fembalance"
+      }
+    },
+    {
+      "id": "prd_13452933f59a",
+      "name": "Maxi Vita Essentials Goddess",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300604",
+      "ean": "8595011149319",
+      "category": "Zdraví žen",
+      "category_key": "womens_health",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/g/o/goddess_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-goddess/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-goddess",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/goddess"
+      }
+    },
+    {
+      "id": "prd_fca9ef2f3b87",
+      "name": "Maxi Vita Essentials Hormonální pohoda",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300610",
+      "ean": "8595011149586",
+      "category": "Močové cesty",
+      "category_key": "urinary",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_hormon_pohoda_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-hormonalni-pohoda/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-hormon-pohoda",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_50136e4c5171",
+      "name": "Maxi Vita Essentials Klidný spánek",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300612",
+      "ean": "8595011149623",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_klidny_spanek_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-klidny-spanek/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-klidny-spanek",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_eae45f1da286",
+      "name": "Maxi Vita Essentials Kloubní výživa",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300613",
+      "ean": "8595011149647",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_kloubni_vyziva_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-kloubni-vyziva/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-kloubni-vyziva",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e3baa486ba57",
+      "name": "Maxi Vita Essentials Krásná pleť",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300611",
+      "ean": "8595011149609",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_krasna_plet_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-krasna-plet/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-krasna-plet",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_788e97417292",
+      "name": "Maxi Vita Essentials Magnesium Bisglycinate",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300601",
+      "ean": "8595011149258",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/magnesium_bisglycinate_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-magnesium-bisglycinate/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-magnesium-bisglycinate",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/magnesium-bisglycinate"
+      }
+    },
+    {
+      "id": "prd_4f528ff7dd69",
+      "name": "Maxi Vita Essentials Magnesium Malate",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300602",
+      "ean": "8595011149272",
+      "category": "Energie a výkon",
+      "category_key": "energy",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/a/magnesium_malate_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-magnesium-malate/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-magnesium-malate",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/magnesium-malate"
+      }
+    },
+    {
+      "id": "prd_1235a6830dd5",
+      "name": "Maxi Vita Essentials Magnézium, 20 stick",
+      "brand": "Maxi Vita Essentials",
+      "sku": "43200601",
+      "ean": "8595011149876",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Stick pack",
+      "image": "https://img.nasevitaminy.cz/images/notfound.jpg?tid=20",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-magnezium-20-stick",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8e7a2ca0ef25",
+      "name": "Maxi Vita Essentials Motion+",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300606",
+      "ean": "8595011149357",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/o/motion__foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-motion/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-motion",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/motion-plus"
+      }
+    },
+    {
+      "id": "prd_be5e0b4baaac",
+      "name": "Maxi Vita Essentials Mužská vitalita",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300614",
+      "ean": "8595011149661",
+      "category": "Zdraví mužů",
+      "category_key": "mens_health",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_muzska_vitalita_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-muzska-vitalita/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-muzska-vitalita",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_258518ff2a8c",
+      "name": "Maxi Vita Essentials Ranní energie",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300609",
+      "ean": "8595011149562",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_ranni_energie_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-ranni-energie/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-ranni-energie",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2473d1c3286e",
+      "name": "Maxi Vita Essentials RegenSleep®",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300605",
+      "ean": "8595011149333",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/r/e/regensleep_foto_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-regensleep/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-regensleep",
+        "ceske-vitaminy.cz": "https://www.ceske-vitaminy.cz/produkty/regensleep"
+      }
+    },
+    {
+      "id": "prd_7a8e98c121d2",
+      "name": "Maxi Vita Essentials Večerní pohoda",
+      "brand": "Maxi Vita Essentials",
+      "sku": "42300608",
+      "ean": "8595011149548",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_maxi_vita_essentials_vecerni_pohoda_volba_spotrebitelu_web.jpg",
+      "targets": [
+        "vitar",
+        "nase"
+      ],
+      "assignment": "Oba e-shopy",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/maxi-vita-essentials-vecerni-pohoda/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/maxi-vita-essentials-vecerni-pohoda",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9988ec6aaef7",
+      "name": "OvoCé Nápoj v prášku - grep",
+      "brand": "OvoCé",
+      "sku": "43200102",
+      "ean": "8595011119916",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/v/ovoce_napoj_vitaminovy_grep.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/ovoce-napoj-v-prasku-grep/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/ovoce-napoj-v-prasku-grep",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4e554a164d90",
+      "name": "OvoCé Nápoj v prášku - jahoda a malina",
+      "brand": "OvoCé",
+      "sku": "43200103",
+      "ean": "8595011119947",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/v/ovoce_napoj_vitaminovy_jahoda-malina_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/ovoce-napoj-v-prasku-jahoda-a-malina/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/ovoce-napoj-v-prasku-jahoda-a-malina",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_88115b2a0dd1",
+      "name": "OvoCé Nápoj v prášku - pomeranč",
+      "brand": "OvoCé",
+      "sku": "43200100",
+      "ean": "8595011119886",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/v/ovoce_napoj_vitaminovy_pomeranc.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/ovoce-napoj-v-prasku-pomeranc/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/ovoce-napoj-v-prasku-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f980f325b04d",
+      "name": "Revital C vitamin 1000 mg",
+      "brand": "Revital",
+      "sku": "00000003",
+      "ean": "",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_vitamin_c_1000mg_citron_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-c-vitamin-1000-mg/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4985ce821cf0",
+      "name": "Revital C vitamin 1000 mg - citron",
+      "brand": "Revital",
+      "sku": "41200020",
+      "ean": "8595011124460",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_vitamin_c_1000mg_citron_20tbl_eff_cz_600px_2.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-c-vitamin-1000-mg-citron",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_318defb8c6ad",
+      "name": "Revital C vitamin 1000 mg - pomeranč",
+      "brand": "Revital",
+      "sku": "41200019",
+      "ean": "8595011124446",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_vitamin_c_1000mg_pomeran__20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-c-vitamin-1000-mg-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a8eddff2ec7d",
+      "name": "Revital C vitamin 500 mg",
+      "brand": "Revital",
+      "sku": "00000002",
+      "ean": "",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_vitamin_c_500mg_jahoda_20tbl_eff_cz_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-vitamin-c-500-mg/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_61df99d9bc44",
+      "name": "Revital C vitamin 500 mg - jahoda",
+      "brand": "Revital",
+      "sku": "41200018",
+      "ean": "8595011124422",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_vitamin_c_500mg_lesn__jahoda_20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-c-vitamin-500-mg-lesni-jahoda",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ec1ed3adff2b",
+      "name": "Revital C vitamin 500 mg - pomeranč",
+      "brand": "Revital",
+      "sku": "41200017",
+      "ean": "8595011124408",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_vitamin_c_500mg_pomeran__20tbl_eff_cz_600px_2.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-c-vitamin-500-mg-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9b1f874afc77",
+      "name": "Revital Ferrodyn",
+      "brand": "Revital",
+      "sku": "41200008",
+      "ean": "8595011104813",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_ferrodyn_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-ferrodyn/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-ferrodyn",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8714a3e63d2a",
+      "name": "Revital Hořčík + vitamin B6",
+      "brand": "Revital",
+      "sku": "00000006",
+      "ean": "",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_ho_k_b6_brusinka_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-horcik-vitamin-b6/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b60bdcf78db5",
+      "name": "Revital Hořčík + vitamin B6 - grep",
+      "brand": "Revital",
+      "sku": "41200005",
+      "ean": "8595011113280",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_ho_k_b6_grep_20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-horcik-vitamin-b6-grep",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8825192338a4",
+      "name": "Revital Hořčík + vitamin B6 - černý rybíz",
+      "brand": "Revital",
+      "sku": "41200027",
+      "ean": "8595011126242",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_ho_k_b6__ern__ryb_z_20tbl_eff_cz_600px_2.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-horcik-vitamin-b6-cerny-rybiz",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_67ceea185e8a",
+      "name": "Revital Multi",
+      "brand": "Revital",
+      "sku": "00000004",
+      "ean": "",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_multi_malina_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-multi/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_96c124ca975d",
+      "name": "Revital Multi - malina",
+      "brand": "Revital",
+      "sku": "41200022",
+      "ean": "8595011124507",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_multi_malina_20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-multi-malina",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c9ed3f4da4f4",
+      "name": "Revital Multi - pomeranč",
+      "brand": "Revital",
+      "sku": "41200021",
+      "ean": "8595011124484",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_multi_pomeran__20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-multi-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7bfd48972ace",
+      "name": "Revital Multi forte",
+      "brand": "Revital",
+      "sku": "00000005",
+      "ean": "",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_multi_forte_tropick__ovoce_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-multi-forte/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e349934f15c7",
+      "name": "Revital Multi forte - pomeranč",
+      "brand": "Revital",
+      "sku": "41200023",
+      "ean": "8595011124521",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_multi_forte_pomeran__20tbl_eff_cz_600px_1.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-multi-forte-pomeranc",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f62acc7f0c2d",
+      "name": "Revital Multi forte - tropické ovoce",
+      "brand": "Revital",
+      "sku": "41200024",
+      "ean": "8595011124545",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/3d_revital_multi_forte_tropick__ovoce_20tbl_eff_cz_600px_2.png?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-multi-forte-tropicke-ovoce",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_213767893c24",
+      "name": "Revital Tripple pack 3 x 20 tablet",
+      "brand": "Revital",
+      "sku": "41200112",
+      "ean": "8595011146486",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Tablety",
+      "image": "https://img.nasevitaminy.cz/images/41200112_Revital_eff_3DK_WEB.jpg?tid=20",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-tripple-pack-3-x-20-eff-3-prichute",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e6f788090af0",
+      "name": "Revital Vápník + hořčík + vitaminy C, B6, D3, K1",
+      "brand": "Revital",
+      "sku": "41200003",
+      "ean": "8595011100129",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revital_ca_mg_vitaminy_20tbl_eff_cz_600px.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-vapnik-horcik-vitaminy-c-b6-d3-k1/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-vapnik-horcik-vitaminy-c-b6-d3-k1",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0be809a8d49d",
+      "name": "Revital Botanicals Energie a vitalita",
+      "brand": "Revital Botanicals",
+      "sku": "41201101",
+      "ean": "8595011146547",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/1/t/1tbs235c.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-energie-a-vitalita/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-energia-a-vitalita-20eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7f53f1fe13dc",
+      "name": "Revital Botanicals Hořčík + B6",
+      "brand": "Revital Botanicals",
+      "sku": "41201107",
+      "ean": "8595011146981",
+      "category": "Hořčík",
+      "category_key": "magnesium",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41201107_revital_botanicals_magnezium_b6_20_efff_tbl_3dk_cz_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-horcik-b6/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-magnesium-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ebddb5a1b57d",
+      "name": "Revital Botanicals Multivitamin + Minerály",
+      "brand": "Revital Botanicals",
+      "sku": "41201104",
+      "ean": "8595011146929",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41201104_revital_botanicals_multivitamin_forte_20_eff_tbl_3dk_cz_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-multivitamin-mineraly/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-multivitamin-mineraly",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5356b061910a",
+      "name": "Revital Botanicals Multivitamin rakytník + červený pomeranč",
+      "brand": "Revital Botanicals",
+      "sku": "41201103",
+      "ean": "8595011146585",
+      "category": "Imunita",
+      "category_key": "immunity",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41201103_revital_botanicals_multivitamin_20_eff_tbl_3dk_cz_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-multivitamin-rakytnik-cerveny-pomeranc/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-multivitamin-20-eff-tbl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b58792f600d4",
+      "name": "Revital Botanicals Spánek a uklidnění",
+      "brand": "Revital Botanicals",
+      "sku": "41201102",
+      "ean": "8595011146561",
+      "category": "Spánek a stres",
+      "category_key": "sleep_stress",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41201102_revital_botanicals_spanek_a_uklidneni_20_eff_tbl_3dk_cz_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-spanek-a-uklidneni/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-spanok-a-upokojenie20eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6b2198dd1e7f",
+      "name": "Revital Botanicals Vitamin C 1000 mg",
+      "brand": "Revital Botanicals",
+      "sku": "41201106",
+      "ean": "8595011146967",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/f/0/f015wsgs.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-vitamin-c-1000-mg/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-vit-c-1000-mg-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0017deac67ed",
+      "name": "Revital Botanicals Vitamin C 500 mg",
+      "brand": "Revital Botanicals",
+      "sku": "41201105",
+      "ean": "8595011146943",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/a/cauwmtzx.png",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revital-botanicals-vitamin-c-500-mg/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revital-botanicals-vitamin-c-500-mg-20-eff",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b3ed38ff36f0",
+      "name": "Revitalon Forte (30 kapslí)",
+      "brand": "Revitalon",
+      "sku": "42200080",
+      "ean": "8595011128598",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revitalon_forte_30_kapsli_lr_1000px_web_2.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revitalon-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revitalon-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7275fadf355d",
+      "name": "Revitalon Forte - výhodné balení (90 + 30 kapslí ZDARMA)",
+      "brand": "Revitalon",
+      "sku": "42200082",
+      "ean": "8595011128628",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kapsle",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revitalon_forte_9030_kapsli_web_fast_ca9682_ii.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revitalon-forte-vyhodne-baleni-90-30-kapsli-zdarma/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revitalon-forte-vyhodne-baleni-90-30-kapsli-zdarma",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2adb8ead0cf0",
+      "name": "Revitalon Kofeinový šampon",
+      "brand": "Revitalon",
+      "sku": "49000001",
+      "ean": "8595011136623",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kosmetika",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revitalon_kofeinovy_sampon_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revitalon-kofeinovy-sampon/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revitalon-kofeinovy-sampon",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_358af5111604",
+      "name": "Revitalon Mořský kolagen drink 4000 mg",
+      "brand": "Revitalon",
+      "sku": "43200501",
+      "ean": "8595011145007",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revitalon_k_kolagen_drink_lr_1000px_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revitalon-morsky-kolagen-drink-4-000-mg/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revitalon-morsky-kolagen-drink-4-000-mg",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9e1564e89ebe",
+      "name": "Revitalon Vlasové sérum",
+      "brand": "Revitalon",
+      "sku": "49000003",
+      "ean": "8595011141733",
+      "category": "Krása, vlasy a pleť",
+      "category_key": "beauty",
+      "form": "Kosmetika",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_revitalon_vlasov__s_rum_50_ml_lr_1000px_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/revitalon-vlasove-serum/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/revitalon-vlasove-serum",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_dbfd5ec43c50",
+      "name": "Vyprošťovák Active",
+      "brand": "Vyprošťovák",
+      "sku": "41200033",
+      "ean": "8595011133660",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41200033_vyprostovak_active_20tbl_web_1.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vyprostovak-active/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vyprostovak-active",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6ee273c173e2",
+      "name": "Vyprošťovák Forte",
+      "brand": "Vyprošťovák",
+      "sku": "43200015",
+      "ean": "8595011133509",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/y/vyprostovak_forte_sacek.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vyprostovak-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vyprostovak-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_66cbb0864985",
+      "name": "Vyprošťovák Restart",
+      "brand": "Vyprošťovák",
+      "sku": "41200010",
+      "ean": "8595011105421",
+      "category": "Trávení a probiotika",
+      "category_key": "digestion",
+      "form": "Šumivé tablety",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/4/1/41200010_vyprostovak_restart_20tbl_web.jpg",
+      "targets": [
+        "nase"
+      ],
+      "assignment": "Jen NašeVitamíny.cz",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vyprostovak-restart-1402/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vyprostovak-restart",
+        "ceske-vitaminy.cz": ""
+      }
+    }
+  ]
+}

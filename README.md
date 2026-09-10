@@ -54,8 +54,9 @@ Main deliverables:
 - `outputs/reports/content-migration-inventory.md` - critical build-readiness and URL/content migration recommendation.
 - `outputs/reports/vitar-group-content-plan.md` - sitemap and migration plan for the standalone VITAR Group website.
 - `outputs/html/vitar-category-planner.html` - interactive local category planner.
-- `outputs/data/final-shop-split.json` / `.csv` - approved current-product routing by shop.
-- `outputs/reports/final-shop-split.md` - approved routing in Markdown.
+- `outputs/data/final-shop-split.json` / `.csv` - approved current-product routing across all shops.
+- `outputs/data/final-shop-split-{vitar,nase,outside}.json` / `.csv` - separate public-safe current-product exports per destination.
+- `outputs/reports/final-shop-split.md` and `final-shop-split-{vitar,nase,outside}.md` - combined and per-destination Markdown exports.
 - `outputs/html/product-qa-dashboard.html` - interactive product QA dashboard.
 - `outputs/html/strategic-readiness-dashboard.html` - strategic readiness, governance and backlog dashboard.
 - `outputs/html/vitar-group-content-planner.html` - interactive VITAR Group content planner.

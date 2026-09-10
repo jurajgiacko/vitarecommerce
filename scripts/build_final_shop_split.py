@@ -25,6 +25,7 @@ VITAR_ONLY_BRANDS = {
 }
 OFFLINE_BRANDS = {"Capri-Sun", "Predator"}
 WIP_SUMMARY = {"total": 36, "VITAR UNITY": 19, "VITAR NEO": 17}
+SHOP_LABELS = {"vitar": "VITAR.cz", "nase": "NašeVitamíny.cz", "outside": "Mimo e-shopy"}
 
 
 def targets_for(brand: str) -> list[str]:
@@ -135,14 +136,35 @@ def write_json(payload: dict) -> None:
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    for target, label in SHOP_LABELS.items():
+        products = [product for product in payload["products"] if target in product["targets"]]
+        shop_payload = {
+            "generated_at": payload["generated_at"],
+            "catalog_generated_at": payload["catalog_generated_at"],
+            "decision_date": payload["decision_date"],
+            "decision_source": payload["decision_source"],
+            "shop": target,
+            "shop_label": label,
+            "current_product_count": len(products),
+            "wip": {
+                "total": payload["wip"]["total"] if target == "vitar" else 0,
+                "details_included": False,
+                "note": "Citlivé WIP detaily jsou dostupné pouze v interním Workbenchi.",
+            },
+            "products": products,
+        }
+        (DATA_DIR / f"final-shop-split-{target}.json").write_text(
+            json.dumps(shop_payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
 
-def write_csv(payload: dict) -> None:
+def csv_content(products: list[dict]) -> str:
     buffer = io.StringIO()
     columns = ["product_id", "name", "brand", "sku", "ean", "category", "form", "assignment", "targets", "vitar_url", "nasevitaminy_url", "ceskevitaminy_url"]
     writer = csv.DictWriter(buffer, fieldnames=columns)
     writer.writeheader()
-    for product in payload["products"]:
+    for product in products:
         writer.writerow({
             "product_id": product["id"],
             "name": product["name"],
@@ -157,7 +179,14 @@ def write_csv(payload: dict) -> None:
             "nasevitaminy_url": product["source_urls"]["nasevitaminy.cz"],
             "ceskevitaminy_url": product["source_urls"]["ceske-vitaminy.cz"],
         })
-    (DATA_DIR / "final-shop-split.csv").write_text("\ufeff" + buffer.getvalue(), encoding="utf-8")
+    return "\ufeff" + buffer.getvalue()
+
+
+def write_csv(payload: dict) -> None:
+    (DATA_DIR / "final-shop-split.csv").write_text(csv_content(payload["products"]), encoding="utf-8")
+    for target in SHOP_LABELS:
+        products = [product for product in payload["products"] if target in product["targets"]]
+        (DATA_DIR / f"final-shop-split-{target}.csv").write_text(csv_content(products), encoding="utf-8")
 
 
 def write_markdown(payload: dict) -> None:
@@ -184,6 +213,23 @@ def write_markdown(payload: dict) -> None:
             values = [product["name"], product["brand"], product["category"], product["sku"], product["ean"], product["assignment"]]
             lines.append("| " + " | ".join(str(value).replace("|", "\\|").replace("\n", " ") for value in values) + " |")
     (REPORTS_DIR / "final-shop-split.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    for target, title in SHOP_LABELS.items():
+        products = [product for product in payload["products"] if target in product["targets"]]
+        shop_lines = [
+            f"# Finální portfolio pro {title}",
+            "",
+            f"- Rozhodnutí: {payload['decision_date']}",
+            f"- Současných produktů: {len(products)}",
+            f"- WIP produktů v interním Workbenchi: {payload['wip']['total'] if target == 'vitar' else 0}",
+            "- WIP detaily nejsou součástí veřejného exportu.",
+            "",
+            "| Produkt | Značka | Kategorie | SKU | EAN | Zařazení |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+        for product in products:
+            values = [product["name"], product["brand"], product["category"], product["sku"], product["ean"], product["assignment"]]
+            shop_lines.append("| " + " | ".join(str(value).replace("|", "\\|").replace("\n", " ") for value in values) + " |")
+        (REPORTS_DIR / f"final-shop-split-{target}.md").write_text("\n".join(shop_lines) + "\n", encoding="utf-8")
 
 
 def pixel_mark() -> str:
@@ -209,7 +255,7 @@ def write_html(payload: dict) -> None:
 </style>
 </head>
 <body>
-<header class="top"><span class="mark">{pixel_mark()}</span><span class="brand"><strong>VITAR</strong><small>Finální rozdělení portfolia</small></span><nav><a href="../index.html">Rozcestník</a><a href="../data/final-shop-split.json" download>JSON</a><a href="../reports/final-shop-split.md" download>MD</a><a href="../data/final-shop-split.csv" download>CSV</a></nav></header>
+<header class="top"><span class="mark">{pixel_mark()}</span><span class="brand"><strong>VITAR</strong><small>Finální rozdělení portfolia</small></span><nav><a href="../index.html">Rozcestník</a><a id="exportJson" href="../data/final-shop-split-vitar.json" download>JSON</a><a id="exportMd" href="../reports/final-shop-split-vitar.md" download>MD</a><a id="exportCsv" href="../data/final-shop-split-vitar.csv" download>CSV</a></nav></header>
 <div class="shell"><aside><h2>Kategorie</h2><div class="category-list" id="categoryList"></div></aside><main>
 <header class="heading"><div><p class="eyebrow">SCHVÁLENÉ ROZDĚLENÍ</p><h1>Portfolio pro jednotlivé e-shopy</h1><p>Současný sortiment ze tří zdrojových webů, sjednocený na 324 master produktů.</p></div></header>
 <section class="decision"><div><strong>Rozhodnutí vedení</strong><p>VITAR.cz staví na značce VITAR, nových řadách NEO a UNITY a Maxi Vita Essentials. Ostatní portfolio patří na NašeVitamíny.cz. Essentials je jediný překryv.</p></div><time>3. 9. 2026</time></section>
@@ -234,6 +280,7 @@ function sourceLinks(product){{return Object.entries(product.source_urls).filter
 function card(product){{const cls=product.assignment==='Oba e-shopy'?'both':product.targets.includes('outside')?'out':'';return `<article class="card"><span class="image">${{product.image?`<img src="${{esc(product.image)}}" alt="">`:'Bez foto'}}</span><span class="copy"><small>${{esc(product.brand)}}</small><strong>${{esc(product.name)}}</strong><span>${{esc(product.form)}}${{product.sku?` · SKU ${{esc(product.sku)}}`:''}}</span><span class="pills"><b class="pill ${{cls}}">${{esc(product.assignment)}}</b><span class="sources">${{sourceLinks(product)}}</span></span></span></article>`;}}
 function render(){{
  const shopRows=rows(),shown=visible(),cats=categories(),brandCounts=new Map();shopRows.forEach(product=>brandCounts.set(product.brand,(brandCounts.get(product.brand)||0)+1));
+ document.getElementById('exportJson').href=`../data/final-shop-split-${{shop}}.json`;document.getElementById('exportMd').href=`../reports/final-shop-split-${{shop}}.md`;document.getElementById('exportCsv').href=`../data/final-shop-split-${{shop}}.csv`;
  document.getElementById('segments').innerHTML=TABS.map(([key,label])=>`<button class="${{shop===key?'active':''}}" onclick="setShop('${{key}}')"><span>${{label}}</span><b>${{DATA.counts[key==='vitar'?'vitar_current':key==='nase'?'nase_current':'outside_current']}}</b></button>`).join('');
  document.getElementById('metrics').innerHTML=`<span class="metric"><small>Produkty</small><strong>${{shopRows.length}}</strong></span><span class="metric"><small>Značky</small><strong>${{brandCounts.size}}</strong></span><span class="metric"><small>Kategorie</small><strong>${{new Set(shopRows.map(product=>product.category)).size}}</strong></span><span class="metric"><small>WIP v interním PIM</small><strong>${{shop==='vitar'?DATA.wip.total:0}}</strong></span>`;
  document.getElementById('wip').classList.toggle('visible',shop==='vitar');

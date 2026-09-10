@@ -61,6 +61,10 @@ export async function GET(request: Request) {
   const requestedFormat = url.searchParams.get("format");
   const format = requestedFormat === "csv" || requestedFormat === "md" ? requestedFormat : "json";
   const scope = url.searchParams.get("scope") === "all" ? "all" : "final";
+  const requestedShop = url.searchParams.get("shop");
+  const shop = requestedShop === "vitar" || requestedShop === "nase" || requestedShop === "outside"
+    ? requestedShop
+    : null;
   const [products, sources, profiles, reviews, reviewChannels, comments, decisions, decisionChannels] =
     await Promise.all([
       db
@@ -110,7 +114,7 @@ export async function GET(request: Request) {
   const finalMap = new Map(decisions.map((decision) => [decision.productId, decision]));
   const familyByProduct = buildProductFamilyMap(products);
 
-  const rows = products.map((product) => {
+  const allRows = products.map((product) => {
     const final = finalMap.get(product.id);
     const productReviews = reviewsByProduct.get(product.id) || [];
     const productSources = sourceMap.get(product.id) || [];
@@ -175,11 +179,30 @@ export async function GET(request: Request) {
           : undefined,
     };
   });
+  const rows = shop
+    ? allRows.filter((row) => {
+        const finalChannels = row.final_channels
+          .filter((channel) => channel.split(":")[1] === "include")
+          .map((channel) => channel.split(":")[0]);
+        const channels = finalChannels.length ? finalChannels : row.placeholder_channels;
+        if (shop === "vitar") return channels.includes("vitar.cz");
+        if (shop === "nase") return channels.includes("nasevitaminy.cz");
+        return channels.some((channel) => ["offline_retail", "vitar_veterina", "oem_b2b"].includes(channel));
+      })
+    : allRows;
+  const exportKey = shop ? `${scope}-${shop}` : scope;
+  const shopLabel = shop === "vitar"
+    ? "VITAR.cz"
+    : shop === "nase"
+      ? "NašeVitamíny.cz"
+      : shop === "outside"
+        ? "Mimo e-shopy"
+        : "Všechny kanály";
 
   if (format === "json") {
     return NextResponse.json(
-      { generated_at: new Date().toISOString(), round_id: ROUND_ID, scope, products: rows },
-      { headers: { "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.json"` } },
+      { generated_at: new Date().toISOString(), round_id: ROUND_ID, scope, shop: shop || "all", shop_label: shopLabel, products: rows },
+      { headers: { "Content-Disposition": `attachment; filename="vitar-assortment-${exportKey}.json"` } },
     );
   }
   const finalColumns = [
@@ -214,7 +237,8 @@ export async function GET(request: Request) {
   if (format === "md") {
     const generatedAt = new Date().toISOString();
     const approvedCount = rows.filter((row) => row.final_status !== "unresolved").length;
-    const title = scope === "all" ? "VITAR sortiment - všechny názory" : "VITAR sortiment - finální rozhodnutí";
+    const baseTitle = scope === "all" ? "VITAR sortiment - všechny názory" : "VITAR sortiment - finální rozhodnutí";
+    const title = `${baseTitle} - ${shopLabel}`;
     const lines = [
       `# ${title}`,
       "",
@@ -301,7 +325,7 @@ export async function GET(request: Request) {
     return new NextResponse(`${lines.join("\n")}\n`, {
       headers: {
         "Content-Type": "text/markdown; charset=utf-8",
-        "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.md"`,
+        "Content-Disposition": `attachment; filename="vitar-assortment-${exportKey}.md"`,
       },
     });
   }
@@ -339,7 +363,7 @@ export async function GET(request: Request) {
     return new NextResponse(`\uFEFF${csv}`, {
       headers: {
         "Content-Type": "text/csv; charset=utf-8",
-        "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.csv"`,
+        "Content-Disposition": `attachment; filename="vitar-assortment-${exportKey}.csv"`,
       },
     });
   }
@@ -351,7 +375,7 @@ export async function GET(request: Request) {
   return new NextResponse(`\uFEFF${csv}`, {
     headers: {
       "Content-Type": "text/csv; charset=utf-8",
-      "Content-Disposition": `attachment; filename="vitar-assortment-${scope}.csv"`,
+      "Content-Disposition": `attachment; filename="vitar-assortment-${exportKey}.csv"`,
     },
   });
 }

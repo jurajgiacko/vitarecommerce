@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useMemo, useState } from "react";
-import { ChevronRight, ExternalLink, PackageOpen, Search, Store } from "lucide-react";
+import { ChevronRight, Download, ExternalLink, FileJson, FileSpreadsheet, FileText, PackageOpen, Search, Store } from "lucide-react";
 
 import { assignmentLabel, assignmentReason, shopTargets, type ShopPlanKey } from "@/lib/shop-policy";
 import type { WorkbenchProduct } from "@/lib/workbench-types";
@@ -70,14 +70,22 @@ export function ShopPlanner({ products, onOpenProduct }: { products: WorkbenchPr
   return (
     <section className="shop-plan-page">
       <header className="shop-plan-heading">
-        <div>
+        <div className="shop-plan-heading-copy">
           <p className="eyebrow">SCHVÁLENÉ ROZDĚLENÍ · 3. 9. 2026</p>
           <h1>Portfolio pro jednotlivé e-shopy</h1>
           <p>Finální kanál vychází z rozhodnutí vedení. Kategorie navazují na týmový návrh a zdrojová data.</p>
         </div>
-        <a className="secondary-button" href="https://jurajgiacko.github.io/vitarecommerce/html/vitar-category-planner.html" target="_blank" rel="noreferrer">
-          <ExternalLink size={15} /> Otevřít GitHub Pages
-        </a>
+        <div className="shop-plan-heading-actions">
+          <div className="shop-export-links" aria-label={`Export ${activeTab.label}`}>
+            <span><Download size={15} /> Export {activeTab.label}</span>
+            <a href={`/api/export?format=json&scope=final&shop=${shop}`} title={`Stáhnout ${activeTab.label} jako JSON`}><FileJson size={15} /> JSON</a>
+            <a href={`/api/export?format=md&scope=final&shop=${shop}`} title={`Stáhnout ${activeTab.label} jako Markdown`}><FileText size={15} /> MD</a>
+            <a href={`/api/export?format=csv&scope=final&shop=${shop}`} title={`Stáhnout ${activeTab.label} jako CSV`}><FileSpreadsheet size={15} /> CSV</a>
+          </div>
+          <a className="secondary-button" href="https://jurajgiacko.github.io/vitarecommerce/html/vitar-category-planner.html" target="_blank" rel="noreferrer">
+            <ExternalLink size={15} /> GitHub Pages
+          </a>
+        </div>
       </header>
 
       <div className="shop-segments" role="tablist" aria-label="Cílové portfolio">

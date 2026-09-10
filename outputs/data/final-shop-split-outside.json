@@ -1,0 +1,1616 @@
+{
+  "generated_at": "2026-09-10T06:19:32.626323+00:00",
+  "catalog_generated_at": "2026-09-01T15:16:37.626415+00:00",
+  "decision_date": "2026-09-03",
+  "decision_source": "Tomáš Červinka, CEO; potvrzeno na týmovém setkání 3. 9. 2026",
+  "shop": "outside",
+  "shop_label": "Mimo e-shopy",
+  "current_product_count": 80,
+  "wip": {
+    "total": 0,
+    "details_included": false,
+    "note": "Citlivé WIP detaily jsou dostupné pouze v interním Workbenchi."
+  },
+  "products": [
+    {
+      "id": "prd_077f431ae3bd",
+      "name": "Capri-Sun Dětský batoh pejsek",
+      "brand": "Capri-Sun",
+      "sku": "39005056",
+      "ean": "3900505600000",
+      "category": "Merch a příslušenství",
+      "category_key": "merch",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/Capri-Sun batoh.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-detsky-batoh",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5365d58389bd",
+      "name": "Capri-Sun Fairy Drink 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000003",
+      "ean": "4000177033487",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_fairydrink_unicornfemale_3d_ot_packshot.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-fairy-drink-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-fairy-drink-0-2-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_337ac70fc800",
+      "name": "Capri-Sun láhev",
+      "brand": "Capri-Sun",
+      "sku": "39005057",
+      "ean": "3900505700000",
+      "category": "Merch a příslušenství",
+      "category_key": "merch",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/Capri-Sun láhev.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-lahev",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_35a10b4bd4bc",
+      "name": "Capri-Sun Mango + maracuja 0,33 l",
+      "brand": "Capri-Sun",
+      "sku": "50600047",
+      "ean": "4000177172650",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_330ml_mangomaracuja_3d_phoenix_packshot_tetheredcap_miticon_clean.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-mango-maracuja-0-33-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-mango-maracuja-0-33-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e4609a570834",
+      "name": "Capri-Sun Monster Alarm 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000142",
+      "ean": "4000177019276",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_monster_blue_relaunch_3d_packshot.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-monster-alarm-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-fun-alarm-0-2-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6e967cabb248",
+      "name": "Capri-Sun Multivitamin 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000102",
+      "ean": "4000177407509",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_multivitamin_relaunch_3d_packshot.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-multivitamin-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-multivitamin-0-2-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2bd3051b759d",
+      "name": "Capri-Sun Multivitamin 0,33 l",
+      "brand": "Capri-Sun",
+      "sku": "50600043",
+      "ean": "4000177162316",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_330ml_multivitamin_3d_phoenix_packshot_tetheredcap_miticon_clean.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-multivitamin-0-33-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-multivitamin-0-33-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9e55c4a1d27f",
+      "name": "Capri-Sun Multivitamin Zero 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000015",
+      "ean": "4000177030035",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/a/capri-sun_multivitamin_zero.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-multivitamin-zero-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-multivitamin-zero",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9758d3a221c7",
+      "name": "Capri-Sun Mystic Dragon 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000122",
+      "ean": "4000177408100",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_mystic_purple_relaunch_3d_packshot_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-mystic-dragon-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-mystic-dragon",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_104bef80646e",
+      "name": "Capri-Sun osuška",
+      "brand": "Capri-Sun",
+      "sku": "39000011",
+      "ean": "3900001100000",
+      "category": "Merch a příslušenství",
+      "category_key": "merch",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/Capri-Sun osuška.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-osuska",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1db711655d71",
+      "name": "Capri-Sun Pomeranč + broskev 0,33 l",
+      "brand": "Capri-Sun",
+      "sku": "50183747",
+      "ean": "",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_330ml_orangepeach_3d_phoenix_packshot_tetheredcap_recyclable.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-pomeranc-broskev-0-33-l/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e9b8a2b0854f",
+      "name": "Capri-Sun Pomeranč 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000112",
+      "ean": "4000177407400",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_orange_relaunch_3d_packshot_2.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-pomeranc-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-pomeranc-0-2-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8d030e405324",
+      "name": "Capri-Sun Safari Fruits 0,2 l",
+      "brand": "Capri-Sun",
+      "sku": "40000132",
+      "ean": "4000177407608",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_safari_lion_relaunch_3d_packshot.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-safari-fruits-0-2-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-safari-fruits-0-2-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_fd35fc0b74f0",
+      "name": "Capri-Sun taška",
+      "brand": "Capri-Sun",
+      "sku": "39005029",
+      "ean": "3900502900000",
+      "category": "Merch a příslušenství",
+      "category_key": "merch",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/Capri-Sun taška.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-taska",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ca9061e8b1d5",
+      "name": "Capri-Sun Višeň + granátové jablko 0,33 l",
+      "brand": "Capri-Sun",
+      "sku": "50600044",
+      "ean": "4000177172629",
+      "category": "Pitný režim a nápoje",
+      "category_key": "hydration",
+      "form": "Nápoj",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/p/tp_330ml_kirschegranatapfel_3d_phoenix_packshot_tetheredcap_miticon_clean.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/capri-sun-visen-and-granatove-jablko-0-33-l/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/capri-sun-visen-granatove-jablko-0-33-l",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e99da9f0ed05",
+      "name": "Predator 16% - 150 ml",
+      "brand": "Predator",
+      "sku": "50100102",
+      "ean": "8595117102447",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/3D_Repelent_PREDATOR_16_150ml_retail_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-16-150-ml-ret",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_099f02e06efc",
+      "name": "Predator 16% - 300 ml XXL",
+      "brand": "Predator",
+      "sku": "50100103",
+      "ean": "8595117101716",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/3D_Repelent_PREDATOR_16_300ml_XXL_retail_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-16-300-ml-xxl",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_91383912cf5e",
+      "name": "Predator Gel po bodnutí hmyzem",
+      "brand": "Predator",
+      "sku": "50100206",
+      "ean": "0000085951181",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Kosmetika",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/p/r/predator_gel_po_bodnuti_hmyzem.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-gel-po-bodnuti-hmyzem/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-gel-po-bodnuti-hmyzem",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_05818f6a1c2d",
+      "name": "Predator IXO protector",
+      "brand": "Predator",
+      "sku": "50100502",
+      "ean": "8595117103000",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Sprej",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/tinktura.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-ixo-protector/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-ixo-protector",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3176ed4b27cd",
+      "name": "Predator Outdoor Impregnace Alfa sprej 400 ml",
+      "brand": "Predator",
+      "sku": "50100118",
+      "ean": "8595117103369",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Sprej",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/p/r/prvni_volba_lekarnika_predator_2_5_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-outdoor-impregnace-alfa-sprej-400-ml/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-outdoor-impregnace-alfa-sprej-400-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_96129a105b1c",
+      "name": "Predator Parazit hřeben na vši",
+      "brand": "Predator",
+      "sku": "50100302",
+      "ean": "8595011120776",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/h/r/hreben-na-vsi.jpeg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-parazit-hreben-na-vsi/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-parazit-hreben-na-vsi",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7029ed9745c1",
+      "name": "Predator Parazit retail šampon + sérum + hřeben",
+      "brand": "Predator",
+      "sku": "50100303",
+      "ean": "8595117102935",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Kosmetika",
+      "image": "https://img.nasevitaminy.cz/images/113_serumsampon-2.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-parazit-retail-sampon-serum-hreben",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_990f1af63d5d",
+      "name": "Predator Parazit sprej na vši",
+      "brand": "Predator",
+      "sku": "50100119",
+      "ean": "8595117103840",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Sprej",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_predator_vapo_parazit_100ml_lr_1000px_web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-parazit-sprej-na-vsi/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-parazit-sprej-na-vsi",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f7d57ddf86fc",
+      "name": "Predator Parazit Sérum",
+      "brand": "Predator",
+      "sku": "50100305",
+      "ean": "8595117103062",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Kosmetika",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_predator_parazit_s_rum_lr_1000px_web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-parazit-serum/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-parazit-serum",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_9993cac4490b",
+      "name": "Predator Parazit Sérum + šampon + hřeben",
+      "brand": "Predator",
+      "sku": "50100301",
+      "ean": "8595117102898",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Kosmetika",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_predator_parazit__ampon_s_rum_h_eben_lr_1000px_web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-parazit-serum-sampon-hreben/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-parazit-serum-sampon-hreben",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_19da7024ba5d",
+      "name": "Predator Repelent",
+      "brand": "Predator",
+      "sku": "50100201",
+      "ean": "8595117100733",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_16__150ml_pharma_lr_web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e83cfd057e9c",
+      "name": "Predator Repelent 3D - prostorový repelent",
+      "brand": "Predator",
+      "sku": "50100109",
+      "ean": "8595117102041",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/5/0/50100109.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-3d-prostorovy-repelent/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-3d-prostorovy-repelent",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_89f168b68b45",
+      "name": "Predator Repelent Bio",
+      "brand": "Predator",
+      "sku": "50100209",
+      "ean": "8595117103314",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_bio_150ml_hr-cz-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-bio/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-bio",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d4066c631e18",
+      "name": "Predator Repelent Forte 150 ml",
+      "brand": "Predator",
+      "sku": "50100202",
+      "ean": "8595117101709",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_forte_150ml_pharma_hr-nova-flaska-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-forte/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-forte",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f5a071b72cf3",
+      "name": "Predator Repelent Forte 90 ml",
+      "brand": "Predator",
+      "sku": "50100207",
+      "ean": "8595117103246",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_forte_90ml_pharma_hr-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-forte-90-ml/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-forte-90-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5440766db093",
+      "name": "Predator Repelent Forte XXL 300 ml",
+      "brand": "Predator",
+      "sku": "50100210",
+      "ean": "8595117103758",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_forte_300ml_xxl_pharma_hr-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-forte-xxl-300-ml/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-forte-xxl-300-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6c176ba9263d",
+      "name": "Predator Repelent Junior",
+      "brand": "Predator",
+      "sku": "50100203",
+      "ean": "8595117101983",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_junior_150ml_hr-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-junior-1446/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-junior",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_12a015465005",
+      "name": "Predator Repelent Maxx plus",
+      "brand": "Predator",
+      "sku": "50100107",
+      "ean": "8595117102843",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_maxx_plus_80ml_hr-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-maxx-plus/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-maxx-plus",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1fb23e207ae5",
+      "name": "Predator Repelent Maxx sprej 90 ml",
+      "brand": "Predator",
+      "sku": "50100117",
+      "ean": "8595117102829",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Sprej",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_repelent_predator_maxx_90ml_hr-web.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-maxx-90-ml/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-maxx-90-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_ee88e952c5bd",
+      "name": "Predator Repelent Outdoor impregnace+",
+      "brand": "Predator",
+      "sku": "50100108",
+      "ean": "8595117102058",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_predator_impregnace_outdoor__web.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-outdoor-impregnace/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-outdoor-impregnace",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d0996002a271",
+      "name": "Predator Repelent Protector 90 ml",
+      "brand": "Predator",
+      "sku": "50100101",
+      "ean": "8595117103949",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/p/r/protector-repelent-2026.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/predator-repelent-protector-90-ml/",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-repelent-protector-90-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_dac82ab67337",
+      "name": "Predator sprej 16% - 90 ml",
+      "brand": "Predator",
+      "sku": "50100112",
+      "ean": "8595117103123",
+      "category": "Repelenty a ochrana",
+      "category_key": "repellents",
+      "form": "Sprej",
+      "image": "https://img.nasevitaminy.cz/images/3D_Repelent_PREDATOR_16_90ml_retail_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Mimo e-shopy / retail",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/predator-sprej-16-90-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8181364fc404",
+      "name": "Vitar Veterinae ArtiVit Forte prášek",
+      "brand": "Vitar Veterinae",
+      "sku": "45000003, 45000004, 45000005",
+      "ean": "",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_artivit-forte_400g_etiketa_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-artivit-forte-prasek/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f7550e74432e",
+      "name": "Vitar Veterinae Artivit Forte sypká směs / 70 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301003",
+      "ean": "8595011125467",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000003_Vitar_Veterinae_Artivit_Forte_sypka_smes_70g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-forte-sypka-smes-70-g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8169d983c817",
+      "name": "Vitar Veterinae Artivit Forte sypká směs /400g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301004",
+      "ean": "8595011125481",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000004_VITAR_Veterinae_Artivit_Forte_sypka_smes_400g_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-forte-sypka-smes-400g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_50b9c4009ea1",
+      "name": "Vitar Veterinae Artivit Forte sypká směs/600g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301005",
+      "ean": "8595011125504",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000005_VITAR_Veterinae_Artivit_Forte_sypka_smes_600g_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-forte-sypka-smes-600g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c6e2631ec5a8",
+      "name": "VITAR Veterinae ArtiVit Pegas Forte 7",
+      "brand": "Vitar Veterinae",
+      "sku": "50301016",
+      "ean": "8595011134643",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000016_VITAR_Artivit_Pegas_Forte7_700g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-pegas-forte-7-700g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a6d0ebd07b10",
+      "name": "Vitar Veterinae ArtiVit Pegas Forte 7",
+      "brand": "Vitar Veterinae",
+      "sku": "45000016",
+      "ean": "8595011134643",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_artivit_pegas_forte_7_310x140mm_700g.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-artivit-pegas-forte-7/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7060b44bda64",
+      "name": "Vitar Veterinae ArtiVit Pegas MSM",
+      "brand": "Vitar Veterinae",
+      "sku": "50301015",
+      "ean": "8595011132366",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/45000015_VITAR_Veterinae_Artivit_Pegas_MSM_720g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-pegas-msm-smes-720g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b220d3175e57",
+      "name": "Vitar Veterinae ArtiVit Pegas MSM",
+      "brand": "Vitar Veterinae",
+      "sku": "45000015",
+      "ean": "8595011132366",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_artivit_pegas_310x140mm_600g_120g.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-artivit-pegas-msm/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6db82df400e4",
+      "name": "Vitar Veterinae ArtiVit sirup",
+      "brand": "Vitar Veterinae",
+      "sku": "00000016",
+      "ean": "",
+      "category": "Klouby a pohyb",
+      "category_key": "joints",
+      "form": "Sirup / elixír",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_nmd_artivit_sirup_200ml_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-artivit-sirup/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_5bbe4bced4b2",
+      "name": "VITAR Veterinae Artivit sirup 1000 ml",
+      "brand": "Vitar Veterinae",
+      "sku": "50301012",
+      "ean": "8595011130584",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/ArtiVit sirup etiketa 1000 ml_punpička_ Z-SK-EN_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-sirup-1000ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_8a9ad60536a0",
+      "name": "VITAR Veterinae Artivit sirup 200 ml",
+      "brand": "Vitar Veterinae",
+      "sku": "50301001",
+      "ean": "8595011125429",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/45000001_artivit_sirup_200ml_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-sirup-200-ml-2",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6d58bd77e6fe",
+      "name": "VITAR Veterinae Artivit sirup 500 ml",
+      "brand": "Vitar Veterinae",
+      "sku": "50301002",
+      "ean": "8595011125443",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/45000002_artivit_sirup_500ml_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-artivit-sirup-500-ml-2",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_50adb27efed0",
+      "name": "VITAR Veterinae balíček Artivit sirup + DentOn + Lososový olej",
+      "brand": "Vitar Veterinae",
+      "sku": "50303021",
+      "ean": "8595011144406",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/Sirup_1000+DentON+Olej_losos.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/balicek-artivit-sir-1000-ml-denton100g-losos-olej-2",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_50e942afe726",
+      "name": "VITAR Veterinae balíček Artivit sirup 200 ml + DentOn 50 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50303001",
+      "ean": "8595011137309",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/ArtiVit_sirup_200+DentON.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/balicek-artivit-sirup-200-denton-50",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_1e8bf7d0b721",
+      "name": "VITAR Veterinae Balíček ArtiVit sirup 500 ml + cestovní miska ZDARMA",
+      "brand": "Vitar Veterinae",
+      "sku": "50303031",
+      "ean": "8595011146905",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/ArtiVit500+miska.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/balicek-artivit-sir-500-ml-cestovni-miska-2",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3d80c9eb80c0",
+      "name": "VITAR Veterinae balíček Artivit sirup 500 ml + Lososový olej 200 ml",
+      "brand": "Vitar Veterinae",
+      "sku": "50303020",
+      "ean": "8595011144390",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Sirup / elixír",
+      "image": "https://img.nasevitaminy.cz/images/Sirup_500+olej_losos.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/balicek-artivit-sirup500-ml-lososovy-olej-200-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_55c21b19cbc1",
+      "name": "Vitar Veterinae DentON",
+      "brand": "Vitar Veterinae",
+      "sku": "00000014",
+      "ean": "",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_vtv_denton_50g_etiketa_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-denton/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d9a111938244",
+      "name": "VITAR Veterinae DentON sypká směs 100 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301014",
+      "ean": "8595011131864",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000014_Vitar_Veterinae_DentON_sypka_smes_100g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-denton-sypka-smes-100g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_64aff3629c7c",
+      "name": "VITAR Veterinae DentON sypká směs 50 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301013",
+      "ean": "8595011131840",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000013_VITAR_Veterinae_DentOn_sypka_smes_50g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-denton-sypka-smes-50g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4e23f9e00af3",
+      "name": "VITAR Veterinae GasterON SYMBIO",
+      "brand": "Vitar Veterinae",
+      "sku": "50301018",
+      "ean": "8595011144536",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/45000018_Vitar_Veterinae_GasterON_SYMBIO_28g_doza_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-gasteron-symbio-28-g-doza",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a5f96f92f7a7",
+      "name": "Vitar Veterinae GasterON Symbio",
+      "brand": "Vitar Veterinae",
+      "sku": "45000018",
+      "ean": "8595011144536",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_gasteron_d_za_1.jpg",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-gasteron-symbio/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b952d6c76c44",
+      "name": "VITAR Veterinae Konopný olej",
+      "brand": "Vitar Veterinae",
+      "sku": "00000026",
+      "ean": "",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/v/vvet_olej_konopi_etiketa_200_ml_01.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-konopny-olej/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_f2fc0ac6e757",
+      "name": "VITAR Veterinae Konopný olej (1000 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300009",
+      "ean": "8595011144116",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_konopi_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-konopny-olej-1000-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7f56fa32e2d1",
+      "name": "VITAR Veterinae Konopný olej (200 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300007",
+      "ean": "8595011144079",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_konopi_etiketa_200_ml_01_1.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-konopny-olej-200-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_7893dfc32dab",
+      "name": "VITAR Veterinae Konopný olej (500 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300008",
+      "ean": "8595011144093",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_konopi_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-konopny-olej-500-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_432e40d74f51",
+      "name": "VITAR Veterinae Lněný olej",
+      "brand": "Vitar Veterinae",
+      "sku": "00000028",
+      "ean": "",
+      "category": "Srdce a oběh",
+      "category_key": "heart",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/v/vvet_olej_len_etiketa_200_ml_01_2.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-lneny-olej/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_4471b1fd89df",
+      "name": "VITAR Veterinae Lněný olej (1000 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300006",
+      "ean": "8595011144055",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/products/45000106_Vitar_Veterinae_Premium_lněný_olej_uzávěr_1000 ml_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lneny-olej-1000-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_661d8baf598a",
+      "name": "VITAR Veterinae Lněný olej (200 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300004",
+      "ean": "8595011144017",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_len_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lneny-olej-200-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2edf02657569",
+      "name": "VITAR Veterinae Lněný olej (500 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300005",
+      "ean": "8595011144031",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_len_etiketa_200_ml_01_2.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lneny-olej-500-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_2e1d5daa7224",
+      "name": "VITAR Veterinae Lososový olej",
+      "brand": "Vitar Veterinae",
+      "sku": "00000025",
+      "ean": "",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/v/vvet_olej_lososovy_etiketa_200_ml_01.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-lososovy-olej/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b62d5e83cdae",
+      "name": "VITAR Veterinae Lososový olej (1000 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300003",
+      "ean": "8595011143997",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_lososovy_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lososovy-olej-1000-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_0bf39a8716ac",
+      "name": "VITAR Veterinae Lososový olej (200 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300001",
+      "ean": "8595011143959",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_lososovy_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lososovy-olej-200-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_a6fe9abfd8c6",
+      "name": "VITAR Veterinae Lososový olej (500 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300002",
+      "ean": "8595011143973",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_lososovy_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-lososovy-olej-500-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_b8b1db78c619",
+      "name": "Vitar Veterinae Mineral Forte",
+      "brand": "Vitar Veterinae",
+      "sku": "00000013",
+      "ean": "",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_mineral-forte_80g_etiketa_1.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-mineral-forte/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_571a468cc2f8",
+      "name": "VITAR Veterinae Mineral Forte sypká směs 500 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301007",
+      "ean": "8595011125580",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000007_Vitar_Mineral_Forte_sypka_smes_500g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-mineral-forte-sypka-smes-500g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_d6b84c3ac2f8",
+      "name": "VITAR Veterinae Mineral Forte sypká směs 80 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301006",
+      "ean": "8595011125566",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000006_Vitar_Veterinae_Mineral_Forte_sypka_smes_80g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-mineral-forte-sypka-smes-80g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_03bb96453efc",
+      "name": "VITAR Veterinae Minerál Forte sypká směs 800 g",
+      "brand": "Vitar Veterinae",
+      "sku": "50301008",
+      "ean": "8595011125603",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Prášek",
+      "image": "https://img.nasevitaminy.cz/images/45000008_Vitar_Mineral_Forte_sypka_smes_800g_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-mineral-forte-sypka-smes-800g",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_97ae50af697e",
+      "name": "VITAR Veterinae Multivit Forte želé",
+      "brand": "Vitar Veterinae",
+      "sku": "50301009",
+      "ean": "8595011125627",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Želé / gummies",
+      "image": "https://img.nasevitaminy.cz/images/45000009_VITAR_Veterinae_Multivit_Forte_zele_40ks_3DE_WEB.jpg?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-multivit-forte-zele-40ks",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_c587030c3284",
+      "name": "Vitar Veterinae Multivitamin Forte",
+      "brand": "Vitar Veterinae",
+      "sku": "45000009",
+      "ean": "8595011125627",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Želé / gummies",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/3/d/3d_multivitaminforte_etiketa.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-multivitamin-forte/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_3aff9846e3a6",
+      "name": "VITAR Veterinae Ostropestřec olej",
+      "brand": "Vitar Veterinae",
+      "sku": "00000027",
+      "ean": "",
+      "category": "Vitaminy a minerály",
+      "category_key": "vitamins_minerals",
+      "form": "Neurčeno",
+      "image": "https://www.vitar.cz/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/v/v/vvet_olej_ostropestrec_etiketa_200_ml_01_3.png",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "https://www.vitar.cz/vitar-veterinae-ostropestrec-olej/",
+        "nasevitaminy.cz": "",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e0c8de7b70fb",
+      "name": "VITAR Veterinae Ostropestřec olej (1000 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300012",
+      "ean": "8595011144178",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_ostropestrec_etiketa_1000_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-ostropestrec-olej-1000-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_6bceba4e51bb",
+      "name": "VITAR Veterinae Ostropestřec olej (200 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300010",
+      "ean": "8595011144130",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_ostropestrec_etiketa_200_ml_01.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-ostropestrec-olej-200-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    },
+    {
+      "id": "prd_e906f51f775c",
+      "name": "VITAR Veterinae Ostropestřec olej (500 ml)",
+      "brand": "Vitar Veterinae",
+      "sku": "50300011",
+      "ean": "8595011144154",
+      "category": "Veterina",
+      "category_key": "veterina",
+      "form": "Neurčeno",
+      "image": "https://img.nasevitaminy.cz/images/graphic/Import/vvet_olej_ostropestrec_etiketa_200_ml_01_3.png?tid=20",
+      "targets": [
+        "outside"
+      ],
+      "assignment": "Samostatná VITAR Veterina",
+      "source_urls": {
+        "vitar.cz": "",
+        "nasevitaminy.cz": "https://www.nasevitaminy.cz/vitar-veterinae-ostropestrec-olej-500-ml",
+        "ceske-vitaminy.cz": ""
+      }
+    }
+  ]
+}

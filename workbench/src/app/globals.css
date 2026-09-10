@@ -3202,6 +3202,47 @@ textarea {
   gap: 6px;
 }
 
+.shop-plan-heading > .shop-plan-heading-actions {
+  align-items: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.shop-export-links {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  display: flex;
+  min-height: 36px;
+}
+
+.shop-export-links > span {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 10px;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+.shop-export-links a {
+  align-items: center;
+  border-left: 1px solid var(--line);
+  display: flex;
+  font-size: 10px;
+  font-weight: 750;
+  gap: 4px;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 8px;
+}
+
+.shop-export-links a:hover {
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
 .shop-plan-heading h1 {
   font-size: 28px;
   line-height: 1.15;
@@ -3546,7 +3587,10 @@ textarea {
 
 @media (max-width: 720px) {
   .shop-plan-heading h1 { font-size: 23px; }
+  .shop-plan-heading > .shop-plan-heading-actions { flex-direction: column; width: 100%; }
   .shop-plan-heading .secondary-button { width: 100%; }
+  .shop-export-links { width: 100%; }
+  .shop-export-links > span { margin-right: auto; }
   .shop-segments { grid-template-columns: 1fr; }
   .shop-segments button + button { border-left: 0; border-top: 1px solid var(--line); }
   .shop-rule-band { grid-template-columns: 22px minmax(0, 1fr); }
