@@ -360,13 +360,13 @@ Veřejná verze bez interních poznámek, otevřených otázek a bloků, které 
 - stejne u obou: Stejné u obou: 150 mg hořčíku (40 % RHP) a 1,4 mg vitaminu B6 (100 % RHP) ve 2 kapslích · 90 kapslí s rostlinným obalem (HPMC) · vystačí na 22–45 dní · {cena} Kč, tj. {cena za kapsli} Kč za kapsli a {cena za dávku} Kč za denní dávku 2 kapslí.
 - tabulka:
 
-| Magnesium Malate | Magnesium Bisglycinate |
-|---|---|
+|  | Magnesium Malate | Magnesium Bisglycinate |
+|---|---|---|
 | Forma hořčíku | malát hořečnatý (hořčík + kyselina jablečná) | bisglycinát hořečnatý (hořčík + glycin) |
 | Další vitaminy | B1, B2, B3 (nikotinamid) | – |
 | Tvrzení k vitaminům navíc (výběr) | Thiamin přispívá k normálnímu energetickému metabolismu. Riboflavin přispívá k normálnímu energetickému metabolismu. Niacin přispívá k normálnímu energetickému metabolismu. | – |
 | Plnidlo v kapsli | inulin | mikrokrystalická celulóza |
-| [Koupit] | Právě prohlížíte |
+|  | [Koupit] | Právě prohlížíte |
 
 - poznamka pod: Tvrzení k hořčíku a vitaminu B6 jsou u obou výrobků stejná, protože obsahují stejné množství obou živin. Všechna tvrzení najdete v části „Na co je“.
 - cta: Koupit
@@ -551,8 +551,8 @@ Veřejná verze bez interních poznámek, otevřených otázek a bloků, které 
 - uvod: Při 2 kapslích denně vystačí jedno balení na 45 dní, při 4 kapslích na 22 dní.
 - tabulka:
 
-| 2 kapsle denně | 4 kapsle denně |
-|---|---|
+|  | 2 kapsle denně | 4 kapsle denně |
+|---|---|---|
 | 1 balení (90 kapslí) | 45 dní | 22 dní |
 | 2 balení (180 kapslí) | 90 dní | 45 dní |
 | 3 balení (270 kapslí) | 135 dní | 67 dní |

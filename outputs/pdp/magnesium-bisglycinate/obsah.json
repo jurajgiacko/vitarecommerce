@@ -675,6 +675,7 @@
         "stejne_u_obou": "Stejné u obou: 150 mg hořčíku (40 % RHP) a 1,4 mg vitaminu B6 (100 % RHP) ve 2 kapslích · 90 kapslí s rostlinným obalem (HPMC) · vystačí na 22–45 dní · {cena} Kč, tj. {cena za kapsli} Kč za kapsli a {cena za dávku} Kč za denní dávku 2 kapslí.",
         "tabulka": {
           "hlavicka": [
+            "",
             "Magnesium Malate",
             "Magnesium Bisglycinate"
           ],
@@ -700,6 +701,7 @@
               "mikrokrystalická celulóza"
             ],
             [
+              "",
               "[Koupit]",
               "Právě prohlížíte"
             ]
@@ -1063,6 +1065,7 @@
         "uvod": "Při 2 kapslích denně vystačí jedno balení na 45 dní, při 4 kapslích na 22 dní.",
         "tabulka": {
           "hlavicka": [
+            "",
             "2 kapsle denně",
             "4 kapsle denně"
           ],
