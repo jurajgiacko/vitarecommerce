@@ -57,6 +57,7 @@ Main deliverables:
 - `outputs/data/final-shop-split.json` / `.csv` - approved current-product routing across all shops.
 - `outputs/data/final-shop-split-{vitar,nase,outside}.json` / `.csv` - separate public-safe current-product exports per destination.
 - `outputs/reports/final-shop-split.md` and `final-shop-split-{vitar,nase,outside}.md` - combined and per-destination Markdown exports.
+- `outputs/pdp/magnesium-bisglycinate/` - showcase product page (PDP) for vitar.cz: block-by-block content, sketch (`index.html`), `obsah.md` and `obsah.json`. Public-safe export: internal notes, open questions and legal review items stay in the internal workspace. Pages URL: https://jurajgiacko.github.io/vitarecommerce/pdp/magnesium-bisglycinate/
 - `outputs/html/product-qa-dashboard.html` - interactive product QA dashboard.
 - `outputs/html/strategic-readiness-dashboard.html` - strategic readiness, governance and backlog dashboard.
 - `outputs/html/vitar-group-content-planner.html` - interactive VITAR Group content planner.
